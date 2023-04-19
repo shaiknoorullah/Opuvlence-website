@@ -49,7 +49,7 @@ export default function Home() {
 				ref={mainRef}
 				className="w-screen min-h-screen flex justify-center items-center"
 			>
-				<h1 className="text-[8vw] text-white font-bold">
+				<h1 className="text-[8vw] text-black font-bold">
 					This is an auto generated next js template for
 					opuvlence
 				</h1>
