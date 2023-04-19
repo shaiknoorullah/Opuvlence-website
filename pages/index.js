@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import LoadingScreen from "../components/LoadingScreen";
+import Hero from "../components/Hero";
 
 export default function Home() {
   const mainRef = useRef(null);
@@ -15,7 +16,6 @@ export default function Home() {
       const mainRefVar = mainRef.current.children;
     }
   }, []);
-
   return (
     <div>
       <Head>
