@@ -5,34 +5,35 @@ import Image from "next/image"
 import styles from "../styles/Home.module.css"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
+import OurExpertise from "../components/ourExpertise"
 
 export default function Home() {
-	const mainRef = useRef(null)
+	// const mainRef = useRef(null)
 
-	useEffect(() => {
-		if (mainRef.current) {
-			const mainRefVar = mainRef.current.children
+	// useEffect(() => {
+	// 	if (mainRef.current) {
+	// 		const mainRefVar = mainRef.current.children
 
-			gsap.fromTo(
-				mainRefVar,
-				{
-					y: -10,
-					opacity: 0,
-				},
-				{
-					y: 0,
-					opacity: 1,
-					duration: 0.5,
-					delay: 0.5,
-					stagger: 0.2,
-					ease: "power2.out",
-				}
-			)
-		}
-	}, [])
+	// 		gsap.fromTo(
+	// 			mainRefVar,
+	// 			{
+	// 				y: -10,
+	// 				opacity: 0,
+	// 			},
+	// 			{
+	// 				y: 0,
+	// 				opacity: 1,
+	// 				duration: 0.5,
+	// 				delay: 0.5,
+	// 				stagger: 0.2,
+	// 				ease: "power2.out",
+	// 			}
+	// 		)
+	// 	}
+	// }, [])
 
 	return (
-		<div>
+		<div className="bg-[#F5E1E2]">
 			<Head>
 				<title>Create Next App</title>
 				<meta
@@ -45,7 +46,9 @@ export default function Home() {
 				/>
 			</Head>
 
-			<main
+			<OurExpertise />
+
+			{/* <main
 				ref={mainRef}
 				className="w-screen min-h-screen flex justify-center items-center"
 			>
@@ -53,7 +56,7 @@ export default function Home() {
 					This is an auto generated next js template for
 					opuvlence
 				</h1>
-			</main>
+			</main> */}
 		</div>
 	)
 }

@@ -6,6 +6,7 @@
 html,
 body {
 	padding: 0;
+	background-color:#F5E1E2;
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
 		Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
@@ -27,13 +28,17 @@ a {
 	}
 	body {
 		color: white;
-		background: black;
+		
 	}
 }
 
 
-.hello{
+.golden{
 	font-family: GOLDEN Regular;
 	font-weight: 400;
 	letter-spacing: 1rem;
+}
+
+.poppins{
+	font-family: Poppins;
 }
