@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import OurExpertise from "../components/ourExpertise"
+import Testimonials from "../components/testimonials"
 
 export default function Home() {
 	// const mainRef = useRef(null)
@@ -33,7 +34,7 @@ export default function Home() {
 	// }, [])
 
 	return (
-		<div className="bg-[#F5E1E2]">
+		<div>
 			<Head>
 				<title>Create Next App</title>
 				<meta
@@ -47,6 +48,7 @@ export default function Home() {
 			</Head>
 
 			<OurExpertise />
+			<Testimonials />
 
 			{/* <main
 				ref={mainRef}

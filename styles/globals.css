@@ -7,6 +7,7 @@ html,
 body {
 	padding: 0;
 	background-color:#F5E1E2;
+	overflow-x: hidden;
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
 		Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
@@ -42,3 +43,11 @@ a {
 .poppins{
 	font-family: Poppins;
 }
+
+.circle {
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 50%;
+  }
