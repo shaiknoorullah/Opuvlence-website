@@ -7,6 +7,8 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import LoadingScreen from "../components/LoadingScreen";
 import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import Contact from "../components/Contact";
 
 export default function Home() {
   const mainRef = useRef(null);
@@ -24,15 +26,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main
-        ref={mainRef}
-        className="w-screen bg-[#F5E1E2] min-h-screen justify-center items-center"
-      >
+      <main ref={mainRef} className=" bg-[#F5E1E2]  justify-center ">
         {/* <h1 className="text-[8vw] text-white font-bold">
 					This is an auto generated next js template for
 					opuvlence
 				</h1> */}
         <LoadingScreen />
+        <Navbar />
+        <Hero />
+        <Contact />
       </main>
     </div>
   );

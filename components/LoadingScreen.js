@@ -6,7 +6,7 @@ const LoadingScreen = () => {
     gsap.fromTo(
       "#loadingScreen1",
       { opacity: 1, display: "block" },
-      { opacity: 0, display: "none", delay: 2.2 }
+      { opacity: 0, display: "none", delay: 2.2, overflow: "hidden" }
     );
     gsap.fromTo(
       "#loadingScreen2",
@@ -104,7 +104,7 @@ const LoadingScreen = () => {
       </div>
       <div
         id="loadingScreen2"
-        className="bg-[#340506] fixed top-0 flex flex-col justify-center m-auto w-[100%] h-[100vh]"
+        className="bg-[#340506] z-[100] fixed top-0 flex flex-col justify-center m-auto w-[100%] h-[100vh]"
       >
         <img id="text2" src="loadingText2.png " />
       </div>
