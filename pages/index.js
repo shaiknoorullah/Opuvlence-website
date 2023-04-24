@@ -43,7 +43,7 @@ export default function Home() {
       </Head>
 
       {/* <OurExpertise /> */}
-      <OurProject />
+      <Batholic />
       {/* <Batholic /> */}
 
       {/* <main
