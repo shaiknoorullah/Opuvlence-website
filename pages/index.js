@@ -9,6 +9,8 @@ import LoadingScreen from "../components/LoadingScreen";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
+import OurExpertise from "../components/ourExpertise";
+import Testimonials from "../components/testimonials";
 
 export default function Home() {
   const mainRef = useRef(null);
@@ -34,6 +36,8 @@ export default function Home() {
         <LoadingScreen />
         <Navbar />
         <Hero />
+		<OurExpertise />
+		<Testimonials />
         <Contact />
       </main>
     </div>
