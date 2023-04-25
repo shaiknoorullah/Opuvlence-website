@@ -8,32 +8,14 @@ import { gsap } from "gsap";
 import OurExpertise from "../components/ourExpertise";
 import OurProject from "../components/ourProject";
 import Batholic from "../components/batHolic";
+import LoadingScreen from "../components/LoadingScreen";
+import Testimonials from "../components/testimonials";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import Contact from "../components/Contact";
+import TransitionScreen from "../components/TransitionScreen";
 
 export default function Home() {
-  // const mainRef = useRef(null)
-
-  // useEffect(() => {
-  // 	if (mainRef.current) {
-  // 		const mainRefVar = mainRef.current.children
-
-  // 		gsap.fromTo(
-  // 			mainRefVar,
-  // 			{
-  // 				y: -10,
-  // 				opacity: 0,
-  // 			},
-  // 			{
-  // 				y: 0,
-  // 				opacity: 1,
-  // 				duration: 0.5,
-  // 				delay: 0.5,
-  // 				stagger: 0.2,
-  // 				ease: "power2.out",
-  // 			}
-  // 		)
-  // 	}
-  // }, [])
-
   return (
     <div className="bg-[#F5E1E2]">
       <Head>
@@ -42,19 +24,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <OurExpertise /> */}
-      <Batholic />
+      <LoadingScreen />
+      {/* <TransitionScreen /> */}
+      {/* <Navbar />
+      <Hero />
+      <Testimonials />
+      <OurExpertise />
+      <OurProject />
+      <Contact /> */}
       {/* <Batholic /> */}
-
-      {/* <main
-				ref={mainRef}
-				className="w-screen min-h-screen flex justify-center items-center"
-			>
-				<h1 className="text-[8vw] text-black font-bold">
-					This is an auto generated next js template for
-					opuvlence
-				</h1>
-			</main> */}
     </div>
   );
 }
