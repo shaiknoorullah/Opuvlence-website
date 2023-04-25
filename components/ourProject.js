@@ -29,7 +29,7 @@ const OurProject = () => {
         </div>
         <div className="flex flex-row 3xl:gap-[168px] lg:gap-[8.75vw]">
           <text className="3xl:w-[583px] lg:w-[30.36vw]  3xl:text-[33px] lg:text-[1.71vw]  3xl:leading-[45.34px] lg:leading-[2.361vw] tracking-[10%] font-bold 3xl:pl-[50px] 3xl:pt-[41px] lg:pl-[2.60vw] lg:pt-[2.13vw] snap-center font-[lamore]">
-            WE’VE BUILT HOMES THAT BRING DREAMS COME TRUE
+            WE&apos;VE BUILT HOMES THAT BRING DREAMS COME TRUE
           </text>
           <div className="3xl:w-[442px] lg:w-[23.02vw] 3xl:text-[16px] lg:text-[0.833vw] 3xl:leading-[24.85px] lg:leading-[1.294vw] tracking-[7%] font-normal  3xl:pt-[86px] lg:pt-[4.47vw]  snap-center">
             Using edge cutting technology to provide extremely reliable service

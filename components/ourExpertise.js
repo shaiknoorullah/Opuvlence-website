@@ -93,10 +93,10 @@ const OurExpertise = () => {
       </div>
 
       {/* background text */}
-      <div className="absolute golden top-[-5rem] text-[20rem] opacity-70 text-[#DFCECF4D]">
+      <div className="absolute golden top-[-5rem] text-[25rem] opacity-70 text-[#DFCECF4D]">
         ACHIEVEMENTS
       </div>
-      <div className="absolute golden bottom-[-5rem] text-[20rem] opacity-70 text-[#DFCECF4D]">
+      <div className="absolute golden bottom-[-5rem] text-[25rem] opacity-70 text-[#DFCECF4D]">
         ACHIEVEMENTS
       </div>
     </div>

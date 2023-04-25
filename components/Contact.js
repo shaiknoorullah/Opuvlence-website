@@ -1,8 +1,9 @@
 import React from "react";
+import CustomButton from "./section/customButton";
 
 const Contact = () => {
   return (
-    <div className="w-full h-screen  px-[40px] flex flex-col ">
+    <div className="w-full px-[40px] flex flex-col ">
       <div className="flex w-full justify-between ">
         <h1 className="w-[30%] text-[#270405] uppercase text-[100px] font-[GOLDEN] leading-[130px] ">
           get in contact with us
@@ -57,6 +58,10 @@ const Contact = () => {
             />
           </div>
         </div>
+      </div>
+      <div className="my-12">
+        {" "}
+        <CustomButton text={"Submit"} />
       </div>
     </div>
   );

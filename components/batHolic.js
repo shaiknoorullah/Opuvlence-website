@@ -1,4 +1,5 @@
 import react from "react";
+import CustomButton from "./section/customButton";
 const Pluto = () => {
   const elements = [
     {
@@ -45,7 +46,7 @@ const Batholic = () => {
     "Rectangle28.png",
   ];
   return (
-    <div className="w-full max-w-[1920px] bg-[#1E1E1E] 3xl:pt-[105px] lg:pt-[5.46vw]">
+    <div className="w-full max-w-[1920px] bg-[#1E1E1E] 3xl:pt-[105px] lg:pt-[5.46vw] pb-9">
       <div className="flex flex-row 3xl:gap-[33.97px] lg:gap-[1.7692vw]">
         <div className="h-[fit-content] lg:h-[fit-content] 3xl:w-[90px] lg:w-[4.68vw]  relative rotate-[270deg] 3xl:top-[520px] lg:top-[27.08vw] ">
           <div className="flex flex-row items-center 3xl:gap-[40px] lg:gap-[2.08vw]">
@@ -112,8 +113,8 @@ const Batholic = () => {
       <div className="3xl:pt-[85px]  3xl:pl-[102px] 3xl:pr-[152px] 3xl:pb-[79px] lg:pt-[4.42vw] lg:pl-[5.312vw] lg:pr-[7.91vw] lg:pb-[4.114vw]">
         <Pluto />
       </div>
-      <div className="pl-[128px]">
-        <button>button</button>
+      <div className="pl-[128px] ">
+        <CustomButton  text={"CONTACT US"}/>
       </div>
     </div>
   );

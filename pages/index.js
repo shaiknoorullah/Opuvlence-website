@@ -47,14 +47,13 @@ export default function Home() {
       </Head>
 
       {/* <OurExpertise /> */}
-	  <Navbar />
+	  /* <Navbar />
       <Hero />
-	  <OurExpertise />
+	  <OurExpertise /> 
 	  {/* <OurProject /> */}
 	  <Testimonials />
 	  <Contact />
-	  
-      {/* <Batholic /> */}
+	
 
       {/* <main
 				ref={mainRef}
