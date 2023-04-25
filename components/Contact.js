@@ -1,10 +1,22 @@
 import React from "react";
+import localFont from "next/font/local";
+
+const golden = localFont({
+  src: "../styles/font/golden/golden.woff2",
+  variable: "--font-golden",
+});
+const poppins = localFont({
+  src: "../styles/font/poppins/Poppins-ExtraLight.woff2",
+  variable: "--font-poppins",
+});
 
 const Contact = () => {
   return (
     <div className="w-full h-screen  px-[40px] flex flex-col ">
       <div className="flex w-full justify-between ">
-        <h1 className="w-[30%] text-[#270405] uppercase text-[100px] font-[GOLDEN] leading-[130px] ">
+        <h1
+          className={`w-[40%] text-[#270405] uppercase text-[100px] leading-[130px]  ${golden.className} `}
+        >
           get in contact with us
         </h1>
         <div className="text-[#270405] flex flex-col text-right h-[400px]  justify-between  ">
