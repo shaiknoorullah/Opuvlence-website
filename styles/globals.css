@@ -35,9 +35,9 @@ a {
 
 
 .golden{
-	font-family: GOLDEN Regular;
+	font-family: GOLDEN;
 	font-weight: 400;
-	letter-spacing: 1rem;
+	/* letter-spacing: 1rem; */
 }
 
 .poppins{

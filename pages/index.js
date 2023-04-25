@@ -8,6 +8,10 @@ import { gsap } from "gsap";
 import OurExpertise from "../components/ourExpertise";
 import OurProject from "../components/ourProject";
 import Batholic from "../components/batHolic";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import Testimonials from "../components/testimonials";
+import Contact from "../components/Contact";
 
 export default function Home() {
   // const mainRef = useRef(null)
@@ -43,7 +47,13 @@ export default function Home() {
       </Head>
 
       {/* <OurExpertise /> */}
-      <Batholic />
+	  <Navbar />
+      <Hero />
+	  <OurExpertise />
+	  {/* <OurProject /> */}
+	  <Testimonials />
+	  <Contact />
+	  
       {/* <Batholic /> */}
 
       {/* <main
