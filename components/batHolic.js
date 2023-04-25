@@ -46,7 +46,7 @@ const Batholic = () => {
     "Rectangle28.png",
   ];
   return (
-    <div className="w-full max-w-[1920px] bg-[#1E1E1E] 3xl:pt-[105px] lg:pt-[5.46vw] pb-9">
+    <div className="w-full max-w-[1920px] bg-[#270405] 3xl:pt-[105px] lg:pt-[5.46vw]">
       <div className="flex flex-row 3xl:gap-[33.97px] lg:gap-[1.7692vw]">
         <div className="h-[fit-content] lg:h-[fit-content] 3xl:w-[90px] lg:w-[4.68vw]  relative rotate-[270deg] 3xl:top-[520px] lg:top-[27.08vw] ">
           <div className="flex flex-row items-center 3xl:gap-[40px] lg:gap-[2.08vw]">

@@ -64,10 +64,7 @@ const Testimonials = () => {
             <CustomButton text={"DISCOVER"} color={"black"} />
           </div>
           <div className="flex gap-[3rem]">
-            <div>
-                PREV
-
-            </div>
+            <div>PREV</div>
             <div>NEXT</div>
           </div>
         </div>

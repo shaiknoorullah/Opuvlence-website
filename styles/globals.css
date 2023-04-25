@@ -3,51 +3,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html,
 body {
-	padding: 0;
-	background-color:#F5E1E2;
-	overflow-x: hidden;
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
-		Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
+  padding: 0;
+  background-color: #f5e1e2;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
-	html {
-		color-scheme: dark;
-	}
-	body {
-		color: white;
-		
-	}
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+  }
 }
 
-
-.golden{
-	font-family: GOLDEN;
-	font-weight: 400;
-	/* letter-spacing: 1rem; */
+.golden {
+  font-family: GOLDEN Regular;
+  font-weight: 400;
+  letter-spacing: 1rem;
 }
 
-.poppins{
-	font-family: Poppins;
+.poppins {
+  font-family: Poppins;
 }
 
 .circle {
-    width: 5rem;
-    height: 5rem;
-    border: 1px solid black;
-    background-color: transparent;
-    border-radius: 50%;
-  }
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
