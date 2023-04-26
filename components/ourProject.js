@@ -5,13 +5,13 @@ const Residential = () => {
       {/* <div className="flex flex-row  absolute bottom-[36px] left-[-200px]"> */}
       <img
         src="ourproject.png"
-        className="3xl:w-[550px] 3xl:h-[555px] lg:h-[28.90vw] lg:w-[28.64vw] "
+        className="3xl:w-[550px] 3xl:h-[600px] lg:h-[28.90vw] lg:w-[28.64vw] "
       ></img>
       <div className="flex flex-col">
-        <p className="font-extrabold 3xl:text-[25px] lg:text-[1.30vw] 3xl:leading-[37.5px] lg:leading-[1.95vw] tracking-[0.5%] mt-0">
+        <p className="font-extrabold 3xl:text-[25px] lg:text-[1.3vw] 3xl:leading-[37.5px] lg:leading-[1.95vw] tracking-[0.5%] mt-[-9px]">
           2020
         </p>
-        <p className="font-medium 3xl:text-[89.14px] lg:text-[4.642vw] 3xl:leading-[133.71px] lg:leading-[6.93vw] tracking-[0.5%] rotate-[270deg] absolute 3xl:left-[328px] lg:left-[17.0833vw] 3xl:mt-[228px] lg:mt-[11.875vw] uppercase">
+        <p className="font-medium 3xl:text-[89.14px] lg:text-[4.642vw] 3xl:leading-[133.71px] lg:leading-[6.93vw] tracking-[0.5%] rotate-[270deg] absolute 3xl:left-[328px] lg:left-[16.5vw] 3xl:mt-[228px] lg:mt-[11.875vw] uppercase">
           {" "}
           Residential
         </p>
@@ -40,8 +40,8 @@ const OurProject = () => {
           </div>
         </div>
         {/* reuse */}
-        <div className="3xl:w-[587px] lg:w-[30.57vw] 3xl:pl-[50px] lg:pl-[2.60vw]  relative">
-          <div className="flex flex-row items-center 3xl:gap-[15px] lg:gap-[0.78vw] absolute 3xl:top-[-52px] lg:top-[-2.708vw]">
+        <div className="3xl:w-[587px] lg:w-[30.57vw] 3xl:pl-[50px] lg:pl-[2.60vw]  relative pb-[10px]">
+          <div className="flex flex-row items-center 3xl:gap-[15px] lg:gap-[0.78vw] absolute 3xl:top-[-13.59px] lg:top-[-0.708vw]">
             <div className="3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%] font-medium italic uppercase">
               residential
             </div>
@@ -64,11 +64,11 @@ const OurProject = () => {
         {/* ksd */}
         <div className="3xl:pt-[35px] lg:pt-[1.822vw]">
           <div className="flex flex-col justify-center items-center m-auto">
-            <div className="3xl:w-[792px] lg:w-[41.25vw]  3xl:text-[188px] lg:text-[9.79vw] lg:leading-[9.79vw] 3xl:leading-[188px] tracking-[3%] font-normal font-[golden] uppercase mt-0 z-[10]">
+            <div className="3xl:w-[892px] lg:w-[46.25vw]  3xl:text-[188px] lg:text-[9.79vw] lg:leading-[9.79vw] 3xl:leading-[188px] tracking-[3%] font-normal font-[gilroy] uppercase mt-0 z-[10]">
               bonito designs
             </div>
-            <div className="3xl:w-[792px] lg:w-[41.25vw] 3xl:text-[16px] lg:text-[0.833vw] 3xl:leading-[24.85px] lg:leading-[1.29vw] tracking-[7%] font-normal z-[10] ">
-              <div className="3xl:w-[501px] lg:w-[26.09vw] 3xl:pl-[70px] lg:pl-[3.64vw]">
+            <div className="3xl:w-[892px] lg:w-[46.25vw] 3xl:text-[16px] lg:text-[0.833vw] 3xl:leading-[24.85px] lg:leading-[1.29vw] tracking-[7%] font-normal z-[10] ">
+              <div className="3xl:w-[501px] lg:w-[26.09vw] 3xl:pl-[70px] lg:pl-[3.64vw] ">
                 Using edge cutting technology to provide extremely reliable
                 service Using edge cutting technology to provide extremely
                 reliable service Using edge cutting technology to provide
@@ -77,28 +77,39 @@ const OurProject = () => {
               </div>
             </div>
           </div>
+          <div className="relative rotate-90 3xl:top-[425.856px] lg:top-[22.18vw] 3xl:left-[752.64px] lg:left-[39.20vw]">
+            <div className="absolute flex flex-row 3xl:gap-[10px] lg:gap-[0.52vw] ">
+              <img
+                className="3xl:w-[200px] lg:w-[10.41vw] rotate-[180deg] "
+                src="Ourprojectvector.png"
+              ></img>
+              <button className="uppercase 3xl:w-[401px] lg:w-[20.88vw] 3xl:h-[74px] lg:h-[3.85vw] bg-transparent border-transparent font-normal 3xl:text-[54px] lg:text-[2.81vw] 3xl:leading-[54px] lg:leading-[2.81vw] tracking-[10%] rotate-[180deg]">
+                view more
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute 3xl:bottom-[0px]  3xl:left-[-180px] lg:bottom-[0px] lg:left-[-9.375vw] ">
+        <div className="relative h-10">
+          <div className="absolute 3xl:bottom-[-50px]  3xl:left-[-180px] lg:bottom-[0] lg:left-[-9.375vw] ">
             <Residential />
           </div>
-          <div className="absolute 3xl:bottom-[0px] lg:bottom-[0px]  3xl:right-[330px] lg:right-[17.18vw] ">
+          <div className="absolute 3xl:bottom-[-50px] lg:bottom-[0]  3xl:right-[330px] lg:right-[17.18vw] ">
             <Residential />
           </div>
         </div>
 
-        <div className="absolute rotate-90">
-          <div className="flex flex-row 3xl:gap-[10px] lg:gap-[0.52vw] ">
+        {/* <div className="relative rotate-90 top-[259px] left-[600px]">
+          <div className="absolute flex flex-row 3xl:gap-[10px] lg:gap-[0.52vw] ">
             <img
-              className="w-[200px] rotate-[180deg] "
+              className="3xl:w-[200px] lg:w-[10.41vw] rotate-[180deg] "
               src="Ourprojectvector.png"
             ></img>
-            <button className="uppercase w-[401px] h-[74px] bg-transparent border-transparent font-normal text-[54px] leading-[54px] tracking-[10%] rotate-[180deg]">
+            <button className="uppercase 3xl:w-[401px] lg:w-[20.88vw] 3xl:h-[74px] lg:h-[3.85vw] bg-transparent border-transparent font-normal 3xl:text-[54px] lg:text-[2.81vw] 3xl:leading-[54px] lg:leading-[2.81vw] tracking-[10%] rotate-[180deg]">
               view more
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
