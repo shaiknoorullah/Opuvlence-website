@@ -24,14 +24,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <LoadingScreen />
+      {/* <LoadingScreen /> */}
       {/* <TransitionScreen /> */}
-      {/* <Navbar />
-      <Hero />
+      {/* <Navbar /> */}
+      {/* <Hero /> */}
       <Testimonials />
       <OurExpertise />
-      <OurProject />
-      <Contact /> */}
+      {/* <OurProject /> */}
+      {/* <Contact /> */}
       {/* <Batholic /> */}
     </div>
   );

@@ -13,27 +13,51 @@ const poppins = localFont({
 const AboutusHero = () => {
   return (
     <div className="w-full flex justify-center">
-      <div className="flex w-[95%] flex-col">
+      <div className="flex base:w-[95%] lg:w-[95%] flex-col">
         {/* text and image section grid*/}
-        <div className="grid grid-cols-12 pt-[8rem] ">
+        <div className="lg:grid grid-cols-12 base:pt-7 lg:pt-[8rem] ">
           <div className="flex row-span-full flex-col col-start-1 col-end-6  z-50">
             <div
-              className={`text-[6.2vw] tracking-[0.7rem] leading-[130px] ${golden.className}`}
+              className={`base:text-[2.8rem] lg:text-[6.2vw] tracking-[0.7rem] lg:leading-[130px] ${golden.className}`}
             >
               GET TO KNOW US
             </div>
-            <div className={`text-[2rem]`}>ThE StOrY BeHinD </div>
-            <div className={`mt-[5rem] text-[1.3rem] w-[70%] font-extrabold italic ${poppins.className}`}>
+            <div className={`base:text-[1.8rem] lg:text-[2rem]`}>
+              ThE StOrY BeHinD{" "}
+            </div>
+
+            {/* quotation for desktop */}
+            <div
+              className={`lg:inline-block base:hidden mt-[5rem] text-[1.3rem] w-[70%] font-extrabold italic ${poppins.className}`}
+            >
               “Lorem Ipsum dolor sit amet consectetur adipscing lore lorem is
               lorem ipsum dolor sit amet adipscing Lorem Ipsum dolor sit amet”
             </div>
           </div>
-          <div className="col-start-5 row-span-full col-end-13 z-0">
-            <img className="pl-10 pr-4" src="/AboutUsHero.jpg" />
+
+          {/* image section */}
+          <div className="col-start-5 row-span-full base:py-4 col-end-13 z-0">
+            <img
+              className="lg:hidden lg:pl-10 lg:pr-4 w-full rounded-bl-[2rem] "
+              src="/aboutusheromobile.jpg"
+            />
+            <img
+              className="base:hidden lg:inline-block lg:pl-10 lg:pr-4 "
+              src="/AboutUsHero.jpg"
+            />
           </div>
         </div>
-        {/* description down */}
-        <div className={`${poppins.className} ml-[17rem] mr-[10rem] text-[1rem] py-11 text-black leading-8 font-bold`}>
+        <div
+          className={`lg:hidden base:inline-block   lg:text-[1.3rem] w-[80%] font-extrabold italic ${poppins.className}`}
+        >
+          “Lorem Ipsum dolor sit amet consectetur adipscing lore lorem is lorem
+          ipsum dolor sit amet adipscing Lorem Ipsum dolor sit amet”
+        </div>
+
+        {/* description*/}
+        <div
+          className={`${poppins.className} lg:ml-[17rem] lg:mr-[10rem] base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-bold`}
+        >
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
           Aliquam in hendrerit urna. Pellentesque sitLorem ipsum dolor sit amet
           consectetur Lorem ipsum dolor sit amet consectetur adipiscing elit Ut
