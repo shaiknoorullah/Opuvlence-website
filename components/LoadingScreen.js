@@ -22,6 +22,29 @@ const LoadingScreen = () => {
     const tl = gsap.timeline();
     const tl2 = gsap.timeline();
 
+    gsap
+      .timeline()
+      .fromTo(
+        "#loadingScreen1",
+        { opacity: 1 },
+        {
+          opacity: 0,
+
+          transformOrigin: "bottom center",
+          duration: 0.2,
+          delay: 3.1,
+        }
+      )
+      .fromTo(
+        "#loadingScreen1",
+        {
+          display: "block",
+        },
+        {
+          display: "none",
+        }
+      );
+
     tl.fromTo(
       loadingLogoVar,
       {
@@ -77,39 +100,39 @@ const LoadingScreen = () => {
       { y: 0, duration: 1, delay: 0.85, ease: "power3.out" }
     );
 
-    return () => {};
+    //   return () => {};
 
-    // tl.fromTo(
-    //   "#loadingScreen1",
-    //   { opacity: 1, display: "block" },
-    //   { opacity: 0, display: "none", delay: 2.2, overflow: "hidden" }
-    // );
-    // tl.
-    // tl.
-    // tl.
-    // tl.
-    // .fromTo(
-    //   "#loadingScreen2",
-    //   { height: 0, transformOrigin: "bottom center", display: "block" },
-    //   {
-    //     height: 100,
-    //     ease: "power2.Out",
-    //     duration: 0.5,
-    //     delay: 4.2,
-    //   }
-    // )
-    // .to("#loadingScreen2", {
-    //   height: 0,
-    //   ease: "power2.Out",
-    //   duration: 0.5,
-    //   delay: 1,
-    // })
-    // .fromTo(
-    //   "#text2",
-    //   { opacity: 0 },
-    //   { opacity: 1, delay: 2.5, duration: 1.2, ease: "power3.Out" }
-    // )
-    //
+    //   // tl.fromTo(
+    //   //   "#loadingScreen1",
+    //   //   { opacity: 1, display: "block" },
+    //   //   { opacity: 0, display: "none", delay: 2.2, overflow: "hidden" }
+    //   // );
+    //   // tl.
+    //   // tl.
+    //   // tl.
+    //   // tl.
+    //   // .fromTo(
+    //   //   "#loadingScreen2",
+    //   //   { height: 0, transformOrigin: "bottom center", display: "block" },
+    //   //   {
+    //   //     height: 100,
+    //   //     ease: "power2.Out",
+    //   //     duration: 0.5,
+    //   //     delay: 4.2,
+    //   //   }
+    //   // )
+    //   // .to("#loadingScreen2", {
+    //   //   height: 0,
+    //   //   ease: "power2.Out",
+    //   //   duration: 0.5,
+    //   //   delay: 1,
+    //   // })
+    //   // .fromTo(
+    //   //   "#text2",
+    //   //   { opacity: 0 },
+    //   //   { opacity: 1, delay: 2.5, duration: 1.2, ease: "power3.Out" }
+    //   // )
+    //   //
   }, []);
 
   return (
@@ -122,24 +145,19 @@ const LoadingScreen = () => {
           },
         }}
         className="relative
-         z-[1000] bg-[#F5E1E2] w-[100%] h-[100vh] overflow-hidden text-left text-[186px] text-black font-golden"
+         z-[1000] bg-[#F5E1E2] w-[100%]  overflow-hidden text-left text-[186px] text-black "
       >
         <img
-          className="absolute top-[0px] left-[0px] h-[260px]  object-contain"
+          className="absolute top-[0px] left-[0px] h-[230px]  object-contain"
           alt=""
           id="img1"
           src="/loadingbed.svg"
         />
 
         <div
-          // className={`absolute ${golden.className} top-[299px] left-[88px] w-[1745px] h-[361px]`}
           className={`relative flex flex-col z-[999] justify-center items-center ${golden.className}  w-full h-screen`}
           id="text"
         >
-          {/* <img
-            src="/loadingText.svg"
-            className="absolute top-[45px] z-[100] left-[0px] tracking-[0.28em]"
-          /> */}
           <h1 ref={loadingLogo} className="text-[12vw]">
             {"Opuvlence".split("").map((char, idx) => {
               return (
@@ -165,21 +183,21 @@ const LoadingScreen = () => {
           </div>
         </div>
         <img
-          className="absolute top-[628px] left-[1426px] w-[395px] h-[414px] object-cover"
+          className="absolute bottom-0 right-[100px] h-[274px] object-contain"
           alt=""
           id="img4"
           src="/loadingrightbottom.svg"
         />
 
         <img
-          className="absolute top-[421px] left-[-50px] w-[920px] h-[414px] object-cover"
+          className="absolute top-[321px] left-0 w-[650px] h-[414px] object-contain"
           alt=""
           id="img3"
           src="/loading3.png"
         />
 
         <img
-          className="absolute top-[0px] right-0 w-[903px]  object-cover"
+          className="absolute top-[0px] right-0 w-[783px]  object-contain"
           alt=""
           id="img2"
           src="/loadingright.svg"

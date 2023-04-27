@@ -14,6 +14,9 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import TransitionScreen from "../components/TransitionScreen";
+import Imgs4 from "../components/Imgs4";
+import ExampleComponent from "../components/ExampleComponent";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -24,14 +27,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <LoadingScreen /> */}
+      <LoadingScreen />
+      <ExampleComponent />
       {/* <TransitionScreen /> */}
-      {/* <Navbar /> */}
-      {/* <Hero /> */}
-      <Testimonials />
+      <Navbar />
+      <Hero />
+      <Imgs4 />
+      {/* <Testimonials />
       <OurExpertise />
-      {/* <OurProject /> */}
-      {/* <Contact /> */}
+      <OurProject /> */}
+      <Contact />
+      <Footer />
       {/* <Batholic /> */}
     </div>
   );
