@@ -12,8 +12,8 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import TransitionScreen from "../components/TransitionScreen";
-import Imgs4 from "../components/Imgs4";
-
+import MobileOurProject from "../components/Mobileourproject";
+import About from "../components/About";
 export default function Home() {
   return (
     <>
@@ -23,16 +23,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <LoadingScreen />
+      {/* <LoadingScreen /> */}
       {/* <TransitionScreen /> */}
       {/* <Navbar />
-      <Hero />
-      <Imgs4 />
       <Testimonials />
-      <OurExpertise />
-      <OurProject />
-      <Contact />
-      {/* <Batholic /> */}
+    <OurExpertise /> */}
+      {/* <OurProject /> */}
+      {/* <Contact /> */}
+      <Batholic />
+      {/* <MobileOurProject /> */}
+      {/* <Hero /> */}
+      {/* <div className="w-full flex justify-center">
+        <About />
+      </div> */}
+      {/* <Contact /> */}
     </>
   );
 }
