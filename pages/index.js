@@ -15,6 +15,8 @@ import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import TransitionScreen from "../components/TransitionScreen";
 import Imgs4 from "../components/Imgs4";
+import ExampleComponent from "../components/ExampleComponent";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -26,14 +28,16 @@ export default function Home() {
       </Head>
 
       <LoadingScreen />
-      <TransitionScreen />
+      <ExampleComponent />
+      {/* <TransitionScreen /> */}
       <Navbar />
       <Hero />
       <Imgs4 />
-      <Testimonials />
+      {/* <Testimonials />
       <OurExpertise />
-      <OurProject />
+      <OurProject /> */}
       <Contact />
+      <Footer />
       {/* <Batholic /> */}
     </div>
   );

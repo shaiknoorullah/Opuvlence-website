@@ -11,10 +11,10 @@ const poppins = localFont({
 });
 const Hero = () => {
   return (
-    <div className=" w-[100%] px-[40px] mt-[50px] ">
-      <section className="flex flex-row items-start mt-[20px] justify-between  w-full text-left ">
+    <div className=" w-[100%] relative z-[1000] flex justify-center px-[40px]  ">
+      <section className="flex flex-row max-w-[1920px] items-start mt-[20px] justify-between  w-full text-left ">
         <div className="flex flex-col items-start justify-start gap-[30px]">
-          <h1 className="m-0  text-[#270405]  tracking-[5px]  text-[62px] uppercase font-[300] leading-[80px] ">
+          <h1 className="m-0  text-[#270405]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[90px] 2xl:leading-[100px] ">
             <span className={`w-full  ${golden.className} `}>
               <p className="tracking">Taking the</p>
               <p className="tracking">living standards</p>
@@ -22,7 +22,7 @@ const Hero = () => {
             </span>
           </h1>
           <p
-            className={`m-0 text-[#A5787A] text-lg tracking-normal leading-[30px]  font-[400] flex items-end w-[600px] ${poppins.className}`}
+            className={`m-0 text-[#A5787A] lg:text-lg 2xl:text-[22px] tracking-wide lg:leading-[30px] 2xl:leading-[34px]  font-[400] flex items-end w-[670px] ${poppins.className}`}
           >
             Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
             Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
@@ -32,14 +32,15 @@ const Hero = () => {
             consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit
             urna. Pellentesque sit
           </p>
-          <button className="cursor-pointer  [border:none] p-0 bg-[transparent] w-[250px] h-[55px] shrink-0">
-            <div className=" bg-[#000000] py-[12px] text-[20px] tracking-[0.1em] rounded-r-[50px]  uppercase font-[700] font-nunito-sans text-white text-center">
+          <button className="cursor-pointer  [border:none] p-0 bg-[transparent] lg:w-[250px] 2xl:w-[340px] h-[55px] shrink-0">
+            <div className=" bg-[#000000] lg:py-[12px] 2xl:py-[18px] lg:text-[20px] 2xl:text-[24px] tracking-[0.1em] rounded-r-[50px]  uppercase font-[700] font-nunito-sans text-white text-center">
               say hello
             </div>
           </button>
         </div>
         <img
-          className=" h-[650px] pr-[100px]  object-cover "
+          className=" 2xl:w-[670px] lg:w-[550px] pr-[100px]  object-fill "
+          // className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
           alt=""
           src="/heroImg.png"
         />

@@ -24,7 +24,7 @@ const CustomButton = ({ text, color }) => {
   }, []);
   return (
     <div ref={buttonRef} className="relative">
-      <div className="font-black text-[1.4rem] uppercase text-blck spacing tracking-[1rem]">
+      <div className="font-black text-[1.4rem] uppercase text-black spacing tracking-[1rem]">
         {text}
       </div>
       <div className="circle absolute bottom-[-20px] left-[-11px] "></div>

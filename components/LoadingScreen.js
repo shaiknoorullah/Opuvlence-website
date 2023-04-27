@@ -26,13 +26,12 @@ const LoadingScreen = () => {
       .timeline()
       .fromTo(
         "#loadingScreen1",
-        { opacity: 1, height: "100vh" },
+        { opacity: 1 },
         {
           opacity: 0,
 
-          height: "0px",
           transformOrigin: "bottom center",
-          duration: 2,
+          duration: 0.2,
           delay: 3.1,
         }
       )
