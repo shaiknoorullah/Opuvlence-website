@@ -10,38 +10,40 @@ const poppins = localFont({
 });
 const MobileOurProject = () => {
   return (
-    <div className="md:hidden w-[100%] pt-[30px] ">
-      <p className="relative items-center flex justify-center text-[12px] leading-[18px] tracking-[0.5%] text-[#A5787A] font-extrabold uppercase mb-[20px]">
+    <div className="lg:hidden w-[100%] pt-[9.375vw] ">
+      <p className="relative items-center flex justify-center text-[3.75vw] leading-[5.625vw] tracking-[0.05em] text-[#A5787A] font-extrabold uppercase mb-[6.25vw]">
         / our projects
       </p>
-      <div className="flex flex-row justify-between pl-[19px] pr-[23px] pb-[27px] ">
-        <div className="flex flex-col text-[15px] leading-[22.5px] tracking-[0.5px] font-[300] italic uppercase">
+      <div className="flex flex-row justify-between pl-[5.93vw] pr-[7.18vw] pb-[8.43vw] ">
+        <div className="flex flex-col text-[4.68vw] leading-[7.03vw] tracking-[0.05em] font-[300] italic uppercase">
           <div className="font-medium">-residential</div>
           <div>commercial</div>
           <div>restaurant</div>
         </div>
-        <div className="w-[36px] text-[7.06px] leading-[8.78px] tracking-[10%] font-[700] text-right">
+        <div className="w-[11.25vw] text-[2.20vw] leading-[2.743vw] tracking-[10%] font-[700] text-right">
           wE’vE bUiLt homes thAt brinG DrEAms COME trUE
         </div>
       </div>
       <img src="rectangle269.png" className="w-[100vw]"></img>
-      <div className="pl-[20px]">
+      <div className="pl-[6.25vw]">
         {/* <img src="rectangle269.png" className="w-[100vw] z-[1]"></img> */}
         <div
-          className={`${golden.className} absolute text-[50px] leading-[50px] tracking-[3%] top-[190px] z-[10]`}
+          className={`${golden.className} absolute text-[15.625vw] leading-[15.625vw] tracking-[3%] top-[59.374vw] z-[10]`}
         >
           bonito{" "}
-          <div className="rotate-[270deg] absolute left-[218px] top-[10px]  text-[16px] leading-[27px] tracking-[0.5%] font-bold">
+          <div className="rotate-[270deg] absolute left-[68.125vw] top-[3.125vw]  text-[5vw] leading-[8.43vw] tracking-[0.05em] font-bold">
             2020
           </div>
           designs
         </div>
       </div>
-      <div className="absolute right-[20px] top-[475px]">
-        <img src="group 52.svg"></img>
+      <div className="absolute right-[6.25vw] top-[151vw]">
+        <img src="group 52.svg" className="w-[45vw]"></img>
       </div>
 
-      <div className="mt-[4rem] text-[1rem] px-5 font-normal text-justify leading-[19.36px] tracking-[0.05em]">
+      <div
+        className={`${poppins.className} mt-[13vw] text-[4vw] px-[6.125vw] font-normal text-justify leading-[6.05vw] tracking-[0.05em]`}
+      >
         Using edge cutting technology to provide extremely reliable service
         Using edge cutting technology to provide extremely reliable service
         Using edge cutting technology to provide extremely reliable serviceUsing

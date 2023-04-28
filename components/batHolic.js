@@ -1,5 +1,5 @@
 import react from "react";
-import CustomButton from "./section/customButton";
+// import CustomButton from "./section/customButton";
 import localFont from "next/font/local";
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
@@ -66,7 +66,9 @@ const BasePluto = () => {
           <div key={idx}>
             <div className="flex flex-col gap-[17px] ">
               <img src={item.pic}></img>
-              <div className="text-[#A5787A]">{item.info}</div>
+              <div className="text-[#A5787A] text-[3.43vw] font-normal leading-[5vw]">
+                {item.info}
+              </div>
             </div>
           </div>
         );
@@ -85,29 +87,29 @@ const Batholic = () => {
   return (
     <div className="w-full max-w-[1920px] bg-[#270405] 3xl:pt-[105px] lg:pt-[5.46vw]">
       <div className=" flex  base:flex-col lg:flex-row 3xl:gap-[33.97px] lg:gap-[1.7692vw]">
-        <div className="h-[fit-content] lg:h-[fit-content] 3xl:w-[90px] lg:w-[4.68vw]  relative lg:rotate-[270deg] 3xl:top-[520px] lg:top-[27.08vw] ">
-          <div className="flex flex-row items-center base:gap-[5px] 3xl:gap-[40px] lg:gap-[2.08vw]">
-            <div className="base:text-[11px] base:leading-[16.5px] base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-medium italic uppercase text-[white]">
+        <div className="lg:h-[fit-content] 3xl:w-[90px] lg:w-[4.68vw]  relative lg:rotate-[270deg] 3xl:top-[520px] lg:top-[27.08vw] ">
+          <div className="flex flex-row items-center base:gap-[5.56vw] base:px-[3.125vw] 3xl:gap-[40px] lg:gap-[2.08vw]">
+            <div className="base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-medium italic uppercase text-[white]">
               residential
             </div>
             <img
               src="Vectorwhite.png"
-              className=" 3xl:w-[12.17px] 3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-[90deg]"
+              className="base:w-[2.3vw]  3xl:w-[12.17px] 3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-[90deg]"
             ></img>
-            <div className="base:text-[11px] base:leading-[16.5px] base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-[white]">
+            <div className="base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em]3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-[white]">
               commercial
             </div>
             <img
               src="Vectorwhite.png"
-              className=" 3xl:w-[12.17px]  3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-[90deg] ml-1"
+              className=" base:w-[2.3vw] 3xl:w-[12.17px]  3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-[90deg] ml-1"
             ></img>
-            <div className="base:text-[11px] base:leading-[16.5px] base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-[white]">
+            <div className="base:text-[3.43vw] base:leading-[5.15vw]  base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-[white]">
               restaurant
             </div>
           </div>
         </div>
 
-        <div className="flex  flex-col base:gap-[20px] 3xl:gap-[50px] lg:gap-[2.60vw] base:-[] base:pl-[10px] base:pr-[10px] lg:p-[0px]">
+        <div className="flex  flex-col base:gap-[20px] 3xl:gap-[50px] lg:gap-[2.60vw] base:-[] base:pl-[3.125vw] base:pr-[3.125vw] lg:p-[0px]">
           <div className="large-image">
             <img
               src={images[0]}
@@ -118,7 +120,7 @@ const Batholic = () => {
               className="3xl:w-[1084px] 3xl:h-[646px] lg:w-[56.45vw] lg:h-[33.64vw]"
             />
           </div>
-          <div className="flex flex-row base:gap-[12px] 3xl:gap-[25.51px] lg:gap-[1.32vw] small-images">
+          <div className="flex flex-row base:gap-[4.5vw] 3xl:gap-[25.51px] lg:gap-[1.32vw] small-images">
             {images.slice(1).map((image, index) => (
               <div key={index} className="small-image">
                 <img
@@ -133,13 +135,13 @@ const Batholic = () => {
             ))}
           </div>
         </div>
-        <div className="base:p-[20px] lg:p-[0px] flex flex-col base:gap-[6px] 3xl:gap-[62px] lg:gap-[3.22vw]">
+        <div className="base:px-[6.25vw] base:pt-[6.25vw] lg:p-[0px] flex flex-col base:gap-[6px] 3xl:gap-[62px] lg:gap-[3.22vw]">
           <div
-            className={`base:text-[25px] base:leading-[34.2px] base:tracking-[0.175em] 3xl:w-[509px] lg:w-[26.51vw] 3xl:text-[72px] lg:text-[3.75vw] 3xl:leading-[98.5px] lg:leading-[5.130vw] tracking-[17.5%] font-normal italic align-middle uppercase text-[white] ${golden.className}`}
+            className={`base:text-[7.81vw] base:leading-[10.68vw] base:tracking-[0.175em] 3xl:w-[509px] lg:w-[26.51vw] 3xl:text-[72px] lg:text-[3.75vw] 3xl:leading-[98.5px] lg:leading-[5.130vw] tracking-[17.5%] font-normal italic align-middle uppercase text-[white] ${golden.className}`}
           >
             Batholic plutonic
           </div>
-          <div className="3xl:w-[499px] lg:w-[25.989vw] 3xl:text-[22px] lg:text-[1.14vw] 3xl:leading-[40px] lg:leading-[2.083vw] tracking-[10%] font-normal italic align-middle  text-[#A5787A] 3xl:pl-[141px] lg:pl-[7.343vw]">
+          <div className="base:text-[3.43vw] base:leading-[5.625vw] 3xl:w-[499px] lg:w-[25.989vw] 3xl:text-[22px] lg:text-[1.14vw] 3xl:leading-[40px] lg:leading-[2.083vw] tracking-[10%] font-normal lg:italic align-middle  text-[#A5787A] 3xl:pl-[141px] lg:pl-[7.343vw]">
             Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
             mi. Aliquam in hendrerit urna. Pellentesque sitLorem ipsum dolor sit
             amet consectetur adipiscing elit Ut et massa mi. Aliquam in
@@ -150,11 +152,11 @@ const Batholic = () => {
         </div>
       </div>
       {/* lg-component */}
-      <div className="base:hidden 3xl:pt-[85px]  3xl:pl-[102px] 3xl:pr-[152px] 3xl:pb-[79px] lg:pt-[4.42vw] lg:pl-[5.312vw] lg:pr-[7.91vw] lg:pb-[4.114vw]">
+      <div className="base:hidden lg:flex 3xl:pt-[85px]  3xl:pl-[102px] 3xl:pr-[152px] 3xl:pb-[79px] lg:pt-[4.42vw] lg:pl-[5.312vw] lg:pr-[7.91vw] lg:pb-[4.114vw]">
         <Pluto />
       </div>
       {/* {base-comp} */}
-      <div className="lg:hidden p-[40px]">
+      <div className="lg:hidden p-[20px]">
         <BasePluto />
       </div>
       {/* <div className="pl-[128px] ">

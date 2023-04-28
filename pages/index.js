@@ -28,9 +28,9 @@ export default function Home() {
       {/* <Navbar />
       <Testimonials />
     <OurExpertise /> */}
-      {/* <OurProject /> */}
+      <OurProject />
       {/* <Contact /> */}
-      <Batholic />
+      {/* <Batholic /> */}
       {/* <MobileOurProject /> */}
       {/* <Hero /> */}
       {/* <div className="w-full flex justify-center">

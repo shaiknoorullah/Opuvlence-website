@@ -12,12 +12,9 @@ const poppins = localFont({
 
 const Residential = () => {
   return (
-    <div className="flex flex-row relative 3xl:gap-[12px] lg:gap-[0.625vw]">
+    <div className="flex flex-row relative w-full 3xl:gap-[12px] lg:gap-[0.625vw]">
       {/* <div className="flex flex-row  absolute bottom-[36px] left-[-200px]"> */}
-      <img
-        src="ourproject.png"
-        className="3xl:w-[550px] 3xl:h-[600px] lg:h-[28.90vw] lg:w-[28.64vw] "
-      ></img>
+      <img src="ourproject.png" className="w-[25vw]"></img>
       <div className="flex flex-col">
         <p className="font-extrabold 3xl:text-[25px] lg:text-[1.3vw] 3xl:leading-[37.5px] lg:leading-[1.95vw] tracking-[0.5%] mt-[-9px]">
           2020
@@ -72,16 +69,83 @@ const OurProject = () => {
             </div>
           </div>
         </div>
-        {/* ksd */}
-        <div className="3xl:pt-[35px] lg:pt-[1.822vw]">
-          <div className="flex flex-col justify-center items-center m-auto">
+        {/* <div className="grid w-[700px] h-[550px] grid-cols-[0.3fr_2.2fr_0.7fr_1.9fr_0.5fr_0.4fr] grid-rows-[0.1fr_1.6fr_0.8fr]">
+          <div
+            style={{
+              gridArea: "2 / 1 / 3 / 5",
+            }}
+            className={` ${golden.className} pointer-events-none select-none w-[792px]   3xl:text-[188px] lg:text-[9.79vw] lg:leading-[9.79vw] 3xl:leading-[188px] tracking-[3%] font-normal font-[gilroy] uppercase mt-0 z-[10]`}
+          >
+            Bonito Designs
+          </div>
+          <div
+            style={{
+              gridArea: "3 / 2 / 4 / 4",
+            }}
+            className="grid-cols-1 3xl:text-[16px] lg:text-[0.833vw] 3xl:leading-[24.85px] ml-8 mr-[-3.6rem] lg:leading-[1.29vw] tracking-[7%] font-normal z-[10]"
+          >
+            Using edge cutting technology to provide extremely reliable service
+            Using edge cutting technology to provide extremely reliable service
+            Using edge cutting technology to provide extremely reliable
+            serviceUsing edge cutting technology to provide extremely reliable
+            service
+          </div>
+          <div
+            style={{
+              gridArea: "1 / 3 / 4 / 6",
+            }}
+            className="w-[588px] h-[542px] ml-[90px]"
+          >
+            <img src="ourproject.png" className="w-[100%] h-[100%]"></img>
+          </div>
+          <p
+            style={{
+              gridArea: "1/ 7 / 1 / 6",
+            }}
+            className="font-extrabold 3xl:text-[25px] lg:text-[1.3vw] 3xl:leading-[37.5px] lg:leading-[1.95vw] tracking-[0.5%] mt-[-9px]"
+          >
+            2020
+          </p>
+          <div
+            style={{
+              gridArea: "2 / 6 / 4 / 7",
+            }}
+            className="relative max-w-[135px] max-h-[531px]"
+          >
+            <p className="uppercase  text-[90px] origin-top-left translate-y-[531px] rotate-[270deg]">
+              Residential
+            </p>
+          </div>
+        </div> */}
+        <div className="grid w-[80%] grid-cols-9 grid-rows-3">
+          <div className="row-span-full col-start-1 col-end-7 row-start-1 row-end-3 z-40">
             <div
-              className={` ${golden.className} 3xl:w-[892px] lg:w-[46.25vw]  3xl:text-[188px] lg:text-[9.79vw] lg:leading-[9.79vw] 3xl:leading-[188px] tracking-[3%] font-normal font-[gilroy] uppercase mt-0 z-[10]`}
+              className={` ${golden.className} pointer-events-none select-none   text-[9vw] lg:leading-[9.79vw] 3xl:leading-[188px] tracking-[3%] font-normal font-[gilroy] uppercase mt-0 z-[10]`}
             >
               bonito designs
             </div>
-            <div className="3xl:w-[892px] lg:w-[46.25vw] 3xl:text-[16px] lg:text-[0.833vw] 3xl:leading-[24.85px] lg:leading-[1.29vw] tracking-[7%] font-normal z-[10] ">
-              <div className="3xl:w-[501px] lg:w-[26.09vw] 3xl:pl-[70px] lg:pl-[3.64vw] ">
+          </div>
+          <div className="row-span-full row-start-1 row-end-4 col-start-4 col-end-9">
+            <Residential />
+          </div>
+          <div className=" font-medium  col-start-1 col-end-5 ml-[4rem] row-start-3 row-end-4 z-30">
+            Using edge cutting technology to provide extremely reliable service
+            Using edge cutting technology to provide extremely reliable service
+            Using edge cutting technology to provide extremely reliable
+            serviceUsing edge cutting technology to provide extremely reliable
+            service
+          </div>
+        </div>
+        {/* ksd */}
+        {/* <div className="3xl:pt-[35px] lg:pt-[1.822vw] mt-[15px]">
+          <div className="flex flex-col justify-center items-center m-auto">
+            <div
+              className={` ${golden.className} pointer-events-none select-none 3xl:w-[892px] lg:w-[46.25vw]  3xl:text-[188px] lg:text-[9.79vw] lg:leading-[9.79vw] 3xl:leading-[188px] tracking-[3%] font-normal font-[gilroy] uppercase mt-0 z-[10]`}
+            >
+              bonito designs
+            </div>
+            <div className=" 3xl:text-[16px] lg:text-[0.833vw] 3xl:leading-[24.85px] lg:leading-[1.29vw] tracking-[7%] font-normal z-[10] ">
+              <div className="3xl:w-[501px] font-medium lg:w-[26.09vw]">
                 Using edge cutting technology to provide extremely reliable
                 service Using edge cutting technology to provide extremely
                 reliable service Using edge cutting technology to provide
@@ -104,16 +168,16 @@ const OurProject = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="relative h-10">
-          <div className="absolute 3xl:bottom-[-50px]  3xl:left-[-180px] lg:bottom-[0] lg:left-[-9.375vw] ">
+        {/* <div className="relative h-10"> */}
+        {/* <div className="absolute 3xl:bottom-[-50px]  3xl:left-[-180px] lg:bottom-[0.5vw] lg:left-[-9.375vw] ">
+            <Residential />
+          </div> */}
+        {/* <div className="absolute 3xl:bottom-[-50px] lg:bottom-[0.5vw]  3xl:right-[330px] lg:right-[14.4vw] ">
             <Residential />
           </div>
-          <div className="absolute 3xl:bottom-[-50px] lg:bottom-[0]  3xl:right-[330px] lg:right-[14.4vw] ">
-            <Residential />
-          </div>
-        </div>
+        </div> */}
 
         {/* <div className="relative rotate-90 top-[259px] left-[600px]">
           <div className="absolute flex flex-row 3xl:gap-[10px] lg:gap-[0.52vw] ">
