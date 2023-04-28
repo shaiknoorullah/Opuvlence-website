@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import localFont from "next/font/local";
+import React, { useRef, useEffect } from "react";
+import localFont from "@next/font/local";
 import { gsap } from "gsap";
 
-// Font files can be colocated inside of `pages`
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
   variable: "--font-golden",
@@ -12,78 +11,67 @@ const poppins = localFont({
   variable: "--font-poppins",
 });
 
-const TransitionScreen = ({ defaultPaused }) => {
+const TransitionScreen = () => {
+  const contentRef = useRef(null);
+
   useEffect(() => {
-    const tl = gsap.timeline({});
-    // tl.fromTo(
-    //   "#loadingScreen2",
-    //   {
-    //     height: 0,
-    //     zIndex: "10",
-    //     bottom: 0,
-    //   },
-    //   {
-    //     height: "100vh",
-    //     bottom: 0,
-    //     transformOrigin: "bottom center",
-    //     duration: 1.5,
-    //     ease: "power4.out",
-    //     zIndex: "1000",
-    //     delay: 3.1,
-    //   }
-    // );
-    // tl.fromTo(
-    //   "#loadingScreen2",
-    //   {
-    //     height: "100vh ",
-    //     top: 0,
-    //   },
-    //   {
-    //     height: "0px",
-    //     delay: 0.8,
-    //     duration: 1.5,
-    //   }
-    // );
+    // hide content initially
+    // gsap.set(contentRef.current, { visibility: "hidden" });
+
+    // define animation timeline
+    const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+
+    const setPositions = () => {
+      const clientHeight = window.innerHeight;
+      const clientWidth = window.innerWidth;
+      const h1Height = document.getElementById("opuvlence").clientHeight;
+      const h1Width = document.getElementById("opuvlence").clientWidth;
+      const pHeight = document.getElementById("desc").clientHeight;
+      const pWidth = document.getElementById("desc").clientWidth;
+
+      document.getElementById("opuvlence").style.left = `7vw`;
+      document.getElementById("opuvlence").style.top = `${
+        50 - h1Height / 20
+      }vh`;
+    };
+    setPositions();
+
+    document.addEventListener("resize", setPositions());
+
+    // document.getElementById("#opuvlence").style.left =
+    tl.fromTo(
+      contentRef.current,
+      {
+        clipPath: "inset(100vh 0 0 0)",
+      },
+      {
+        clipPath: "inset(0px 0 0 0)",
+        duration: 0.8,
+
+        ease: "power3.out",
+      }
+    ).to(contentRef.current, {
+      clipPath: "inset(0px 0 100vh 0)",
+      duration: 0.8,
+      ease: "power3.out",
+    });
   }, []);
 
   return (
-    <div
-      id="loadingScreen2"
-      className="bg-[#340506] overflow-clip flex flex-col justify-center w-[100%]"
-    >
-      <svg
-        id="svg"
-        className="absolute top-0 left-0 z-[9999]"
-        width="1920"
-        height="1080"
-        viewBox="0 0 1920 1080"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <clipPath id="clip" clipPathUnits="objectBoundingBox">
-          <rect width="1920" height="108" fill="white" />
-        </clipPath>
-      </svg>
-      <img
-        className="absolute w-screen h-screen"
-        style={{ clipPath: "url(#clip)" }}
-        src="/loading3.png"
-        alt="test image"
-      />
+    <div className="absolute top-0 pointer-events-none left-0 w-full h-screen ">
       <div
-        // className={`absolute ${golden.className} top-[299px] left-[88px] w-[1745px] h-[361px]`}
-        style={{
-          clipPath: "url(#clip)",
-        }}
-        className={`relative flex flex-col z-[999] text-[#A5787A] justify-center items-center ${golden.className} fixed min-h-screen  w-full`}
-        id="text"
+        ref={contentRef}
+        className={`relative z-[9999] flex flex-col ${golden.className} overflow-clip justify-center text-[200px] h-screen w-full items-center text-[#A5787A] bg-[#340506]`}
       >
-        <h1 className="text-[12vw]">Opuvlence</h1>
-        <div
-          className={`${poppins.className} w-[436px] text-center overflow-hidden text-[28px] z-[100]`}
+        <h1 id="opuvlence" className="absolute top-[27vh] text-[12vw]">
+          Opuvlence
+        </h1>
+        <p
+          id="desc"
+          className={`absolute top-[70vh] left-[35vw] ${poppins.className} w-[436px] text-center text-[min(28px,1.25vw)] z-[100]`}
         >
-          Elevating the status of luxury for the deserving"
-        </div>
+          Elevating the status of luxury for the deserving
+        </p>
       </div>
     </div>
   );
