@@ -12,7 +12,7 @@ const poppins = localFont({
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-row z-[99999] relative  justify-between w-full pt-[25px] px-[40px] ">
+    <nav className="flex flex-row relative  justify-between w-full pt-[25px] px-[40px] ">
       <h3 className="m-0  text-3xl-4 text-[#CAABAC] tracking-[0.1em] lg:leading-[20px] 2xl:leading-[24px] uppercase font-semibold  ">
         <p className="m-0 lg:text-[14px] 2xl:text-[18px] ">Creating new</p>
         <p className="m-0 lg:text-[14px] 2xl:text-[18px] ">heights of luxury</p>

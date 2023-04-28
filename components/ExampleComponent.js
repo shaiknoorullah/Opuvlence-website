@@ -58,7 +58,7 @@ const ExampleComponent = () => {
   }, []);
 
   return (
-    <div className="absolute top-0 left-0 w-full h-screen ">
+    <div className="absolute top-0 pointer-events-none left-0 w-full h-screen ">
       <div
         ref={contentRef}
         className={`relative z-[9999] flex flex-col ${golden.className} overflow-clip justify-center text-[200px] h-screen w-full items-center text-[#A5787A] bg-[#340506]`}
