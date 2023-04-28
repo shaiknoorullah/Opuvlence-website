@@ -6,6 +6,7 @@
 
 html,
 body {
+  color: black;
   padding: 0;
   background-color: #f5e1e2;
   overflow-x: hidden;
@@ -52,6 +53,15 @@ a {
   background-color: transparent;
   border-radius: 50%;
 }
+.circleblack {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

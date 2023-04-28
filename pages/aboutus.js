@@ -6,12 +6,14 @@ import AboutUsMeet from "../components/aboutUsMeet";
 import LoadingScreen from "../components/LoadingScreen";
 import ExampleComponent from "../components/ExampleComponent";
 import Navbar from "../components/Navbar";
+import TransitionScreen from "../components/TransitionScreen";
 
 const Aboutus = () => {
   return (
     <div>
-      <LoadingScreen />
-      <ExampleComponent />
+      {/* <LoadingScreen />
+      <ExampleComponent /> */}
+      <TransitionScreen />
       <Navbar />
       <AboutusHero />
       <AboutUsContainer left={true} />

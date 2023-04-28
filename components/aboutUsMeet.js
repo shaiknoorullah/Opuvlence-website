@@ -1,5 +1,6 @@
 import React from "react";
 import localFont from "next/font/local";
+import Link from "next/link";
 
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
@@ -74,10 +75,11 @@ const AboutUsMeet = () => {
           {testimonial.map((data,index)=>{
             return(
               <div key={index} className="flex flex-col   ">
+                <a href="/testimonialsingle">
                 
                 <img className="rounded-t-full self-center " src="/testimonialdemo.jpg" />
                 <div className="font-medium text-[1.5rem] mt-2">{data.name}</div>
-                <div className="font-normal italic text-[1.3rem]">{data.designation}</div>
+                <div className="font-normal italic text-[1.3rem]">{data.designation}</div></a>
 
               </div>
             )
@@ -90,11 +92,12 @@ const AboutUsMeet = () => {
             {testimonial.map((data, index) => {
               return (
                 <div key={index}>
+                  <a>
                   <OurTeamSingle
                     name={data.name}
                     image={"/testimonialtesting.jpg"}
                     designation={data.designation}
-                  />
+                  /></a>
                 </div>
               );
             })}

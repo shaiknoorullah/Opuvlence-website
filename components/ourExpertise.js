@@ -119,7 +119,7 @@ const OurExpertise = () => {
             <div class="row-span-1 hidden lg:flex  items-end ">
               <div className="ml-8 pb-4">
                 {" "}
-                <CustomButton text={"Discover"} color={"black"} />
+                <CustomButton text={"Discover"} color={"black"} href="#contact" />
               </div>
             </div>
           </div>

@@ -8,9 +8,9 @@ import Services4 from "../components/Services4";
 const Services = () => {
   return (
     <div className="bg-[#F5E1E2] w-full h-screen px-[40px] ">
-      {/* <OurServices /> */}
       <TransitionScreen />
       <Navbar />
+      <OurServices />
       {/* <ServicesComp /> */}
       <Services4 />
     </div>

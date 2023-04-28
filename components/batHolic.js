@@ -1,6 +1,7 @@
 import react from "react";
 // import CustomButton from "./section/customButton";
 import localFont from "next/font/local";
+import CustomButton from "./section/customButton";
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
   variable: "--font-golden",
@@ -159,9 +160,9 @@ const Batholic = () => {
       <div className="lg:hidden p-[20px]">
         <BasePluto />
       </div>
-      {/* <div className="pl-[128px] ">
-        <CustomButton text={"CONTACT US"} />
-      </div> */}
+      <div className="pl-[128px] pb-14">
+        <CustomButton text={"CONTACT US"} color={"white"} href={"/#contact"}/>
+      </div>
     </div>
   );
 };
