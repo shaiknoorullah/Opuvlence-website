@@ -30,7 +30,7 @@ const AboutUsBehind = () => {
             </div>
 
             {/* For desktop quotation */}
-            <div className="lg:inline-block base:hidden w-[30rem] text-[1.4rem] font-bold italic ml-[17vw] pt-[11rem]">
+            <div className="lg:inline-block base:hidden w-[30rem] text-[1.4rem] font-bold italic  pt-[11rem]">
               “Using edge cutting technology to provide extremely reliable
               service Using edge cutting technology to provide extremely
               reliable service Using edge cutting technology to provide
@@ -38,7 +38,7 @@ const AboutUsBehind = () => {
             </div>
           </div>
           <div className="row-span-full lg:pl-[5rem] col-start-7 col-end-13 z-0">
-            <img src="/aboutus.jpg" />
+            <img className="rounded-br-[5rem]" src="/aboutus.jpg" />
           </div>
           
           {/*for mobile  */}

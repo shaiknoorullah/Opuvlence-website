@@ -15,7 +15,7 @@ const AboutusHero = () => {
     <div className="w-full flex justify-center">
       <div className="flex base:w-[95%] lg:w-[95%] flex-col">
         {/* text and image section grid*/}
-        <div className="lg:grid grid-cols-12 base:pt-7 lg:pt-[8rem] ">
+        <div className="lg:grid grid-cols-12 base:pt-7 lg:pt-[2rem] ">
           <div className="flex row-span-full flex-col col-start-1 col-end-6  z-50">
             <div
               className={`base:text-[2.8rem] lg:text-[6.2vw] tracking-[0.7rem] lg:leading-[130px] ${golden.className}`}

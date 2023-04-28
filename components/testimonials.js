@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomButton from "./section/customButton";
 
 const TestimonialCard = ({ text, description, image }) => {};
 
 const Testimonials = () => {
+  const [showModal, setShowModal] = useState(false);
+  console.log(showModal);
   const cards = [
     {
       title: "CAROLYN",
@@ -46,13 +48,45 @@ const Testimonials = () => {
           {cards.map((data, index) => {
             return (
               <div key={index} className="flex flex-col min-w-[68rem]">
-                <div className="text-[6rem] w-full pl-[25rem] tracking-[1rem]">
-                  {data.title}
-                </div>
-                <div className="flex gap-[4rem]">
-                  <img className="min-w-[33rem] h-[10rem]" src={data.img} />
-                  <div className="min-w-[18rem] text-[0.8rem] leading-[30px] self-end">
-                    "{data.description}"
+                {showModal && (
+                  <div
+                    className={
+                      showModal
+                        ? `fixed top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-50 z-[1000] flex justify-center items-center `
+                        : `hidden`
+                    }
+                    style={{ overflowY: "hidden" }}
+                  >
+                    <div className="bg-white rounded-lg p-8 w-[50rem]">
+                      {/* Image */}
+                      <img
+                        src={data.img}
+                        alt="Modal Image"
+                        className="mx-auto mb-4"
+                      />
+
+                      {/* Text */}
+                      <p className="text-gray-700 mb-4">{data.description}</p>
+
+                      {/* Close button */}
+                      <button
+                        className="bg-[#270405] hover:bg-black text-white font-bold py-2 px-4 rounded"
+                        onClick={() => setShowModal(false)}
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                )}
+                <div onClick={() => setShowModal(true)}>
+                  <div className="text-[6rem] w-full pl-[25rem] tracking-[1rem]">
+                    {data.title}
+                  </div>
+                  <div className="flex gap-[4rem]">
+                    <img className="min-w-[33rem] h-[10rem]" src={data.img} />
+                    <div className="min-w-[18rem] text-[0.8rem] leading-[30px] self-end">
+                      "{data.description}"
+                    </div>
                   </div>
                 </div>
               </div>
@@ -72,17 +106,13 @@ const Testimonials = () => {
               service Using edge cutting technology to provide extremely
               reliable service Using edge cutting technology.
             </div>
-            
           </div>
           <div className="flex self-end mt-8 gap-[3rem]">
             <div className="text-[1.4rem] italic underline ">PREV</div>
             <div className="text-[1.4rem] italic underline ">NEXT</div>
           </div>
-          
 
-          <div>
-
-          </div>
+          <div></div>
         </div>
 
         <div className="w-full mt-[10rem] hidden lg:flex justify-between">

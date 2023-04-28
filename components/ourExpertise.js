@@ -126,9 +126,9 @@ const OurExpertise = () => {
 
           {/* graph */}
           <div class="col-span-5 base:mt-[5rem] items-end  lg:pl-9 gap-6 lg:gap-9 grid grid-cols-3">
-            <div className="bg-[#A5787A] rounded-tl-full  w-full base:h-[9rem] lg:h-[14rem]"></div>
-            <div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] lg:h-full"></div>
-            <div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] lg:h-[18rem]"></div>
+            <div className="bg-[#A5787A] rounded-tl-full  w-full base:h-[9rem] lg:h-[20vw]"></div>
+            <div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] lg:h-[20rem]"></div>
+            <div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] lg:h-[22rem]"></div>
           </div>
         </div>
         {/* mobile description */}
