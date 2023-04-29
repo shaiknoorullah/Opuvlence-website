@@ -16,6 +16,7 @@ const Services = () => {
       <ServicesBottom />
       {/* <ServicesComp /> */}
       <Services4 />
+      <ServicesBottom />
     </div>
   );
 };

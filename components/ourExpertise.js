@@ -26,12 +26,12 @@ const NumberText = ({ number, text, state }) => {
 	return (
 		<div className={`flex w-[9rem]  flex-${state} `}>
 			<div
-				className={`${poppinsSemibold.className} font-semibold base:text-[2.8rem] lg:text-[3.5rem]`}
+				className={`${poppinsSemibold.className} font-semibold base:text-[2.8rem] lg:text-[min(3.5vw,3.5rem)]`}
 			>
 				{number}+
 			</div>
 			<div
-				className={`${poppinsMedium.className} w-[40%]  base:text-[0.9rem] lg:text-[1.5rem] font-medium lg:leading-[2.5rem] `}
+				className={`${poppinsMedium.className} w-[40%]  base:text-[0.9rem] lg:text-[min(1.8vw,1.5rem)] font-medium lg:leading-[min(2.2vw,2.5rem)] `}
 			>
 				{text}
 			</div>

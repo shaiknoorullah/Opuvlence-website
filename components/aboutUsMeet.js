@@ -6,17 +6,25 @@ const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
   variable: "--font-golden",
 });
-const poppins = localFont({
-  src: "../styles/font/poppins/Poppins-ExtraLight.woff2",
-  variable: "--font-poppins",
-});
+const poppinsExtrabold = localFont({
+	src: "../styles/font/poppins/Poppins-ExtraBold.woff2",
+})
+const poppinsRegular = localFont({
+	src: "../styles/font/poppins/Poppins-Regular.woff2",
+})
+const poppinsMedium = localFont({
+	src: "../styles/font/poppins/Poppins-Medium.woff2",
+})
+const poppinsSemibold = localFont({
+	src: "../styles/font/poppins/Poppins-SemiBold.woff2",
+})
 
 const OurTeamSingle = ({ name, image, designation }) => {
   return (
     <div className="flex gap-1 rounded-tl-[10rem] justify-center items-center flex-col">
       <img className="w-full rounded-tl-[2rem] " src={image} />
-      <div className="font-bold">{name}</div>
-      <div className="font-semibold italic text-center w-[50%]">
+      <div className={`${poppinsSemibold.className}`}>{name}</div>
+      <div className={`${poppinsRegular.className} italic text-center w-[50%]`}>
         {designation}
       </div>
     </div>
