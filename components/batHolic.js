@@ -1,6 +1,7 @@
 import react from "react";
 // import CustomButton from "./section/customButton";
 import localFont from "next/font/local";
+import CustomButton from "./section/customButton";
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
   variable: "--font-golden",
@@ -85,7 +86,8 @@ const Batholic = () => {
     "Rectangle28.png",
   ];
   return (
-    <div className="w-full max-w-[1920px] bg-[#270405] 3xl:pt-[105px] lg:pt-[5.46vw]">
+    <div className="w-full flex justify-center bg-[#270405] ">
+    <div className="w-[95%] max-w-[1920px] bg-[#270405] 3xl:pt-[105px] lg:pt-[5.46vw]">
       <div className=" flex  base:flex-col lg:flex-row 3xl:gap-[33.97px] lg:gap-[1.7692vw]">
         <div className="lg:h-[fit-content] 3xl:w-[90px] lg:w-[4.68vw]  relative lg:rotate-[270deg] 3xl:top-[520px] lg:top-[27.08vw] ">
           <div className="flex flex-row items-center base:gap-[5.56vw] base:px-[3.125vw] 3xl:gap-[40px] lg:gap-[2.08vw]">
@@ -159,10 +161,10 @@ const Batholic = () => {
       <div className="lg:hidden p-[20px]">
         <BasePluto />
       </div>
-      {/* <div className="pl-[128px] ">
-        <CustomButton text={"CONTACT US"} />
-      </div> */}
-    </div>
+      <div className="pl-[128px] pb-14">
+        <CustomButton text={"CONTACT US"} color={"white"} href={"/#contact"}/>
+      </div>
+    </div></div>
   );
 };
 export default Batholic;

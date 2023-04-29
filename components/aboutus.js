@@ -1,15 +1,10 @@
 import React from "react";
 import localFont from "next/font/local";
+import { lamore, golden, poppins } from "../utils/fonts";
+
 
 // Font files can be colocated inside of `pages`
-const golden = localFont({
-  src: "../styles/font/golden/golden.woff2",
-  variable: "--font-golden",
-});
-const poppins = localFont({
-  src: "../styles/font/poppins/Poppins-ExtraLight.woff2",
-  variable: "--font-poppins",
-});
+
 const AboutusHero = () => {
   return (
     <div className="w-full flex justify-center">
@@ -18,17 +13,17 @@ const AboutusHero = () => {
         <div className="lg:grid grid-cols-12 base:pt-7 lg:pt-[2rem] ">
           <div className="flex row-span-full flex-col col-start-1 col-end-6  z-50">
             <div
-              className={`base:text-[2.8rem] lg:text-[6.2vw] tracking-[0.7rem] lg:leading-[130px] ${golden.className}`}
+              className={`base:text-[2.8rem] lg:text-[6.2vw] tracking-[0.7rem] lg:leading-[130px] ${golden}`}
             >
               GET TO KNOW US
             </div>
-            <div className={`base:text-[1.8rem] lg:text-[2rem]`}>
+            <div className={`base:text-[1.8rem] lg:text-[2rem] ${lamore}`}>
               ThE StOrY BeHinD{" "}
             </div>
 
             {/* quotation for desktop */}
             <div
-              className={`lg:inline-block base:hidden mt-[5rem] text-[1.3rem] w-[70%] font-extrabold italic ${poppins.className}`}
+              className={`lg:inline-block base:hidden mt-[5rem] text-[1.3rem] w-[70%] font-medium italic ${poppins}`}
             >
               “Lorem Ipsum dolor sit amet consectetur adipscing lore lorem is
               lorem ipsum dolor sit amet adipscing Lorem Ipsum dolor sit amet”
@@ -48,7 +43,7 @@ const AboutusHero = () => {
           </div>
         </div>
         <div
-          className={`lg:hidden base:inline-block   lg:text-[1.3rem] w-[80%] font-extrabold italic ${poppins.className}`}
+          className={`lg:hidden base:inline-block   lg:text-[1.3rem] w-[80%] font-extrabold italic ${poppins}`}
         >
           “Lorem Ipsum dolor sit amet consectetur adipscing lore lorem is lorem
           ipsum dolor sit amet adipscing Lorem Ipsum dolor sit amet”
@@ -56,7 +51,7 @@ const AboutusHero = () => {
 
         {/* description*/}
         <div
-          className={`${poppins.className} lg:ml-[17rem] lg:mr-[10rem] base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-bold`}
+          className={`${poppins} lg:ml-[17rem] lg:mr-[10rem] base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal`}
         >
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
           Aliquam in hendrerit urna. Pellentesque sitLorem ipsum dolor sit amet

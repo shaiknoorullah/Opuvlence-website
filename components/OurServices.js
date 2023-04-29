@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import localFont from "next/font/local";
+import CustomButton from "./section/customButton";
 
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
@@ -44,11 +45,10 @@ const OurServices = () => {
             Using edge cutting technology to provide extremely reliable service
             Using edge cutting technology.”
           </div>
-          <button className="cursor-pointer col-start-1 row-start-2 lg:mt-[-6rem] base:mt-5  ml-5  [border:none] p-0 bg-[transparent] lg:w-[250px] 2xl:w-[340px] h-[55px] shrink-0 w-[60%] ">
-            <div className=" bg-[#000000] lg:py-[12px] 2xl:py-[18px] lg:text-[20px] 2xl:text-[24px] tracking-[0.1em] rounded-r-[50px] px-8 py-2  uppercase font-[700] font-nunito-sans text-white text-center">
-              say hello
-            </div>
-          </button>
+           <div className="mt-10 col-start-1 col-end-4 row-start-2">
+            {" "}
+            <CustomButton text="Say Hello" href={"#contact"} />
+          </div>
         </div>
       </div>
     </div>
