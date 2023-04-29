@@ -18,7 +18,8 @@ import Footer from "../components/Footer";
 
 import MobileOurProject from "../components/Mobileourproject";
 import About from "../components/About";
-import { useEffect, useState } from "react";
+// import Project from "../components/project";
+import CasesLibrary from "../components/CasesLibray";
 export default function Home() {
   return (
     <>
@@ -43,7 +44,6 @@ export default function Home() {
       <Contact />
       <Footer />
       {/* <Batholic /> */}
-      {/* <MobileOurProject /> */}
       {/* <Hero /> */}
      
       {/* <Contact /> */}
