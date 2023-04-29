@@ -161,86 +161,93 @@ const OurExpertise = () => {
 							</div>
 						</div>
 
-            {/* button */}
-            <div class="row-span-1 hidden lg:flex  items-center">
-              <div className="ml-8 pb-4">
-                {" "}
-                <CustomButton
-                  text={"Discover"}
-                  color={"black"}
-                  href="#contact"
-                />
-              </div>
-            </div>
-          </div>
+						{/* button */}
+						<div class="row-span-1 hidden lg:flex  items-center">
+							<div className="ml-8 pb-4">
+								{" "}
+								<CustomButton
+									text={"Discover"}
+									color={"black"}
+									href="#contact"
+								/>
+							</div>
+						</div>
+					</div>
 
-          {/* graph */}
-          <div class="col-span-5 base:mt-[5rem] lg:mt-[-2rem] items-end  lg:pl-9 gap-6 lg:gap-9 grid grid-cols-3">
-           {/* restaurant */}
-            <div className="flex flex-col items-center gap-6">
-              <div
-                className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
-              >
-                75%
-              </div>
-              <div className="bg-[#A5787A] rounded-tl-full  w-full base:h-[9rem] lg:h-[min(15vw,22rem)]"></div>
-              <div
-                className={`text-[#A5787A] text-[1.3rem] font-semibold italic ${poppinsRegular.className}`}
-              >
-                RESTAURANT
-              </div>
-            </div>
-            {/* residential */}
-            <div className="flex flex-col items-center gap-6">
-              <div
-                className={`${poppinsRegular.className} text-[#524646] text-[1.3rem] font-normal`}
-              >
-                86%
-              </div>
-              <div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] lg:h-[min(25vw,34rem)]"></div>
-              <div
-                className={`${poppinsRegular.className} text-[#A5787A] text-[1.3rem] font-semibold italic `}
-              >
-                RESIDENTIAL
-              </div>
-            </div>
-            {/* coperate */}
-            <div className="flex flex-col items-center gap-6">
-              <div
-                className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
-              >
-                78%
-              </div>
-              <div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] lg:h-[min(20vw,28rem)]"></div>
-              <div
-                className={`text-[#A5787A] text-[1.3rem] font-semibold italic ${poppinsRegular.className} `}
-              >
-                CORPORATE
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* mobile description */}
-        <div className="lg:hidden  w-full mt-10">
-          <div className="lg:text-[0.9rem] text-[1.2rem]  text-center text-[#A5787A] leading-[1.5rem]">
-            Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to provide extremely reliable
-            serviceUsing edge cutting technology to provide extremely reliable
-            service
-          </div>
-        </div>
-      </div>
+					{/* graph */}
+					<div class="col-span-5 base:mt-[5rem] lg:mt-[-2rem] items-end  lg:pl-9 gap-6 lg:gap-9 grid grid-cols-3">
+						{/* restaurant */}
+						<div className="flex flex-col items-center gap-6">
+							<div
+								className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
+							>
+								75%
+							</div>
+							<div className="bg-[#A5787A] rounded-tl-full  w-full base:h-[9rem] lg:h-[min(15vw,22rem)]"></div>
+							<div
+								className={`text-[#A5787A] text-[1.3rem] font-semibold italic ${poppinsRegular.className}`}
+							>
+								RESTAURANT
+							</div>
+						</div>
+						{/* residential */}
+						<div className="flex flex-col items-center gap-6">
+							<div
+								className={`${poppinsRegular.className} text-[#524646] text-[1.3rem] font-normal`}
+							>
+								86%
+							</div>
+							<div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] lg:h-[min(25vw,34rem)]"></div>
+							<div
+								className={`${poppinsRegular.className} text-[#A5787A] text-[1.3rem] font-semibold italic `}
+							>
+								RESIDENTIAL
+							</div>
+						</div>
+						{/* coperate */}
+						<div className="flex flex-col items-center gap-6">
+							<div
+								className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
+							>
+								78%
+							</div>
+							<div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] lg:h-[min(20vw,28rem)]"></div>
+							<div
+								className={`text-[#A5787A] text-[1.3rem] font-semibold italic ${poppinsRegular.className} `}
+							>
+								CORPORATE
+							</div>
+						</div>
+					</div>
+				</div>
+				{/* mobile description */}
+				<div className="lg:hidden  w-full mt-10">
+					<div className="lg:text-[0.9rem] text-[1.2rem]  text-center text-[#A5787A] leading-[1.5rem]">
+						Using edge cutting technology to provide
+						extremely reliable service Using edge cutting
+						technology to provide extremely reliable service
+						Using edge cutting technology to provide
+						extremely reliable serviceUsing edge cutting
+						technology to provide extremely reliable service
+					</div>
+				</div>
+			</div>
 
-      {/* background text */}
-      <div className="absolute hidden scale-[2] top-[18%]  lg:inline-block golden  opacity-70 text-[#DFCECF4D]">
-        <img src="/achievements.svg" className="max-h-[15rem] ml-[25rem]" />
-      </div>
-      <div className="absolute hidden scale-[2] bottom-[18%] lg:inline-block golden  opacity-70 text-[#DFCECF4D]">
-        <img src="/achievements.svg" className="max-h-[15rem]" />
-      </div>
-    </div>
-  );
-};
+			{/* background text */}
+			<div className="absolute hidden scale-[2] top-[18%]  lg:inline-block golden  opacity-70 text-[#DFCECF4D]">
+				<img
+					src="/achievements.svg"
+					className="max-h-[15rem] ml-[25rem]"
+				/>
+			</div>
+			<div className="absolute hidden scale-[2] bottom-[18%] lg:inline-block golden  opacity-70 text-[#DFCECF4D]">
+				<img
+					src="/achievements.svg"
+					className="max-h-[15rem]"
+				/>
+			</div>
+		</div>
+	)
+}
 
 export default OurExpertise
