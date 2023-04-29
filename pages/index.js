@@ -44,7 +44,7 @@ export default function Home() {
 			<Hero />
 			<Imgs4 />
 			<OurExpertise />
-			{/* <OurProject /> */}
+			<OurProject />
 			<MobileOurProject />
 			<Testimonials />
 			<Contact />

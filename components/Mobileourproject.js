@@ -10,6 +10,8 @@ const poppins = localFont({
 	src: "../styles/font/poppins/Poppins-ExtraLight.woff2",
 	variable: "--font-poppins",
 })
+
+import { lamore } from "../utils/fonts"
 const MobileOurProject = () => {
 	return (
 		<div className="lg:hidden w-[100%] pt-[9.375vw]">
@@ -17,13 +19,15 @@ const MobileOurProject = () => {
 				/ our projects
 			</p>
 			<div className="flex flex-row justify-between pl-[5.93vw] pr-[7.18vw] pb-[8.43vw] ">
-				<div className="flex flex-col text-[4.68vw] leading-[7.03vw] tracking-[0.05em] font-[300] italic uppercase">
+				<div className="flex text-black flex-col text-[4.68vw] leading-[7.03vw] tracking-[0.05em] font-[300] italic uppercase">
 					<div className="font-medium">-residential</div>
 					<div>commercial</div>
 					<div>restaurant</div>
 				</div>
-				<div className="w-[11.25vw] text-[2.20vw] leading-[2.743vw] tracking-[10%] font-[700] text-right">
-					wE’vE bUiLt homes thAt brinG DrEAms COME trUE
+				<div
+					className={`${lamore} w-[11.25vw] text-black text-[min(9px,2.20vw)] leading-[2.743vw] tracking-[10%] font-[700] text-right`}
+				>
+					wE&apos;vE bUiLt homes thAt brinG DrEAms COME trUE
 				</div>
 			</div>
 			<div className="relative">
@@ -34,7 +38,7 @@ const MobileOurProject = () => {
 				<div className="pl-[6.25vw]">
 					{/* <img src="rectangle269.png" className="w-[100vw] z-[1]"></img> */}
 					<div
-						className={`${golden.className} absolute text-[15.625vw] leading-[15.625vw] tracking-[3%] top-[15.374vw] z-[10]`}
+						className={`${golden.className} text-black absolute text-[15.625vw] leading-[15.625vw] tracking-[3%] top-[15.374vw] z-[10]`}
 					>
 						bonito{" "}
 						<div className="rotate-[270deg] absolute left-[68.125vw] top-[3.125vw]  text-[5vw] leading-[8.43vw] tracking-[0.05em] font-bold">
@@ -49,6 +53,16 @@ const MobileOurProject = () => {
 					src="group 52.svg"
 					className="absolute w-[45vw]"
 				></img>
+			</div>
+			<div
+				className={`${poppins.className} mt-[13vw] text-black text-[4vw] px-[6.125vw] font-normal text-justify leading-[6.05vw] tracking-[0.05em]`}
+			>
+				Using edge cutting technology to provide extremely
+				reliable service Using edge cutting technology to
+				provide extremely reliable service Using edge
+				cutting technology to provide extremely reliable
+				serviceUsing edge cutting technology to provide
+				extremely reliable service
 			</div>
 		</div>
 	)
