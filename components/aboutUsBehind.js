@@ -1,6 +1,18 @@
 import React from "react";
 import localFont from "next/font/local";
 import { lamore, golden, poppins } from "../utils/fonts";
+const poppinsExtrabold = localFont({
+	src: "../styles/font/poppins/Poppins-ExtraBold.woff2",
+})
+const poppinsRegular = localFont({
+	src: "../styles/font/poppins/Poppins-Regular.woff2",
+})
+const poppinsMedium = localFont({
+	src: "../styles/font/poppins/Poppins-Medium.woff2",
+})
+const poppinsSemibold = localFont({
+	src: "../styles/font/poppins/Poppins-SemiBold.woff2",
+})
 
 // Font files can be colocated inside of `pages`
 
@@ -24,7 +36,7 @@ const AboutUsBehind = () => {
             </div>
 
             {/* For desktop quotation */}
-            <div className={`lg:inline-block base:hidden w-[30rem] text-[1.4rem] font-bold italic  pt-[11rem] ${poppins}`}>
+            <div className={`lg:inline-block base:hidden w-[32rem] text-[1.4rem]  italic  pt-[11rem] ${poppinsSemibold.className}`}>
               “Using edge cutting technology to provide extremely reliable
               service Using edge cutting technology to provide extremely
               reliable service Using edge cutting technology to provide
@@ -44,7 +56,7 @@ const AboutUsBehind = () => {
         </div>
         </div>
         <div
-          className={`${poppins} base:text-right lg:text-left lg:ml-[25rem] lg:mr-[5rem] text-[1.1rem] py-11 text-black leading-8 font-bold`}
+          className={`${poppinsRegular.className} base:text-right lg:text-left lg:ml-[25rem] lg:mr-[5rem] text-[1.1rem] py-11 text-black leading-8 `}
         >
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
           Aliquam in hendrerit urna. Pellentesque sitLorem ipsum dolor sit amet
