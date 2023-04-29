@@ -6,6 +6,10 @@ import ScrollContainer from "react-indiana-drag-scroll"
 import { useEffect } from "react"
 import { gsap } from "gsap"
 import Link from "next/link"
+import ProjectCard from "./projectCard"
+
+// import images statically
+import projectImage from "../public/ourproject.png"
 
 const golden = localFont({
 	src: "../styles/font/golden/golden.woff2",
@@ -94,15 +98,39 @@ const OurProject = () => {
 	return (
 		<div className="w-full max-w-[1920px] items-center flex justify-center ">
 			<div className="font-poppins w-[98%] z-50 ">
-				<div className="w-[65%] justify-center font-extrabold text-[1.3rem] text-[#A5787A] flex pt-[20px]">
-					/ OUR PROJECTS
-				</div>
-				<div className="flex flex-row 3xl:gap-[168px] lg:gap-[8.75vw]">
-					<text className="3xl:w-[583px] lg:w-[30.36vw]  3xl:text-[33px] lg:text-[1.71vw]  3xl:leading-[45.34px] lg:leading-[2.361vw] tracking-[10%] font-bold 3xl:pl-[50px] 3xl:pt-[41px] lg:pl-[2.60vw] lg:pt-[2.13vw] snap-center font-[lamore]">
+				<div className="grid grid-cols-[1.3fr_0.4fr_1.2fr_1.2fr] grid-rows-[0.4fr_0.6fr_0.7fr_0.5fr_0.4fr]">
+					<div
+						style={{
+							gridColumnStart: 2,
+							gridColumnEnd: 3,
+							gridRowStart: 1,
+							gridRowEnd: 2,
+						}}
+						className="w-[100%] justify-center font-extrabold text-[1.3rem] text-[#A5787A] flex pt-[20px]"
+					>
+						/ OUR PROJECTS
+					</div>
+					<text
+						style={{
+							gridColumnStart: 1,
+							gridColumnEnd: 2,
+							gridRowStart: 3,
+							gridRowEnd: 4,
+						}}
+						className=" 3xl:w-[583px] text-black lg:w-[30.36vw]  3xl:text-[33px] lg:text-[1.71vw]  3xl:leading-[45.34px] lg:leading-[2.361vw] tracking-[10%] font-bold 3xl:pl-[50px] 3xl:pt-[41px] lg:pl-[2.60vw] lg:pt-[2.13vw] snap-center font-[lamore]"
+					>
 						WE&apos;VE BUILT HOMES THAT BRING DREAMS COME
 						TRUE
 					</text>
-					<div className="3xl:w-[442px] lg:w-[23.02vw] 3xl:text-[16px] lg:text-[0.833vw] 3xl:leading-[24.85px] lg:leading-[1.294vw] tracking-[7%] font-normal  3xl:pt-[86px] lg:pt-[4.47vw]  snap-center">
+					<div
+						style={{
+							gridColumnStart: 3,
+							gridColumnEnd: 4,
+							gridRowStart: 3,
+							gridRowEnd: 5,
+						}}
+						className="3xl:w-[442px] text-[#270405] lg:w-[23.02vw] 3xl:text-[16px] lg:text-[0.833vw] 3xl:leading-[24.85px] lg:leading-[1.294vw] tracking-[7%] font-normal  3xl:pt-[86px] lg:pt-[4.47vw]  snap-center"
+					>
 						Using edge cutting technology to provide
 						extremely reliable service Using edge cutting
 						technology to provide extremely reliable service
@@ -110,26 +138,34 @@ const OurProject = () => {
 						extremely reliable serviceUsing edge cutting
 						technology to provide extremely reliable service
 					</div>
-				</div>
-				{/* reuse */}
-				<div className="3xl:w-[587px] lg:w-[30.57vw] 3xl:pl-[50px] lg:pl-[2.60vw]  relative">
-					<div className="flex flex-row items-center 3xl:gap-[15px] lg:gap-[0.78vw] absolute 3xl:top-[-13.59px] lg:top-[-0.708vw]">
-						<div className="3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%] font-medium italic uppercase">
-							residential
-						</div>
-						<img
-							src="OurprojectVector.png"
-							className=" 3xl:h-[12.17px] 3xl:w-[64.78px] lg:h-[0.633vw] lg:w-[3.37vw]"
-						></img>
-						<div className="3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase">
-							commercial
-						</div>
-						<img
-							src="OurprojectVector.png"
-							className="3xl:h-[12.17px] 3xl:w-[64.78px] lg:h-[0.633vw] lg:w-[3.37vw]  ml-1"
-						></img>
-						<div className="3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase">
-							restaurant
+					{/* reuse */}
+					<div
+						style={{
+							gridColumnStart: 1,
+							gridColumnEnd: 2,
+							gridRowStart: 5,
+							gridRowEnd: 6,
+						}}
+						className="3xl:w-[587px] lg:w-[30.57vw] 3xl:pl-[50px] lg:pl-[2.60vw]  relative"
+					>
+						<div className="flex text-black flex-row items-center 3xl:gap-[15px] lg:gap-[0.78vw] absolute 3xl:top-[-13.59px] lg:top-[-0.708vw]">
+							<div className="3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%] font-medium italic uppercase">
+								residential
+							</div>
+							<img
+								src="OurprojectVector.png"
+								className=" 3xl:h-[12.17px] 3xl:w-[64.78px] lg:h-[0.633vw] lg:w-[3.37vw]"
+							></img>
+							<div className="3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase">
+								commercial
+							</div>
+							<img
+								src="OurprojectVector.png"
+								className="3xl:h-[12.17px] 3xl:w-[64.78px] lg:h-[0.633vw] lg:w-[3.37vw]  ml-1"
+							></img>
+							<div className="3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase">
+								restaurant
+							</div>
 						</div>
 					</div>
 				</div>
@@ -141,239 +177,27 @@ const OurProject = () => {
 						overflow: "scroll",
 					}}
 				>
-					<div className="select-none grid grid-flow-row grid-cols-[0.03fr_0.22fr_0.1fr_0.15fr_0.07fr_0.05fr] grid-rows-[0.1fr_1.6fr_0.45fr]">
-						<div
-							style={{
-								// gridArea: "2 / 1 / 3 / 4",
-								gridColumnStart: 1,
-								gridRowStart: 2,
-								gridColumnEnd: 5,
-								gridRowEnd: 3,
-							}}
-							className={` ${golden.className} pointer-events-none w-[min(992px,47vw)] 3xl:ml-[-25px] lg:ml-[-1.30vw] 3xl:text-[188px] lg:text-[9vw] leading-[min(188px,9vw)] tracking-[0.03em] font-normal font-[gilroy] uppercase mt-0 z-[10]`}
-						>
-							Bonito Designs
-						</div>
-						<div
-							style={{
-								// gridArea: "3 / 2 / 4 / 4",
-								gridColumnStart: 2,
-								gridColumnEnd: 4,
-								gridRowStart: 3,
-								gridRowEnd: 4,
-							}}
-							className="3xl:text-[16px] pointer-events-none w-[min(600px,32vw)] lg:text-[0.85vw] 3xl:leading-[24.85px] lg:leading-[1.29vw] tracking-[0.007em] font-normal z-[10]"
-						>
-							Using edge cutting technology to provide
-							extremely reliable service Using edge cutting
-							technology to provide extremely reliable
-							service Using edge cutting technology to
-							provide extremely reliable serviceUsing edge
-							cutting technology to provide extremely
-							reliable service
-						</div>
-						<div
-							style={{
-								// gridArea: "1 / 3 / 4 / 5",
-								gridColumnStart: 3,
-								gridColumnEnd: 6,
-								gridRowStart: 1,
-								gridRowEnd: 4,
-							}}
-							className="w-[min(588px,30.625vw)] cursor-pointer"
-						>
-							<Link
-								href="/projects/residential"
-								passHref
-							>
-								<img
-									src="ourproject.png"
-									className=""
-								></img>
-							</Link>
-						</div>
-
-						<p
-							style={{
-								// gridArea: "1/ 7 / 1 / 6",
-								gridColumnStart: 6,
-								gridColumnEnd: 7,
-								gridRowStart: 1,
-								gridRowEnd: 2,
-								justifySelf: "center",
-							}}
-							className="font-extrabold w-[min(100px, 5vw)] 3xl:text-[25px] lg:text-[1.2vw]  leading-[min(37.5px,3vw)] tracking-[0.05em] mt-[-9px]"
-						>
-							2020
-						</p>
-						<div
-							style={{
-								// gridArea: "2 / 6 / 4 / 7",
-								gridColumnStart: 6,
-								gridColumnEnd: 7,
-								gridRowStart: 2,
-								gridRowEnd: 4,
-							}}
-							className="relative w-[min(100px, 5vw)]"
-						>
-							{/* <div className="w-[100%]"></div> */}
-							<p className="uppercase absolute bottom-0 left-0 origin-top-left -rotate-90 -translate-x-[min(25px,1.30vw)]  translate-y-[min(135px,6.7vw)]  text-[min(90px,4.6vw)]">
-								Residential
-							</p>
-						</div>
-					</div>
-					<div className=" pointer-events-none select-none grid grid-flow-row grid-cols-[0.03fr_0.22fr_0.1fr_0.15fr_0.07fr_0.05fr] grid-rows-[0.1fr_1.6fr_0.45fr]">
-						<div
-							style={{
-								// gridArea: "2 / 1 / 3 / 4",
-								gridColumnStart: 1,
-								gridRowStart: 2,
-								gridColumnEnd: 5,
-								gridRowEnd: 3,
-							}}
-							className={` ${golden.className} w-[min(992px,47vw)] 3xl:ml-[-25px] lg:ml-[-1.30vw] 3xl:text-[188px] lg:text-[9vw] leading-[min(188px,9vw)] tracking-[0.03em] font-normal font-[gilroy] uppercase mt-0 z-[10]`}
-						>
-							Bonito Designs
-						</div>
-						<div
-							style={{
-								// gridArea: "3 / 2 / 4 / 4",
-								gridColumnStart: 2,
-								gridColumnEnd: 4,
-								gridRowStart: 3,
-								gridRowEnd: 4,
-							}}
-							className="3xl:text-[16px] w-[min(600px,32vw)] lg:text-[0.85vw] 3xl:leading-[24.85px] lg:leading-[1.29vw] tracking-[0.007em] font-normal z-[10]"
-						>
-							Using edge cutting technology to provide
-							extremely reliable service Using edge cutting
-							technology to provide extremely reliable
-							service Using edge cutting technology to
-							provide extremely reliable serviceUsing edge
-							cutting technology to provide extremely
-							reliable service
-						</div>
-						<div
-							style={{
-								// gridArea: "1 / 3 / 4 / 5",
-								gridColumnStart: 3,
-								gridColumnEnd: 6,
-								gridRowStart: 1,
-								gridRowEnd: 4,
-							}}
-							className="w-[min(588px,30.625vw)]"
-						>
-							<img
-								src="ourproject.png"
-								className=""
-							></img>
-						</div>
-
-						<p
-							style={{
-								// gridArea: "1/ 7 / 1 / 6",
-								gridColumnStart: 6,
-								gridColumnEnd: 7,
-								gridRowStart: 1,
-								gridRowEnd: 2,
-								justifySelf: "center",
-							}}
-							className="font-extrabold w-[min(100px, 5vw)] 3xl:text-[25px] lg:text-[1.2vw]  leading-[min(37.5px,3vw)] tracking-[0.05em] mt-[-9px]"
-						>
-							2020
-						</p>
-						<div
-							style={{
-								// gridArea: "2 / 6 / 4 / 7",
-								gridColumnStart: 6,
-								gridColumnEnd: 7,
-								gridRowStart: 2,
-								gridRowEnd: 4,
-							}}
-							className="relative w-[min(100px, 5vw)]"
-						>
-							{/* <div className="w-[100%]"></div> */}
-							<p className="uppercase absolute bottom-0 left-0 origin-top-left -rotate-90 -translate-x-[min(25px,1.30vw)]  translate-y-[min(135px,6.7vw)]  text-[min(90px,4.6vw)]">
-								Residential
-							</p>
-						</div>
-					</div>
-					<div className=" pointer-events-none select-none grid grid-flow-row grid-cols-[0.03fr_0.22fr_0.1fr_0.15fr_0.07fr_0.05fr] grid-rows-[0.1fr_1.6fr_0.45fr]">
-						<div
-							style={{
-								// gridArea: "2 / 1 / 3 / 4",
-								gridColumnStart: 1,
-								gridRowStart: 2,
-								gridColumnEnd: 5,
-								gridRowEnd: 3,
-							}}
-							className={` ${golden.className} w-[min(992px,47vw)] 3xl:ml-[-25px] lg:ml-[-1.30vw] 3xl:text-[188px] lg:text-[9vw] leading-[min(188px,9vw)] tracking-[0.03em] font-normal font-[gilroy] uppercase mt-0 z-[10]`}
-						>
-							Bonito Designs
-						</div>
-						<div
-							style={{
-								// gridArea: "3 / 2 / 4 / 4",
-								gridColumnStart: 2,
-								gridColumnEnd: 4,
-								gridRowStart: 3,
-								gridRowEnd: 4,
-							}}
-							className="3xl:text-[16px] w-[min(600px,32vw)] lg:text-[0.85vw] 3xl:leading-[24.85px] lg:leading-[1.29vw] tracking-[0.007em] font-normal z-[10]"
-						>
-							Using edge cutting technology to provide
-							extremely reliable service Using edge cutting
-							technology to provide extremely reliable
-							service Using edge cutting technology to
-							provide extremely reliable serviceUsing edge
-							cutting technology to provide extremely
-							reliable service
-						</div>
-						<div
-							style={{
-								// gridArea: "1 / 3 / 4 / 5",
-								gridColumnStart: 3,
-								gridColumnEnd: 6,
-								gridRowStart: 1,
-								gridRowEnd: 4,
-							}}
-							className="w-[min(588px,30.625vw)]"
-						>
-							<img
-								src="ourproject.png"
-								className=""
-							></img>
-						</div>
-
-						<p
-							style={{
-								// gridArea: "1/ 7 / 1 / 6",
-								gridColumnStart: 6,
-								gridColumnEnd: 7,
-								gridRowStart: 1,
-								gridRowEnd: 2,
-								justifySelf: "center",
-							}}
-							className="font-extrabold w-[min(100px, 5vw)] 3xl:text-[25px] lg:text-[1.2vw]  leading-[min(37.5px,3vw)] tracking-[0.05em] mt-[-9px]"
-						>
-							2020
-						</p>
-						<div
-							style={{
-								// gridArea: "2 / 6 / 4 / 7",
-								gridColumnStart: 6,
-								gridColumnEnd: 7,
-								gridRowStart: 2,
-								gridRowEnd: 4,
-							}}
-							className="relative w-[min(100px, 5vw)]"
-						>
-							{/* <div className="w-[100%]"></div> */}
-							<p className="uppercase absolute bottom-0 left-0 origin-top-left -rotate-90 -translate-x-[min(25px,1.30vw)]  translate-y-[min(135px,6.7vw)]  text-[min(90px,4.6vw)]">
-								Residential
-							</p>
-						</div>
-					</div>
+					<ProjectCard
+						src={projectImage}
+						title="Bonito Designs"
+						description="Indulge in the world of luxury interior design with our exceptional showcase of projects. From opulent residential homes to lavish commercial spaces, we cater to the most discerning clients in Bangalore. Slide through our stunning designs and let us inspire you to transform your space into a beautiful, functional work of art that exudes luxury."
+						year="2022"
+						type="residential"
+					/>
+					<ProjectCard
+						src={projectImage}
+						title="Bonito Designs"
+						description="Indulge in the world of luxury interior design with our exceptional showcase of projects. From opulent residential homes to lavish commercial spaces, we cater to the most discerning clients in Bangalore. Slide through our stunning designs and let us inspire you to transform your space into a beautiful, functional work of art that exudes luxury."
+						year="2022"
+						type="residential"
+					/>
+					<ProjectCard
+						src={projectImage}
+						title="Bonito Designs"
+						description="Indulge in the world of luxury interior design with our exceptional showcase of projects. From opulent residential homes to lavish commercial spaces, we cater to the most discerning clients in Bangalore. Slide through our stunning designs and let us inspire you to transform your space into a beautiful, functional work of art that exudes luxury."
+						year="2022"
+						type="residential"
+					/>
 					<Link
 						href="/project"
 						passHref
