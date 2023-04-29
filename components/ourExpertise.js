@@ -1,131 +1,165 @@
-import React from "react";
-import CustomButton from "./section/customButton";
-import { lamore, golden, poppins } from "../utils/fonts";
+/** @format */
+
+import React from "react"
+import CustomButton from "./section/customButton"
+import { useLocomotiveScroll } from "react-locomotive-scroll"
+import localFont from "next/font/local"
+
+const poppinsExtrabold = localFont({
+	src: "../styles/font/poppins/Poppins-ExtraBold.woff2",
+})
+const poppinsRegular = localFont({
+	src: "../styles/font/poppins/Poppins-Regular.woff2",
+})
+const poppinsMedium = localFont({
+	src: "../styles/font/poppins/Poppins-Medium.woff2",
+})
+const poppinsSemibold = localFont({
+	src: "../styles/font/poppins/Poppins-SemiBold.woff2",
+})
+
+import { lamore } from "../utils/fonts"
 
 // number component
 
 const NumberText = ({ number, text, state }) => {
-  return (
-    <div className={`flex w-[9rem]  flex-${state} `}>
-      <div
-        className={`font-semibold ${poppins} base:text-[2.8rem] lg:text-[3.5rem]`}
-      >
-        {number}+
-      </div>
-      <div
-        className={`w-[40%]  base:text-[0.9rem] lg:text-[1.5rem] font-medium lg:leading-[2.5rem] ${poppins}`}
-      >
-        {text}
-      </div>
-    </div>
-  );
-};
+	return (
+		<div className={`flex w-[9rem]  flex-${state} `}>
+			<div
+				className={`${poppinsSemibold.className} font-semibold base:text-[2.8rem] lg:text-[3.5rem]`}
+			>
+				{number}+
+			</div>
+			<div
+				className={`${poppinsMedium.className} w-[40%]  base:text-[0.9rem] lg:text-[1.5rem] font-medium lg:leading-[2.5rem] `}
+			>
+				{text}
+			</div>
+		</div>
+	)
+}
 
 const OurExpertise = () => {
-  return (
-    <div className="w-full flex  justify-center relative">
-      <div className="font-poppins base:w-[90%] max-w-[1900px]  lg:w-[95%] z-50 flex flex-col my-[10rem] ">
-        {/* our Expertise title */}
-        <div className="flex lg:justify-start base:justify-center">
-          <div className="lg:flex hidden w-[30%]"></div>
+	const { scroll } = useLocomotiveScroll()
 
-          <div
-            className={`font-[800] ${poppins} text-[1.2rem] text-[#A5787A] flex`}
-          >
-            / OUR EXPERTISE
-          </div>
-        </div>
+	return (
+		<div
+			data-scroll
+			data-scroll-speed="1.2"
+			className="w-full flex justify-center mt-[-170px] relative"
+		>
+			<div
+				data-scroll
+				data-scroll-speed="1.6"
+				className={`base:w-[90%] max-w-[1900px]  lg:w-[95%] z-50 flex flex-col py-12`}
+			>
+				{/* our Expertise title */}
+				<div className="flex lg:justify-start base:justify-center">
+					<div className="lg:flex hidden w-[30%]"></div>
 
-        {/*25 years experience  */}
-        <div
-          className={`lg:w-[30%] ${poppins} base:text-[1.5rem] lg:text-[1.8rem] lg:text-left base:text-center  leading-[2.4rem] font-[700] pt-8`}
-        >
-          25 YEARS OF EXPERIENCE IN INTERIOR DESIGN
-        </div>
+					<div
+						className={`${poppinsExtrabold.className} uppercase font-extrabold text-[1.2rem] text-[#A5787A] flex`}
+					>
+						<span className="inline-block text-[1rem] mr-3">
+							/
+						</span>
+						<span className="inline-block mr-3 mt-[-3px]">
+							our expertise
+						</span>
+					</div>
+				</div>
 
-        {/* description for lg */}
-        <div className="lg:flex base:hidden w-full">
-          <div className="w-[35%]"></div>
-          <div
-            className={`text-[0.9rem] ${poppins} w-[30rem] text-[#A5787A] leading-[1.5rem]`}
-          >
-            Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to provide extremely reliable
-            serviceUsing edge cutting technology to provide extremely reliable
-            service
-          </div>
-        </div>
+				{/*25 years experience  */}
+				<div
+					className={`${lamore} lg:w-[30%] base:text-[1.5rem] lg:text-[1.8rem] lg:text-left base:text-center text-black leading-[2.4rem] font-[700] pt-8`}
+				>
+					25 YEARS OF EXPERIENCE IN INTERIOR DESIGN
+				</div>
 
-        {/* grid */}
-        <div className="w-full grid base:grid-cols-2 lg:grid-cols-11 pt-9">
-          <div class="col-span-6  w-full grid lg:grid-rows-3">
-            {/* for desktop */}
-            <div class="lg:row-span-2 lg:grid lg:grid-cols-2 gap-3  hidden">
-              <div>
-                <NumberText
-                  number={"25"}
-                  text={"Years Experience"}
-                  state={"col"}
-                />
-              </div>
-              <div>
-                <NumberText
-                  number={"32"}
-                  text={"Professional Team"}
-                  state={"col"}
-                />
-              </div>
-              <div className="hidden lg:flex">
-                <NumberText
-                  number={"50"}
-                  text={"Awards Gained"}
-                  state={"row"}
-                />
-              </div>
-              <div className="hidden lg:flex">
-                <NumberText
-                  number={"5,000"}
-                  text={"Projects Completed"}
-                  state={"row"}
-                />
-              </div>
-            </div>
+				{/* description for lg */}
+				<div className="lg:flex base:hidden w-full">
+					<div className="w-[35%]"></div>
+					<div
+						className={`${poppinsRegular.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
+					>
+						Using edge cutting technology to provide
+						extremely reliable service Using edge cutting
+						technology to provide extremely reliable service
+						Using edge cutting technology to provide
+						extremely reliable serviceUsing edge cutting
+						technology to provide extremely reliable service
+					</div>
+				</div>
 
-            {/* for mobile */}
+				{/* grid */}
+				<div className="w-full grid base:grid-cols-2 lg:grid-cols-11 pt-9">
+					<div class="col-span-6  w-full grid lg:grid-rows-3">
+						{/* for desktop */}
+						<div class="lg:row-span-2 lg:grid text-black lg:grid-cols-2 gap-3  hidden">
+							<div>
+								<NumberText
+									number={"25"}
+									text={"Years Experience"}
+									state={"col"}
+								/>
+							</div>
+							<div>
+								<NumberText
+									number={"32"}
+									text={"Professional Team"}
+									state={"col"}
+								/>
+							</div>
+							<div className="hidden lg:flex">
+								<NumberText
+									number={"50"}
+									text={"Awards Gained"}
+									state={"row"}
+								/>
+							</div>
+							<div className="hidden lg:flex">
+								<NumberText
+									number={"5,000"}
+									text={"Projects Completed"}
+									state={"row"}
+								/>
+							</div>
+						</div>
 
-            <div className="base:flex lg:hidden justify-between">
-              <div className="flex flex-col gap-3">
-                <NumberText
-                  number={"25"}
-                  text={"Years Experience"}
-                  state={"col"}
-                />
-                <NumberText
-                  number={"50"}
-                  text={"Awards Gained"}
-                  state={"col"}
-                  end={true}
-                />
-              </div>
-              <div className="flex flex-col gap-3">
-                <div className="self-end">
-                  <NumberText
-                    number={"32"}
-                    text={"Professional Team"}
-                    state={"col"}
-                  />
-                </div>
-                <div className="self-end">
-                  <NumberText
-                    number={"5,000"}
-                    text={"Projects Completed"}
-                    state={"col"}
-                    end={true}
-                  />
-                </div>
-              </div>
-            </div>
+						{/* for mobile */}
+
+						<div className="base:flex lg:hidden justify-between">
+							<div className="flex flex-col gap-3">
+								<NumberText
+									number={"25"}
+									text={"Years Experience"}
+									state={"col"}
+								/>
+								<NumberText
+									number={"50"}
+									text={"Awards Gained"}
+									state={"col"}
+									end={true}
+								/>
+							</div>
+							<div className="flex flex-col gap-3">
+								<div className="self-end">
+									<NumberText
+										number={"32"}
+										text={"Professional Team"}
+										state={"col"}
+									/>
+								</div>
+								<div className="self-end">
+									<NumberText
+										number={"5,000"}
+										text={"Projects Completed"}
+										state={"col"}
+										end={true}
+									/>
+								</div>
+							</div>
+						</div>
 
             {/* button */}
             <div class="row-span-1 hidden lg:flex  items-center">
@@ -209,4 +243,4 @@ const OurExpertise = () => {
   );
 };
 
-export default OurExpertise;
+export default OurExpertise

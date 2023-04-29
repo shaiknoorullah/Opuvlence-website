@@ -1,34 +1,34 @@
-import React, { useState } from "react";
-import CustomButton from "./section/customButton";
-import { ScrollContainer } from 'react-indiana-drag-scroll'
-import { lamore, golden, poppins } from "../utils/fonts";
+/** @format */
 
+import React, { useState } from "react"
+import CustomButton from "./section/customButton"
+import ScrollContainer from "react-indiana-drag-scroll"
 
-const TestimonialCard = ({ text, description, image }) => {};
+const TestimonialCard = ({ text, description, image }) => {}
 
 const Testimonials = () => {
-  const [showModal, setShowModal] = useState(false);
-  console.log(showModal);
-  const cards = [
-    {
-      title: "CAROLYN",
-      img: "/testimonial.png",
-      description:
-        "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
-    },
-    {
-      title: "CAROLYN",
-      img: "/testimonial.png",
-      description:
-        "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
-    },
-    {
-      title: "CAROLYN",
-      img: "/testimonial.png",
-      description:
-        "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
-    },
-  ];
+	const [showModal, setShowModal] = useState(false)
+	console.log(showModal)
+	const cards = [
+		{
+			title: "CAROLYN",
+			img: "/testimonial.png",
+			description:
+				"Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
+		},
+		{
+			title: "CAROLYN",
+			img: "/testimonial.png",
+			description:
+				"Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
+		},
+		{
+			title: "CAROLYN",
+			img: "/testimonial.png",
+			description:
+				"Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
+		},
+	]
 
   return (
     <div className="w-full flex   justify-center relative">
@@ -70,8 +70,10 @@ const Testimonials = () => {
                         className="mx-auto mb-4"
                       />
 
-                      {/* Text */}
-                      <p className="text-gray-700 mb-4">{data.description}</p>
+												{/* Text */}
+												<p className="text-gray-700 mb-4">
+													{data.description}
+												</p>
 
                       {/* Close button */}
                       <button
@@ -99,29 +101,34 @@ const Testimonials = () => {
           })}</ScrollContainer>
         </div>
 
-        {/* cards mobile */}
-        <div className=" flex lg:hidden flex-col justify-center">
-        {showModal && (
-                  <div
-                    className={
-                      showModal
-                        ? `fixed top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-50 z-[1000] flex justify-center items-center `
-                        : `hidden`
-                    }
-                    style={{ overflowY: "hidden" }}
-                  >
-                    <div className="bg-white rounded-lg base:p-3 lg:p-8 w-[50rem]">
-                      {/* Image */} 
-                      <img
-                        src="/testimonial.png"
-                        alt="Modal Image"
-                        className="mx-auto mb-4"
-                      />
+				{/* cards mobile */}
+				<div className=" flex lg:hidden flex-col justify-center">
+					{showModal && (
+						<div
+							className={
+								showModal
+									? `fixed top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-50 z-[1000] flex justify-center items-center `
+									: `hidden`
+							}
+							style={{ overflowY: "hidden" }}
+						>
+							<div className="bg-white rounded-lg base:p-3 lg:p-8 w-[50rem]">
+								{/* Image */}
+								<img
+									src="/testimonial.png"
+									alt="Modal Image"
+									className="mx-auto mb-4"
+								/>
 
-                      {/* Text */}
-                      <p className="text-gray-700 mb-4"> Using edge cutting technology to provide extremely reliable
-              service Using edge cutting technology to provide extremely
-              reliable service Using edge cutting technology.</p>
+								{/* Text */}
+								<p className="text-gray-700 mb-4">
+									{" "}
+									Using edge cutting technology to provide
+									extremely reliable service Using edge
+									cutting technology to provide extremely
+									reliable service Using edge cutting
+									technology.
+								</p>
 
                       {/* Close button */}
                       <button
@@ -149,8 +156,8 @@ const Testimonials = () => {
             <div className="text-[1.4rem] italic underline ">NEXT</div>
           </div>
 
-          <div></div>
-        </div>
+					<div></div>
+				</div>
 
         <div className="w-full mt-[10rem] hidden lg:flex justify-between">
           <div className=" pl-8 z-[1000]">
@@ -166,4 +173,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Testimonials
