@@ -61,7 +61,7 @@ const Testimonials = () => {
         </div>
         <div className="w-full mt-[10rem] flex justify-between">
           <div className=" pl-8">
-            <CustomButton text={"DISCOVER"} color={"black"} />
+            <CustomButton text={"DISCOVER"} color={"black"} href="/" />
           </div>
           <div className="flex gap-[3rem]">
             <div>PREV</div>

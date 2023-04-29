@@ -26,15 +26,15 @@ export default function Home() {
 
       {/* <LoadingScreen /> */}
       {/* <TransitionScreen /> */}
-      {/* <Navbar />
+      <Navbar />
       <Testimonials />
-    <OurExpertise /> */}
-      <OurProject />
+      <OurExpertise />
+      {/* <OurProject /> */}
+      <MobileOurProject />
       {/* <Project /> */}
 
       {/* <Contact /> */}
       {/* <Batholic /> */}
-      {/* <MobileOurProject /> */}
       {/* <Hero /> */}
       {/* <div className="w-full flex justify-center">
         <About />
