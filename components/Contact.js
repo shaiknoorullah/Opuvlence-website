@@ -71,6 +71,7 @@ const Contact = () => {
 				<CustomButton
 					text={"Submit"}
 					color={"black"}
+					href={"/"}
 				/>
 			</div>
 		</div>
