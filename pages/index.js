@@ -43,9 +43,9 @@ export default function Home() {
       {/* <Batholic /> */}
       {/* <MobileOurProject /> */}
       {/* <Hero /> */}
-      {/* <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center">
         <About />
-      </div> */}
+      </div>
       {/* <Contact /> */}
     </>
   );
