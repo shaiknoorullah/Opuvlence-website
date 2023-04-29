@@ -12,7 +12,10 @@ const Services = () => {
       <TransitionScreen />
       <Navbar />
       {/* pls remove services4  , servicescomp and ourservices  */}
+      {/* <OurServices /> */}
       <ServicesBottom />
+      {/* <ServicesComp /> */}
+      <Services4 />
     </div>
   );
 };

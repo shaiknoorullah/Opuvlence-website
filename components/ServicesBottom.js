@@ -182,7 +182,7 @@ const servicesBottom = () => {
   }, [service1, service2, service3, service4]);
   return (
     <div className="flex w-full justify-center h-fit">
-      <div className="max-w-[1920px] flex lg:flex-row base:flex-col h-[700px] ">
+      <div className="max-w-[1920px] flex h-[700px] ">
         {/* first service */}
         <div
           id="first"

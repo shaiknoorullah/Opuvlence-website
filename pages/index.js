@@ -31,21 +31,21 @@ export default function Home() {
       <LoadingScreen />
       <ExampleComponent />
       {/* <TransitionScreen /> */}
-      {/* <Navbar />
+      <Navbar />
       <Hero />
       <Imgs4 />
       <About />
-      <OurExpertise /> */}
-      {/* <OurProject /> */}
-      {/* <Testimonials />
+      <OurExpertise />
+      <OurProject />
+      <Testimonials />
       <Contact />
-      <Footer /> */}
+      <Footer />
       <Batholic />
-      {/* <MobileOurProject /> */}
+      {/* <MobileOurProject />
       {/* <Hero /> */}
-      {/* <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center">
         <About />
-      </div> */}
+      </div>
       {/* <Contact /> */}
     </>
   );
