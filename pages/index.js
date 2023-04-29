@@ -14,6 +14,7 @@ import Contact from "../components/Contact";
 import TransitionScreen from "../components/TransitionScreen";
 import MobileOurProject from "../components/Mobileourproject";
 import About from "../components/About";
+import Project from "../components/project";
 export default function Home() {
   return (
     <>
@@ -29,6 +30,8 @@ export default function Home() {
       <Testimonials />
     <OurExpertise /> */}
       <OurProject />
+      {/* <Project /> */}
+
       {/* <Contact /> */}
       {/* <Batholic /> */}
       {/* <MobileOurProject /> */}

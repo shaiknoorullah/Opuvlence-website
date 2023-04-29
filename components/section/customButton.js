@@ -1,6 +1,7 @@
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
-const CustomButton = ({ text, color }) => {
+const CustomButton = ({ text, color, href }) => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
@@ -23,12 +24,15 @@ const CustomButton = ({ text, color }) => {
     };
   }, []);
   return (
-    <div ref={buttonRef} className="relative">
-      <div className="font-black text-[1.4rem] uppercase text-blck spacing tracking-[1rem]">
-        {text}
+    <Link href={href}>
+      {" "}
+      <div ref={buttonRef} className="relative">
+        <div className="font-black text-[1.4rem] uppercase text-blck spacing tracking-[1rem]">
+          {text}
+        </div>
+        <div className="circle absolute bottom-[-20px] left-[-11px] "></div>
       </div>
-      <div className="circle absolute bottom-[-20px] left-[-11px] "></div>
-    </div>
+    </Link>
   );
 };
 
