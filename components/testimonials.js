@@ -3,6 +3,8 @@
 import React, { useState } from "react"
 import CustomButton from "./section/customButton"
 import ScrollContainer from "react-indiana-drag-scroll"
+import { lamore, golden, poppins } from "../utils/fonts";
+
 
 const TestimonialCard = ({ text, description, image }) => {}
 

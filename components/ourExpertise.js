@@ -80,7 +80,7 @@ const OurExpertise = () => {
 				<div className="lg:flex base:hidden w-full">
 					<div className="w-[35%]"></div>
 					<div
-						className={`${poppinsRegular.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
+						className={`${poppinsRegular.className.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
 					>
 						Using edge cutting technology to provide
 						extremely reliable service Using edge cutting
@@ -179,13 +179,13 @@ const OurExpertise = () => {
            {/* restaurant */}
             <div className="flex flex-col items-center gap-6">
               <div
-                className={`text-[#524646] text-[1.3rem] font-normal ${poppins}`}
+                className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
               >
                 75%
               </div>
               <div className="bg-[#A5787A] rounded-tl-full  w-full base:h-[9rem] lg:h-[min(15vw,22rem)]"></div>
               <div
-                className={`text-[#A5787A] text-[1.3rem] font-semibold italic ${poppins}`}
+                className={`text-[#A5787A] text-[1.3rem] font-semibold italic ${poppinsRegular.className}`}
               >
                 RESTAURANT
               </div>
@@ -193,13 +193,13 @@ const OurExpertise = () => {
             {/* residential */}
             <div className="flex flex-col items-center gap-6">
               <div
-                className={`${poppins} text-[#524646] text-[1.3rem] font-normal`}
+                className={`${poppinsRegular.className} text-[#524646] text-[1.3rem] font-normal`}
               >
                 86%
               </div>
               <div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] lg:h-[min(25vw,34rem)]"></div>
               <div
-                className={`${poppins} text-[#A5787A] text-[1.3rem] font-semibold italic `}
+                className={`${poppinsRegular.className} text-[#A5787A] text-[1.3rem] font-semibold italic `}
               >
                 RESIDENTIAL
               </div>
@@ -207,13 +207,13 @@ const OurExpertise = () => {
             {/* coperate */}
             <div className="flex flex-col items-center gap-6">
               <div
-                className={`text-[#524646] text-[1.3rem] font-normal ${poppins}`}
+                className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
               >
                 78%
               </div>
               <div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] lg:h-[min(20vw,28rem)]"></div>
               <div
-                className={`text-[#A5787A] text-[1.3rem] font-semibold italic ${poppins} `}
+                className={`text-[#A5787A] text-[1.3rem] font-semibold italic ${poppinsRegular.className} `}
               >
                 CORPORATE
               </div>
