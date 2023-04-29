@@ -18,7 +18,7 @@ const About = () => {
       </div>
       <div className="base:pl-[6.25vw] base:pr-[6.25vw] 3xl:pl-[191px] 3xl:pr-[191px] lg:pl-[9.64vw] lg:pr-[9.64vw] lg:flex lg:flex-row relative lg:gap-[11.41vw] 3xl:gap-[226px] z-[100]">
         <div
-          className={`base:w-[60.56vw] base:text-[8.88vw] base:leading-[14.88vw] base:tracking-[2.46vw] 3xl:w-[656px] 3xl:text-[115px] 3xl:leading-[157.32px] 3xl:tracking-[17.5px] font-normal ${golden.className} lg:text-[5.80vw] lg:leading-[7.94vw] lg:tracking-[0.88vw] lg:w-[33.1313vw]`}
+          className={`base:w-[60.56vw] base:text-[8.88vw] base:leading-[14.88vw] base:tracking-[2.46vw] 3xl:w-[656px] 3xl:text-[115px] 3xl:leading-[157.32px] 3xl:tracking-[17.5px] font-normal ${golden.className} lg:text-[5.80vw] lg:leading-[7.94vw] lg:tracking-[0.88vw] lg:w-[33.1313vw] text-black`}
         >
           get to kno<span className="lg:text-[white] base:text-[black]">w</span>{" "}
           <span className="lg:text-black base:text-white">us</span>
@@ -36,7 +36,7 @@ const About = () => {
             <div className="lg:text-[white] text-right base:text-[black]">
               lit<span className="text-[black] text-right ">tle</span>
             </div>
-            <div className="text-right">better</div>
+            <div className="text-right text-black">better</div>
           </div>
         </div>
       </div>

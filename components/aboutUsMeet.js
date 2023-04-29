@@ -6,17 +6,25 @@ const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
   variable: "--font-golden",
 });
-const poppins = localFont({
-  src: "../styles/font/poppins/Poppins-ExtraLight.woff2",
-  variable: "--font-poppins",
-});
+const poppinsExtrabold = localFont({
+	src: "../styles/font/poppins/Poppins-ExtraBold.woff2",
+})
+const poppinsRegular = localFont({
+	src: "../styles/font/poppins/Poppins-Regular.woff2",
+})
+const poppinsMedium = localFont({
+	src: "../styles/font/poppins/Poppins-Medium.woff2",
+})
+const poppinsSemibold = localFont({
+	src: "../styles/font/poppins/Poppins-SemiBold.woff2",
+})
 
 const OurTeamSingle = ({ name, image, designation }) => {
   return (
     <div className="flex gap-1 rounded-tl-[10rem] justify-center items-center flex-col">
-      <img className="w-full rounded-tl-[2rem] " src={image} />
-      <div className="font-bold">{name}</div>
-      <div className="font-semibold italic text-center w-[50%]">
+      <img className="w-full rounded-tl-[10vw] " src={image} />
+      <div className={`${poppinsSemibold.className}`}>{name}</div>
+      <div className={`${poppinsRegular.className} italic text-center w-[50%]`}>
         {designation}
       </div>
     </div>
@@ -57,12 +65,12 @@ const AboutUsMeet = () => {
         <div className=" lg:grid grid-cols-12">
           <div className="col-start-1 col-end-11  flex flex-col z-50">
             <div
-              className={`lg:hidden base:text-[2.8rem] lg:text-[4.8vw] tracking-[0.5rem] base:leading-[65px] lg:leading-[130px] ${golden.className} capitalize leading-[7rem] `}
+              className={`lg:hidden base:text-[2.8rem] lg:text-[min(4.8vw)] tracking-[0.5rem] base:leading-[65px] lg:leading-[130px] ${golden.className} capitalize leading-[7rem] `}
             >
               meet the team behind the magic
             </div>
             <div
-              className={`lg:inline-block base:hidden base:text-[2.8rem] lg:text-[4.8vw] tracking-[0.5rem] base:leading-[65px] lg:leading-[130px] ${golden.className} capitalize leading-[7rem] `}
+              className={`lg:inline-block base:hidden base:text-[2.8rem] lg:text-[min(4.8vw,6rem)] tracking-[0.5rem] base:leading-[65px] lg:leading-[min(6vw,130px)] ${golden.className} capitalize leading-[7rem] `}
             >
               Meet the creative minds behind our designs - our team
             </div>
@@ -87,7 +95,7 @@ const AboutUsMeet = () => {
         </div>
 
         {/* mobile testimonial */}
-        <div className="flex w-full justify-center">
+        <div className="flex w-full mt-16 justify-center">
           <div className="base:grid gap-5 w-full lg:hidden grid-cols-2">
             {testimonial.map((data, index) => {
               return (

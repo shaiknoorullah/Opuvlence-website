@@ -26,12 +26,12 @@ const NumberText = ({ number, text, state }) => {
 	return (
 		<div className={`flex w-[9rem]  flex-${state} `}>
 			<div
-				className={`${poppinsSemibold.className} text-black font-semibold base:text-[2.8rem] lg:text-[3.5rem]`}
+				className={`${poppinsSemibold.className} text-black font-semibold base:text-[2.8rem] lg:text-[min(3.5vw,3.5rem)]`}
 			>
 				{number}+
 			</div>
 			<div
-				className={`${poppinsMedium.className} text-black w-[40%]  base:text-[0.9rem] lg:text-[1.5rem] font-medium lg:leading-[2.5rem] `}
+				className={`${poppinsMedium.className} text-black w-[40%]  base:text-[0.9rem] lg:text-[min(1.8vw,1.5rem)] font-medium lg:leading-[min(2.2vw,2.5rem)] `}
 			>
 				{text}
 			</div>
@@ -46,7 +46,7 @@ const OurExpertise = () => {
 		<div
 			data-scroll
 			data-scroll-speed="1.2"
-			className="w-full flex justify-center mt-[-170px] relative"
+			className="w-full flex justify-center base:mt-[5rem] lg:mt-[170px] relative"
 		>
 			<div
 				data-scroll
@@ -82,12 +82,15 @@ const OurExpertise = () => {
 					<div
 						className={`${poppinsRegular.className.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
 					>
-						Using edge cutting technology to provide
-						extremely reliable service Using edge cutting
-						technology to provide extremely reliable service
-						Using edge cutting technology to provide
-						extremely reliable serviceUsing edge cutting
-						technology to provide extremely reliable service
+						At our interior design company in Bangalore,
+						we&apos;re committed to delivering exceptional
+						service and stunning designs that exceed
+						expectations. Our expertise and creativity have
+						made us a trusted source for transforming spaces
+						into something extraordinary. But don&apos;t
+						take our word for it - hear from our satisfied
+						customers about their experiences working with
+						us.
 					</div>
 				</div>
 
@@ -128,7 +131,7 @@ const OurExpertise = () => {
 
 						{/* for mobile */}
 
-						<div className="base:flex relative lg:hidden justify-between">
+						<div className="base:flex lg:hidden justify-between">
 							<div className="flex flex-col gap-3">
 								<NumberText
 									number={"25"}
@@ -179,13 +182,13 @@ const OurExpertise = () => {
 						{/* restaurant */}
 						<div className="flex flex-col items-center gap-6">
 							<div
-								className={`text-[#524646] md:text-[1.3rem] sm:text-[9px] font-normal ${poppinsRegular.className}`}
+								className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
 							>
 								75%
 							</div>
 							<div className="bg-[#A5787A] rounded-tl-full  w-full base:h-[9rem] lg:h-[min(15vw,22rem)]"></div>
 							<div
-								className={`text-[#A5787A] md:text-[1.3rem] sm:text-[9px]  font-semibold italic ${poppinsRegular.className}`}
+								className={`text-[#A5787A] base:text-[0.8rem] lg:text-[1.3rem] font-semibold italic ${poppinsRegular.className}`}
 							>
 								RESTAURANT
 							</div>
@@ -193,13 +196,13 @@ const OurExpertise = () => {
 						{/* residential */}
 						<div className="flex flex-col items-center gap-6">
 							<div
-								className={`${poppinsRegular.className} text-[#524646] md:text-[1.3rem] sm:text-[9px]  font-normal`}
+								className={`${poppinsRegular.className} text-[#524646] text-[1.3rem] font-normal`}
 							>
 								86%
 							</div>
 							<div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] lg:h-[min(25vw,34rem)]"></div>
 							<div
-								className={`${poppinsRegular.className} text-[#A5787A] md:text-[1.3rem] sm:text-[9px]  font-semibold italic `}
+								className={`${poppinsRegular.className} base:text-[0.8rem] lg:text-[1.3rem] text-[#A5787A]  font-semibold italic `}
 							>
 								RESIDENTIAL
 							</div>
@@ -207,13 +210,13 @@ const OurExpertise = () => {
 						{/* coperate */}
 						<div className="flex flex-col items-center gap-6">
 							<div
-								className={`text-[#524646] md:text-[1.3rem] sm:text-[9px]  font-normal ${poppinsRegular.className}`}
+								className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
 							>
 								78%
 							</div>
 							<div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] lg:h-[min(20vw,28rem)]"></div>
 							<div
-								className={`text-[#A5787A] md:text-[1.3rem] sm:text-[9px]  font-semibold italic ${poppinsRegular.className} `}
+								className={`text-[#A5787A] base:text-[0.8rem] lg:text-[1.3rem] font-semibold italic ${poppinsRegular.className} `}
 							>
 								CORPORATE
 							</div>

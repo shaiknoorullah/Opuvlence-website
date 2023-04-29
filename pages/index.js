@@ -17,6 +17,8 @@ import ExampleComponent from "../components/ExampleComponent"
 import Footer from "../components/Footer"
 
 import MobileOurProject from "../components/Mobileourproject"
+import CasesLibrary from "../components/CasesLibray"
+
 import About from "../components/About"
 import { useEffect, useState } from "react"
 export default function Home() {
@@ -43,6 +45,9 @@ export default function Home() {
 			<Navbar />
 			<Hero />
 			<Imgs4 />
+			<div className="w-full flex justify-center">
+				<About />
+			</div>
 			<OurExpertise />
 			<OurProject />
 			<MobileOurProject />
