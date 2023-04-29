@@ -34,7 +34,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Imgs4 />
-      <About />
+      <div className="w-full flex justify-center">
+        <About />
+      </div>
       <OurExpertise />
       <OurProject />
       <Testimonials />
@@ -43,9 +45,7 @@ export default function Home() {
       {/* <Batholic /> */}
       {/* <MobileOurProject /> */}
       {/* <Hero /> */}
-      <div className="w-full flex justify-center">
-        <About />
-      </div>
+     
       {/* <Contact /> */}
     </>
   );
