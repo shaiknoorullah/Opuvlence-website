@@ -105,9 +105,9 @@ const Hero = () => {
 			// data-scroll-section
 			className=" w-[100%] relative z-[1000] flex justify-center base:px-[20px] lg:px-[40px]  "
 		>
-			<section className="flex lg:flex-row base:flex-col max-w-[1920px] items-start mt-[20px] justify-between mr-12 w-full text-left ">
-				<div className="flex flex-col base:items-center lg:items-start justify-start gap-[30px]">
-					<h1 className="m-0  text-[#270405] base:text-[2rem]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[90px] 2xl:leading-[100px] ">
+			<section className="flex lg:flex-row base:flex-col max-w-[1920px] lg:items-start mt-[20px] lg:justify-between lg:mr-12 w-full text-left ">
+				<div className="flex flex-col base:items-center w-full lg:items-start justify-start gap-[30px]">
+					<h1 className="m-0  text-[#270405] base:text-[2rem]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[min(5vw,90px)] 2xl:leading-[100px] ">
 						<div
 							className={`w-full base:flex flex-col base:justify-center lg:justify-start base:items-center lg:items-start  ${golden.className} `}
 						>
@@ -175,9 +175,10 @@ const Hero = () => {
 							</div>
 						</div>
 					</h1>
-					<div className="lg:hidden base:inline-block w-[min(712px,15vw)] h-[min(782px,70vh)] relative overflow-clip rounded-tl-full rounded-tr-full">
+					{/* image for mobile */}
+					<div className="lg:hidden base:inline-block w-full h-[min(500px,60vh)] relative overflow-clip rounded-tl-full rounded-tr-full">
 						<Image
-							className=" absolute top-10 right-[10] object-fill "
+							className=" absolute top-0 lg:right-[10] object-fill "
 							// className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
 							alt="image of a luxury chair"
 							src={heroImage}
@@ -185,9 +186,9 @@ const Hero = () => {
 					</div>
 					<p
 						id="description"
-						className={`m-0 base:text-center lg:text-left text-[#A5787A] lg:text-lg 2xl:text-[22px] tracking-wide lg:leading-[30px] 2xl:leading-[34px] font-[400] flex flex-col items-start lg:w-[670px] ${poppins.className}`}
+						className={`m-0 base:text-center lg:text-left text-[#A5787A]  lg:text-[min(1.3vw,20px)] 2xl:text-[22px] tracking-wide lg:leading-[30px] 2xl:leading-[34px] font-[400] flex flex-col items-start lg:w-[500px] ${poppins.className}`}
 					>
-						{`Lorem ipsum dolor sit amet consectetur adipiscing elit Ut\net massa Lorem ipsum dolorit amet consectetur\nadipiscing elit Ut et massami. Aliquam in hendrerit urna.\nPellentesque sitLorem ipsum dolor sit amet consectetur\nadipiscing elit Ut et massa mi. Aliquam in hendrerit urna.\nPellentesque sitLorem ipsum dolor sit amet consectetur\nadipiscing elit Ut et massa mi. Aliquam in hendrerit urna.\nPellentesque sit`
+						{`Welcome to our Interior Design company in Bangalore! We specialize in Home & Commercial Decor, Furniture Design, Space Planning, Custom Interiors, Renovation, & Luxury Design. Let us transform your space into something truly extraordinary. Contact us today for bespoke solutions tailored to your unique needs.`
 							.split(/\r?\n/)
 							.map((char, idx) => {
 								return (
@@ -200,10 +201,11 @@ const Hero = () => {
 								)
 							})}
 					</p>
-					<div className="mt-10">
+					<div className="lg:mt-10 base:mt-3">
 						{" "}
 						<CustomButton
 							text="Say Hello"
+							color={"black"}
 							href={"#contact"}
 						/>
 					</div>
@@ -212,12 +214,12 @@ const Hero = () => {
 					id="heroImage"
 					data-scroll
 					data-scroll-speed="1.7"
-					className="w-[min(712px,40vw)] h-[min(782px,75vh)] relative overflow-clip rounded-tl-full rounded-tr-full"
+					className="w-[min(712px,40vw)] h-[min(782px,75vh)] base:hidden lg:inline-block relative overflow-clip rounded-tl-full rounded-tr-full"
 				>
 					<Image
 						data-scroll
 						data-scroll-speed="1.5"
-						className="lg:inline-block base:hidden absolute top-[-20px] right-[10] h-[800px] object-cover"
+						className="lg:inline-block base:hidden absolute top-[-20px] lg:right-[10] h-[800px] "
 						// className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
 						alt="image of a luxury chair"
 						src={heroImage}

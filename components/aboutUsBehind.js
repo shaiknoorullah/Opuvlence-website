@@ -19,24 +19,24 @@ const poppinsSemibold = localFont({
 
 const AboutUsBehind = () => {
   return (
-    <div className="w-full flex base:justify-center lg:justify-end py-14 ">
-      <div className="base:w-[95%] lg:w-[97.5%]">
+    <div className="w-full flex base:justify-center lg:justify-center py-14 ">
+      <div className="base:w-[95%] max-w-[1920px] lg:w-[97.5%]">
         {/* grid  */}
         <div className="base:flex base:flex-col lg:grid grid-cols-12">
           <div className="row-span-full col-start-1 col-end-11 flex w-full flex-col z-50">
             <div
-              className={`hidden lg:inline-block text-[4.8vw] tracking-[0.7rem] leading-[130px] ${golden} capitalize leading-[7rem] `}
+              className={`hidden lg:inline-block text-[min(4.8vw,6rem)] tracking-[0.7rem] leading-[min(7vw,130px)] ${golden} capitalize  `}
             >
               Behind every great company is a great founder - meet ours.
             </div>
             <div
-              className={`lg:hidden base:text-[2.8rem] lg:text-[4.8vw]  self-center justify-self-center tracking-[0.7rem] leading-[65px] ${golden.className} capitalize leading-[7rem] `}
+              className={`lg:hidden base:text-[2.8rem] lg:text-[4.8vw]  self-center justify-self-center tracking-[0.7rem] leading-[65px] ${golden} capitalize leading-[5rem] `}
             >
               meet our visionary founder
             </div>
 
             {/* For desktop quotation */}
-            <div className={`lg:inline-block base:hidden w-[32rem] text-[1.4rem]  italic  pt-[11rem] ${poppinsSemibold.className}`}>
+            <div className={`lg:inline-block base:hidden w-[32rem] text-[min(1.5vw,1.4rem)]  italic  pt-[11rem] ${poppinsSemibold.className}`}>
               “Using edge cutting technology to provide extremely reliable
               service Using edge cutting technology to provide extremely
               reliable service Using edge cutting technology to provide

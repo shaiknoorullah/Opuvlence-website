@@ -45,7 +45,7 @@ const OurServices = () => {
             Using edge cutting technology to provide extremely reliable service
             Using edge cutting technology.”
           </div>
-           <div className="mt-10 col-start-1 col-end-4 row-start-2">
+          <div className="mt-10 col-start-1 col-end-4 row-start-2">
             {" "}
             <CustomButton text="Say Hello" href={"#contact"} />
           </div>
@@ -74,10 +74,8 @@ export default OurServices;
     <div
       className={`text-[#A5787A] w-[32%] leading-[24px] text-[14px]  ${poppins.className}`}
     >
-      Using edge cutting technology to provide extremely reliable service Using
-      edge cutting technology to provide extremely reliable service Using edge
-      cutting technology to provide extremely reliable serviceUsing edge cutting
-      technology to provide extremely reliable service
+      We offer stunning residential interiors and optimized rental spaces.
+      Custom designs and renovations available. Let us transform your space.
     </div>
   </div>
   <div className="flex w-[90%] items-center justify-between ">
@@ -85,10 +83,8 @@ export default OurServices;
       <p
         className={`text-[#270405] text-[20px] leading-[34px] tracking-wide  italic font-[500] w-[450px] mx-[70px] my-[60px] ${poppinsItalic.className} `}
       >
-        “Using edge cutting technology to provide extremely reliable service
-        Using edge cutting technology to provide extremely reliable service
-        Using edge cutting technology to provide extremely reliable service
-        Using edge cutting technology.”
+        “We offer stunning residential interiors and optimized rental spaces.
+        Custom designs and renovations available. Let us transform your space.”
       </p>
       <button className="cursor-pointer  [border:none] p-0 bg-[transparent] w-[250px] h-[55px] shrink-0">
         <div className=" bg-[#000000] py-[10px] text-[22px] tracking-[0.1em] rounded-r-[50px]  uppercase font-[700] font-nunito-sans text-white text-center">
