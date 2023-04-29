@@ -322,15 +322,15 @@ const Services4 = () => {
     const first = document.getElementById("first");
     const second = document.getElementById("second");
     first.addEventListener("mouseenter", onMouseEnter1);
-    // first.addEventListener("mouseleave", onMouseLeave1);
-    // second.addEventListener("mouseenter", onMouseEnter2);
-    // second.addEventListener("mouseleave", onMouseLeave2);
+    first.addEventListener("mouseleave", onMouseLeave1);
+    second.addEventListener("mouseenter", onMouseEnter2);
+    second.addEventListener("mouseleave", onMouseLeave2);
 
     return () => {
       first.removeEventListener("mouseenter", onMouseEnter1);
-      // first.removeEventListener("mouseleave", onMouseLeave1);
-      // second.removeEventListener("mouseenter", onMouseEnter2);
-      // second.removeEventListener("mouseleave", onMouseLeave2);
+      first.removeEventListener("mouseleave", onMouseLeave1);
+      second.removeEventListener("mouseenter", onMouseEnter2);
+      second.removeEventListener("mouseleave", onMouseLeave2);
     };
   }, []);
   return (
