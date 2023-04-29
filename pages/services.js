@@ -4,6 +4,7 @@ import OurServices from "../components/OurServices";
 import Navbar from "../components/Navbar";
 import TransitionScreen from "../components/TransitionScreen";
 import Services4 from "../components/Services4";
+import ServicesBottom from "../components/ServicesBottom";
 
 const Services = () => {
   return (
@@ -11,8 +12,8 @@ const Services = () => {
       {/* <OurServices /> */}
       <TransitionScreen />
       <Navbar />
-      {/* <ServicesComp /> */}
-      <Services4 />
+      {/* pls remove services4  , servicescomp and ourservices  */}
+      <ServicesBottom />
     </div>
   );
 };

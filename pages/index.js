@@ -30,15 +30,16 @@ export default function Home() {
       <LoadingScreen />
       <ExampleComponent />
       {/* <TransitionScreen /> */}
-      <Navbar />
+      {/* <Navbar />
       <Hero />
       <Imgs4 />
-      <OurExpertise />
+      <About />
+      <OurExpertise /> */}
       {/* <OurProject /> */}
-      <Testimonials />
+      {/* <Testimonials />
       <Contact />
-      <Footer />
-      {/* <Batholic /> */}
+      <Footer /> */}
+      <Batholic />
       {/* <MobileOurProject /> */}
       {/* <Hero /> */}
       {/* <div className="w-full flex justify-center">
