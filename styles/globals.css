@@ -70,6 +70,32 @@ a {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.our-projects-grid {
+	display: grid;
+	grid-template-columns: 1.3fr 0.4fr 1.2fr 1.2fr;
+	grid-template-rows: 0.4fr 0.6fr 0.7fr 0.5fr 0.4fr 9.1fr;
+	gap: 0px 0px;
+	grid-template-areas:
+		". ourporjects . ."
+		". . . ."
+		"Title . description ."
+		". . description ."
+		"types . . ."
+		". . . .";
+}
+.our-projects-description {
+	grid-area: description;
+}
+.our-projects-Title {
+	grid-area: Title;
+}
+.our-projects-types {
+	grid-area: types;
+}
+.our-projects-ourporjects {
+	grid-area: ourporjects;
+}
 #grid {
   display: grid;
   grid-template-columns: repeat(50, 1fr);

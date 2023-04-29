@@ -64,7 +64,7 @@ const CustomButton = ({ text, color, href }) => {
 		}
 	}, [])
 	return (
-		<a href={href}>
+		<Link href={href}>
 			<div
 				ref={buttonRef}
 				className="relative flex items-center"
@@ -98,7 +98,7 @@ const CustomButton = ({ text, color, href }) => {
 					/>
 				</svg>
 			</div>
-		</a>
+		</Link>
 	)
 }
 
