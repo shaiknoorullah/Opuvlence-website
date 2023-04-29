@@ -12,7 +12,7 @@ const poppins = localFont({
 });
 const Hero = () => {
   return (
-    <div className=" w-[100%] relative z-[1000] flex justify-center base:px-[20px] lg:px-[40px]  ">
+    <div className=" w-[100%] relative z-[1000] base:py-[3rem] flex justify-center base:px-[20px] lg:px-[40px]  ">
       <section className="flex lg:flex-row base:flex-col max-w-[1920px] items-start mt-[20px] justify-between  w-full text-left ">
         <div className="flex flex-col base:items-center lg:items-start justify-start gap-[30px]">
           <h1 className="m-0  text-[#270405] base:text-[2rem]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[90px] 2xl:leading-[100px] ">
@@ -48,7 +48,7 @@ const Hero = () => {
             consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit
             urna. Pellentesque sit
           </p>
-          <div className="mt-10">
+          <div className="mt-10 self-start pl-4">
             {" "}
             <CustomButton text="Say Hello" href={"#contact"} />
           </div>

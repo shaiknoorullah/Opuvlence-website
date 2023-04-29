@@ -47,15 +47,15 @@ a {
 }
 
 .circle {
-  width: 5rem;
-  height: 5rem;
+  width: 5.5rem;
+  height: 5.5rem;
   border: 1px solid black;
   background-color: transparent;
   border-radius: 50%;
 }
 .circleblack {
-  width: 5rem;
-  height: 5rem;
+  width: 5.5rem;
+  height: 5.5rem;
   border: 1px solid white;
   background-color: transparent;
   border-radius: 50%;

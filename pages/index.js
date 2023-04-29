@@ -33,8 +33,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Imgs4 />
+      <About />
       <OurExpertise />
-      {/* <OurProject /> */}
+      <OurProject />
       <Testimonials />
       <Contact />
       <Footer />

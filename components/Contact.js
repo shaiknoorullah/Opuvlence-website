@@ -13,7 +13,7 @@ const poppins = localFont({
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full h-fit base:mt-[25px] lg:mt-[50px] base:px-[6.25vw] max-w-[1920px] lg:px-[40px] flex flex-col  justify-center mx-auto ">
+    <div id="contact" className="w-full h-fit base:mt-[25px] lg:py-[8rem] base:px-[6.25vw] max-w-[1920px] lg:px-[40px] flex flex-col  justify-center mx-auto ">
       <div className="flex w-full justify-between ">
         <h1
           className={`lg:w-[40%] base:w-[70%] text-[#270405] uppercase base:text-[10vw] lg:text-[min(4.68vw,90px)] base:[12.5vw] lg:leading-[min(120px,6.25vw)]  ${golden.className} `}

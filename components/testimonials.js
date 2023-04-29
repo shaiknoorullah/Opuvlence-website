@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import CustomButton from "./section/customButton";
 import { ScrollContainer } from 'react-indiana-drag-scroll'
+import { lamore, golden, poppins } from "../utils/fonts";
+
 
 const TestimonialCard = ({ text, description, image }) => {};
 
@@ -29,24 +31,24 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="w-full flex lg:mt-14  justify-center relative">
-      <div className="font-poppins base:w-[95%] lg:w-[95%] z-50 flex flex-col py-12">
+    <div className="w-full flex   justify-center relative">
+      <div className="font-poppins base:w-[95%] max-w-[1920px] lg:w-[95%] z-50 flex flex-col py-12">
         {/* testimonials title */}
         <div className="flex w-full base:justify-center lg:justify-start">
           <div className="lg:inline-block hidden w-[30%]"></div>
 
-          <div className="font-[700] text-[1.2rem] text-[#A5787A] flex">
+          <div className={`font-[700] text-[1.2rem] text-[#A5787A] flex ${poppins}`}>
             / TESTIMONIALS
           </div>
         </div>
         {/* Lets see what our */}
-        <div className="lg:w-[30%] base:text-[1.5rem] lg:text-[1.8rem] leading-[2.4rem] font-[700] pt-8">
+        <div className={`lg:w-[30%] ${lamore} base:text-[1.5rem] lg:text-[1.8rem] leading-[2.4rem] font-[700] pt-8`}>
           LETS SEE WHat OUR CUSTOMERS HAVE TO SAY
         </div>
 
         {/* cards desktop*/}
         
-        <div className="pl-[9rem] scrollbar-hide  overflow-y-scroll hidden lg:flex gap-[4rem]">
+        <div className="pl-[9rem] scrollbar-hide  overflow-y-scroll hidden cursor-grab lg:flex gap-[4rem]">
           <ScrollContainer style={{overflowX:"hidden",display:"flex",gap:"4rem"}}>
           {cards.map((data, index) => {
             return (
@@ -82,12 +84,12 @@ const Testimonials = () => {
                   </div>
                 )}
                 <div >
-                  <div className="text-[6rem] w-full pl-[25rem] tracking-[1rem]">
+                  <div className={`text-[6rem] w-full pl-[25rem] tracking-[1rem] italic ${poppins}`}>
                     {data.title}
                   </div>
                   <div className="flex gap-[4rem]">
                     <img onClick={() => setShowModal(true)} className="min-w-[33rem] h-[10rem]" src={data.img} />
-                    <div className="min-w-[18rem] text-[0.8rem] leading-[30px] self-end">
+                    <div className={`min-w-[18rem] text-[0.8rem] leading-[30px] self-end ${poppins}`}>
                       "{data.description}"
                     </div>
                   </div>
@@ -142,7 +144,7 @@ const Testimonials = () => {
               reliable service Using edge cutting technology.
             </div>
           </div>
-          <div className="flex self-end mt-8 gap-[3rem]">
+          <div className={`flex self-end mt-8 gap-[3rem] ${poppins}`}>
             <div className="text-[1.4rem] italic underline ">PREV</div>
             <div className="text-[1.4rem] italic underline ">NEXT</div>
           </div>
@@ -154,9 +156,9 @@ const Testimonials = () => {
           <div className=" pl-8 z-[1000]">
             <CustomButton text={"DISCOVER"} color={"black"} href={"#contact"} />
           </div>
-          <div className="flex  gap-[3rem]">
-            <div className="text-[1.4rem] italic underline ">PREV</div>
-            <div className="text-[1.4rem] italic underline ">NEXT</div>
+          <div className={`flex  gap-[3rem] ${poppins}`}>
+            <div className="text-[2rem] italic underline ">PREV</div>
+            <div className="text-[2rem] italic underline ">NEXT</div>
           </div>
         </div>
       </div>

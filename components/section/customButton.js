@@ -24,11 +24,11 @@ const CustomButton = ({ text, color, href }) => {
     };
   }, []);
   return (
-  <a href={href}>  <div ref={buttonRef} className="relative">
-      <div className={`font-black text-[1.4rem] uppercase text-${color} spacing tracking-[1rem]`}>
+  <a href={href}>  <div ref={buttonRef} className="relative ">
+      <div className={`font-black font-sans text-[1.4rem] uppercase text-${color} spacing tracking-[0.7rem]`}>
         {text}
       </div>
-      <div className={color==="white"?`circleblack absolute bottom-[-20px] left-[-11px]`:`circle absolute bottom-[-20px] left-[-11px]`}></div>
+      <div className={color==="white"?`circleblack absolute bottom-[-27px] left-[-20px]`:`circle absolute bottom-[-27px] left-[-20px]`}></div>
     </div></a>
   );
 };

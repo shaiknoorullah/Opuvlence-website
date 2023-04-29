@@ -10,7 +10,7 @@ const poppins = localFont({
 });
 const About = () => {
   return (
-    <div className="w-[100%] md:hidden base:flex jus relative lg:flex flex-col max-w-[1920px]">
+    <div className="w-[100%] md:hidden base:flex jus relative lg:flex flex-col max-w-[1920px] base:mt-[4rem] lg:mt-[-10rem]">
       <div
         className={`lg:w-[65%]  flex justify-center base:text-[3.75vw] base:leading-[5.62vw] base:tracking-[0.15vw] base:pt-[5vw] base:pb-[6.40vw] 3xl:text-[25px] 3xl:leading-[37.5px] 3xl:tracking-[0.5px] font-extrabold text-[#A5787A] 3xl:pt-[20px] 3xl:pb-[41px] lg:text-[1.2626vw] lg:leading-[1.89vw] lg:pt-[1.01vw] lg:pb-[2.07vw] uppercase ${poppins.className}`}
       >

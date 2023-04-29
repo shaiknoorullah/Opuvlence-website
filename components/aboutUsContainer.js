@@ -1,4 +1,6 @@
 import React from "react";
+import { lamore, golden, poppins } from "../utils/fonts";
+
 
 const AboutUsContainer = ({ left }) => {
   return (
@@ -7,8 +9,8 @@ const AboutUsContainer = ({ left }) => {
         <div
           className={
             left
-              ? `bg-[#270405] flex items-center lg:pl-[5rem] base:rounded-br-[9rem] base:rounded-tl-[9rem] lg:pr-[10rem] lg:self-start base:self-center px-5 base:justify-self-center lg:justify-self-start lg:rounded-r-full w-full lg:mr-[12rem] py-[8rem] text-white lg:text-[1.3rem]`
-              : `bg-[#270405] flex items-center lg:pr-[5rem] base:rounded-bl-[9rem] base:rounded-tr-[9rem] lg:pl-[10rem] lg:self-start base:self-center px-5 base:justify-self-center lg:justify-self-end lg:rounded-l-full lg:ml-[12rem] py-[8rem] text-white lg:text-[1.3rem]`
+              ? `${poppins} bg-[#270405] flex items-center lg:pl-[5rem] base:rounded-br-[9rem] base:rounded-tl-[9rem] lg:pr-[10rem] lg:self-start base:self-center px-5 base:justify-self-center lg:justify-self-start lg:rounded-r-full w-full lg:mr-[12rem] py-[8rem] text-white lg:text-[1.3rem]`
+              : `${poppins} bg-[#270405] flex items-center lg:pr-[5rem] base:rounded-bl-[9rem] base:rounded-tr-[9rem] lg:pl-[10rem] lg:self-start base:self-center px-5 base:justify-self-center lg:justify-self-end lg:rounded-l-full lg:ml-[12rem] py-[8rem] text-white lg:text-[1.3rem]`
           }
         >
           “Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
