@@ -44,12 +44,12 @@ export default function Home() {
 			<Hero />
 			<Imgs4 />
 			<OurExpertise />
-			<OurProject />
+			{/* <OurProject /> */}
+			<MobileOurProject />
 			<Testimonials />
 			<Contact />
 			<Footer />
 			{/* <Batholic /> */}
-			{/* <MobileOurProject /> */}
 			{/* <Hero /> */}
 			{/* <div className="w-full flex justify-center">
         <About />
