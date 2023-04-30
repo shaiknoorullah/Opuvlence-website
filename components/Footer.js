@@ -22,7 +22,7 @@ const poppinsExtraBoldItalic = localFont({
 	variable: "--font-poppins",
 })
 
-import { lamore, golden, poppins } from "../utils/fonts"
+import { golden, poppins } from "../utils/fonts"
 
 const FooterLinks = [
 	{
@@ -108,7 +108,7 @@ const Footer = () => {
 				<div className="flex flex-col md:w-fit base:w-[90vw] items-end justify-start gap-[8px]">
 					<div className="flex flex-row items-center base:justify-between w-[100%] md:justify-start base:gap-[0] md:gap-[137px]">
 						<input
-							className={`[border:none] placeholder:opacity-[0.56] placeholder:text-[#765151] outline-none  ${lamore} lg:text-[58.24px] base:text-[12px] text-[#765151]  bg-[transparent] relative tracking-[0.08em] uppercase font-bold text-left`}
+							className={`[border:none] placeholder:opacity-[0.56] placeholder:text-[#765151] outline-none ${poppins} lg:text-[58.24px] base:text-[12px] text-[#765151]  bg-[transparent] relative tracking-[0.08em] uppercase font-bold text-left`}
 							type="email"
 							placeholder="Enter Your Email"
 							required

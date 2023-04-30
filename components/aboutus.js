@@ -2,7 +2,7 @@
 
 import React from "react"
 import localFont from "next/font/local"
-import { lamore, golden, poppins } from "../utils/fonts"
+import { golden, poppins } from "../utils/fonts"
 
 // Font files can be colocated inside of `pages`
 
@@ -18,8 +18,9 @@ const AboutusHero = () => {
 						>
 							GET TO KNOW US
 						</div>
+						{/* change this poppins to lamore */}
 						<div
-							className={`base:text-[1.8rem] lg:text-[2rem] ${lamore}`}
+							className={`base:text-[1.8rem] lg:text-[2rem] ${poppins}`}
 						>
 							ThE StOrY BeHinD{" "}
 						</div>

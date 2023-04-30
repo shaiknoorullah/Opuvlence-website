@@ -3,7 +3,7 @@
 import React, { useState } from "react"
 import CustomButton from "./section/customButton"
 import ScrollContainer from "react-indiana-drag-scroll"
-import { lamore, golden, poppins } from "../utils/fonts"
+import { golden, poppins } from "../utils/fonts"
 
 import localFont from "next/font/local"
 
@@ -52,7 +52,7 @@ const Testimonials = () => {
 				</div>
 				{/* Lets see what our */}
 				<div
-					className={`lg:w-[30%] ${lamore} text-black base:text-[1.5rem] lg:text-[1.8rem] leading-[2.4rem] lg:ml-10 font-[700] pt-8`}
+					className={`lg:w-[30%] ${poppins} text-black base:text-[1.5rem] lg:text-[1.8rem] leading-[2.4rem] lg:ml-10 font-[700] pt-8`}
 				>
 					LETS SEE WHat OUR CUSTOMERS HAVE TO SAY
 				</div>

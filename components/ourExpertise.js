@@ -18,7 +18,6 @@ const poppinsSemibold = localFont({
 	src: "../styles/font/poppins/Poppins-SemiBold.woff2",
 })
 
-import { lamore } from "../utils/fonts"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
@@ -169,7 +168,7 @@ const OurExpertise = () => {
 				{/*25 years experience  */}
 				<div
 					id="section-title"
-					className={`${lamore} lg:w-[30%] base:text-[1.5rem] lg:text-[1.8rem] lg:text-left base:text-center text-black leading-[2.4rem] font-[700] pt-8`}
+					className={`${poppinsRegular.className} lg:w-[30%] base:text-[1.5rem] lg:text-[1.8rem] lg:text-left base:text-center text-black leading-[2.4rem] font-[700] pt-8`}
 				>
 					25 YEARS OF EXPERIENCE IN INTERIOR DESIGN
 				</div>
@@ -181,7 +180,7 @@ const OurExpertise = () => {
 				>
 					<div className="w-[35%]"></div>
 					<div
-						className={`${poppinsRegular.className.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
+						className={`${poppinsRegular.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
 					>
 						At our interior design company in Bangalore,
 						we&apos;re committed to delivering exceptional

@@ -2,7 +2,7 @@
 
 import React from "react"
 import localFont from "next/font/local"
-import { lamore, golden, poppins } from "../utils/fonts"
+import { golden, poppins } from "../utils/fonts"
 const poppinsExtrabold = localFont({
 	src: "../styles/font/poppins/Poppins-ExtraBold.woff2",
 })

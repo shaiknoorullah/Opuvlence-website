@@ -11,7 +11,6 @@ const poppins = localFont({
 	variable: "--font-poppins",
 })
 
-import { lamore } from "../utils/fonts"
 const MobileOurProject = () => {
 	return (
 		<div className="lg:hidden w-[100%] pt-[9.375vw]">
@@ -25,7 +24,7 @@ const MobileOurProject = () => {
 					<div>restaurant</div>
 				</div>
 				<div
-					className={`${lamore} w-[11.25vw] text-black text-[min(9px,2.20vw)] leading-[2.743vw] tracking-[10%] font-[700] text-right`}
+					className={`${poppins.className} w-[11.25vw] text-black text-[min(9px,2.20vw)] leading-[2.743vw] tracking-[10%] font-[700] text-right`}
 				>
 					wE&apos;vE bUiLt homes thAt brinG DrEAms COME trUE
 				</div>

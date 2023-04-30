@@ -85,7 +85,7 @@ const OurProject = () => {
 							gridRowStart: 3,
 							gridRowEnd: 4,
 						}}
-						className=" 3xl:w-[583px] text-black lg:w-[30.36vw]  3xl:text-[33px] lg:text-[1.71vw]  3xl:leading-[45.34px] lg:leading-[2.361vw] tracking-[10%] font-bold 3xl:pl-[50px] 3xl:pt-[41px] lg:pl-[2.60vw] lg:pt-[2.13vw] snap-center font-[lamore]"
+						className=" 3xl:w-[583px] text-black lg:w-[30.36vw]  3xl:text-[33px] lg:text-[1.71vw]  3xl:leading-[45.34px] lg:leading-[2.361vw] tracking-[10%] font-bold 3xl:pl-[50px] 3xl:pt-[41px] lg:pl-[2.60vw] lg:pt-[2.13vw] snap-center"
 					>
 						WE&apos;VE BUILT HOMES THAT BRING DREAMS COME
 						TRUE

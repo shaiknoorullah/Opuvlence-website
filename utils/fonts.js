@@ -12,13 +12,13 @@ const poppins = localFont({
 	variable: "--font-poppins",
 })
 
-const lamore = localFont({
-	src: "../styles/font/lamor/lamore.woff2",
-	variable: "--font-lamore",
-})
+// const lamore = localFont({
+// 	src: "../styles/font/lamor/lamore.woff2",
+// 	variable: "--font-lamore",
+// })
 
 module.exports = {
 	golden: golden.className,
 	poppins: poppins.className,
-	lamore: lamore.className,
+	// lamore: lamore.className,
 }
