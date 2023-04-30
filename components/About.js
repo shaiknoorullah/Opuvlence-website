@@ -63,7 +63,7 @@ const About = () => {
 				<img
 					data-scroll
 					data-scroll-speed="1.2"
-					src="rectangle 266.png"
+					src="/homeabout.png"
 					className=" 3xl:w-[1044px] lg:w-[52.7272vw] absolute 3xl:top-[245px] lg:top-[12.15vw] 3xl:right-[400px] lg:right-[23vw] "
 				></img>
 				<img

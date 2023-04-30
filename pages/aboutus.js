@@ -8,7 +8,7 @@ import AboutUsMeet from "../components/aboutUsMeet"
 
 const Aboutus = () => {
 	return (
-		<div>
+		<div className="">
 			<AboutusHero />
 			<AboutUsContainer left={true} />
 			<AboutUsBehind />
