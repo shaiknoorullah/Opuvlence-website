@@ -133,10 +133,6 @@ const AboutUsMeet = () => {
 						})}
 					</div>
 				</div>
-
-				{/* <div className="hidden lg:flex">
-          <img src="/dreamteam.svg" />
-        </div> */}
 			</div>
 		</div>
 	)
