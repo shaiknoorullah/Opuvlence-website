@@ -34,7 +34,7 @@ const Aboutus = () => {
 				/>
 				<meta
 					property="og:image"
-					content="https://opuvlence.com/about-us.jpg"
+					content="/image-card.png"
 				/>
 				<meta
 					property="og:url"
@@ -54,7 +54,7 @@ const Aboutus = () => {
 				/>
 				<meta
 					name="twitter:image"
-					content="https://opuvlence.com/about-us.jpg"
+					content="/image-card.png"
 				/>
 			</Head>
 			<AboutusHero />
