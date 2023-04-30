@@ -95,7 +95,7 @@ const Hero = () => {
 	return (
 		<div
 			data-scroll-section
-			className=" w-[100%] relative z-[1000] flex justify-center base:px-[20px] lg:px-[40px]  "
+			className=" w-[100%] relative z-[1000] flex justify-center base:px-[20px] base:mt-5 lg:mt-0 lg:px-[40px]  "
 		>
 			<section className="flex lg:flex-row base:flex-col max-w-[1920px] lg:items-start lg:justify-between lg:mr-12 w-full text-left ">
 				<div className="flex flex-col base:items-center base:w-[100%]  md:w-[max(970px,50vw)] lg:items-start justify-start gap-[30px]">
@@ -170,7 +170,7 @@ const Hero = () => {
 					{/* image for mobile */}
 					<div className="lg:hidden base:inline-block base:w-[280px] md:w-[max(710px,40vw)] base:h-[350px] md:h-[min(500px,60vh)] relative overflow-clip rounded-tl-full rounded-tr-full">
 						<Image
-							className=" absolute top-0 lg:right-[10] object-fill "
+							className="  lg:top-0 lg:right-[10] object-fill "
 							// className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
 							alt="image of a luxury chair"
 							src={heroImage}

@@ -31,7 +31,7 @@ const MobileOurProject = () => {
 			</div>
 			<div className="relative">
 				<img
-					src="rectangle269.png"
+					src="/ourprojectsmobile.png"
 					className="w-[100vw]"
 				></img>
 				<div className="pl-[6.25vw]">
@@ -49,7 +49,7 @@ const MobileOurProject = () => {
 			</div>
 			<div className="relative left-[52vw] top-[-10vw]">
 				<img
-					src="group 52.svg"
+					src="/group52.svg"
 					className="absolute w-[45vw]"
 				></img>
 			</div>
