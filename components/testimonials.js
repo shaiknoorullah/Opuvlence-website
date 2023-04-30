@@ -16,7 +16,6 @@ const TestimonialCard = ({ text, description, image }) => {}
 
 const Testimonials = () => {
 	const [showModal, setShowModal] = useState(false)
-	console.log(showModal)
 	const cards = [
 		{
 			title: "CAROLYN",
@@ -57,17 +56,11 @@ const Testimonials = () => {
 				>
 					LETS SEE WHat OUR CUSTOMERS HAVE TO SAY
 				</div>
-
 				{/* cards desktop*/}
-
 				<div className="scrollbar-hide  overflow-y-scroll hidden cursor-grab lg:flex gap-[4rem] ">
 					<ScrollContainer
-						data-scroll
-						data-scroll-direction="horizontal"
-						data-scroll-draggable="true"
-						data-scroll-speed="1.2"
 						style={{
-							overflowX: "hidden",
+							overflow: "scroll",
 							display: "flex",
 							gap: "4rem",
 						}}
@@ -75,6 +68,10 @@ const Testimonials = () => {
 						{cards.map((data, index) => {
 							return (
 								<div
+									data-scroll
+									data-scroll-direction="horizontal"
+									data-scroll-speed="1.5"
+									data-scroll-draggable="true"
 									key={index}
 									className="flex flex-col min-w-[68rem] pl-[7rem] mr-[2rem]"
 								>
@@ -94,12 +91,10 @@ const Testimonials = () => {
 													alt="Modal Image"
 													className="mx-auto mb-4"
 												/>
-
 												{/* Text */}
 												<p className="text-gray-700 mb-4">
 													{data.description}
 												</p>
-
 												{/* Close button */}
 												<button
 													className="bg-[#270405] hover:bg-black text-white font-bold py-2 px-4 rounded"
@@ -127,7 +122,7 @@ const Testimonials = () => {
 											<div
 												className={`min-w-[18rem] text-[0.8rem] leading-[30px] self-end ${poppins}`}
 											>
-												"{data.description}"
+												{data.description}
 											</div>
 										</div>
 									</div>

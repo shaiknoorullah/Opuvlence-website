@@ -93,7 +93,7 @@ const FooterLinks = [
 const Footer = () => {
 	return (
 		<footer
-			data-scroll-section
+			// data-scroll-section
 			className="w-screen flex justify-start flex-col gap-[124px] pl-[5vw] items-start mt-[180px] text-left"
 		>
 			<div className="flex flex-col items-start justify-start gap-[51px] font-golden">

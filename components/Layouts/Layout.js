@@ -51,13 +51,33 @@ const Layout = props => {
 				ref={mainContainerRef}
 			>
 				<div
-					className={` Layout container antialiased w-screen h-full`}
+					data-scroll-section
+					className={`Layout container antialiased w-screen h-full`}
 				>
 					{router.asPath == "/" && <LoadingScreen />}
-					<Navbar />
+					<div
+						className={`${
+							router.asPath == "/caseslibrary" ||
+							router.asPath == "/casestudies"
+								? "hidden"
+								: "block"
+						}`}
+					>
+						<Navbar />
+					</div>
 					<ExampleComponent />
 					{props.children}
-					{router.asPath != "/services" && <Footer />}
+					<div
+						className={`${
+							router.asPath == "/services" ||
+							router.asPath == "/caseslibrary" ||
+							router.asPath == "/casestudies"
+								? "hidden"
+								: "block"
+						}`}
+					>
+						<Footer />
+					</div>
 				</div>
 			</div>
 		</LocomotiveScrollProvider>

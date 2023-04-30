@@ -1,6 +1,5 @@
 /** @format */
 
-import react from "react"
 import localFont from "next/font/local"
 import ScrollContainer from "react-indiana-drag-scroll"
 import { useEffect } from "react"
@@ -195,11 +194,6 @@ const OurProject = () => {
 						</div>
 					</Link>
 				</ScrollContainer>
-				{/* <div className="block h-[800px] overflow-hidden">
-          <div className=" flex gap-[100px] overflow-x-scroll scrollbar-hide">
-            
-          </div>
-        </div> */}
 			</div>
 		</div>
 	)

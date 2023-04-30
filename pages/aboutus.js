@@ -12,7 +12,7 @@ import TransitionScreen from "../components/TransitionScreen"
 
 const Aboutus = () => {
 	return (
-		<div data-scroll-section>
+		<div>
 			<AboutusHero />
 			<AboutUsContainer left={true} />
 			<AboutUsBehind />

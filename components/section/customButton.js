@@ -72,9 +72,7 @@ const CustomButton = ({ text, color, href }) => {
 				<div
 					id="circle"
 					className={
-						color === "white"
-							? `circleblack absolute left-0 top-0`
-							: `circle `
+						color === "white" ? `circleblack` : `circle `
 					}
 				></div>
 				<div

@@ -12,11 +12,13 @@ const Services = () => {
 	return (
 		<div
 			// data-scroll-section
-			className="bg-[#F6EBDD] w-full h-screen px-[40px] "
+			className="bg-[#F6EBDD] w-full px-[40px] "
 		>
 			{/* pls remove services4  , servicescomp and ourservices  */}
-			{/* <OurServices /> */}
-			<ServicesBottom />
+			<OurServices />
+			<div className="my-[200px]">
+				<ServicesBottom />
+			</div>
 			{/* <ServicesComp /> */}
 			{/* <Services4 /> */}
 			{/* <ServicesBottom /> */}

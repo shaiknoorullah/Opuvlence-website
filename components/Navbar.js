@@ -327,7 +327,7 @@ const Navbar = () => {
 		},
 		{
 			title: "Cases",
-			href: "/casestudies",
+			href: "/caseslibrary",
 		},
 		{
 			title: "Contact",
@@ -381,8 +381,8 @@ const Navbar = () => {
 	]
 	return (
 		<nav
-			data-scroll-section
-			className="flex flex-row relative  justify-between w-screen pt-[25px] px-[40px] "
+			// data-scroll-section
+			className={`flex flex-row relative justify-between w-screen pt-[25px] px-[40px]`}
 		>
 			<h3
 				id="navLinksDesktop"

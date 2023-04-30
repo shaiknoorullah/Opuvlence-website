@@ -26,7 +26,7 @@ export default function Home() {
 
 	return (
 		<div
-			data-scroll-section
+			// data-scroll-section
 			className="w-[100vw]"
 		>
 			<Head>
