@@ -10,7 +10,7 @@ const poppinsRegular = localFont({
 	variable: "--font-poppins",
 })
 const poppinsSemibold = localFont({
-	src: "../styles/font/poppins/Poppins-Semibold.woff2",
+	src: "../styles/font/poppins/Poppins-SemiBold.woff2",
 	variable: "--font-poppins",
 })
 const poppinsMediumItalic = localFont({
