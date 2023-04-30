@@ -1,7 +1,6 @@
 /** @format */
 
 import React from "react"
-import { lamore, golden } from "../utils/fonts"
 import localFont from "@next/font/local"
 
 const poppins = localFont({
