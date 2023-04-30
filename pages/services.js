@@ -43,7 +43,7 @@ const Services = () => {
 				/>
 				<meta
 					property="og:image"
-					content="https://www.opuvlence.com/images/services-banner.jpg"
+					content="/image-card.png"
 				/>
 				<meta
 					property="og:image:alt"
@@ -63,7 +63,7 @@ const Services = () => {
 				/>
 				<meta
 					name="twitter:image"
-					content="https://www.opuvlence.com/images/services-banner.jpg"
+					content="/image-card.png"
 				/>
 			</Head>
 			{/* pls remove services4  , servicescomp and ourservices  */}

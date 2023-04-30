@@ -26,9 +26,9 @@ export default function Home() {
 
 	return (
 		<div
-		className="text-black"
-		// data-scroll-section
-		// className="w-[100vw]"
+			className="text-black"
+			// data-scroll-section
+			// className="w-[100vw]"
 		>
 			<Head>
 				<title>
@@ -64,7 +64,7 @@ export default function Home() {
 				/>
 				<meta
 					property="og:image"
-					content="https://www.opuvlence.com/images/opuvlence-logo.png"
+					content="/image-card.png"
 				/>
 				<meta
 					property="og:url"
@@ -92,7 +92,7 @@ export default function Home() {
 				/>
 				<meta
 					name="twitter:image"
-					content="https://www.opuvlence.com/images/opuvlence-logo.png"
+					content="/image-card.png"
 				/>
 				<meta
 					name="twitter:creator"
