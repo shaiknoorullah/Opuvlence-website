@@ -4,8 +4,6 @@ import React, { useEffect } from "react"
 import localFont from "next/font/local"
 import Image from "next/image"
 
-import { lamore } from "../utils/fonts"
-
 // importing images statically
 import Arrow from "../public/Vectorwhite.png"
 import OurProject from "./ourProject"
