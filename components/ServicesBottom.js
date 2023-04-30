@@ -183,7 +183,7 @@ const ServicesBottom = () => {
 		service4 ? tl4.current.play() : tl4.current.reverse()
 	}, [service1, service2, service3, service4])
 	return (
-		<div className="flex w-full justify-center h-fit">
+		<div className="hidden lg:flex w-full justify-center h-fit">
 			<div className="max-w-[1920px] flex h-[700px] ">
 				{/* first service */}
 				<div

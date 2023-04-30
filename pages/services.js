@@ -8,6 +8,7 @@ import TransitionScreen from "../components/TransitionScreen"
 import Services4 from "../components/Services4"
 import ServicesBottom from "../components/ServicesBottom"
 import Head from "next/head"
+import ServicesBottomMobile from "../components/ServicesBottomMobile"
 
 const Services = () => {
 	return (
@@ -70,6 +71,7 @@ const Services = () => {
 			<div className="my-[200px]">
 				<ServicesBottom />
 			</div>
+			<ServicesBottomMobile />
 			{/* <ServicesComp /> */}
 			{/* <Services4 /> */}
 			{/* <ServicesBottom /> */}
