@@ -121,7 +121,7 @@ const AboutUsMeet = () => {
 						{testimonial.map((data, index) => {
 							return (
 								<div key={index}>
-									<Link>
+									<Link href="/testimonialsingle">
 										<OurTeamSingle
 											name={data.name}
 											image={"/testimonialtesting.jpg"}

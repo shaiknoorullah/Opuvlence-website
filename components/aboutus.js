@@ -22,7 +22,7 @@ const AboutusHero = () => {
 						<div
 							className={`base:text-[1.8rem] lg:text-[2rem] ${poppins}`}
 						>
-							ThE StOrY BeHinD{" "}
+							ThE StOrY BeHinD
 						</div>
 
 						{/* quotation for desktop */}
