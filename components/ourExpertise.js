@@ -175,7 +175,7 @@ const OurExpertise = () => {
             {/* restaurant */}
             <div className="flex flex-col items-center gap-6">
               <div
-                className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
+                className={`text-[#524646] md:text-[1.3rem] sm:text-[9px] font-normal ${poppinsRegular.className}`}
               >
                 75%
               </div>
@@ -189,7 +189,7 @@ const OurExpertise = () => {
             {/* residential */}
             <div className="flex flex-col items-center gap-6">
               <div
-                className={`${poppinsRegular.className} text-[#524646] text-[1.3rem] font-normal`}
+                className={`${poppinsRegular.className} text-[#524646] md:text-[1.3rem] sm:text-[9px]  font-normal`}
               >
                 86%
               </div>
@@ -203,7 +203,7 @@ const OurExpertise = () => {
             {/* coperate */}
             <div className="flex flex-col items-center gap-6">
               <div
-                className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
+                className={`text-[#524646] md:text-[1.3rem] sm:text-[9px]  font-normal ${poppinsRegular.className}`}
               >
                 78%
               </div>
