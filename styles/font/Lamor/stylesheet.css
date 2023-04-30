@@ -1,9 +1,10 @@
-@font-face {
-    font-family: 'LAMORE';
-    src: url('LAMORERegular.woff2') format('woff2'),
-        url('LAMORERegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+/** @format */
 
+@font-face {
+	font-family: "LAMORE";
+	src: url("lamore.woff2") format("woff2"),
+		url("lamore.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
