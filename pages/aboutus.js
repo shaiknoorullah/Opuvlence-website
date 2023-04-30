@@ -10,7 +10,7 @@ import TransitionScreen from "../components/TransitionScreen";
 
 const Aboutus = () => {
   return (
-    <div>
+    <div className="text-black">
       {/* <LoadingScreen />
       <ExampleComponent /> */}
       <TransitionScreen />

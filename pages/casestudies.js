@@ -3,7 +3,7 @@ import Batholic from '../components/batHolic'
 
 const Casestudies = () => {
   return (
-    <div>
+    <div className='text-black'>
         <Batholic />
     </div>
   )

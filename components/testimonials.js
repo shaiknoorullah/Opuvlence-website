@@ -32,7 +32,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="w-full flex  text-black   justify-center relative">
+    <div className="w-full flex  text-black   justify-center relative my-[10rem]">
       <div className="font-poppins base:w-[95%] lg:w-[100%] z-50 flex flex-col py-12">
         {/* testimonials title */}
         <div className="flex w-full base:justify-center lg:justify-start">

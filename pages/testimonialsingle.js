@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 const Testimonialsingle = () => {
   return (
-    <div className="w-full flex flex-col justify-center">
+    <div className="w-full flex flex-col justify-center text-black">
       <Navbar />
       <div className="w-[95%] base:py-12 lg:py-9 flex lg:flex-row base:flex-col">
         {/* image section */}

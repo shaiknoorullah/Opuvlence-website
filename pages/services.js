@@ -6,16 +6,17 @@ import TransitionScreen from "../components/TransitionScreen";
 import Services4 from "../components/Services4";
 import ServicesBottom from "../components/ServicesBottom";
 import ServicesBottomMobile from "../components/ServicesBottomMobile";
+import Footer from "../components/Footer";
 
 const Services = () => {
   return (
-    <div className="bg-[#F5E1E2] w-full h-screen lg:px-[40px] ">
+    <div className="bg-[#F5E1E2] w-full text-black ">
       <TransitionScreen />
       <Navbar />
-      {/* <ServicesBottom /> */}
+      <OurServices />
+      <ServicesBottom />
       <ServicesBottomMobile />
-
-      {/* <Services4 /> */}
+      <Footer />
     </div>
   );
 };
