@@ -23,6 +23,7 @@ import arch2 from "../public/architecture2.webp"
 import arch3 from "../public/architecture3.webp"
 import arch4 from "../public/architecture4.webp"
 import Link from "next/link"
+import Head from "next/head"
 
 const ProjectGrid = props => {
 	return (
@@ -61,6 +62,61 @@ const CasesLibrary = () => {
 			// data-scroll-section
 			className="w-[full]"
 		>
+			<Head>
+				<title>Opuvlence - Our Design Cases</title>
+				<meta
+					name="description"
+					content="Explore our portfolio of design cases to see how we have transformed spaces into beautiful and functional environments. Contact us to start your own design project."
+				/>
+				<meta
+					name="keywords"
+					content="opuvlence, design cases, portfolio, interior design, architecture, transformation, beautiful spaces, functional environments"
+				/>
+				<meta
+					property="og:title"
+					content="Opuvlence - Our Design Cases"
+				/>
+				<meta
+					property="og:description"
+					content="Explore our portfolio of design cases to see how we have transformed spaces into beautiful and functional environments. Contact us to start your own design project."
+				/>
+				<meta
+					property="og:url"
+					content="https://www.opuvlence.com/cases"
+				/>
+				<meta
+					property="og:type"
+					content="website"
+				/>
+				<meta
+					property="og:image"
+					content="https://www.opuvlence.com/images/cases-thumbnail.jpg"
+				/>
+				<meta
+					property="og:image:alt"
+					content="Opuvlence Design Cases"
+				/>
+				<meta
+					property="twitter:title"
+					content="Opuvlence - Our Design Cases"
+				/>
+				<meta
+					property="twitter:description"
+					content="Explore our portfolio of design cases to see how we have transformed spaces into beautiful and functional environments. Contact us to start your own design project."
+				/>
+				<meta
+					property="twitter:url"
+					content="https://www.opuvlence.com/cases"
+				/>
+				<meta
+					property="twitter:card"
+					content="summary_large_image"
+				/>
+				<meta
+					property="twitter:image"
+					content="https://www.opuvlence.com/images/cases-thumbnail.jpg"
+				/>
+			</Head>
 			<div className="px-[min(20px,1.041vw)] max-w-[1920px] flex flex-col items-center justify-center">
 				<div className="flex justify-center  ">
 					<img src="image 8.png"></img>
