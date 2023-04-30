@@ -98,7 +98,7 @@ const AboutUsMeet = () => {
 								key={index}
 								className="flex flex-col   "
 							>
-								<a href="/testimonialsingle">
+								<Link href="/testimonialsingle">
 									<img
 										className="rounded-t-full self-center "
 										src="/testimonialdemo.jpg"
@@ -109,7 +109,7 @@ const AboutUsMeet = () => {
 									<div className="font-normal italic text-[1.3rem]">
 										{data.designation}
 									</div>
-								</a>
+								</Link>
 							</div>
 						)
 					})}
@@ -121,13 +121,13 @@ const AboutUsMeet = () => {
 						{testimonial.map((data, index) => {
 							return (
 								<div key={index}>
-									<a>
+									<Link>
 										<OurTeamSingle
 											name={data.name}
 											image={"/testimonialtesting.jpg"}
 											designation={data.designation}
 										/>
-									</a>
+									</Link>
 								</div>
 							)
 						})}
