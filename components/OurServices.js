@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react"
-import Navbar from "./Navbar"
+// import Navbar from "./Navbar"
 import localFont from "next/font/local"
 import CustomButton from "./section/customButton"
 
@@ -9,6 +9,7 @@ const golden = localFont({
 	src: "../styles/font/golden/golden.woff2",
 	variable: "--font-golden",
 })
+
 const poppinsItalic = localFont({
 	src: "../styles/font/poppins/Poppins-Italic.woff2",
 	variable: "--font-poppins",

@@ -7,7 +7,7 @@ const Imgs4 = () => {
 		<div
 			data-scroll
 			data-scroll-speed="0.5"
-			className="w-full flex mt-[-150px] lg:justify-center"
+			className="w-full flex base:mt-0 md:mt-[-150px] lg:justify-center"
 		>
 			<section className="w-[95%] max-w-[1920px] base:hidden lg:flex justify-center ">
 				<div className=" w-full grid grid-cols-9  grid-rows-6  ">

@@ -47,12 +47,12 @@ const Layout = props => {
 		>
 			<div
 				data-scroll-container
-				className="w-screen"
+				// className="w-full"
 				ref={mainContainerRef}
 			>
 				<div
 					data-scroll-section
-					className={`Layout container antialiased w-screen h-full`}
+					// className={`Layout container antialiased w-screen h-full`}
 				>
 					{router.asPath == "/" && <LoadingScreen />}
 					<div

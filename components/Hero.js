@@ -24,17 +24,9 @@ const Hero = () => {
 		const heading = document.getElementById("heading")
 		const description =
 			document.getElementById("description")
-		// console.log(heading.children)
 
 		const tl = gsap.timeline()
 
-		// console.log(heading.childNodes.)
-		// gsap.from(heading.children, {
-		// 	stagger: 0.5,
-		// })
-
-		// heading.childNodes.forEach((element, idx) => {
-		// console.log(element, idx)
 		gsap.fromTo(
 			heading.children,
 			{
@@ -106,10 +98,10 @@ const Hero = () => {
 			className=" w-[100%] relative z-[1000] flex justify-center base:px-[20px] lg:px-[40px]  "
 		>
 			<section className="flex lg:flex-row base:flex-col max-w-[1920px] lg:items-start lg:justify-between lg:mr-12 w-full text-left ">
-				<div className="flex flex-col base:items-center w-[max(970px,50vw)] lg:items-start justify-start gap-[30px]">
-					<h1 className="m-0  text-[#270405] base:text-[24px]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[min(5vw,90px)] 2xl:leading-[100px] ">
+				<div className="flex flex-col base:items-center base:w-[100%]  md:w-[max(970px,50vw)] lg:items-start justify-start gap-[30px]">
+					<h1 className="m-0 text-[#270405] base:text-[24px]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[min(5vw,90px)] 2xl:leading-[100px] ">
 						<div
-							className={`w-full base:flex flex-col base:justify-center lg:justify-start base:items-center lg:items-start  ${golden.className} `}
+							className={`w-full flex flex-col base:justify-center lg:justify-start base:items-center lg:items-start ${golden.className}`}
 						>
 							<div
 								id="heading"
@@ -176,7 +168,7 @@ const Hero = () => {
 						</div>
 					</h1>
 					{/* image for mobile */}
-					<div className="lg:hidden base:inline-block w-[max(710px, 40vw)] h-[min(500px,60vh)] relative overflow-clip rounded-tl-full rounded-tr-full">
+					<div className="lg:hidden base:inline-block base:w-[280px] md:w-[max(710px,40vw)] base:h-[350px] md:h-[min(500px,60vh)] relative overflow-clip rounded-tl-full rounded-tr-full">
 						<Image
 							className=" absolute top-0 lg:right-[10] object-fill "
 							// className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
