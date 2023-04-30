@@ -58,7 +58,7 @@ const FooterLinks = [
 				text: "Facebook",
 			},
 			{
-				href: "/https://www.youtube.com/opuvlence",
+				href: "https://www.youtube.com/opuvlence",
 				text: "Youtube",
 			},
 			{
