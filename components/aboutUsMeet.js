@@ -46,27 +46,27 @@ const AboutUsMeet = () => {
 	const testimonial = [
 		{
 			name: "Shaikh Fauwaz",
-			designation: "Senior Architect",
+			designation: "Chief Executive Officer",
 		},
 		{
 			name: "Shaikh Fauwaz",
-			designation: "Senior Architect",
+			designation: "Chief Executive Officer",
 		},
 		{
 			name: "Shaikh Fauwaz",
-			designation: "Senior Architect",
+			designation: "Chief Executive Officer",
 		},
 		{
 			name: "Shaikh Fauwaz",
-			designation: "Senior Architect",
+			designation: "Chief Executive Officer",
 		},
 		{
 			name: "Shaikh Fauwaz",
-			designation: "Senior Architect",
+			designation: "Chief Executive Officer",
 		},
 		{
 			name: "Shaikh Fauwaz",
-			designation: "Senior Architect",
+			designation: "Chief Executive Officer",
 		},
 	]
 
