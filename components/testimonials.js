@@ -5,6 +5,13 @@ import CustomButton from "./section/customButton"
 import ScrollContainer from "react-indiana-drag-scroll"
 import { lamore, golden, poppins } from "../utils/fonts"
 
+import localFont from "next/font/local"
+
+const poppinsBold = localFont({
+	src: "../styles/font/poppins/Poppins-ExtraBold.woff2",
+	variable: "--font-poppins",
+})
+
 const TestimonialCard = ({ text, description, image }) => {}
 
 const Testimonials = () => {
@@ -39,7 +46,7 @@ const Testimonials = () => {
 					<div className="lg:inline-block hidden w-[30%]"></div>
 
 					<div
-						className={`font-[700] text-[1.2rem] text-[#A5787A] flex ${poppins}`}
+						className={`font-[700] text-[1.2rem] text-[#A5787A] flex ${poppinsBold.className}`}
 					>
 						/ TESTIMONIALS
 					</div>
@@ -55,6 +62,10 @@ const Testimonials = () => {
 
 				<div className="scrollbar-hide  overflow-y-scroll hidden cursor-grab lg:flex gap-[4rem] ">
 					<ScrollContainer
+						data-scroll
+						data-scroll-direction="horizontal"
+						data-scroll-draggable="true"
+						data-scroll-speed="1.2"
 						style={{
 							overflowX: "hidden",
 							display: "flex",

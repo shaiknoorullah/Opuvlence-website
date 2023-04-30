@@ -25,7 +25,10 @@ export default function Home() {
 	const [loader, setLoader] = useState(true)
 
 	return (
-		<div data-scroll-section>
+		<div
+			data-scroll-section
+			className="w-[100vw]"
+		>
 			<Head>
 				<title>Create Next App</title>
 				<meta
@@ -37,12 +40,8 @@ export default function Home() {
 					href="/favicon.ico"
 				/>
 			</Head>
-			<LoadingScreen />
-			<ExampleComponent />
 
-			{/* <TransitionScreen /> */}
 			{/* added 1.3s of global delay to all animations in navbar because of transition animation */}
-			<Navbar />
 			<Hero />
 			<Imgs4 />
 			<div className="w-full flex justify-center">
@@ -53,13 +52,6 @@ export default function Home() {
 			<MobileOurProject />
 			<Testimonials />
 			<Contact />
-			<Footer />
-			{/* <Batholic /> */}
-			{/* <Hero /> */}
-			{/* <div className="w-full flex justify-center">
-        <About />
-      </div> */}
-			{/* <Contact /> */}
 		</div>
 	)
 }

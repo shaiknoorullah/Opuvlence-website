@@ -7,13 +7,13 @@ const Imgs4 = () => {
 		<div
 			data-scroll
 			data-scroll-speed="0.5"
-			className="w-full flex lg:justify-center"
+			className="w-full flex mt-[-150px] lg:justify-center"
 		>
-			<section className="w-[95%] max-w-[1920px] mt-[50px] base:hidden lg:flex justify-center ">
+			<section className="w-[95%] max-w-[1920px] base:hidden lg:flex justify-center ">
 				<div className=" w-full grid grid-cols-9  grid-rows-6  ">
 					<div
 						data-scroll
-						data-scroll-speed="1.2"
+						data-scroll-speed="1.5"
 						className=" mr-[6rem] z-[1000]  row-span-full row-start-3 row-end-6 col-start-1 col-end-4"
 					>
 						<img
@@ -46,7 +46,7 @@ const Imgs4 = () => {
 
 					<div
 						data-scroll
-						data-scroll-speed="2"
+						data-scroll-speed="3"
 						className=" col-start-7 col-end-13 row-start-2 row-end-5 z-10 ml-[7rem] row-span-full"
 					>
 						<img

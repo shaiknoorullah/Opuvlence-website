@@ -3,7 +3,9 @@
 import localFont from "@next/font/local"
 import Image from "next/image"
 import Link from "next/link"
-import React from "react"
+import React, { useEffect, useRef } from "react"
+import useAnimateOnScroll from "../utils/hooks/useAnimateOnScroll"
+import { gsap } from "gsap"
 
 const golden = localFont({
 	src: "../styles/font/golden/golden.woff2",
@@ -21,8 +23,39 @@ const ProjectCard = ({
 	type,
 	src,
 }) => {
+	const projectCardRef = useRef(null)
+
+	// useEffect(() => {
+	// 	const cardRefVar = projectCardRef.current.children
+	// 	gsap.fromTo(
+	// 		cardRefVar,
+	// 		{
+	// 			y: 20,
+	// 			opacity: 0,
+	// 		},
+	// 		{
+	// 			y: 0,
+	// 			opacity: 1,
+	// 			duration: 0.5,
+	// 			delay: 0.2,
+	// 			ease: "power4.out",
+	// 			stagger: 0.05,
+	// 			scrollTrigger: {
+	// 				trigger: projectCardRef.current,
+	// 			},
+	// 		}
+	// 	)
+	// }, [])
+
 	return (
-		<div className="select-none grid grid-flow-row grid-cols-[0.03fr_0.22fr_0.1fr_0.15fr_0.07fr_0.05fr] grid-rows-[0.1fr_1.6fr_0.45fr]">
+		<div
+			ref={projectCardRef}
+			data-scroll
+			data-scroll-direction="horizontal"
+			data-scroll-speed="1.3"
+			data-scroll-draggable="true"
+			className="select-none grid grid-flow-row grid-cols-[0.03fr_0.22fr_0.1fr_0.15fr_0.07fr_0.05fr] grid-rows-[0.1fr_1.6fr_0.45fr]"
+		>
 			<div
 				style={{
 					// gridArea: "2 / 1 / 3 / 4",
