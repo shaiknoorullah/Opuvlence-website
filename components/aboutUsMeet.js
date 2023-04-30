@@ -45,28 +45,28 @@ const OurTeamSingle = ({ name, image, designation }) => {
 const AboutUsMeet = () => {
 	const testimonial = [
 		{
-			name: "Abdul Ahad",
-			designation: "Senior Developer",
+			name: "Shaikh Fauwaz",
+			designation: "Senior Architect",
 		},
 		{
-			name: "Shaikh Noorullah",
-			designation: "Senior Developer",
+			name: "Shaikh Fauwaz",
+			designation: "Senior Architect",
 		},
 		{
-			name: "Abdul Ahad",
-			designation: "Senior Developer",
+			name: "Shaikh Fauwaz",
+			designation: "Senior Architect",
 		},
 		{
-			name: "Abdul Ahad",
-			designation: "Senior Developer",
+			name: "Shaikh Fauwaz",
+			designation: "Senior Architect",
 		},
 		{
-			name: "Abdul Ahad",
-			designation: "Senior Developer",
+			name: "Shaikh Fauwaz",
+			designation: "Senior Architect",
 		},
 		{
-			name: "Abdul Ahad",
-			designation: "Senior Developer",
+			name: "Shaikh Fauwaz",
+			designation: "Senior Architect",
 		},
 	]
 

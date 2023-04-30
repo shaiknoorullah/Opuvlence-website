@@ -14,7 +14,7 @@ const Services = () => {
 	return (
 		<div
 			// data-scroll-section
-			className="bg-[#F6EBDD] w-full px-[40px] "
+			className="bg-[#F6EBDD] w-full px-[40px] text-black "
 		>
 			<Head>
 				<title>

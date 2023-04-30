@@ -26,6 +26,7 @@ export default function Home() {
 
 	return (
 		<div
+		className="text-black"
 		// data-scroll-section
 		// className="w-[100vw]"
 		>

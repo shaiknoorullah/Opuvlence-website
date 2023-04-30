@@ -9,7 +9,7 @@ import Head from "next/head"
 
 const Aboutus = () => {
 	return (
-		<div>
+		<div className="text-black">
 			<Head>
 				<title>About Us - Opuvlence</title>
 				<meta

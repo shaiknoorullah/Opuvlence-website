@@ -38,7 +38,7 @@ const Testimonials = () => {
 	]
 
 	return (
-		<div className="w-full flex  text-black   justify-center relative">
+		<div className="w-full flex  text-black my-[8rem]  justify-center relative">
 			<div className="font-poppins base:w-[95%] lg:w-[100%] z-50 flex flex-col py-12">
 				{/* testimonials title */}
 				<div className="flex w-full base:justify-center lg:justify-start">
@@ -54,7 +54,7 @@ const Testimonials = () => {
 				<div
 					className={`lg:w-[30%] ${poppins} text-black base:text-[1.5rem] lg:text-[1.8rem] leading-[2.4rem] lg:ml-10 font-[700] pt-8`}
 				>
-					LETS SEE WHat OUR CUSTOMERS HAVE TO SAY
+					LETS SEE WHAT OUR CUSTOMERS HAVE TO SAY
 				</div>
 				{/* cards desktop*/}
 				<div className="scrollbar-hide  overflow-y-scroll hidden cursor-grab lg:flex gap-[4rem] ">
