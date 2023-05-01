@@ -5,7 +5,7 @@ import CasesLibrary from "../components/CasesLibray"
 
 function CasesLibraryPage() {
 	return (
-		<div className="bg-[#270405] text-black">
+		<div className=" text-black">
 			<CasesLibrary />
 		</div>
 	)

@@ -141,7 +141,7 @@ const LoadingScreen = () => {
 		<>
 			<div
 				id="loadingScreen1"
-				className="absolute top-0 left-0 scrollbar-hide z-[9999] bg-[#F5E1E2] w-[100%]  overflow-hidden text-left text-[186px] text-black "
+				className="absolute top-0 left-0 scrollbar-hide z-[9999] bg-[#f6ebdd] w-[100%]  overflow-hidden text-left text-[186px] text-black "
 			>
 				<img
 					className="base:hidden md:block absolute top-[0px] left-[0px] h-[230px]  object-contain"
@@ -151,7 +151,7 @@ const LoadingScreen = () => {
 				/>
 
 				<div
-					className={`relative flex flex-col z-[999] justify-center items-center ${golden.className}  w-full h-screen`}
+					className={`relative flex flex-col z-[999] justify-center items-center ${golden.className} text-[#270405] w-full h-screen`}
 					id="text"
 				>
 					<h1
@@ -209,7 +209,7 @@ const LoadingScreen = () => {
 				/>
 				<div
 					id="progress"
-					className="base:hidden md:block absolute bottom-0 left-[0px] bg-[#340506] w-[1920px] h-2"
+					className="base:hidden md:block absolute bottom-0 left-[0px] bg-[#270405] w-[1920px] h-2"
 				/>
 			</div>
 		</>

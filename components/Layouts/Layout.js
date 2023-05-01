@@ -28,9 +28,8 @@ const Layout = props => {
 		<LocomotiveScrollProvider
 			options={{
 				smooth: true,
-				lerp: 0.03,
-				offset: [-100, 0],
-				repeat: true,
+				lerp: 0.04,
+				multiplier: 1.3,
 			}}
 			watch={[path]}
 			location={path}
@@ -47,37 +46,14 @@ const Layout = props => {
 		>
 			<div
 				data-scroll-container
-				// className="w-full"
 				ref={mainContainerRef}
 			>
-				<div
-					data-scroll-section
-					// className={`Layout container antialiased w-screen h-full`}
-				>
+				<div data-scroll-section>
 					{router.asPath == "/" && <LoadingScreen />}
-					<div
-						className={`${
-							router.asPath == "/caseslibrary" ||
-							router.asPath == "/casestudies"
-								? "hidden"
-								: "block"
-						}`}
-					>
-						<Navbar />
-					</div>
+					<Navbar />
 					<ExampleComponent />
 					{props.children}
-					<div
-						className={`${
-							router.asPath == "/services" ||
-							router.asPath == "/caseslibrary" ||
-							router.asPath == "/casestudies"
-								? "hidden"
-								: "block"
-						}`}
-					>
-						<Footer />
-					</div>
+					<Footer />
 				</div>
 			</div>
 		</LocomotiveScrollProvider>
