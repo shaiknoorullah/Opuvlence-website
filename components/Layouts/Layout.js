@@ -1,23 +1,23 @@
 /** @format */
 
-import { useRouter } from "next/router"
-import React, { useRef } from "react"
+import { useRouter } from "next/router";
+import React, { useRef } from "react";
 import {
-	LocomotiveScrollProvider,
-	useLocomotiveScroll,
-} from "react-locomotive-scroll"
-import Navbar from "../Navbar"
-import Footer from "../Footer"
+  LocomotiveScrollProvider,
+  useLocomotiveScroll,
+} from "react-locomotive-scroll";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
-import localFont from "next/font/local"
-import LoadingScreen from "../LoadingScreen"
-import ExampleComponent from "../ExampleComponent"
+import localFont from "next/font/local";
+import LoadingScreen from "../LoadingScreen";
+import ExampleComponent from "../ExampleComponent";
 
 // Font files can be colocated inside of `pages`
 const golden = localFont({
-	src: "../../styles/font/golden/golden.woff2",
-	variable: "--font-golden",
-})
+  src: "../../styles/font/golden/golden.woff2",
+  variable: "--font-golden",
+});
 
 const Layout = props => {
 	const mainContainerRef = useRef(null)
@@ -65,4 +65,4 @@ const Layout = props => {
 	)
 }
 
-export default Layout
+export default Layout;

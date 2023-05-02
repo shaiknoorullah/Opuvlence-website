@@ -31,7 +31,37 @@ const ServicesBottomMobile = () => {
     });
 
     tl1.current.fromTo(
-      "#img1",
+      "#image1",
+      { display: "none", width: "0%" },
+      {
+        display: "flex",
+        width: "100%",
+        duration: 1,
+        ease: "power4.out",
+      }
+    );
+    tl1.current.fromTo(
+      "#div1",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.5, ease: "power3.out" }
+    );
+    tl2.current.fromTo(
+      "#image2",
+      { display: "none", width: "0%" },
+      {
+        display: "flex",
+        width: "100%",
+        duration: 1,
+        ease: "power3.out",
+      }
+    );
+    tl2.current.fromTo(
+      "#div2",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.5, ease: "power3.out" }
+    );
+    tl3.current.fromTo(
+      "#image3",
       { display: "none", width: "0%" },
       {
         display: "flex",
@@ -41,18 +71,13 @@ const ServicesBottomMobile = () => {
         ease: "power3.out",
       }
     );
-    tl2.current.fromTo(
-      "#img2",
-      { display: "none", width: "0%" },
-      {
-        display: "flex",
-        width: "100%",
-        duration: 1,
-        ease: "power3.out",
-      }
-    );
     tl3.current.fromTo(
-      "#img3",
+      "#div3",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.5, ease: "power3.out" }
+    );
+    tl4.current.fromTo(
+      "#image4",
       { display: "none", width: "0%" },
       {
         display: "flex",
@@ -63,15 +88,9 @@ const ServicesBottomMobile = () => {
       }
     );
     tl4.current.fromTo(
-      "#img4",
-      { display: "none", width: "0%" },
-      {
-        display: "flex",
-        width: "100%",
-
-        duration: 1,
-        ease: "power3.out",
-      }
+      "#div4",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.5, ease: "power3.out" }
     );
   }, []);
 
@@ -83,11 +102,11 @@ const ServicesBottomMobile = () => {
   }, [service1, service2, service3, service4]);
 
   return (
-    <div className="  base:flex lg:hidden  justify-center w-full ">
+    <div className="  base:flex lg:hidden  justify-center  w-[100%]">
       <div className="w-[95%] flex flex-col gap-[16px] mt-[50px] ">
         {/* first service */}
         <div
-         className="min-w-full"
+          className="w-full"
           id="first"
           onClick={() => {
             setService1(true);
@@ -96,19 +115,25 @@ const ServicesBottomMobile = () => {
             setService4(false);
           }}
         >
-          <div className="w-full  h-[1px] bg-black  " />
-          <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[5vw] text-black">
+          <div className=" h-[1px] bg-black" />
+          <div className="flex items-center gap-[20px] mt-[16px] font- text-[5vw] text-black">
             <img src="/services12.png" className="w-[15.625vw] " />
-            <h1>Corporate Design</h1>
+            <h1> Residential Design</h1>
           </div>
-          <div id="img1" className="relative mt-[12px] hidden  justify-center ">
+          <div
+            id="image1"
+            className="relative mt-[12px] hidden  justify-center "
+          >
             <img src="/services3.png" className="relative" />
-            <div className="absolute z-10 top-[50%] w-[90%] ">
-              <h1 className="text-[5vw]">Corporate Design</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+            <div
+              id="div1"
+              className="absolute z-10 top-[50%] w-[90%] text-white "
+            >
+              <h1 className="text-[5vw]"> Residential Design</h1>
+              <p className="text-[3.5075vw]">
+                Transform your home into a work of art with our residential
+                design services. From space planning to custom interiors, we
+                create stunning living spaces that reflect your unique style.
               </p>
             </div>
           </div>
@@ -116,7 +141,6 @@ const ServicesBottomMobile = () => {
         {/* second service */}
         <div
           id="second"
-          className="min-w-full"
           onClick={() => {
             setService1(false);
             setService2(true);
@@ -129,14 +153,21 @@ const ServicesBottomMobile = () => {
             <img src="/services12.png" className="w-[15.625vw] " />
             <h1>Corporate Design</h1>
           </div>
-          <div id="img2" className="relative mt-[12px] hidden  justify-center ">
+          <div
+            id="image2"
+            className="relative mt-[12px] hidden  justify-center "
+          >
             <img src="/services3.png" className="relative" />
-            <div className="absolute z-10 top-[50%] w-[90%] ">
+            <div
+              id="div2"
+              className="absolute z-10 top-[50%] w-[90%] text-white  "
+            >
               <h1 className="text-[5vw]">Corporate Design</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+              <p className="text-[3.5075vw]">
+                Elevate your business with our corporate design services. We
+                create functional and attractive workspaces that promote
+                productivity and reflect your brand identity. Let us help you
+                create a space that inspires and motivates.
               </p>
             </div>
           </div>
@@ -144,7 +175,6 @@ const ServicesBottomMobile = () => {
         {/* third service */}
         <div
           id="third"
-          className="min-w-full"
           onClick={() => {
             setService1(false);
             setService2(false);
@@ -157,11 +187,17 @@ const ServicesBottomMobile = () => {
             <img src="/services12.png" className="w-[15.625vw] " />
             <h1>Corporate Design</h1>
           </div>
-          <div id="img3" className="relative mt-[12px] hidden  justify-center ">
+          <div
+            id="image3"
+            className="relative mt-[12px] hidden  justify-center "
+          >
             <img src="/services3.png" className="relative" />
-            <div className="absolute z-10 top-[50%] w-[90%] ">
+            <div
+              id="div3"
+              className="absolute z-10 top-[50%] w-[90%] text-white "
+            >
               <h1 className="text-[5vw]">Corporate Design</h1>
-              <p>
+              <p className="text-[3.5075vw]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco{" "}
@@ -172,7 +208,6 @@ const ServicesBottomMobile = () => {
         {/* fourth service */}
         <div
           id="fourth"
-          className="min-w-full"
           onClick={() => {
             setService1(false);
             setService2(false);
@@ -180,16 +215,22 @@ const ServicesBottomMobile = () => {
             setService4(true);
           }}
         >
-          <div className="w-full  h-[1px] bg-black  " />
+          <div className="w-full  lg:hidden  h-[1px] bg-black  " />
           <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[5vw] text-black">
             <img src="/services12.png" className="w-[15.625vw] " />
             <h1>Corporate Design</h1>
           </div>
-          <div id="img4" className="relative mt-[12px] hidden  justify-center ">
+          <div
+            id="image4"
+            className="relative mt-[12px] hidden  justify-center "
+          >
             <img src="/services3.png" className="relative" />
-            <div className="absolute z-10 top-[50%] w-[90%] ">
+            <div
+              id="div4"
+              className="absolute z-10 top-[50%] w-[90%] text-white "
+            >
               <h1 className="text-[5vw]">Corporate Design</h1>
-              <p>
+              <p className="text-[3.5075vw]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco{" "}

@@ -5,6 +5,11 @@ import localFont from "next/font/local";
 import CustomButton from "./section/customButton";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Navbar from "../components/Navbar";
+import localFont from "next/font/local";
+import CustomButton from "./section/customButton";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 // static import images
 
@@ -166,14 +171,16 @@ const Hero = () => {
               className="  lg:top-0 lg:right-[10] object-fill "
               // className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
               alt="image of a luxury chair"
-              src={Heroimg}
+              src={heroImage}
             />
           </div>
           <p
             id="description"
             className={`m-0 base:text-center lg:text-left text-[#A5787A]  lg:text-[min(1.3vw,20px)] 2xl:text-[22px] tracking-wide lg:leading-[30px] 2xl:leading-[34px] font-[400] flex flex-col items-start lg:w-[500px] ${poppins.className}`}
           >
-            {`Welcome to our Interior Design company in Bangalore! We specialize in Home & Commercial Decor, Furniture Design, Space Planning, Custom Interiors, Renovation, & Luxury Design. Let us transform your space into something truly extraordinary. Contact us today for bespoke solutions tailored to your unique needs.`
+            {`Opuvlence is a full-service interior design firm specializing in creating beautiful, functionalspaces for residential and commercial clients. With over 4 years of experience in the industry,our team of designers have a proven track record of delivering exceptional results.
+
+`
               .split(/\r?\n/)
               .map((char, idx) => {
                 return (
@@ -200,7 +207,7 @@ const Hero = () => {
             className="lg:inline-block base:hidden absolute top-[-20px] lg:right-[10] h-[800px] "
             // className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
             alt="image of a luxury chair"
-            src={Heroimg}
+            src={heroImage}
           />
         </div>
       </section>

@@ -1,26 +1,26 @@
 /** @format */
 
-import Head from "next/head"
-import Image from "next/image"
-import styles from "../styles/Home.module.css"
-import OurExpertise from "../components/ourExpertise"
-import OurProject from "../components/ourProject"
-import Batholic from "../components/batHolic"
-import LoadingScreen from "../components/LoadingScreen"
-import Testimonials from "../components/testimonials"
-import Hero from "../components/Hero"
-import Navbar from "../components/Navbar"
-import Contact from "../components/Contact"
-import TransitionScreen from "../components/TransitionScreen"
-import Imgs4 from "../components/Imgs4"
-import ExampleComponent from "../components/ExampleComponent"
-import Footer from "../components/Footer"
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import OurExpertise from "../components/ourExpertise";
+import OurProject from "../components/ourProject";
+import Batholic from "../components/batHolic";
+import LoadingScreen from "../components/LoadingScreen";
+import Testimonials from "../components/testimonials";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import Contact from "../components/Contact";
+import TransitionScreen from "../components/TransitionScreen";
+import Imgs4 from "../components/Imgs4";
+import ExampleComponent from "../components/ExampleComponent";
+import Footer from "../components/Footer";
 
-import MobileOurProject from "../components/Mobileourproject"
-import CasesLibrary from "../components/CasesLibray"
+import MobileOurProject from "../components/Mobileourproject";
+import CasesLibrary from "../components/CasesLibray";
 
-import About from "../components/About"
-import { useEffect, useState } from "react"
+import About from "../components/About";
+import { useEffect, useState } from "react";
 export default function Home() {
 	const [loader, setLoader] = useState(true)
 

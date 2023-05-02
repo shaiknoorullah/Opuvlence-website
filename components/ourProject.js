@@ -84,11 +84,11 @@ const OurProject = () => {
             }}
             className="3xl:w-[442px] text-[#270405] lg:w-[23.02vw] 3xl:text-[16px] lg:text-[0.833vw] 3xl:leading-[24.85px] lg:leading-[1.294vw] tracking-[7%] font-normal  3xl:pt-[86px] lg:pt-[4.47vw]  snap-center"
           >
-            Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to provide extremely reliable
-            serviceUsing edge cutting technology to provide extremely reliable
-            service
+            We take pride in our ability to transform spaces into beautiful,
+            functional environments that meet our client's needs and exceed
+            their expectations. Whether it's a cozy living room, a modern
+            kitchen, or a luxurious hotel lobby, we have the expertise and
+            experience to deliver exceptional results.
           </div>
           {/* reuse */}
           <div

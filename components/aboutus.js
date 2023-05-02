@@ -62,35 +62,27 @@ const AboutusHero = () => {
           space into a breathtaking work of art.”
         </div>
 
-				{/* description*/}
-				<div className="lg:grid py-[3rem] grid-cols-[1fr_3fr_1fr]">
-					<div
-						style={{
-							gridColumnStart: 2,
-							gridColumnEnd: 3,
-						}}
-						className={`${poppins} lg:ml-[17rem lg:mr-[10rem] base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal`}
-					>
-						At our interior design company, we&apos;re more
-						than just designers. We&apos;re visionaries,
-						artists, and dreamers. We&apos;re passionate
-						about creating spaces that inspire, delight, and
-						transcend the ordinary. From elegant residential
-						homes to awe-inspiring commercial spaces, we
-						bring our unique blend of creativity,
-						innovation, and expertise to every project. Our
-						team of experts work tirelessly to ensure that
-						every detail is perfect, leaving our clients
-						with a space that is both beautiful and
-						functional. At our company, luxury is not just a
-						word, it&apos;s a way of life, and we&apos;re
-						committed to bringing that to every design we
-						create.
-					</div>
-				</div>
-			</div>
-		</div>
-	)
-}
+        {/* description*/}
+        <div className="lg:grid py-[3rem] grid-cols-[1fr_3fr_1fr]">
+          <div
+            style={{
+              gridColumnStart: 2,
+              gridColumnEnd: 3,
+            }}
+            className={`${poppins} lg:ml-[17rem lg:mr-[10rem] base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal`}
+          >
+            At Opuvlence, we are committed to sustainability and
+            eco-friendliness. We use environmentally- friendly materials
+            whenever possible and strive to reduce waste and minimize our carbon
+            footprint. Our portfolio includes a diverse range of projects, from
+            single-room makeovers to large-scale commercial renovations. We have
+            worked with clients in a variety of industries, including
+            hospitality, healthcare, and retail.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default AboutusHero;

@@ -23,7 +23,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
 // number component
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const NumberText = ({ number, text, state }) => {
 	return (
@@ -47,92 +47,92 @@ const OurExpertise = () => {
 
 	const sectionRef = useRef(null)
 
-	// useEffect(() => {
-	// 	// const sectionName = document.getElementById('section-name')
+  // useEffect(() => {
+  // 	// const sectionName = document.getElementById('section-name')
 
-	// 	const sectionStats =
-	// 		document.getElementById("section-stats")
-	// 	const sectionDescMob = document.getElementById(
-	// 		"section-description-mobile"
-	// 	).children
-	// 	const sectionStatsMobile = document.getElementById(
-	// 		"section-stats-mobile"
-	// 	).children
-	// 	const sectionGraph =
-	// 		document.getElementById("section-graph")
+  // 	const sectionStats =
+  // 		document.getElementById("section-stats")
+  // 	const sectionDescMob = document.getElementById(
+  // 		"section-description-mobile"
+  // 	).children
+  // 	const sectionStatsMobile = document.getElementById(
+  // 		"section-stats-mobile"
+  // 	).children
+  // 	const sectionGraph =
+  // 		document.getElementById("section-graph")
 
-	// 	const tl = gsap.timeline({
-	// 		ease: "power2.out",
-	// 		duration: 0.4,
-	// 		delay: 1,
-	// 	})
+  // 	const tl = gsap.timeline({
+  // 		ease: "power2.out",
+  // 		duration: 0.4,
+  // 		delay: 1,
+  // 	})
 
-	// 	tl.fromTo(
-	// 		"#section-name",
-	// 		{
-	// 			y: 20,
-	// 			opacity: 0,
-	// 		},
-	// 		{
-	// 			y: 0,
-	// 			opacity: 1,
-	// 			scrollTrigger: { trigger: sectionRef.current },
-	// 		}
-	// 	)
-	// 		.fromTo(
-	// 			"#section-title",
-	// 			{
-	// 				y: 20,
-	// 				opacity: 0,
-	// 			},
-	// 			{
-	// 				y: 0,
-	// 				opacity: 1,
-	// 				scrollTrigger: { trigger: sectionRef.current },
-	// 			}
-	// 		)
-	// 		.fromTo(
-	// 			"#section-description",
-	// 			{ y: 20, opacity: 0 },
-	// 			{
-	// 				y: 0,
-	// 				opacity: 1,
+  // 	tl.fromTo(
+  // 		"#section-name",
+  // 		{
+  // 			y: 20,
+  // 			opacity: 0,
+  // 		},
+  // 		{
+  // 			y: 0,
+  // 			opacity: 1,
+  // 			scrollTrigger: { trigger: sectionRef.current },
+  // 		}
+  // 	)
+  // 		.fromTo(
+  // 			"#section-title",
+  // 			{
+  // 				y: 20,
+  // 				opacity: 0,
+  // 			},
+  // 			{
+  // 				y: 0,
+  // 				opacity: 1,
+  // 				scrollTrigger: { trigger: sectionRef.current },
+  // 			}
+  // 		)
+  // 		.fromTo(
+  // 			"#section-description",
+  // 			{ y: 20, opacity: 0 },
+  // 			{
+  // 				y: 0,
+  // 				opacity: 1,
 
-	// 				scrollTrigger: { trigger: sectionRef.current },
-	// 			}
-	// 		)
-	// 		.fromTo(
-	// 			[sectionStats, sectionStatsMobile],
-	// 			{ y: 20, opacity: 0 },
-	// 			{
-	// 				y: 0,
-	// 				opacity: 1,
-	// 				stagger: 0.05,
+  // 				scrollTrigger: { trigger: sectionRef.current },
+  // 			}
+  // 		)
+  // 		.fromTo(
+  // 			[sectionStats, sectionStatsMobile],
+  // 			{ y: 20, opacity: 0 },
+  // 			{
+  // 				y: 0,
+  // 				opacity: 1,
+  // 				stagger: 0.05,
 
-	// 				scrollTrigger: { trigger: sectionRef.current },
-	// 			}
-	// 		)
-	// 		.fromTo(
-	// 			"#section-button",
-	// 			{ y: 20, opacity: 0 },
-	// 			{
-	// 				y: 0,
-	// 				opacity: 1,
+  // 				scrollTrigger: { trigger: sectionRef.current },
+  // 			}
+  // 		)
+  // 		.fromTo(
+  // 			"#section-button",
+  // 			{ y: 20, opacity: 0 },
+  // 			{
+  // 				y: 0,
+  // 				opacity: 1,
 
-	// 				scrollTrigger: { trigger: sectionRef.current },
-	// 			}
-	// 		)
-	// 		.fromTo(
-	// 			"#section-graph",
-	// 			{ h: 0, opacity: 0 },
-	// 			{
-	// 				h: "initial",
-	// 				opacity: 1,
+  // 				scrollTrigger: { trigger: sectionRef.current },
+  // 			}
+  // 		)
+  // 		.fromTo(
+  // 			"#section-graph",
+  // 			{ h: 0, opacity: 0 },
+  // 			{
+  // 				h: "initial",
+  // 				opacity: 1,
 
-	// 				scrollTrigger: { trigger: sectionRef.current },
-	// 			}
-	// 		)
-	// }, [])
+  // 				scrollTrigger: { trigger: sectionRef.current },
+  // 			}
+  // 		)
+  // }, [])
 
 	return (
 		<div
@@ -153,46 +153,35 @@ const OurExpertise = () => {
 				>
 					<div className="lg:flex hidden w-[30%]"></div>
 
-					<div
-						className={`${poppinsExtrabold.className} uppercase font-extrabold text-[1.2rem] text-[#A5787A] flex`}
-					>
-						<span className="inline-block text-[1rem] mr-3">
-							/
-						</span>
-						<span className="inline-block mr-3 mt-[-3px]">
-							our expertise
-						</span>
-					</div>
-				</div>
+          <div
+            className={`${poppinsExtrabold.className} uppercase font-extrabold text-[1.2rem] text-[#A5787A] flex`}
+          >
+            <span className="inline-block text-[1rem] mr-3">/</span>
+            <span className="inline-block mr-3 mt-[-3px]">our expertise</span>
+          </div>
+        </div>
 
-				{/*25 years experience  */}
-				<div
-					id="section-title"
-					className={`${poppinsRegular.className} lg:w-[30%] base:text-[1.5rem] lg:text-[1.8rem] lg:text-left base:text-center text-black leading-[2.4rem] font-[700] pt-8`}
-				>
-					25 YEARS OF EXPERIENCE IN INTERIOR DESIGN
-				</div>
+        {/*25 years experience  */}
+        <div
+          id="section-title"
+          className={`${poppinsRegular.className} lg:w-[30%] base:text-[1.5rem] lg:text-[1.8rem] lg:text-left base:text-center text-black leading-[2.4rem] font-[700] pt-8`}
+        >
+          25 YEARS OF EXPERIENCE IN INTERIOR DESIGN
+        </div>
 
-				{/* description for lg */}
-				<div
-					id="section-description"
-					className="lg:flex base:hidden w-full"
-				>
-					<div className="w-[35%]"></div>
-					<div
-						className={`${poppinsRegular.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
-					>
-						At our interior design company in Bangalore,
-						we&apos;re committed to delivering exceptional
-						service and stunning designs that exceed
-						expectations. Our expertise and creativity have
-						made us a trusted source for transforming spaces
-						into something extraordinary. But don&apos;t
-						take our word for it - hear from our satisfied
-						customers about their experiences working with
-						us.
-					</div>
-				</div>
+        {/* description for lg */}
+        <div id="section-description" className="lg:flex base:hidden w-full">
+          <div className="w-[35%]"></div>
+          <div
+            className={`${poppinsRegular.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
+          >
+            Each member of our team brings unique strengths and experiences to
+            the table, and we work collaboratively to achieve our objectives. We
+            prioritize communication, trust, and accountability in all our
+            interactions to ensure that we are working efficiently and
+            effectively towards our common goals
+          </div>
+        </div>
 
 				{/* grid */}
 				<div className="w-full grid base:grid-cols-2 lg:grid-cols-11 pt-9">
@@ -270,21 +259,21 @@ const OurExpertise = () => {
 							</div>
 						</div>
 
-						{/* button */}
-						<div
-							id="section-button"
-							class="row-span-1 hidden lg:flex  items-center"
-						>
-							<div className="ml-8 pb-4">
-								{" "}
-								<CustomButton
-									text={"Discover"}
-									color={"black"}
-									href="#contact"
-								/>
-							</div>
-						</div>
-					</div>
+            {/* button */}
+            <div
+              id="section-button"
+              class="row-span-1 hidden lg:flex  items-center"
+            >
+              <div className="ml-8 pb-4">
+                {" "}
+                <CustomButton
+                  text={"Discover"}
+                  color={"black"}
+                  href="#contact"
+                />
+              </div>
+            </div>
+          </div>
 
 					{/* graph */}
 					<div

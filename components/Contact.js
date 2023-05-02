@@ -20,10 +20,13 @@ const Contact = () => {
   const [email, setemail] = useState();
   const [yourMessage, setyourMessage] = useState();
 
-console.log(name,email,contactNumber,yourMessage)
+  console.log(name, email, contactNumber, yourMessage);
 
   const checkvalidation = () => {
-    name === null || contactNumber === null || email === null || yourMessage === null
+    name === null ||
+    contactNumber === null ||
+    email === null ||
+    yourMessage === null
       ? alert("Please Enter All Fields")
       : alert("We'll get back to you");
   };
