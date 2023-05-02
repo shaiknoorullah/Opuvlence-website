@@ -24,39 +24,44 @@ const Layout = props => {
 	const router = useRouter()
 	const { scroll } = useLocomotiveScroll()
 	const path = router.pathname.split("?")[0]
+
 	return (
-		<LocomotiveScrollProvider
-			options={{
-				smooth: true,
-				lerp: 0.04,
-				multiplier: 1.3,
-			}}
-			watch={[path]}
-			location={path}
-			containerRef={mainContainerRef}
-			onLocationChange={scroll =>
-				scroll.scrollTo(0, {
-					duration: 0,
-					disableLerp: true,
-				})
-			} // If you want to reset the scroll position to 0 for example
-			onUpdate={() =>
-				console.log("Updated, but not on location change!")
-			}
-		>
-			<div
-				data-scroll-container
-				ref={mainContainerRef}
+		<>
+			<LocomotiveScrollProvider
+				options={{
+					smooth: true,
+					lerp: 0.04,
+					multiplier: 1.3,
+				}}
+				watch={[path]}
+				location={path}
+				containerRef={mainContainerRef}
+				onLocationChange={scroll =>
+					scroll.scrollTo(0, {
+						duration: 0,
+						disableLerp: true,
+					})
+				} // If you want to reset the scroll position to 0 for example
+				onUpdate={() =>
+					console.log(
+						"Updated, but not on location change!"
+					)
+				}
 			>
-				<div data-scroll-section>
-					{router.asPath == "/" && <LoadingScreen />}
-					<Navbar />
-					<ExampleComponent />
-					{props.children}
-					<Footer />
+				<div
+					data-scroll-container
+					ref={mainContainerRef}
+				>
+					<div data-scroll-section>
+						{router.asPath == "/" && <LoadingScreen />}
+						<Navbar />
+						<ExampleComponent />
+						{props.children}
+						<Footer />
+					</div>
 				</div>
-			</div>
-		</LocomotiveScrollProvider>
+			</LocomotiveScrollProvider>
+		</>
 	)
 }
 

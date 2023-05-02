@@ -13,7 +13,7 @@ const Imgs4 = () => {
 				<div className=" w-full grid grid-cols-9  grid-rows-6  ">
 					<div
 						data-scroll
-						data-scroll-speed="1.5"
+						data-scroll-speed="4"
 						className=" mr-[6rem] z-[1000]  row-span-full row-start-3 row-end-6 col-start-1 col-end-4"
 					>
 						<img
@@ -24,7 +24,7 @@ const Imgs4 = () => {
 
 					<div
 						data-scroll
-						data-scroll-speed="2"
+						data-scroll-speed="6"
 						className="row-span-full z-[100]  row-start-1 row-end-5  col-start-3 col-end-6 "
 					>
 						<img
@@ -35,7 +35,7 @@ const Imgs4 = () => {
 
 					<div
 						data-scroll
-						data-scroll-speed="2.5"
+						data-scroll-speed="2"
 						className="col-start-4 col-end-8 mt-[2rem] ml-[9rem] mr-[-8rem]  z-[1] row-start-3 row-end-7   row-span-full"
 					>
 						<img
@@ -46,7 +46,7 @@ const Imgs4 = () => {
 
 					<div
 						data-scroll
-						data-scroll-speed="3"
+						data-scroll-speed="8"
 						className=" col-start-7 col-end-13 row-start-2 row-end-5 z-10 ml-[7rem] row-span-full"
 					>
 						<img

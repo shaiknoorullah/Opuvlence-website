@@ -210,8 +210,8 @@ const Hero = () => {
 				>
 					<Image
 						data-scroll
-						data-scroll-speed="1.5"
-						className="lg:inline-block base:hidden absolute top-[-20px] lg:right-[10] h-[800px] "
+						data-scroll-speed="3"
+						className="lg:inline-block base:hidden absolute top-[-90px] lg:right-[10] h-[900px] "
 						// className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
 						alt="image of a luxury chair"
 						src={heroImage}
