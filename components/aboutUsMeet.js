@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React from "react";
 import localFont from "next/font/local";
 import Link from "next/link";
 
@@ -36,42 +36,55 @@ const OurTeamSingle = ({ name, image, designation }) => {
 };
 
 const AboutUsMeet = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const [name, setname] = useState();
-  const [designation, setdesignation] = useState();
-  const [image, setimage] = useState();
-  const [description, setdescription] = useState();
-
   const testimonial = [
     {
-      name: "Shaikh Fauwaz",
-      designation: "Chief Executive Officer",
+      name: "HIBA ISHTIAQ",
+      designation: "OPERATIONS MANAGER",
     },
     {
-      name: "Shaikh Fauwaz",
-      designation: "Chief Executive Officer",
+      name: "SONALI SINGH",
+      designation: "DESIGN MANAGER",
     },
     {
-      name: "Shaikh Fauwaz",
-      designation: "Chief Executive Officer",
+      name: " SUPRIYA SATYAM",
+      designation: "BUSINESS MANAGER",
     },
     {
-      name: "Shaikh Fauwaz",
-      designation: "Chief Executive Officer",
+      name: " ARAVINDH G",
+      designation: " J.DESIGNER",
     },
     {
-      name: "Shaikh Fauwaz",
-      designation: "Chief Executive Officer",
+      name: " ASHRITH V",
+      designation: "S. DESIGNER",
     },
     {
-      name: "Shaikh Fauwaz",
-      designation: "Chief Executive Officer",
+      name: "SUHAIL SHAIK",
+      designation: "DESIGNER",
+    },
+    {
+      name: "SALEEM MAJEED",
+      designation: "S. DESIGNER",
+    },
+    {
+      name: "S JYOTI KONDADA ",
+      designation: "DESIGNER",
+    },
+    {
+      name: "AYMAN FARUQ",
+      designation: "S.DESIGNER",
+    },
+    {
+      name: "SHAIK FAROUK",
+      designation: "S.DESIGNER",
+    },
+    {
+      name: "SHABAB BASHEER",
+      designation: "S.DESIGNER",
     },
   ];
 
   return (
-    <div className="w-full flex justify-center py-[8rem] relative">
+    <div className="w-full flex justify-center py-[8rem]">
       <div className="w-[95%] text-black max-w-[1920px] flex flex-col">
         <div className=" lg:grid grid-cols-12">
           <div className="col-start-1 col-end-11 flex flex-col z-50">
@@ -93,16 +106,8 @@ const AboutUsMeet = () => {
         <div className="w-full px-[4rem] gap-[5.7rem] hidden lg:grid grid-cols-4 mt-[4rem]">
           {testimonial.map((data, index) => {
             return (
-              <div key={index} className="flex flex-col cursor-pointer  ">
-                <div
-                  onClick={() => {
-                    setname(data.name);
-                    setimage("/testimonialdemo.jpg");
-                    setdesignation(data.designation);
-                    
-                    setShowModal(true);
-                  }}
-                >
+              <div key={index} className="flex flex-col   ">
+                <Link href="/testimonialsingle">
                   <img
                     className="rounded-t-full self-center "
                     src="/testimonialdemo.jpg"
@@ -113,7 +118,7 @@ const AboutUsMeet = () => {
                   <div className="font-normal italic text-[1.3rem]">
                     {data.designation}
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}
@@ -124,7 +129,7 @@ const AboutUsMeet = () => {
           <div className="base:grid gap-5 w-full lg:hidden grid-cols-2">
             {testimonial.map((data, index) => {
               return (
-                <div key={index} className="cursor-pointer">
+                <div key={index}>
                   <Link passHref href="/testimonialsingle">
                     <OurTeamSingle
                       name={data.name}
@@ -138,55 +143,6 @@ const AboutUsMeet = () => {
           </div>
         </div>
       </div>
-
-      {/* Modal */}
-      {showModal && (
-        <div
-          className={
-            showModal
-              ? `absolute top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-25 z-[1000] flex justify-center items-center  `
-              : `hidden`
-          }
-          style={{ overflowY: "hidden" }}
-        >
-          <div className="w-[70%] flex flex-col justify-center bg-[#F1E3F2] text-black p-9 relative rounded ">
-            <div className=" base:py-12 lg:py-9 flex lg:flex-row base:flex-col">
-              {/* image section */}
-
-              <div className="base:w-[65%] lg:w-[25%]">
-                <img className="cover w-full" src="testimonial.jpg" />
-              </div>
-              <div className="flex  text-black flex-col base:py-3 lg:my-[1rem] lg:pl-[3rem] lg:w-[75%]">
-                <div className="w-[16rem] text-[3.2rem] leading-[4rem]">
-                  {name}
-                </div>
-                <div className="flex text-[1.5rem] ">{designation}</div>
-                <div className="border border-black w-full base:my-6 lg:my-11"></div>
-                <div className="text-[1.3rem] leading-[2rem]">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
-                  massa mi. Aliquam in hendrerit urna. Pellentesque sitLorem
-                  ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
-                  consectetur adipiscing elit Ut et massa mi. Aliquam in
-                  hendrerit urna. Pellentesque sitLorem ipsum dolor sit amet
-                  consectetur Lorem ipsum dolor sit amet consectetur adipiscing
-                  elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
-                  sitLorem ipsum dolor sit amet consectetur Lorem ipsum dolor
-                  sit amet consectetur adipiscing elit Ut et massa mi. Aliquam
-                  in hendrerit urna. Pellentesque sitLorem ipsum dolor sit amet
-                  consectetur Lorem ipsum dolor sit amet consectetur adipiscing
-                  elit Ut et massa mi. Aliquam in hendrerit urna.
-                </div>
-                <button
-                  className="absolute top-5 right-5 bg-[#270405] hover:bg-black text-white font-bold py-2 px-4 w-fit rounded"
-                  onClick={() => setShowModal(false)}
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

@@ -39,7 +39,7 @@ const MobileOurProject = () => {
 					<div
 						className={`${golden.className} text-black absolute text-[15.625vw] leading-[15.625vw] tracking-[3%] top-[15.374vw] z-[10]`}
 					>
-						bonito{" "}
+						fluidic{" "}
 						<div className="rotate-[270deg] absolute left-[68.125vw] top-[3.125vw]  text-[5vw] leading-[8.43vw] tracking-[0.05em] font-bold">
 							2020
 						</div>
