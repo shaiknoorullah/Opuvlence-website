@@ -169,11 +169,12 @@ const Footer = () => {
 					>
 						address
 					</h5>
-					<p
-						className={`${poppinsRegular.className} m-0 base:text-[13px] md:text-[18px] relative text-xl tracking-[0.18em] leading-[136.8%] font-medium flex items-end base:w-fit md:w-[427px]`}
+					<Link
+						href="https://www.google.com/maps/place/Opuvlence/@13.0182965,77.6456517,17z/data=!3m1!4b1!4m6!3m5!1s0x844319234894b65d:0x8282e50574ef517f!8m2!3d13.0182913!4d77.648232!16s%2Fg%2F11twsvc47r"
+						className={`${poppinsRegular.className} m-0 base:text-[13px] md:text-[18px] cursor-pointer relative text-xl tracking-[0.18em] leading-[136.8%] font-medium flex items-end base:w-fit md:w-[427px]`}
 					>
 						Orangery plaza Bengaluru, Karnataka, 560043
-					</p>
+					</Link>
 				</div>
 			</div>
 			<div className="flex flex-row items-start base:justify-between md:justify-start md:gap-[485px] md:w-[initial] base:w-[90vw] text-right mb-[50px] text-xs text-black">
