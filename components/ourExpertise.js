@@ -175,12 +175,11 @@ const OurExpertise = () => {
           <div
             className={`${poppinsRegular.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
           >
-            At our interior design company in Bangalore, we&apos;re committed to
-            delivering exceptional service and stunning designs that exceed
-            expectations. Our expertise and creativity have made us a trusted
-            source for transforming spaces into something extraordinary. But
-            don&apos;t take our word for it - hear from our satisfied customers
-            about their experiences working with us.
+            Each member of our team brings unique strengths and experiences to
+            the table, and we work collaboratively to achieve our objectives. We
+            prioritize communication, trust, and accountability in all our
+            interactions to ensure that we are working efficiently and
+            effectively towards our common goals
           </div>
         </div>
 

@@ -34,7 +34,8 @@ const ServicesBottom = () => {
       "#first",
       { width: "191px" },
       {
-        width: "800px",
+        width: "max(41.6vw,min(41vw,800px))",
+        // width: "800px",
 
         duration: 0.5,
         ease: "power3.inOut",
@@ -58,18 +59,30 @@ const ServicesBottom = () => {
         ease: "power2.out",
       }
     );
+    tl1.current.fromTo(
+      "#abs1",
+      {
+        display: "none",
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        display: "block",
+      }
+    );
     tl1.current.to("#s1text180", {
       opacity: 1,
       display: "block",
-      delay: 0.2,
+      delay: -0.2,
       duration: 1,
       ease: "power3.inOut",
     });
+
     tl2.current.fromTo(
       "#second",
       { width: "191px" },
       {
-        width: "800px",
+        width: "max(41.6vw,min(41vw,800px))",
 
         duration: 0.5,
         ease: "power3.inOut",
@@ -93,10 +106,21 @@ const ServicesBottom = () => {
         ease: "power2.out",
       }
     );
+    tl2.current.fromTo(
+      "#abs2",
+      {
+        display: "none",
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        display: "block",
+      }
+    );
     tl2.current.to("#s2text180", {
       opacity: 1,
       display: "block",
-      delay: 0.2,
+      delay: -0.2,
       duration: 1,
       ease: "power3.inOut",
     });
@@ -104,7 +128,7 @@ const ServicesBottom = () => {
       "#third",
       { width: "191px" },
       {
-        width: "800px",
+        width: "max(41.6vw,min(41vw,800px))",
         duration: 0.5,
         ease: "power3.inOut",
       }
@@ -127,10 +151,21 @@ const ServicesBottom = () => {
         ease: "power2.out",
       }
     );
+    tl3.current.fromTo(
+      "#abs3",
+      {
+        display: "none",
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        display: "block",
+      }
+    );
     tl3.current.to("#s3text180", {
       opacity: 1,
       display: "block",
-      delay: 0.2,
+      delay: -0.2,
       duration: 1,
       ease: "power3.inOut",
     });
@@ -138,7 +173,7 @@ const ServicesBottom = () => {
       "#fourth",
       { width: "191px" },
       {
-        width: "800px",
+        width: "max(41.6vw,min(41vw,800px))",
         duration: 0.5,
         ease: "power3.inOut",
       }
@@ -161,10 +196,21 @@ const ServicesBottom = () => {
         ease: "power2.out",
       }
     );
+    tl4.current.fromTo(
+      "#abs4",
+      {
+        display: "none",
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        display: "block",
+      }
+    );
     tl4.current.to("#s4text180", {
       opacity: 1,
       display: "block",
-      delay: 0.2,
+      delay: -0.2,
       duration: 1,
       ease: "power3.inOut",
     });
@@ -182,8 +228,8 @@ const ServicesBottom = () => {
     service4 ? tl4.current.play() : tl4.current.reverse();
   }, [service1, service2, service3, service4]);
   return (
-    <div className="hidden lg:flex w-full justify-center h-fit">
-      <div className="max-w-[1920px] flex h-[700px] ">
+    <div className=" mt-[100px] flex w-full justify-center h-screen ">
+      <div className="max-w-[1920px] flex h-[min(700px,40vw)] justify-center ">
         {/* first service */}
         <div
           id="first"
@@ -196,18 +242,23 @@ const ServicesBottom = () => {
           className=" flex flex-row "
         >
           <div className="h-full w-[1px] bg-black " />
-          <div className="flex flex-col  h-fit px-[20px] self-end">
+          <div className="flex flex-col gap-[70px] h-fit px-[20px] self-end">
             <div id="img1" className="relative hidden">
               <img
                 src="/services1.png"
-                className="w-[700px]  object-contain relative z-1 self-start "
+                className="w-[min(700px,36.45vw)] object-contain relative z-1 self-start "
               />
-              <div className="text-white absolute top-[300px] left-[100px]  z-100  text-center">
-                <h1 className=" font-[500]  ">Residential Design</h1>
-                <p className="text-[min(14px,0.74vw)] w-[500px] ">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+              <div
+                id="abs1"
+                className="text-white absolute  top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center"
+              >
+                <h1 className=" font-[500] text-[min(32px,1.66vw)] ">
+                  Residential Design
+                </h1>
+                <p className="text-[min(16px,0.833vw)]  w-[min(500px,26.5vw)] ">
+                  Transform your home into a work of art with our residential
+                  design services. From space planning to custom interiors, we
+                  create stunning living spaces that reflect your unique style.{" "}
                 </p>
               </div>
             </div>
@@ -217,7 +268,7 @@ const ServicesBottom = () => {
                   writingMode: "vertical-lr",
                 }}
                 id="s1text270"
-                className=" text-[30px] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
+                className=" text-[min(30px,1.56vw)] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
               >
                 Residential Design
               </h2>
@@ -225,12 +276,12 @@ const ServicesBottom = () => {
               <div id="wrapper" className="flex items-center gap-[25px] ">
                 <img
                   id="small1"
-                  className=" min-w-[150px]   "
+                  className=" min-w-[min(150px,7.8125vw)] "
                   src="/services12.png"
                 />
                 <h2
                   id="s1text180"
-                  className=" text-[30px] hidden font-[600] text-black  "
+                  className=" text-[min(30px,1.56vw)] hidden font-[600] text-black  "
                 >
                   Residential Design
                 </h2>
@@ -254,14 +305,20 @@ const ServicesBottom = () => {
             <div id="img2" className="relative hidden">
               <img
                 src="/services21.png"
-                className="w-[700px]  object-contain relative z-1 self-start "
+                className="w-[min(700px,36.45vw)] object-contain relative z-1 self-start "
               />
-              <div className="text-white absolute top-[300px] left-[100px]  z-100  text-center">
-                <h1 className=" font-[500]  ">Residential Design</h1>
-                <p className="text-[min(14px,0.74vw)] w-[500px] ">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+              <div
+                id="abs2"
+                className="text-white absolute  top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center"
+              >
+                <h1 className=" font-[500] text-[min(32px,1.66vw)] ">
+                  Corporate Design
+                </h1>
+                <p className="text-[min(16px,0.833vw)]  w-[min(500px,26.5vw)] ">
+                  Elevate your business with our corporate design services. We
+                  create functional and attractive workspaces that promote
+                  productivity and reflect your brand identity. Let us help you
+                  create a space that inspires and motivates.
                 </p>
               </div>
             </div>
@@ -271,9 +328,9 @@ const ServicesBottom = () => {
                   writingMode: "vertical-lr",
                 }}
                 id="s2text270"
-                className=" text-[30px] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
+                className=" text-[min(30px,1.56vw)] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
               >
-                Residential Design
+                Corporate Design
               </h2>
 
               <div className="flex items-center gap-[25px] ">
@@ -286,7 +343,7 @@ const ServicesBottom = () => {
                   id="s2text180"
                   className=" text-[min(30px,1.56vw)] hidden font-[600] text-black  "
                 >
-                  Residential Design
+                  Corporate Design
                 </h2>
               </div>
             </div>
@@ -311,14 +368,18 @@ const ServicesBottom = () => {
                 src="/services3.png"
                 className="w-[min(700px,36.45vw)]  object-contain relative z-1 self-start "
               />
-              <div className="text-white absolute  top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center">
+              <div
+                id="abs3"
+                className="text-white absolute  top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center"
+              >
                 <h1 className=" font-[500] text-[min(32px,1.66vw)] ">
-                  Residential Design
+                  Restaurant Design
                 </h1>
                 <p className="text-[min(16px,0.833vw)]  w-[min(500px,26.5vw)] ">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+                  Impress your diners with our restaurant design services. From
+                  the layout to the decor, we create a welcoming atmosphere that
+                  complements your menu and brand. Let us transform your space
+                  into a dining destination.
                 </p>
               </div>
             </div>
@@ -330,7 +391,7 @@ const ServicesBottom = () => {
                 id="s3text270"
                 className=" text-[min(30px,1.56vw)] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
               >
-                Residential Design
+                Restaurant Design
               </h2>
 
               <div id="wrapper" className="flex items-center gap-[25px] ">
@@ -343,7 +404,7 @@ const ServicesBottom = () => {
                   id="s3text180"
                   className=" text-[min(30px,1.56vw)] hidden font-[600] text-black  "
                 >
-                  Residential Design
+                  Restaurant Design
                 </h2>
               </div>
             </div>
@@ -367,7 +428,10 @@ const ServicesBottom = () => {
                 src="/services1.png"
                 className="w-[min(700px,36.45vw)] object-contain relative z-1 self-start "
               />
-              <div className="text-white absolute top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center">
+              <div
+                id="abs4"
+                className="text-white absolute top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center"
+              >
                 <h1 className=" font-[500] text-[min(32px,1.66vw)] ">
                   Residential Design
                 </h1>

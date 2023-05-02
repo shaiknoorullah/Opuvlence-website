@@ -118,19 +118,22 @@ const ServicesBottomMobile = () => {
           <div className=" h-[1px] bg-black" />
           <div className="flex items-center gap-[20px] mt-[16px] font- text-[5vw] text-black">
             <img src="/services12.png" className="w-[15.625vw] " />
-            <h1>Corporate Design</h1>
+            <h1> Residential Design</h1>
           </div>
           <div
             id="image1"
             className="relative mt-[12px] hidden  justify-center "
           >
             <img src="/services3.png" className="relative" />
-            <div id="div1" className="absolute z-10 top-[50%] w-[90%] ">
-              <h1 className="text-[5vw]">Corporate Design</h1>
+            <div
+              id="div1"
+              className="absolute z-10 top-[50%] w-[90%] text-white "
+            >
+              <h1 className="text-[5vw]"> Residential Design</h1>
               <p className="text-[3.5075vw]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+                Transform your home into a work of art with our residential
+                design services. From space planning to custom interiors, we
+                create stunning living spaces that reflect your unique style.
               </p>
             </div>
           </div>
@@ -155,12 +158,16 @@ const ServicesBottomMobile = () => {
             className="relative mt-[12px] hidden  justify-center "
           >
             <img src="/services3.png" className="relative" />
-            <div id="div2" className="absolute z-10 top-[50%] w-[90%] ">
+            <div
+              id="div2"
+              className="absolute z-10 top-[50%] w-[90%] text-white  "
+            >
               <h1 className="text-[5vw]">Corporate Design</h1>
               <p className="text-[3.5075vw]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+                Elevate your business with our corporate design services. We
+                create functional and attractive workspaces that promote
+                productivity and reflect your brand identity. Let us help you
+                create a space that inspires and motivates.
               </p>
             </div>
           </div>
@@ -185,7 +192,10 @@ const ServicesBottomMobile = () => {
             className="relative mt-[12px] hidden  justify-center "
           >
             <img src="/services3.png" className="relative" />
-            <div id="div3" className="absolute z-10 top-[50%] w-[90%] ">
+            <div
+              id="div3"
+              className="absolute z-10 top-[50%] w-[90%] text-white "
+            >
               <h1 className="text-[5vw]">Corporate Design</h1>
               <p className="text-[3.5075vw]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -215,7 +225,10 @@ const ServicesBottomMobile = () => {
             className="relative mt-[12px] hidden  justify-center "
           >
             <img src="/services3.png" className="relative" />
-            <div id="div4" className="absolute z-10 top-[50%] w-[90%] ">
+            <div
+              id="div4"
+              className="absolute z-10 top-[50%] w-[90%] text-white "
+            >
               <h1 className="text-[5vw]">Corporate Design</h1>
               <p className="text-[3.5075vw]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

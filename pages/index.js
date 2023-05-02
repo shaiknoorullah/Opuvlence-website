@@ -19,7 +19,6 @@ import Footer from "../components/Footer";
 import MobileOurProject from "../components/Mobileourproject";
 import CasesLibrary from "../components/CasesLibray";
 
-import MobileOurProject from "../components/Mobileourproject";
 import About from "../components/About";
 import { useEffect, useState } from "react";
 export default function Home() {
