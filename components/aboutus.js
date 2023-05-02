@@ -14,7 +14,7 @@ const AboutusHero = () => {
 				<div className="lg:grid grid-cols-12 base:pt-7 lg:pt-[2rem] ">
 					<div className="flex row-span-full flex-col text-black col-start-1 col-end-6  z-50">
 						<div
-							className={`base:text-[2.8rem] lg:text-[min(6.2vw,8rem)] tracking-[0.7rem] lg:leading-[min(7vw,130px)] ${golden}`}
+							className={`base:text-[2.8rem] lg:text-[max(2rem,min(6vw,8rem))] tracking-[min(0.8vw,0.8rem)] lg:leading-[min(6.5vw,130px)] ${golden}`}
 						>
 							GET TO KNOW US
 						</div>
@@ -27,11 +27,11 @@ const AboutusHero = () => {
 
 						{/* quotation for desktop */}
 						<div
-							className={`lg:inline-block base:hidden mt-[5rem] text-[1.3rem] w-[70%] font-medium italic ${poppins}`}
+							className={`lg:inline-block base:hidden mt-[5rem] text-[1.3rem] w-[70%] font-semibold italic ${poppins}`}
 						>
-							Experience the art of luxury interior design.
+							"Experience the art of luxury interior design.
 							Let us transform your space into a
-							breathtaking work of art.
+							breathtaking work of art.""
 						</div>
 					</div>
 
@@ -56,7 +56,7 @@ const AboutusHero = () => {
 				</div>
 
 				{/* description*/}
-				<div className="grid py-[3rem] grid-cols-[1fr_3fr_1fr]">
+				<div className="lg:grid py-[3rem] grid-cols-[1fr_3fr_1fr]">
 					<div
 						style={{
 							gridColumnStart: 2,

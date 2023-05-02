@@ -36,9 +36,9 @@ console.log(name,email,contactNumber,yourMessage)
     >
       <div className="flex w-full justify-between ">
         <h1
-          className={`lg:w-[40%] base:w-[70%] text-[#270405] uppercase base:text-[10vw] lg:text-[min(4.68vw,90px)] base:[12.5vw] lg:leading-[min(120px,6.25vw)]  ${golden.className} `}
+          className={`lg:w-[50%] base:w-[70%] text-[#270405] uppercase base:text-[10vw] lg:text-[min(4.68vw,90px)] base:[12.5vw] lg:leading-[min(120px,6.25vw)]  ${golden.className} `}
         >
-          get in contact with us
+          get in touch with us
         </h1>
       </div>
       <div

@@ -67,7 +67,7 @@ const About = () => {
 					className=" 3xl:w-[1044px] lg:w-[52.7272vw] absolute 3xl:top-[245px] lg:top-[12.15vw] 3xl:right-[400px] lg:right-[23vw] "
 				></img>
 				<img
-					src="rectangle 267.png"
+					src="/backline.png"
 					className="3xl:w-[394px] lg:w-[19.89vw] absolute 3xl:top-[490px] 3xl:right-[325px] lg:top-[24.74vw] lg:right-[19.41vw] "
 				></img>
 			</div>

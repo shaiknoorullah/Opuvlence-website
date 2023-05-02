@@ -204,28 +204,28 @@ const OurExpertise = () => {
 						>
 							<div>
 								<NumberText
-									number={"25"}
+									number={"10"}
 									text={"Years Experience"}
 									state={"col"}
 								/>
 							</div>
 							<div>
 								<NumberText
-									number={"32"}
+									number={"25"}
 									text={"Professional Team"}
 									state={"col"}
 								/>
 							</div>
 							<div className="hidden lg:flex">
 								<NumberText
-									number={"50"}
+									number={"32"}
 									text={"Awards Gained"}
 									state={"row"}
 								/>
 							</div>
 							<div className="hidden lg:flex">
 								<NumberText
-									number={"5,000"}
+									number={"2,000"}
 									text={"Projects Completed"}
 									state={"row"}
 								/>
@@ -240,12 +240,12 @@ const OurExpertise = () => {
 						>
 							<div className="flex flex-col gap-3">
 								<NumberText
-									number={"25"}
+									number={"10"}
 									text={"Years Experience"}
 									state={"col"}
 								/>
 								<NumberText
-									number={"50"}
+									number={"25"}
 									text={"Awards Gained"}
 									state={"col"}
 									end={true}
@@ -261,7 +261,7 @@ const OurExpertise = () => {
 								</div>
 								<div className="self-end">
 									<NumberText
-										number={"5,000"}
+										number={"2,000"}
 										text={"Projects Completed"}
 										state={"col"}
 										end={true}
