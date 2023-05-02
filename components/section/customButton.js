@@ -67,14 +67,12 @@ const CustomButton = ({ text, color, href }) => {
 		<Link href={href}>
 			<div
 				ref={buttonRef}
-				className="relative flex items-center"
+				className="relative w-[max(280px,10vw)] flex items-center"
 			>
 				<div
 					id="circle"
 					className={
-						color === "white"
-							? `circleblack absolute left-0 top-0`
-							: `circle `
+						color === "white" ? `circleblack` : `circle `
 					}
 				></div>
 				<div

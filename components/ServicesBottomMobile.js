@@ -87,6 +87,7 @@ const ServicesBottomMobile = () => {
       <div className="w-[95%] flex flex-col gap-[16px] mt-[50px] ">
         {/* first service */}
         <div
+         className="min-w-full"
           id="first"
           onClick={() => {
             setService1(true);
@@ -115,6 +116,7 @@ const ServicesBottomMobile = () => {
         {/* second service */}
         <div
           id="second"
+          className="min-w-full"
           onClick={() => {
             setService1(false);
             setService2(true);
@@ -142,6 +144,7 @@ const ServicesBottomMobile = () => {
         {/* third service */}
         <div
           id="third"
+          className="min-w-full"
           onClick={() => {
             setService1(false);
             setService2(false);
@@ -169,6 +172,7 @@ const ServicesBottomMobile = () => {
         {/* fourth service */}
         <div
           id="fourth"
+          className="min-w-full"
           onClick={() => {
             setService1(false);
             setService2(false);

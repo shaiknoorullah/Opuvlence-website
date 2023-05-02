@@ -48,7 +48,7 @@ const Navbar = () => {
 			const navLinksRefVar2 = navLinksRef2.current
 
 			// const letters = emailRef.current.children;
-			const socialsChildren = socialsRef.current.children
+			// const socialsChildren = socialsRef.current.children
 			// console.log(letters);
 
 			const handleMouseEnter = () => {
@@ -111,21 +111,21 @@ const Navbar = () => {
 				})
 
 				if (!isClicked) {
-					gsap.fromTo(
-						socialsChildren,
-						{
-							y: -20,
-							opacity: 0,
-						},
-						{
-							y: 0,
-							opacity: 1,
-							delay: 0.5,
-							duration: 0.5,
-							stagger: 0.1,
-							ease: "power2.inOut",
-						}
-					)
+					// gsap.fromTo(
+					// 	socialsChildren,
+					// 	{
+					// 		y: -20,
+					// 		opacity: 0,
+					// 	},
+					// 	{
+					// 		y: 0,
+					// 		opacity: 1,
+					// 		delay: 0.5,
+					// 		duration: 0.5,
+					// 		stagger: 0.1,
+					// 		ease: "power2.inOut",
+					// 	}
+					// )
 					gsap.fromTo(
 						[navLinks2, navLinks],
 						{ y: -20, opacity: 0 },
@@ -139,14 +139,14 @@ const Navbar = () => {
 						}
 					)
 				} else {
-					gsap.to(socialsChildren, {
-						// y: -20,
-						translate: "",
-						opacity: 0,
-						duration: 0.5,
-						stagger: 0.1,
-						ease: "power2.inOut",
-					})
+					// gsap.to(socialsChildren, {
+					// 	// y: -20,
+					// 	translate: "",
+					// 	opacity: 0,
+					// 	duration: 0.5,
+					// 	stagger: 0.1,
+					// 	ease: "power2.inOut",
+					// })
 					gsap.to([navLinks2, navLinks], {
 						// translateY: -20,
 						translate: "",
@@ -203,21 +203,21 @@ const Navbar = () => {
 				})
 
 				if (!isClicked) {
-					gsap.fromTo(
-						socialsChildren,
-						{
-							y: -20,
-							opacity: 0,
-						},
-						{
-							y: 0,
-							opacity: 1,
-							delay: 0.5,
-							duration: 0.5,
-							stagger: 0.1,
-							ease: "power2.inOut",
-						}
-					)
+					// gsap.fromTo(
+					// 	socialsChildren,
+					// 	{
+					// 		y: -20,
+					// 		opacity: 0,
+					// 	},
+					// 	{
+					// 		y: 0,
+					// 		opacity: 1,
+					// 		delay: 0.5,
+					// 		duration: 0.5,
+					// 		stagger: 0.1,
+					// 		ease: "power2.inOut",
+					// 	}
+					// )
 					gsap.fromTo(
 						[navLinks2, navLinks],
 						{ y: -20, opacity: 0 },
@@ -231,14 +231,14 @@ const Navbar = () => {
 						}
 					)
 				} else {
-					gsap.to(socialsChildren, {
-						// y: -20,
-						translate: "",
-						opacity: 0,
-						duration: 0.5,
-						stagger: 0.1,
-						ease: "power2.inOut",
-					})
+					// gsap.to(socialsChildren, {
+					// 	// y: -20,
+					// 	translate: "",
+					// 	opacity: 0,
+					// 	duration: 0.5,
+					// 	stagger: 0.1,
+					// 	ease: "power2.inOut",
+					// })
 					gsap.to([navLinks2, navLinks], {
 						// translateY: -20,
 						translate: "",
@@ -327,7 +327,7 @@ const Navbar = () => {
 		},
 		{
 			title: "Cases",
-			href: "/casestudies",
+			href: "/caseslibrary",
 		},
 		{
 			title: "Contact",
@@ -382,7 +382,7 @@ const Navbar = () => {
 	return (
 		<nav
 			// data-scroll-section
-			className="flex flex-row relative  justify-between w-full pt-[25px] px-[40px] "
+			className={`flex flex-row relative justify-between w-screen pt-[25px] px-[40px]`}
 		>
 			<h3
 				id="navLinksDesktop"
@@ -398,6 +398,7 @@ const Navbar = () => {
 					for the deserving
 				</p>
 			</h3>
+
 			<NavLinks href={"/"}>
 				<Image
 					id="navLinksDesktop"
@@ -451,7 +452,7 @@ const Navbar = () => {
           </NavLinks> */}
 				</ul>
 				{/* mobile hamburger */}
-				<div className="relative z-[6000] lg:hidden w-12 h-12">
+				<div className="relative z-[6000] lg:hidden w-10 h-10">
 					<svg
 						ref={buttonRef}
 						className="absolute  w-full h-full cursor-pointer"
@@ -477,22 +478,11 @@ const Navbar = () => {
 				<div
 					ref={menuBg}
 					className={
-						"fixed left-0 scale-y-0 top-0 base:px-[1rem] base:py-5 lg:px-[6rem] lg:py-[4rem] overflow-y-scroll lg:overflow-clip z-[5000] w-screen h-screen opacity-0 bg-[#C3DBE8]"
+						"fixed left-0 scale-y-0 top-0 base:px-[1rem] base:py-5 lg:px-[6rem] lg:py-[4rem] overflow-y-scroll lg:overflow-clip z-[5000] w-screen h-screen opacity-0 bg-[#F6EBDD]"
 					}
 				>
 					<div className="flex lg:flex-row base:flex-col lg:justify-between h-full">
 						<div className="flex flex-col relative  ">
-							{/* mobile nav */}
-							{/* <div className="flex lg:hidden justify-between w-full">
-                <img className="w-[8rem]" src="/websleakfooter.svg" />
-                <div
-                  onClick={() => {
-                    setisOpen(!isOpen);
-                  }}
-                >
-                  <img className="w-[1.4rem]" src="/wrong.svg" />
-                </div>
-              </div> */}
 							<div className=" flex flex-col pt-[min(110px,34.375vw)] lg:flex-row base:gap-[2.5rem] lg:gap-[min(250px,13vw)] lg:pt-[min(108px,5.625vw)] ">
 								<div
 									ref={navLinksRef2}
@@ -506,7 +496,7 @@ const Navbar = () => {
 												onClick={() => {
 													setIsClicked(!isClicked)
 												}}
-												className="font-medium base:text-[1.3rem] lg:text-[1.7rem] hover:text-white text-[#4F6672]"
+												className="font-medium base:text-[1.3rem] lg:text-[1.7rem] hover:text-black text-[#071419]"
 											>
 												{data.title}
 											</a>
@@ -525,7 +515,7 @@ const Navbar = () => {
 												onClick={() => {
 													setIsClicked(!isClicked)
 												}}
-												className="font-medium base:text-[1.3rem] lg:text-[1.7rem]  hover:text-white text-[#4F6672]"
+												className="font-medium base:text-[1.3rem] lg:text-[1.7rem]  hover:text-black text-[#071419]"
 											>
 												{data.title}
 											</a>
@@ -533,22 +523,6 @@ const Navbar = () => {
 									})}
 								</div>
 							</div>
-							{/* <nav
-                ref={navLinksRef}
-                className="flex flex-col flex-wrap h-[40rem] base:items-center lg:items-start  my-auto base:gap-[2.5rem] py-[9rem] lg:gap-[5rem]"
-              >
-                {options.map((data, idx) => {
-                  return (
-                    <Link
-                      key={idx}
-                      className="font-medium base:text-[1.3rem] lg:text-[1.7rem] text-[#626262] mr-20"
-                      href={data.href}
-                    >
-                      {data.title}
-                    </Link>
-                  );
-                })}
-              </nav> */}
 						</div>
 						<div className="flex flex-col lg:border-l lg:border-[#3F3F3F] w-full lg:w-[44%] ">
 							<div className="self-end  lg:gap-[min(39px,2.03125vw)] hidden  lg:pb-[min(65px,3.385vw)] lg:flex justify-self-start">
@@ -570,7 +544,7 @@ const Navbar = () => {
 									India
 								</text>
 							</div>
-							<div className=" flex flex-col pt-[min(115px,35.9vw)] lg:pt-[min(100px,5.208vw)] pb-[min(138px,7.1875vw)] self-center lg:self-start  gap-[min(40px,2.08vw)] pl-[min(28px,1.458vw)]">
+							{/* <div className=" flex flex-col pt-[min(115px,35.9vw)] lg:pt-[min(100px,5.208vw)] pb-[min(138px,7.1875vw)] self-center lg:self-start  gap-[min(40px,2.08vw)] pl-[min(28px,1.458vw)]">
 								<text className=" hidden lg:flex font-medium text-[min(22px,1.145vw)] text-white leading-[min(25px,1.3vw)] ">
 									Follow Us
 								</text>
@@ -581,7 +555,7 @@ const Navbar = () => {
 									{social.map((social, index) => {
 										return (
 											<img
-												className=" self-center "
+												className="self-center"
 												key={index}
 												width={"24px"}
 												src={social.src}
@@ -589,51 +563,8 @@ const Navbar = () => {
 										)
 									})}
 								</div>
-							</div>
+							</div> */}
 						</div>
-						{/* <div className="flex flex-col border-l border-[#3F3F3F] w-full  lg:w-[44%] lg:pl-[3.4rem]">
-              <div className="base:mx-auto lg:my-auto">
-                <div className="flex flex-col  mb-6 justify-center base:items-center lg:items-start lg:w-[30rem] text-white">
-                  <div className="flex flex-col gap-0 ">
-                    <div className="flex  gap-3">
-                      <div
-                        ref={emailRef}
-                        className="font-medium base:text-[1.7rem] lg:text-[1.9rem] translate-y-0 relative xl:text-[2.9rem]"
-                      >
-                        {email}
-                        {email.split("").map((letter, index) => (
-                          <span key={index} className="relative">
-                            {letter}
-                          </span>
-                        ))}
-                      </div>
-                      <img
-                        className="base:w-[1.8rem] lg:w-[3rem]"
-                        src="/footerarrow.svg"
-                      />
-                    </div>
-                    <div className="base:text-[1.1rem] lg:text-[1.2rem] xl:text-[1.5rem]">
-                      +91-8121885150
-                    </div>
-                  </div>
-                  <div
-                    ref={socialsRef}
-                    className="flex flex-wrap items-end base:gap-6 lg:gap-[1.9rem] mt-[4.5rem]"
-                  >
-                    {socials.map((data, idx) => {
-                      return (
-                        <div key={idx} className="flex gap-2">
-                          <img src="/footerarrow2.svg" />
-                          <div className="font-normal lg:text-[1.3rem] xl:text-[1.5rem]">
-                            {data.title}
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            </div> */}
 					</div>
 				</div>
 			</div>
