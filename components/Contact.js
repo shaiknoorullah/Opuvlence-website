@@ -133,7 +133,8 @@ const Contact = () => {
 		)
 			.then(response => response.json())
 			.then(
-				toast.success("your email was sent successfully")
+				// toast.success("your email was sent successfully")
+				router.push(`/thankyou/${name}`)
 			)
 			.catch(err => alert("there has been an error", err))
 	}
