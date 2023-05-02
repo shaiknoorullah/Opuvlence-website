@@ -132,21 +132,21 @@ const OurProject = () => {
         >
           <ProjectCard
             src={projectImage}
-            title="Bonito Designs"
+            title="Fluidic Designs"
             description="Indulge in the world of luxury interior design with our exceptional showcase of projects. From opulent residential homes to lavish commercial spaces, we cater to the most discerning clients in Bangalore. Slide through our stunning designs and let us inspire you to transform your space into a beautiful, functional work of art that exudes luxury."
             year="2022"
             type="residential"
           />
           <ProjectCard
             src={projectImage}
-            title="Bonito Designs"
+            title="Fluidic Designs"
             description="Indulge in the world of luxury interior design with our exceptional showcase of projects. From opulent residential homes to lavish commercial spaces, we cater to the most discerning clients in Bangalore. Slide through our stunning designs and let us inspire you to transform your space into a beautiful, functional work of art that exudes luxury."
             year="2022"
             type="residential"
           />
           <ProjectCard
             src={projectImage}
-            title="Bonito Designs"
+            title="Fluidic Designs"
             description="Indulge in the world of luxury interior design with our exceptional showcase of projects. From opulent residential homes to lavish commercial spaces, we cater to the most discerning clients in Bangalore. Slide through our stunning designs and let us inspire you to transform your space into a beautiful, functional work of art that exudes luxury."
             year="2022"
             type="residential"

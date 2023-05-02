@@ -163,7 +163,7 @@ const Batholic = () => {
 						<div
 							className={`base:text-[7.81vw] base:leading-[10.68vw] base:tracking-[0.175em] 3xl:w-[509px] lg:w-[26.51vw] 3xl:text-[72px] lg:text-[3.75vw] 3xl:leading-[98.5px] lg:leading-[5.130vw] tracking-[17.5%] font-normal italic align-middle uppercase text-black ${golden.className}`}
 						>
-							Bonito Designs
+							Fluidic Designs
 						</div>
 						<div className="base:text-[3.43vw] base:leading-[5.625vw] 3xl:w-[499px] lg:w-[25.989vw] 3xl:text-[22px] lg:text-[1.14vw] 3xl:leading-[40px] lg:leading-[2.083vw] tracking-[10%] font-normal lg:italic align-middle  text-[#A5787A] 3xl:pl-[141px] lg:pl-[7.343vw]">
 							Lorem ipsum dolor sit amet consectetur
