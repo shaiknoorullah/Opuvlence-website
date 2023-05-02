@@ -5,11 +5,10 @@ import localFont from "next/font/local";
 import CustomButton from "./section/customButton";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import Navbar from "../components/Navbar";
-import localFont from "next/font/local";
-import CustomButton from "./section/customButton";
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+// import localFont from "next/font/local";
+// import CustomButton from "./section/customButton";
+// import { useEffect, useRef } from "react";
+// import { gsap } from "gsap";
 
 // static import images
 
@@ -171,7 +170,7 @@ const Hero = () => {
               className="  lg:top-0 lg:right-[10] object-fill "
               // className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
               alt="image of a luxury chair"
-              src={heroImage}
+              src={Heroimg}
             />
           </div>
           <p
@@ -207,7 +206,7 @@ const Hero = () => {
             className="lg:inline-block base:hidden absolute top-[-20px] lg:right-[10] h-[800px] "
             // className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
             alt="image of a luxury chair"
-            src={heroImage}
+            src={Heroimg}
           />
         </div>
       </section>

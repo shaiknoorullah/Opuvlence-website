@@ -253,7 +253,7 @@ const ServicesBottom = () => {
                 className="text-white absolute  top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center"
               >
                 <h1 className=" font-[500] text-[min(32px,1.66vw)] ">
-                  Residential Design
+                  Design Solutions
                 </h1>
                 <p className="text-[min(16px,0.833vw)]  w-[min(500px,26.5vw)] ">
                   Transform your home into a work of art with our residential
@@ -270,7 +270,7 @@ const ServicesBottom = () => {
                 id="s1text270"
                 className=" text-[min(30px,1.56vw)] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
               >
-                Residential Design
+                Design Solutions
               </h2>
 
               <div id="wrapper" className="flex items-center gap-[25px] ">
@@ -283,7 +283,7 @@ const ServicesBottom = () => {
                   id="s1text180"
                   className=" text-[min(30px,1.56vw)] hidden font-[600] text-black  "
                 >
-                  Residential Design
+                  Design Solutions
                 </h2>
               </div>
             </div>
@@ -312,10 +312,10 @@ const ServicesBottom = () => {
                 className="text-white absolute  top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center"
               >
                 <h1 className=" font-[500] text-[min(32px,1.66vw)] ">
-                  Corporate Design
+                  Turnkey Solutions
                 </h1>
                 <p className="text-[min(16px,0.833vw)]  w-[min(500px,26.5vw)] ">
-                  Elevate your business with our corporate design services. We
+                  Elevate your business with our Turnkey Solutions services. We
                   create functional and attractive workspaces that promote
                   productivity and reflect your brand identity. Let us help you
                   create a space that inspires and motivates.
@@ -330,7 +330,7 @@ const ServicesBottom = () => {
                 id="s2text270"
                 className=" text-[min(30px,1.56vw)] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
               >
-                Corporate Design
+                Turnkey Solutions
               </h2>
 
               <div className="flex items-center gap-[25px] ">
@@ -343,7 +343,7 @@ const ServicesBottom = () => {
                   id="s2text180"
                   className=" text-[min(30px,1.56vw)] hidden font-[600] text-black  "
                 >
-                  Corporate Design
+                  Turnkey Solutions
                 </h2>
               </div>
             </div>
@@ -373,10 +373,10 @@ const ServicesBottom = () => {
                 className="text-white absolute  top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center"
               >
                 <h1 className=" font-[500] text-[min(32px,1.66vw)] ">
-                  Restaurant Design
+                  Execution Solutions
                 </h1>
                 <p className="text-[min(16px,0.833vw)]  w-[min(500px,26.5vw)] ">
-                  Impress your diners with our restaurant design services. From
+                  Impress your diners with our Execution Solutions services. From
                   the layout to the decor, we create a welcoming atmosphere that
                   complements your menu and brand. Let us transform your space
                   into a dining destination.
@@ -391,7 +391,7 @@ const ServicesBottom = () => {
                 id="s3text270"
                 className=" text-[min(30px,1.56vw)] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
               >
-                Restaurant Design
+                Execution Solutions
               </h2>
 
               <div id="wrapper" className="flex items-center gap-[25px] ">
@@ -404,7 +404,7 @@ const ServicesBottom = () => {
                   id="s3text180"
                   className=" text-[min(30px,1.56vw)] hidden font-[600] text-black  "
                 >
-                  Restaurant Design
+                  Execution Solutions
                 </h2>
               </div>
             </div>
@@ -433,7 +433,7 @@ const ServicesBottom = () => {
                 className="text-white absolute top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center"
               >
                 <h1 className=" font-[500] text-[min(32px,1.66vw)] ">
-                  Residential Design
+                  Other Solutions
                 </h1>
                 <p className="text-[min(16px,0.833vw)] w-[min(500px,26.5vw)]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -450,7 +450,7 @@ const ServicesBottom = () => {
                 id="s4text270"
                 className="  text-[min(30px,1.56vw)] z-1 relative h-[350px]  font-[600] text-black rotate-[180deg] "
               >
-                Residential Design
+                Other Solutions
               </h2>
 
               <div id="wrapper" className="flex items-center gap-[25px] ">
@@ -463,7 +463,7 @@ const ServicesBottom = () => {
                   id="s4text180"
                   className=" text-[min(30px,1.56vw)] hidden font-[600] text-black  "
                 >
-                  Residential Design
+                  Other Solutions
                 </h2>
               </div>
             </div>
