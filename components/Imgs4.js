@@ -1,6 +1,8 @@
 /** @format */
 
-import React from "react"
+import React from "react";
+import Image from "next/image";
+import Firstimg from "../public/homepage/Living1.webp";
 
 const Imgs4 = () => {
 	return (
@@ -57,15 +59,12 @@ const Imgs4 = () => {
 				</div>
 			</section>
 
-			{/* for mobile */}
-			<div className="w-full lg:hidden mt-16">
-				<img
-					className="w-full"
-					src="/imagesection.jpg"
-				/>
-			</div>
-		</div>
-	)
-}
+      {/* for mobile */}
+      <div className="w-full lg:hidden mt-16">
+        <img className="w-full" src="/imagesection.jpg" />
+      </div>
+    </div>
+  );
+};
 
-export default Imgs4
+export default Imgs4;
