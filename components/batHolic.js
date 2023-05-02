@@ -4,6 +4,7 @@ import react from "react"
 // import CustomButton from "./section/customButton";
 import localFont from "next/font/local"
 import CustomButton from "./section/customButton"
+import Image from "next/image"
 const golden = localFont({
 	src: "../styles/font/golden/golden.woff2",
 	variable: "--font-golden",
@@ -12,6 +13,9 @@ const poppins = localFont({
 	src: "../styles/font/poppins/Poppins-ExtraLight.woff2",
 	variable: "--font-poppins",
 })
+
+import Arrow from "../public/Vectorwhite.png"
+
 // for LG
 const Pluto = () => {
 	const elements = [
@@ -93,27 +97,35 @@ const Batholic = () => {
 		"Rectangle28.png",
 	]
 	return (
-		<div className="w-full flex justify-center bg-[#270405] ">
-			<div className="w-[95%] max-w-[1920px] bg-[#270405] 3xl:pt-[105px] lg:pt-[5.46vw]">
-				<div className=" flex  base:flex-col lg:flex-row 3xl:gap-[33.97px] lg:gap-[1.7692vw]">
-					<div className="lg:h-[fit-content] 3xl:w-[90px] lg:w-[4.68vw]  relative lg:rotate-[270deg] 3xl:top-[520px] lg:top-[27.08vw] ">
-						<div className="flex flex-row items-center base:gap-[5.56vw] base:px-[3.125vw] 3xl:gap-[40px] lg:gap-[2.08vw]">
-							<div className="base:text-[min(3.43vw,4rem)] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-medium italic uppercase text-[white]">
-								residential
-							</div>
-							<img
-								src="Vectorwhite.png"
-								className="base:w-[2.3vw]  3xl:w-[12.17px] 3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-[90deg]"
-							></img>
-							<div className="base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-[white]">
-								commercial
-							</div>
-							<img
-								src="Vectorwhite.png"
-								className=" base:w-[2.3vw] 3xl:w-[12.17px]  3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-[90deg] ml-1"
-							></img>
-							<div className="base:text-[3.43vw] base:leading-[5.15vw]  base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-[white]">
-								restaurant
+		<div className="w-full flex justify-center ">
+			<div className="w-[95%] max-w-[1920px] 3xl:pt-[105px] lg:pt-[5.46vw]">
+				<div className=" flex base:flex-col lg:flex-row 3xl:gap-[33.97px] lg:gap-[1.7692vw]">
+					<div className="base:w-[100%] lg:w-[5%] 3xl:mt-[291.4px] lg:mt-[6.2vw]">
+						<div className=" 3xl:w-[90px] lg:w-[4.68vw]  relative  3xl:top-[520px] lg:top-[27.08vw] ">
+							<div
+								// className="flex flex-row items-center base:gap-[5.56vw] base:px-[3.125vw] 3xl:gap-[40px] lg:gap-[2.08vw]"
+								className="flex flex-row items-center origin-top-left lg:-rotate-90 base:gap-[5.56vw] base:px-[3.125vw] md:px-[0px] 3xl:gap-[40px] lg:gap-[2.08vw]"
+							>
+								<div className="base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-medium italic uppercase text-black">
+									residential
+								</div>
+								<Image
+									alt="arrow"
+									src={Arrow}
+									className="base:w-[2.3vw] invert 3xl:w-[12.17px]  3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-90  ml-1"
+								></Image>
+								<div className="base:text-[3.43vw] base:leading-[5.15vw]  base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-black">
+									commercial
+								</div>
+								<Image
+									alt="arrow"
+									src={Arrow}
+									className="base:w-[2.3vw] invert 3xl:w-[12.17px]  3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-90  ml-1"
+								></Image>
+
+								<div className="base:text-[3.43vw] base:leading-[5.15vw]  base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-black">
+									restaurant
+								</div>
 							</div>
 						</div>
 					</div>
@@ -149,7 +161,7 @@ const Batholic = () => {
 					</div>
 					<div className="base:px-[6.25vw] base:pt-[6.25vw] lg:p-[0px] flex flex-col base:gap-[6px] 3xl:gap-[62px] lg:gap-[3.22vw]">
 						<div
-							className={`base:text-[7.81vw] base:leading-[10.68vw] base:tracking-[0.175em] 3xl:w-[509px] lg:w-[26.51vw] 3xl:text-[72px] lg:text-[3.75vw] 3xl:leading-[98.5px] lg:leading-[5.130vw] tracking-[17.5%] font-normal italic align-middle uppercase text-[white] ${golden.className}`}
+							className={`base:text-[7.81vw] base:leading-[10.68vw] base:tracking-[0.175em] 3xl:w-[509px] lg:w-[26.51vw] 3xl:text-[72px] lg:text-[3.75vw] 3xl:leading-[98.5px] lg:leading-[5.130vw] tracking-[17.5%] font-normal italic align-middle uppercase text-black ${golden.className}`}
 						>
 							Bonito Designs
 						</div>
@@ -176,7 +188,7 @@ const Batholic = () => {
 				<div className="pl-[128px] pb-14">
 					<CustomButton
 						text={"CONTACT US"}
-						color={"white"}
+						color={"black"}
 						href={"/#contact"}
 					/>
 				</div>
