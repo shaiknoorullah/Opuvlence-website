@@ -1,6 +1,5 @@
 /** @format */
 
-import react from "react"
 import localFont from "next/font/local"
 import ScrollContainer from "react-indiana-drag-scroll"
 import { useEffect } from "react"
@@ -8,7 +7,6 @@ import { gsap } from "gsap"
 import Link from "next/link"
 import ProjectCard from "./projectCard"
 
-// import images statically
 import projectImage from "../public/ourproject.png"
 
 const golden = localFont({
@@ -20,39 +18,6 @@ const poppins = localFont({
 	variable: "--font-poppins",
 })
 
-const Residential = props => {
-	return (
-		<div className="flex flex-row relative w-full 3xl:gap-[12px] lg:gap-[0.625vw]">
-			<img
-				src={props.src}
-				className="3xl:w-[558px] lg:w-[29.06vw] 3xl:h-[558px] lg:h-[29vw] "
-			></img>
-			<div className="flex flex-col">
-				<p className="font-extrabold 3xl:text-[25px] lg:text-[1.3vw] 3xl:leading-[37.5px] lg:leading-[1.95vw] tracking-[0.5%] mt-[-9px]">
-					{props.date}
-				</p>
-				<p className="font-medium  3xl:text-[87.14px] lg:text-[4.642vw] 3xl:leading-[133.71px] lg:leading-[6.93vw] tracking-[0.5%] rotate-[270deg] absolute 3xl:left-[328px] lg:left-[16.5vw] 3xl:mt-[228px] lg:mt-[11.875vw] uppercase">
-					{props.type}
-				</p>
-			</div>
-		</div>
-	)
-}
-
-const Grid = props => {
-	return (
-		<div className="flex flex-col row-span-full col-start-1 col-end-7 row-start-1 row-end-3 z-40">
-			<div
-				className={` ${golden.className} pointer-events-none select-none   3xl:text-[188px] lg:text-[9.79vw] lg:leading-[9.79vw] 3xl:leading-[188px] tracking-[0.03em] font-normal font-[gilroy] uppercase 3xl:mt-[15px] lg:mt-[0.78vw] z-[10] `}
-			>
-				{props.tittle}
-			</div>
-			<div className="font-medium  ml-[3.5rem] z-30">
-				{props.discription}
-			</div>
-		</div>
-	)
-}
 const OurProject = () => {
 	useEffect(() => {
 		const viewMoreButtonRef = document.getElementById(
@@ -96,7 +61,10 @@ const OurProject = () => {
 		}
 	}, [])
 	return (
-		<div className="w-full max-w-[1920px] items-center flex justify-center ">
+		<div
+			data-scroll
+			className="w-full max-w-[1920px] base:hidden md:flex items-center justify-center "
+		>
 			<div className="font-poppins w-[98%] z-50 ">
 				<div className="grid grid-cols-[1.3fr_0.4fr_1.2fr_1.2fr] grid-rows-[0.4fr_0.6fr_0.7fr_0.5fr_0.4fr]">
 					<div
@@ -117,7 +85,7 @@ const OurProject = () => {
 							gridRowStart: 3,
 							gridRowEnd: 4,
 						}}
-						className=" 3xl:w-[583px] text-black lg:w-[30.36vw]  3xl:text-[33px] lg:text-[1.71vw]  3xl:leading-[45.34px] lg:leading-[2.361vw] tracking-[10%] font-bold 3xl:pl-[50px] 3xl:pt-[41px] lg:pl-[2.60vw] lg:pt-[2.13vw] snap-center font-[lamore]"
+						className=" 3xl:w-[583px] text-black lg:w-[30.36vw]  3xl:text-[33px] lg:text-[1.71vw]  3xl:leading-[45.34px] lg:leading-[2.361vw] tracking-[10%] font-bold 3xl:pl-[50px] 3xl:pt-[41px] lg:pl-[2.60vw] lg:pt-[2.13vw] snap-center"
 					>
 						WE&apos;VE BUILT HOMES THAT BRING DREAMS COME
 						TRUE
@@ -226,11 +194,6 @@ const OurProject = () => {
 						</div>
 					</Link>
 				</ScrollContainer>
-				{/* <div className="block h-[800px] overflow-hidden">
-          <div className=" flex gap-[100px] overflow-x-scroll scrollbar-hide">
-            
-          </div>
-        </div> */}
 			</div>
 		</div>
 	)

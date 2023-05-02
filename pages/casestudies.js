@@ -1,12 +1,14 @@
-import React from 'react'
-import Batholic from '../components/batHolic'
+/** @format */
+
+import React from "react"
+import Batholic from "../components/batHolic"
 
 const Casestudies = () => {
-  return (
-    <div>
-        <Batholic />
-    </div>
-  )
+	return (
+		<div className="text-white">
+			<Batholic />
+		</div>
+	)
 }
 
 export default Casestudies

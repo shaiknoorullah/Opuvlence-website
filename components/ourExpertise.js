@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import CustomButton from "./section/customButton";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import localFont from "next/font/local";
@@ -18,20 +18,23 @@ const poppinsSemibold = localFont({
   src: "../styles/font/poppins/Poppins-SemiBold.woff2",
 });
 
-import { lamore } from "../utils/fonts";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 // number component
+
+gsap.registerPlugin(ScrollTrigger);
 
 const NumberText = ({ number, text, state }) => {
   return (
     <div className={`flex w-[9rem]  flex-${state} `}>
       <div
-        className={`${poppinsSemibold.className} font-semibold base:text-[2.8rem] lg:text-[3.5rem]`}
+        className={`${poppinsSemibold.className} text-black font-semibold base:text-[2.8rem] lg:text-[min(3.5vw,3.5rem)]`}
       >
         {number}+
       </div>
       <div
-        className={`${poppinsMedium.className} w-[40%]  base:text-[0.9rem] lg:text-[min(1.8vw,1.5rem)] font-medium lg:leading-[min(2.2vw,2.5rem)] `}
+        className={`${poppinsMedium.className} text-black w-[40%]  base:text-[0.9rem] lg:text-[min(1.8vw,1.5rem)] font-medium lg:leading-[min(2.2vw,2.5rem)] `}
       >
         {text}
       </div>
@@ -42,11 +45,101 @@ const NumberText = ({ number, text, state }) => {
 const OurExpertise = () => {
   const { scroll } = useLocomotiveScroll();
 
+  const sectionRef = useRef(null);
+
+  // useEffect(() => {
+  // 	// const sectionName = document.getElementById('section-name')
+
+  // 	const sectionStats =
+  // 		document.getElementById("section-stats")
+  // 	const sectionDescMob = document.getElementById(
+  // 		"section-description-mobile"
+  // 	).children
+  // 	const sectionStatsMobile = document.getElementById(
+  // 		"section-stats-mobile"
+  // 	).children
+  // 	const sectionGraph =
+  // 		document.getElementById("section-graph")
+
+  // 	const tl = gsap.timeline({
+  // 		ease: "power2.out",
+  // 		duration: 0.4,
+  // 		delay: 1,
+  // 	})
+
+  // 	tl.fromTo(
+  // 		"#section-name",
+  // 		{
+  // 			y: 20,
+  // 			opacity: 0,
+  // 		},
+  // 		{
+  // 			y: 0,
+  // 			opacity: 1,
+  // 			scrollTrigger: { trigger: sectionRef.current },
+  // 		}
+  // 	)
+  // 		.fromTo(
+  // 			"#section-title",
+  // 			{
+  // 				y: 20,
+  // 				opacity: 0,
+  // 			},
+  // 			{
+  // 				y: 0,
+  // 				opacity: 1,
+  // 				scrollTrigger: { trigger: sectionRef.current },
+  // 			}
+  // 		)
+  // 		.fromTo(
+  // 			"#section-description",
+  // 			{ y: 20, opacity: 0 },
+  // 			{
+  // 				y: 0,
+  // 				opacity: 1,
+
+  // 				scrollTrigger: { trigger: sectionRef.current },
+  // 			}
+  // 		)
+  // 		.fromTo(
+  // 			[sectionStats, sectionStatsMobile],
+  // 			{ y: 20, opacity: 0 },
+  // 			{
+  // 				y: 0,
+  // 				opacity: 1,
+  // 				stagger: 0.05,
+
+  // 				scrollTrigger: { trigger: sectionRef.current },
+  // 			}
+  // 		)
+  // 		.fromTo(
+  // 			"#section-button",
+  // 			{ y: 20, opacity: 0 },
+  // 			{
+  // 				y: 0,
+  // 				opacity: 1,
+
+  // 				scrollTrigger: { trigger: sectionRef.current },
+  // 			}
+  // 		)
+  // 		.fromTo(
+  // 			"#section-graph",
+  // 			{ h: 0, opacity: 0 },
+  // 			{
+  // 				h: "initial",
+  // 				opacity: 1,
+
+  // 				scrollTrigger: { trigger: sectionRef.current },
+  // 			}
+  // 		)
+  // }, [])
+
   return (
     <div
       data-scroll
       data-scroll-speed="1.2"
-      className="w-full flex justify-center mt-[-170px] relative"
+      ref={sectionRef}
+      className="w-full flex justify-center base:mt-[5rem] lg:mt-[70px] relative"
     >
       <div
         data-scroll
@@ -54,7 +147,10 @@ const OurExpertise = () => {
         className={`base:w-[90%] max-w-[1900px]  lg:w-[95%] z-50 flex flex-col py-12`}
       >
         {/* our Expertise title */}
-        <div className="flex lg:justify-start base:justify-center">
+        <div
+          id="section-name"
+          className="flex lg:justify-start base:justify-center"
+        >
           <div className="lg:flex hidden w-[30%]"></div>
 
           <div
@@ -67,22 +163,24 @@ const OurExpertise = () => {
 
         {/*25 years experience  */}
         <div
-          className={`${lamore} lg:w-[30%] base:text-[1.5rem] lg:text-[1.8rem] lg:text-left base:text-center text-black leading-[2.4rem] font-[700] pt-8`}
+          id="section-title"
+          className={`${poppinsRegular.className} lg:w-[30%] base:text-[1.5rem] lg:text-[1.8rem] lg:text-left base:text-center text-black leading-[2.4rem] font-[700] pt-8`}
         >
           25 YEARS OF EXPERIENCE IN INTERIOR DESIGN
         </div>
 
         {/* description for lg */}
-        <div className="lg:flex base:hidden w-full">
+        <div id="section-description" className="lg:flex base:hidden w-full">
           <div className="w-[35%]"></div>
           <div
-            className={`${poppinsRegular.className.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
+            className={`${poppinsRegular.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
           >
-            Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to provide extremely reliable
-            serviceUsing edge cutting technology to provide extremely reliable
-            service
+            At our interior design company in Bangalore, we&apos;re committed to
+            delivering exceptional service and stunning designs that exceed
+            expectations. Our expertise and creativity have made us a trusted
+            source for transforming spaces into something extraordinary. But
+            don&apos;t take our word for it - hear from our satisfied customers
+            about their experiences working with us.
           </div>
         </div>
 
@@ -90,7 +188,10 @@ const OurExpertise = () => {
         <div className="w-full grid base:grid-cols-2 lg:grid-cols-11 pt-9">
           <div class="col-span-6  w-full grid lg:grid-rows-3">
             {/* for desktop */}
-            <div class="lg:row-span-2 lg:grid text-black lg:grid-cols-2 gap-3  hidden">
+            <div
+              id="section-stats"
+              class="lg:row-span-2 lg:grid text-black lg:grid-cols-2 gap-3  hidden"
+            >
               <div>
                 <NumberText
                   number={"25"}
@@ -123,7 +224,10 @@ const OurExpertise = () => {
 
             {/* for mobile */}
 
-            <div className="base:flex relative lg:hidden justify-between">
+            <div
+              id="section-stats-mobile"
+              className="base:flex lg:hidden justify-between"
+            >
               <div className="flex flex-col gap-3">
                 <NumberText
                   number={"25"}
@@ -157,7 +261,10 @@ const OurExpertise = () => {
             </div>
 
             {/* button */}
-            <div class="row-span-1 hidden lg:flex  items-center">
+            <div
+              id="section-button"
+              class="row-span-1 hidden lg:flex  items-center"
+            >
               <div className="ml-8 pb-4">
                 {" "}
                 <CustomButton
@@ -170,17 +277,20 @@ const OurExpertise = () => {
           </div>
 
           {/* graph */}
-          <div class="col-span-5 base:mt-[5rem] lg:mt-[-2rem] items-end  lg:pl-9 gap-6 lg:gap-9 grid grid-cols-3">
+          <div
+            id="section-graph"
+            class="col-span-5 base:mt-[5rem] lg:mt-[-2rem] items-end  lg:pl-9 gap-6 lg:gap-9 grid grid-cols-3"
+          >
             {/* restaurant */}
             <div className="flex flex-col items-center gap-6">
               <div
-                className={`text-[#524646] md:text-[1.3rem] sm:text-[9px] font-normal ${poppinsRegular.className}`}
+                className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
               >
                 75%
               </div>
               <div className="bg-[#A5787A] rounded-tl-full  w-full base:h-[9rem] lg:h-[min(15vw,22rem)]"></div>
               <div
-                className={`text-[#A5787A] md:text-[1.3rem] sm:text-[9px]  font-semibold italic ${poppinsRegular.className}`}
+                className={`text-[#A5787A] base:text-[0.8rem] lg:text-[1.3rem] font-semibold italic ${poppinsRegular.className}`}
               >
                 RESTAURANT
               </div>
@@ -188,13 +298,13 @@ const OurExpertise = () => {
             {/* residential */}
             <div className="flex flex-col items-center gap-6">
               <div
-                className={`${poppinsRegular.className} text-[#524646] md:text-[1.3rem] sm:text-[9px]  font-normal`}
+                className={`${poppinsRegular.className} text-[#524646] text-[1.3rem] font-normal`}
               >
                 86%
               </div>
               <div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] lg:h-[min(25vw,34rem)]"></div>
               <div
-                className={`${poppinsRegular.className} text-[#A5787A] md:text-[1.3rem] sm:text-[9px]  font-semibold italic `}
+                className={`${poppinsRegular.className} base:text-[0.8rem] lg:text-[1.3rem] text-[#A5787A]  font-semibold italic `}
               >
                 RESIDENTIAL
               </div>
@@ -202,13 +312,13 @@ const OurExpertise = () => {
             {/* coperate */}
             <div className="flex flex-col items-center gap-6">
               <div
-                className={`text-[#524646] md:text-[1.3rem] sm:text-[9px]  font-normal ${poppinsRegular.className}`}
+                className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
               >
                 78%
               </div>
               <div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] lg:h-[min(20vw,28rem)]"></div>
               <div
-                className={`text-[#A5787A] md:text-[1.3rem] sm:text-[9px]  font-semibold italic ${poppinsRegular.className} `}
+                className={`text-[#A5787A] base:text-[0.8rem] lg:text-[1.3rem] font-semibold italic ${poppinsRegular.className} `}
               >
                 CORPORATE
               </div>
@@ -216,7 +326,10 @@ const OurExpertise = () => {
           </div>
         </div>
         {/* mobile description */}
-        <div className="lg:hidden  w-full mt-10">
+        <div
+          id="section-description-mobile"
+          className="lg:hidden  w-full mt-10"
+        >
           <div className="lg:text-[0.9rem] text-[1.2rem]  text-center text-[#A5787A] leading-[1.5rem]">
             Using edge cutting technology to provide extremely reliable service
             Using edge cutting technology to provide extremely reliable service

@@ -1,149 +1,231 @@
 /** @format */
 
 import React from "react"
-import NavLinks from "next/link"
+import Link from "next/link"
 
-import { lamore, golden, poppins } from "../utils/fonts"
+import localFont from "next/font/local"
+
+const poppinsRegular = localFont({
+	src: "../styles/font/poppins/Poppins-Regular.woff2",
+	variable: "--font-poppins",
+})
+const poppinsSemibold = localFont({
+	src: "../styles/font/poppins/Poppins-SemiBold.woff2",
+	variable: "--font-poppins",
+})
+const poppinsMediumItalic = localFont({
+	src: "../styles/font/poppins/Poppins-MediumItalic.woff2",
+	variable: "--font-poppins",
+})
+const poppinsExtraBoldItalic = localFont({
+	src: "../styles/font/poppins/Poppins-MediumItalic.woff2",
+	variable: "--font-poppins",
+})
+
+import { golden, poppins } from "../utils/fonts"
+
+const FooterLinks = [
+	{
+		heading: "Sitemap",
+		links: [
+			{
+				href: "/aboutus",
+				text: "About",
+			},
+			{
+				href: "/services",
+				text: "Services",
+			},
+			{
+				href: "/casestudies",
+				text: "Cases",
+			},
+			{
+				href: "#contact",
+				text: "Contact",
+			},
+		],
+	},
+	{
+		heading: "Socials",
+		links: [
+			{
+				href: "https://www.instagram.com/opuvlence",
+				text: "Instagram",
+			},
+			{
+				href: "https://www.facebook.com/theopuvlence",
+				text: "Facebook",
+			},
+			{
+				href: "https://www.youtube.com/opuvlence",
+				text: "Youtube",
+			},
+			{
+				href: "https://www.twitter.com/opuvlence",
+				text: "Twitter",
+			},
+		],
+	},
+	{
+		heading: "Quick Links",
+		links: [
+			{
+				href: "/feedback",
+				text: "Feedback",
+			},
+			{
+				href: "/support",
+				text: "Support",
+			},
+			{
+				href: "/privacy",
+				text: "Privacy",
+			},
+			{
+				href: "/terms",
+				text: "Terms",
+			},
+		],
+	},
+]
 
 const Footer = () => {
 	return (
-		<div
+		<footer
 			// data-scroll-section
-			className="bg-[#270405] lg:flex flex-col lg:justify-center   mt-[100px] "
+			className="w-screen flex justify-start flex-col gap-[124px] pl-[5vw] items-start mt-[180px] text-left"
 		>
-			<div className="lg:max-w-[1920px] self-center w-[95%]">
-				<img
-					className=" base:pt-[20px] base:pl-[6.25vw] lg:pl-0  "
-					src="/logoLight.png"
-				/>
-				<div className="flex base:flex-col lg:flex-row justify-between mt-[30px] lg:px-[0px] base:pl-[6.25vw]  ">
-					<h1
-						className={`base:text-[6.25vw] lg:text-[min(80px,5vw)] base:w-full lg:w-[80%] text-white tracking-wider base:leading-[12vw] lg:leading-[min(130px,7vw)] ${golden} `}
-					>
-						Subscribe to our Newsletter.
-					</h1>
-					{/* desktop navlink */}
-					<ul
-						className={`${poppins} base:hidden lg:block mt-[20px] font-600  text-right text-[min(18px,0.99vw)]`}
-					>
-						<li>About</li>
-						<li>Services</li>
-						<li>Cases</li>
-						<li>Contact</li>
-					</ul>
-				</div>
-				<div className="lg:mt-[50px] lg:flex justify-between w-full base:px-[6.25vw] lg:px-[0px] base:mt-[12.5vw] ">
-					<div>
-						{" "}
-						<div className="base:flex base:justify-between  lg:w-[min(600px,31vw)] ">
-							<input
-								id="newsletter-input"
-								type="text"
-								placeholder="ENTER YOU EMAIL"
-								className={`${golden} tracking-widest bg-inherit outline-none text-[#765151] base:w-[50%] lg:w-[450px] base:text-[3.125vw] lg:text-[min(24px,1.25vw)] `}
-							/>
-
-							<button
-								className={`${poppins} font-[800] lg:leading-[min(34px,1.7vw)] base:leading-[5vw] base:text-[5vw] text-right lg:text-[min(42px,2.18vw)] text-white `}
+			<div className="flex flex-col items-start justify-start gap-[51px] font-golden">
+				<h2
+					className={`${golden} m-0 relative text-[min(87.37px,max(22px,5vw))] text-[#1A0102] text-[inherit] tracking-[0.18em] leading-[135%] font-normal font-inherit flex items-end w-[1254px]`}
+				>
+					<span className="[line-break:anywhere] text-[#1A0102] w-full">
+						<p className="m-0">Subscribe to</p>
+						<p className="m-0">our Newsletter</p>
+					</span>
+				</h2>
+				<div className="flex flex-col md:w-fit base:w-[90vw] items-end justify-start gap-[8px]">
+					<div className="flex flex-row items-center base:justify-between w-[100%] md:justify-start base:gap-[0] md:gap-[137px]">
+						<input
+							className={`[border:none] placeholder:opacity-[0.56] placeholder:text-[#765151] outline-none ${poppins} lg:text-[58.24px] base:text-[12px] text-[#765151]  bg-[transparent] relative tracking-[0.08em] uppercase font-bold text-left`}
+							type="email"
+							placeholder="Enter Your Email"
+							required
+						/>
+						<button className="cursor-pointer [border:none] p-[5px] bg-[transparent]">
+							<div
+								className={`tracking-[0.08em] ${poppinsSemibold.className} text-[min(40px,max(9px,2vw))] uppercase font-semibold text-black text-center`}
 							>
-								SUBMIT
-							</button>
-						</div>
-						<div className=" base:w-full   lg:w-[min(600px,31vw)] base:h-[1px] lg:h-[2px] mt-[5px] bg-white"></div>
-						{/* mobile navlinks  */}
-						<div>
-							<ul
-								className={`${poppins} lg:hidden base:flex flex-col gap-[4.25vw] mt-[12.5vw] font-600   text-[4vw]`}
-							>
-								<li className="font-[600] text-[5vw]">
-									Quick Links
-								</li>
-								<li>About</li>
-								<li>Services</li>
-								<li>Cases</li>
-								<li>Contact</li>
-							</ul>
-						</div>
-						{/* social links for desktop */}
-						<div className="base:hidden lg:block">
-							<p
-								className={`${poppins} mt-[min(120px,6.25vw)] uppercase text-[min(24px,1.25vw)] italic font-[700]`}
-							>
-								Follow us on
-							</p>
-							<ul
-								className={`${poppins} lg:flex  italic items-center font-[600] tracking-wider uppercase  w-full gap-[50px] text-[#F7EBDF] text-[min(24px,1.25vw)] `}
-							>
-								<li>Instagram</li>
-								<li>Facebook</li>
-								<li>youtube</li>
-								<li>twitter</li>
-							</ul>
-						</div>
-					</div>
-					{/* contact details for both mobile and desktop */}
-					<div>
-						<div
-							className={` flex flex-col lg:text-right base:h-fit lg:h-[min(300px,15.625vw)] base:mt-[36px] lg:mt-[0px]  text-white justify-between ${poppins} `}
-						>
-							<div>
-								<p className="lg:text-[min(18px,0.93vw)] base:text-[4.375vw]  ">
-									Contact number
-								</p>
-								<p className="lg:text-[min(20px,1.02vw)] base:text-[4.375vw]  ">
-									(+091) 7892360181
-								</p>
+								subscribe
 							</div>
-							<div>
-								<p className="lg:text-[min(18px,0.93vw)] base:text-[4.375vw]  ">
-									Email
-								</p>
-								<p className="lg:text-[min(20px,1.02vw)] base:text-[4.375vw] text">
-									care@opuvlence.com
-								</p>
-							</div>
-							<div>
-								<p className="lg:text-[min(18px,0.93vw)] base:text-[4.375vw] text">
-									Visit Us
-								</p>
-								<p className="lg:text-[min(20px,1.02vw)] base:text-[4.375vw]   lg:w-[230px] m-0 lg:text-right ">
-									Orangery plaza Bengaluru, Karnataka 560043
-								</p>
-							</div>
-						</div>
+						</button>
 					</div>
-					<div className="lg:hidden base:block">
-						<p
-							className={`${poppins} mt-[50px] uppercase text-[3.75vw]  font-[700]`}
-						>
-							Follow us on
-						</p>
-						<ul
-							className={`${poppins} flex justify-between italic items-center font-[300] tracking-wider mt-[10px] uppercase   w-fit l gap-[50px] text-[#F7EBDF] text-[3.75vw] `}
-						>
-							<li>Instagram</li>
-							<li>Facebook</li>
-							<li>youtube</li>
-							<li>twitter</li>
-						</ul>
-					</div>
+					<div className="bg-[#1A0102] w-full h-[1px]" />
 				</div>
 			</div>
 			<div
-				className={`w-[100%] lg:h-[60px] base:h-fit mt-[20px] font-[500] bg-[#140101] text-[#F7EBDF] italic flex base:flex-col lg:flex-row justify-between items-center px-[20px] base:text-[3.75vw] lg:text-[min(18px,1.25vw)] base:py-[7px] ${poppins.className} `}
+				className={`flex w-[100%] md:flex-row base:flex-col items-start md:flex-wrap justify-start md:gap-[187px] base:gap-[100px] ${poppins} text-black text-[18.93px]`}
 			>
-				<p>© 2019-2022, All Rights Reserved opuvlence.</p>
-				<p className="font-[700]">
-					Brought by{" "}
-					<span className="underline text-[#DAB38D] ">
-						<NavLinks
-							href="https://www.websleak.com"
-							target="_blank"
+				{FooterLinks.map((blocks, idx) => {
+					return (
+						<FooterLinkBlock
+							key={idx}
+							heading={blocks.heading}
+							links={blocks.links}
+						/>
+					)
+				})}
+				<div className="flex flex-col items-start justify-start gap-[91px]">
+					<div className="flex flex-col justify-start gap-[15px]">
+						<h5
+							className={`${poppinsSemibold.className} m-0 text-[inherit] tracking-[0.08em] uppercase font-semibold font-inherit`}
 						>
-							WEBSLEAK
-						</NavLinks>
-					</span>
+							phone
+						</h5>
+						<a
+							className={`${poppinsRegular.className} [text-decoration:none] base:text-[13px] md:text-[18px] tracking-[0.18em] leading-[136.8%] font-medium font-gilroy text-[inherit] text-right`}
+						>
+							(+091) 7892360181
+						</a>
+					</div>
+					<div className="flex flex-col justify-start gap-[15px]">
+						<h5
+							className={`${poppinsSemibold.className} m-0 text-[inherit] tracking-[0.08em] uppercase font-semibold font-inherit`}
+						>
+							email
+						</h5>
+						<a
+							className={`${poppinsRegular.className} [text-decoration:none] base:text-[13px] md:text-[18px] tracking-[0.18em] leading-[136.8%] font-medium font-gilroy text-[inherit] text-right`}
+							href="mailto:care@opuvlence.com"
+						>
+							care@opuvlence.com
+						</a>
+					</div>
+				</div>
+				<div className="flex flex-col items-start justify-start text-black gap-[16px] text-left text-[18.93px]">
+					<h5
+						className={`${poppinsSemibold.className} m-0  relative text-[inherit] tracking-[0.08em] uppercase font-semibold font-inherit`}
+					>
+						address
+					</h5>
+					<p
+						className={`${poppinsRegular.className} m-0 base:text-[13px] md:text-[18px] relative text-xl tracking-[0.18em] leading-[136.8%] font-medium flex items-end base:w-fit md:w-[427px]`}
+					>
+						Orangery plaza Bengaluru, Karnataka, 560043
+					</p>
+				</div>
+			</div>
+			<div className="flex flex-row items-start base:justify-between md:justify-start md:gap-[485px] md:w-[initial] base:w-[90vw] text-right mb-[50px] text-xs text-black">
+				<p className="m-0 relative italic font-medium">
+					© 2022, Opuvlence
 				</p>
+				<Link
+					className="[text-decoration:none] relative"
+					href="https://www.websleak.com"
+				>
+					<i className="font-medium">{`Brought by `}</i>
+					<i className="[text-decoration:underline] font-extrabold">
+						websleak
+					</i>
+				</Link>
+			</div>
+		</footer>
+	)
+}
+
+const FooterLink = ({ href, text }) => {
+	return (
+		<Link
+			href={href}
+			passHref
+			className="[text-decoration:none] base:text-[13px] md:text-[18px] cursor-pointer relative tracking-[0.08em] uppercase text-[inherit]"
+		>
+			{text}
+		</Link>
+	)
+}
+
+const FooterLinkBlock = ({ heading, links }) => {
+	return (
+		<div
+			className={`flex flex-col items-start justify-start md:gap-[74px] base:gap-[20px] ${poppinsRegular.className} font-normal`}
+		>
+			<h5
+				className={`${poppinsSemibold.className} base:text-[15px] md:text-[19px] m-0 relative tracking-[0.08em] uppercase font-semibold`}
+			>
+				{heading}
+			</h5>
+			<div className="flex flex-col items-start justify-center gap-[5px]">
+				{links.map((link, idx) => {
+					return (
+						<FooterLink
+							key={idx}
+							href={link.href}
+							text={link.text}
+						/>
+					)
+				})}
 			</div>
 		</div>
 	)

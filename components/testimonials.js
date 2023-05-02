@@ -3,13 +3,19 @@
 import React, { useState } from "react"
 import CustomButton from "./section/customButton"
 import ScrollContainer from "react-indiana-drag-scroll"
-import { lamore, golden, poppins } from "../utils/fonts"
+import { golden, poppins } from "../utils/fonts"
+
+import localFont from "next/font/local"
+
+const poppinsBold = localFont({
+	src: "../styles/font/poppins/Poppins-ExtraBold.woff2",
+	variable: "--font-poppins",
+})
 
 const TestimonialCard = ({ text, description, image }) => {}
 
 const Testimonials = () => {
 	const [showModal, setShowModal] = useState(false)
-	console.log(showModal)
 	const cards = [
 		{
 			title: "CAROLYN",
@@ -32,31 +38,29 @@ const Testimonials = () => {
 	]
 
 	return (
-		<div className="w-full flex   justify-center relative">
-			<div className="font-poppins base:w-[95%] max-w-[1920px] lg:w-[95%] z-50 flex flex-col py-12">
+		<div className="w-full flex  text-black my-[8rem]  justify-center relative">
+			<div className="font-poppins base:w-[95%] lg:w-[100%] z-50 flex flex-col py-12">
 				{/* testimonials title */}
 				<div className="flex w-full base:justify-center lg:justify-start">
 					<div className="lg:inline-block hidden w-[30%]"></div>
 
 					<div
-						className={`font-[700] text-[1.2rem] text-[#A5787A] flex ${poppins}`}
+						className={`font-[700] text-[1.2rem] text-[#A5787A] flex ${poppinsBold.className}`}
 					>
 						/ TESTIMONIALS
 					</div>
 				</div>
 				{/* Lets see what our */}
 				<div
-					className={`lg:w-[30%] ${lamore} base:text-[1.5rem] lg:text-[1.8rem] leading-[2.4rem] font-[700] pt-8`}
+					className={`lg:w-[30%] ${poppins} text-black base:text-[1.5rem] lg:text-[1.8rem] leading-[2.4rem] lg:ml-10 font-[700] pt-8`}
 				>
-					LETS SEE WHat OUR CUSTOMERS HAVE TO SAY
+					LETS SEE WHAT OUR CUSTOMERS HAVE TO SAY
 				</div>
-
 				{/* cards desktop*/}
-
-				<div className="pl-[9rem] scrollbar-hide  overflow-y-scroll hidden cursor-grab lg:flex gap-[4rem]">
+				<div className="scrollbar-hide  overflow-y-scroll hidden cursor-grab lg:flex gap-[4rem] ">
 					<ScrollContainer
 						style={{
-							overflowX: "hidden",
+							overflow: "scroll",
 							display: "flex",
 							gap: "4rem",
 						}}
@@ -64,8 +68,12 @@ const Testimonials = () => {
 						{cards.map((data, index) => {
 							return (
 								<div
+									data-scroll
+									data-scroll-direction="horizontal"
+									data-scroll-speed="1.5"
+									data-scroll-draggable="true"
 									key={index}
-									className="flex flex-col min-w-[68rem]"
+									className="flex flex-col min-w-[68rem] pl-[7rem] mr-[2rem]"
 								>
 									{showModal && (
 										<div
@@ -83,12 +91,10 @@ const Testimonials = () => {
 													alt="Modal Image"
 													className="mx-auto mb-4"
 												/>
-
 												{/* Text */}
 												<p className="text-gray-700 mb-4">
 													{data.description}
 												</p>
-
 												{/* Close button */}
 												<button
 													className="bg-[#270405] hover:bg-black text-white font-bold py-2 px-4 rounded"
@@ -103,7 +109,7 @@ const Testimonials = () => {
 									)}
 									<div>
 										<div
-											className={`text-[6rem] w-full pl-[25rem] tracking-[1rem] italic ${poppins}`}
+											className={`text-[6rem] w-full pl-[25rem] tracking-[1rem] italic text-black ${poppins}`}
 										>
 											{data.title}
 										</div>
@@ -125,74 +131,67 @@ const Testimonials = () => {
 						})}
 					</ScrollContainer>
 				</div>
+				<div className="scrollbar-hide overflow-y-scroll  flex gap-3 ">
+					{cards.map((data, index) => {
+						return (
+							<div
+								className=" flex lg:hidden min-w-[min(22rem,100vw)] flex-col justify-center mt-12 "
+								key={index}
+							>
+								{showModal && (
+									<div
+										className={
+											showModal
+												? `fixed top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-50 z-[1000] flex justify-center items-center `
+												: `hidden`
+										}
+										style={{ overflowY: "hidden" }}
+									>
+										<div className="bg-white rounded-lg base:p-3 lg:p-8 w-[50rem]">
+											{/* Image */}
+											<img
+												src="/testimonial.png"
+												alt="Modal Image"
+												className="mx-auto mb-4"
+											/>
 
-				{/* cards mobile */}
-				<div className=" flex lg:hidden flex-col justify-center">
-					{showModal && (
-						<div
-							className={
-								showModal
-									? `fixed top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-50 z-[1000] flex justify-center items-center `
-									: `hidden`
-							}
-							style={{ overflowY: "hidden" }}
-						>
-							<div className="bg-white rounded-lg base:p-3 lg:p-8 w-[50rem]">
-								{/* Image */}
-								<img
-									src="/testimonial.png"
-									alt="Modal Image"
-									className="mx-auto mb-4"
-								/>
+											{/* Text */}
+											<p className="text-gray-700 mb-4 ">
+												{" "}
+												{data.description}
+											</p>
 
-								{/* Text */}
-								<p className="text-gray-700 mb-4">
-									{" "}
-									Using edge cutting technology to provide
-									extremely reliable service Using edge
-									cutting technology to provide extremely
-									reliable service Using edge cutting
-									technology.
-								</p>
-
-								{/* Close button */}
-								<button
-									className="bg-[#270405] hover:bg-black text-white font-bold py-2 px-4 rounded"
-									onClick={() => setShowModal(false)}
-								>
-									Close
-								</button>
+											{/* Close button */}
+											<button
+												className="bg-[#270405] hover:bg-black text-white font-bold py-2 px-4 rounded"
+												onClick={() => setShowModal(false)}
+											>
+												Close
+											</button>
+										</div>
+									</div>
+								)}
+								<div className="text-[2.5rem] text-black self-end justify-self-end tracking-[0.7rem] italic capitalize">
+									CAROLYN
+								</div>
+								<div className="flex flex-col mx-6 gap-[1rem]">
+									<img
+										onClick={() => setShowModal(true)}
+										className="object-cover h-[10rem]"
+										src="/testimonial.png"
+									/>
+									<div className=" text-[1.3rem] text-black self-center justify-self-center leading-[30px] ">
+										Using edge cutting technology to provide
+										extremely reliable service Using edge
+										cutting technology to provide extremely
+										reliable service Using edge cutting
+										technology.
+									</div>
+								</div>
 							</div>
-						</div>
-					)}
-					<div className="text-[2.5rem] self-end justify-self-end tracking-[0.7rem] italic capitalize">
-						CAROLYN
-					</div>
-					<div className="flex flex-col mx-6 gap-[1rem]">
-						<img
-							onClick={() => setShowModal(true)}
-							className="object-cover h-[10rem]"
-							src="/testimonial.png"
-						/>
-						<div className=" text-[1.3rem] self-center justify-self-center leading-[30px] ">
-							Using edge cutting technology to provide
-							extremely reliable service Using edge cutting
-							technology to provide extremely reliable
-							service Using edge cutting technology.
-						</div>
-					</div>
-					<div
-						className={`flex self-end mt-8 gap-[3rem] ${poppins}`}
-					>
-						<div className="text-[1.4rem] italic underline ">
-							PREV
-						</div>
-						<div className="text-[1.4rem] italic underline ">
-							NEXT
-						</div>
-					</div>
-
-					<div></div>
+						)
+					})}
+					{/* cards mobile */}{" "}
 				</div>
 
 				<div className="w-full mt-[10rem] hidden lg:flex justify-between">
@@ -203,7 +202,9 @@ const Testimonials = () => {
 							href={"#contact"}
 						/>
 					</div>
-					<div className={`flex  gap-[3rem] ${poppins}`}>
+					<div
+						className={`flex  gap-[3rem] text-black mr-16 ${poppins}`}
+					>
 						<div className="text-[2rem] italic underline ">
 							PREV
 						</div>

@@ -1,7 +1,9 @@
+/** @format */
+
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-const servicesBottom = () => {
+const ServicesBottom = () => {
   const [service1, setService1] = useState(false);
   const [service2, setService2] = useState(false);
   const [service3, setService3] = useState(false);
@@ -180,8 +182,8 @@ const servicesBottom = () => {
     service4 ? tl4.current.play() : tl4.current.reverse();
   }, [service1, service2, service3, service4]);
   return (
-    <div className="lg:flex base:hidden w-full justify-center h-fit">
-      <div className="max-w-[1920px] flex justify-cente h-[700px] ">
+    <div className="hidden lg:flex w-full justify-center h-fit">
+      <div className="max-w-[1920px] flex h-[700px] ">
         {/* first service */}
         <div
           id="first"
@@ -198,13 +200,11 @@ const servicesBottom = () => {
             <div id="img1" className="relative hidden">
               <img
                 src="/services1.png"
-                className="w-[min(700px,36.45vw)]  object-contain relative z-1 self-start "
+                className="w-[700px]  object-contain relative z-1 self-start "
               />
-              <div className="text-white absolute top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center">
-                <h1 className=" font-[500] text-[min(32px,1.66vw)] ">
-                  Residential Design
-                </h1>
-                <p className="text-[min(16px,0.833vw)]  w-[min(500px,26.5vw)] ">
+              <div className="text-white absolute top-[300px] left-[100px]  z-100  text-center">
+                <h1 className=" font-[500]  ">Residential Design</h1>
+                <p className="text-[min(14px,0.74vw)] w-[500px] ">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco{" "}
@@ -217,7 +217,7 @@ const servicesBottom = () => {
                   writingMode: "vertical-lr",
                 }}
                 id="s1text270"
-                className=" text-[min(30px,1.56vw)] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
+                className=" text-[30px] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
               >
                 Residential Design
               </h2>
@@ -225,12 +225,12 @@ const servicesBottom = () => {
               <div id="wrapper" className="flex items-center gap-[25px] ">
                 <img
                   id="small1"
-                  className=" min-w-[min(150px,7.8125vw)]   "
+                  className=" min-w-[150px]   "
                   src="/services12.png"
                 />
                 <h2
                   id="s1text180"
-                  className=" text-[min(30px,1.56vw)] hidden font-[600] text-black  "
+                  className=" text-[30px] hidden font-[600] text-black  "
                 >
                   Residential Design
                 </h2>
@@ -254,13 +254,11 @@ const servicesBottom = () => {
             <div id="img2" className="relative hidden">
               <img
                 src="/services21.png"
-                className="w-[min(700px,36.45vw)]w-[700px]  object-contain relative z-1 self-start "
+                className="w-[700px]  object-contain relative z-1 self-start "
               />
-              <div className="text-white absolute  top-[min(300px,15.625vw)] left-[min(100px,5.2vw)]  z-100  text-center">
-                <h1 className=" font-[500] text-[min(32px,1.66vw)] ">
-                  Residential Design
-                </h1>
-                <p className="text-[min(16px,0.833vw)]  w-[min(500px,26.5vw)] ">
+              <div className="text-white absolute top-[300px] left-[100px]  z-100  text-center">
+                <h1 className=" font-[500]  ">Residential Design</h1>
+                <p className="text-[min(14px,0.74vw)] w-[500px] ">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco{" "}
@@ -273,7 +271,7 @@ const servicesBottom = () => {
                   writingMode: "vertical-lr",
                 }}
                 id="s2text270"
-                className=" text-[min(30px,1.56vw)] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
+                className=" text-[30px] z-1 relative h-[350px] wri font-[600] text-black rotate-[180deg] "
               >
                 Residential Design
               </h2>
@@ -412,4 +410,4 @@ const servicesBottom = () => {
   );
 };
 
-export default servicesBottom;
+export default ServicesBottom;
