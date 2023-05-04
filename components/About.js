@@ -3,8 +3,7 @@
 import react from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
-import Gettoknow from "../public/homepage/gettokow.webp";
-import Link from "next/link";
+import Gettoknow from "/homepage/gettokow.webp";
 
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
@@ -16,9 +15,9 @@ const poppins = localFont({
 });
 const About = () => {
   return (
-    <Link href={"/aboutus"} className="w-[100%] md:hidden base:flex jus relative lg:flex flex-col max-w-[1920px] base:mt-[4rem] lg:mt-[-10rem]">
+    <div className="w-[100%] md:hidden base:flex jus relative lg:flex flex-col max-w-[1920px] base:mt-[4rem] lg:mt-[-10rem]">
       <div
-        className={`lg:w-[65%]  flex justify-center base:text-[3.75vw] base:leading-[5.62vw] base:tracking-[0.15vw] base:pt-[5vw] base:pb-[6.40vw] 3xl:text-[25px] 3xl:leading-[37.5px] 3xl:tracking-[0.5px] font-extrabold text-[#A5787A] 3xl:pt-[20px] 3xl:pb-[41px] lg:text-[1.2626vw] lg:leading-[1.89vw] lg:pt-[1.01vw] lg:pb-[2.07vw] uppercase ${poppins.className} cursor-pointer`}
+        className={`lg:w-[65%]  flex justify-center base:text-[3.75vw] base:leading-[5.62vw] base:tracking-[0.15vw] base:pt-[5vw] base:pb-[6.40vw] 3xl:text-[25px] 3xl:leading-[37.5px] 3xl:tracking-[0.5px] font-extrabold text-[#A5787A] 3xl:pt-[20px] 3xl:pb-[41px] lg:text-[1.2626vw] lg:leading-[1.89vw] lg:pt-[1.01vw] lg:pb-[2.07vw] uppercase ${poppins.className}`}
       >
         {/* lg:text-[] lg:leading-[] lg:tracking-[] lg:w-[]*/}/ About
       </div>
@@ -51,7 +50,7 @@ const About = () => {
         </div>
       </div>
       {/* lg */}
-      <div className="base:hidden lg:flex ">
+      <div className="base:hidden lg:flex">
         <Image
           src={Gettoknow}
           data-scroll
@@ -81,7 +80,7 @@ const About = () => {
         ></img>
       </div>
       {/* <div>kbd</div> */}
-    </Link>
+    </div>
   );
 };
 export default About;
