@@ -3,7 +3,7 @@
 import react from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
-import Gettoknow from "/homepage/gettokow.webp";
+import Gettoknow from "../public/homepage/gettokow.webp";
 
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
