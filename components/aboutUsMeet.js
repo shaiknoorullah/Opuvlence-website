@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useState } from "react";
 import localFont from "next/font/local";
 import Link from "next/link";
 
@@ -36,6 +36,12 @@ const OurTeamSingle = ({ name, image, designation }) => {
 };
 
 const AboutUsMeet = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [name, setname] = useState();
+  const [designation, setdesignation] = useState();
+  const [image, setimage] = useState();
+  const [description, setdescription] = useState();
+
   const testimonial = [
     {
       name: "HIBA ISHTIAQ",
@@ -84,7 +90,7 @@ const AboutUsMeet = () => {
   ];
 
   return (
-    <div className="w-full flex justify-center py-[8rem]">
+    <div className="w-full flex justify-center py-[8rem] relative">
       <div className="w-[95%] text-black max-w-[1920px] flex flex-col">
         <div className=" lg:grid grid-cols-12">
           <div className="col-start-1 col-end-11 flex flex-col z-50">
@@ -106,8 +112,15 @@ const AboutUsMeet = () => {
         <div className="w-full px-[4rem] gap-[5.7rem] hidden lg:grid grid-cols-4 mt-[4rem]">
           {testimonial.map((data, index) => {
             return (
-              <div key={index} className="flex flex-col   ">
-                <Link href="/testimonialsingle">
+              <div key={index} className="flex flex-col  cursor-pointer  ">
+                <div
+                  onClick={() => {
+                    setname(data.name);
+                    setdesignation(data.designation);
+
+                    setShowModal(true);
+                  }}
+                >
                   <img
                     className="rounded-t-full self-center "
                     src="/testimonialdemo.jpg"
@@ -118,7 +131,7 @@ const AboutUsMeet = () => {
                   <div className="font-normal italic text-[1.3rem]">
                     {data.designation}
                   </div>
-                </Link>
+                </div>
               </div>
             );
           })}
@@ -143,6 +156,55 @@ const AboutUsMeet = () => {
           </div>
         </div>
       </div>
+      {showModal && (
+        <div
+          className={
+            showModal
+              ? ` absolute top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-10 z-[1000] flex justify-center items-center `
+              : `hidden`
+          }
+          style={{ overflowY: "hidden" }}
+        >
+          <div className="base:w-[95%] lg:w-[80%] px-16 pt-8 flex flex-col justify-center bg-white rounded text-black relative">
+            <div className=" base:py-12 lg:py-4 flex lg:flex-row base:flex-col">
+              {/* image section */}
+
+              <div className="base:w-[65%] lg:w-[25%]">
+                <img className="cover w-full" src="testimonial.jpg" />
+              </div>
+              <div className="flex  text-black flex-col base:py-3 lg:my-[4rem] lg:pl-[3rem] lg:w-[75%]">
+                <div className="w-[16rem] text-[3.2rem] leading-[4rem]">
+                  {name}
+                </div>
+                <div className="flex text-[1.5rem] pt-3">
+                 {designation}
+                </div>
+                <div className="border border-black w-full base:my-6 lg:my-6"></div>
+                <div className="text-[1.3rem] leading-[2rem]">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                  massa mi. Aliquam in hendrerit urna. Pellentesque sitLorem
+                  ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
+                  consectetur adipiscing elit Ut et massa mi. Aliquam in
+                  hendrerit urna. Pellentesque sitLorem ipsum dolor sit amet
+                  consectetur Lorem ipsum dolor sit amet consectetur adipiscing
+                  elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
+                  sitLorem ipsum dolor sit amet consectetur Lorem ipsum dolor
+                  sit amet consectetur adipiscing elit Ut et massa mi. Aliquam
+                  in hendrerit urna. Pellentesque sitLorem ipsum dolor sit amet
+                  consectetur Lorem ipsum dolor sit amet consectetur adipiscing
+                  elit Ut et massa mi. Aliquam in hendrerit urna.
+                </div>
+              </div>
+              <button
+                className="absolute top-4 right-4 bg-[#270405] hover:bg-black text-white font-bold py-2 px-4 w-fit rounded"
+                onClick={() => setShowModal(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

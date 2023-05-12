@@ -169,7 +169,7 @@ const OurProject = () => {
 						type="residential"
 					/>
 					<Link
-						href="/CasesLibraryPage"
+						href="/caseslibrary"
 						passHref
 						id="viewMoreButton"
 						className="relative flex flex-col"

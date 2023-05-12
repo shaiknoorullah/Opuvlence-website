@@ -189,7 +189,7 @@ const Hero = () => {
                 );
               })}
           </p>
-          <div className="lg:mt-10 base:mt-3">
+          <div className="lg:mt-10 base:mt-3 ">
             {" "}
             <CustomButton text="Say Hello" color={"black"} href={"#contact"} />
           </div>

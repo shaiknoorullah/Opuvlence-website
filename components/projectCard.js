@@ -91,7 +91,7 @@ const ProjectCard = ({
 				className="w-[min(588px,30.625vw)] cursor-pointer"
 			>
 				<Link
-					href="/casestudies"
+					href="/caseslibrary"
 					passHref
 				>
 					<Image

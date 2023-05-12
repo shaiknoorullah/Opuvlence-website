@@ -77,7 +77,7 @@ const Testimonials = () => {
                   data-scroll-speed="1.5"
                   data-scroll-draggable="true"
                   key={index}
-                  className="flex flex-col min-w-[68rem] pl-[7rem] mr-[2rem]"
+                  className="flex-col min-w-[68rem] pl-[7rem] mr-[2rem]"
                 >
                   <div>
                     <div
@@ -94,7 +94,7 @@ const Testimonials = () => {
 
                           setShowModal(true);
                         }}
-                        className="min-w-[33rem] h-[10rem]"
+                        className="min-w-[33rem] h-[10rem] cursor-pointer"
                         src={data.img}
                       />
                       <div
@@ -109,6 +109,8 @@ const Testimonials = () => {
             })}
           </ScrollContainer>
         </div>
+
+        {/* mobile */}
         <div className="scrollbar-hide overflow-y-scroll  flex gap-3 ">
           {cards.map((data, index) => {
             return (
@@ -116,42 +118,19 @@ const Testimonials = () => {
                 className=" flex lg:hidden min-w-[min(22rem,100vw)] flex-col justify-center mt-12 "
                 key={index}
               >
-                {showModal && (
-                  <div
-                    className={
-                      showModal
-                        ? `fixed top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-50 z-[1000] flex justify-center items-center `
-                        : `hidden`
-                    }
-                    style={{ overflowY: "hidden" }}
-                  >
-                    <div className="bg-white rounded-lg base:p-3 lg:p-8 w-[50rem]">
-                      {/* Image */}
-                      <img
-                        src="/testimonial.png"
-                        alt="Modal Image"
-                        className="mx-auto mb-4"
-                      />
-
-                      {/* Text */}
-                      <p className="text-gray-700 mb-4 "> {data.description}</p>
-
-                      {/* Close button */}
-                      <button
-                        className="bg-[#270405] hover:bg-black text-white font-bold py-2 px-4 rounded"
-                        onClick={() => setShowModal(false)}
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                )}
+               
                 <div className="text-[2.5rem] text-black self-end justify-self-end tracking-[0.7rem] italic capitalize">
                   CAROLYN
                 </div>
                 <div className="flex flex-col mx-6 gap-[1rem]">
                   <img
-                    onClick={() => setShowModal(true)}
+                   onClick={() => {
+                    setname(data.title);
+                    setimage(data.img);
+                    setdescriptionn(data.description);
+
+                    setShowModal(true);
+                  }}
                     className="object-cover h-[10rem]"
                     src="/testimonial.png"
                   />
@@ -181,14 +160,13 @@ const Testimonials = () => {
         <div
           className={
             showModal
-              ? `absolute top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-10 z-[1000] flex justify-center items-center `
+              ? ` absolute top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-10 z-[1000] flex justify-center items-center `
               : `hidden`
           }
           style={{ overflowY: "hidden" }}
         >
           <div className="bg-white flex flex-col justify-center  item rounded-lg p-8 w-[50rem]">
-			
-			<h1 className="self-center italic text-[2rem]">{name}</h1>
+            <h1 className="self-center italic text-[2rem]">{name}</h1>
             {/* Image */}
             <img src={image} alt="Modal Image" className="mx-auto mb-4" />
             {/* Text */}
