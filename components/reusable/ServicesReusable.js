@@ -1,6 +1,6 @@
 import React from "react";
-import localFont from "next/font/local";
 import CustomButton from "../section/customButton";
+import localFont from "next/font/local";
 // const golden = localFont({
 //   src: "../styles/font/golden/golden.woff2",
 //   variable: "--font-golden",
