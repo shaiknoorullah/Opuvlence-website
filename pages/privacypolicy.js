@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
 			<p className="m-0">
 			  <span>
 				<span className="font-semibold">
-				  Welcome to Opuvlence’s privacy policy (referred to as “Policy”).
+				  Welcome to Opuvlence&#39;s privacy policy (referred to as “Policy”).
 				</span>
 			  </span>
 			</p>
@@ -403,7 +403,7 @@ const PrivacyPolicy = () => {
 			  </li>
 			  <li className="mb-0">
 				<span>
-				  to improve customer service to effectively respond to Users’
+				  to improve customer service to effectively respond to Users&#39;
 				  Service requests, grievances, and support needs;
 				</span>
 			  </li>
