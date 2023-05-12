@@ -198,14 +198,7 @@ html.has-scroll-dragging {
   bottom: 0;
 }
 
-li{
-	font-size: 1rem;
-}
 
-
-p {
-	font-size:1rem;
-  }
 
 .privacy p div span{
 
@@ -215,4 +208,13 @@ p {
 
 ul{
 	list-style-type: disc;
+}
+
+.terms p li {
+	font-size:1rem;
+}
+
+.terms span{
+	font-size: 1.3rem;
+	font-weight: 500;
 }
