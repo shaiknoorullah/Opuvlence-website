@@ -12,17 +12,19 @@ import AboutMobile from "../public/homepage/aboutmobile.webp";
 const AboutusHero = () => {
   return (
     <div className="w-full flex justify-center">
-      <div className="flex base:w-[95%] max-w-[1920px] lg:w-[95%] flex-col">
+      <div className="flex base:w-[95%] max-w-[1920px] lg:w-[95%] flex-col ">
         {/* text and image section grid*/}
         <div className="lg:grid grid-cols-12 base:pt-7 lg:pt-[2rem] ">
           <div className="flex row-span-full flex-col text-black col-start-1 col-end-6  z-50">
             <div
-              className={`base:text-[2.8rem] lg:text-[min(6.2vw,8rem)] tracking-[0.7rem] lg:leading-[min(7vw,130px)] ${golden}`}
+              className={`base:text-[min(9.5vw,5rem)] lg:text-[min(6.2vw,8rem)] tracking-[0.7rem] lg:leading-[min(7vw,130px)] ${golden}`}
             >
               GET TO KNOW US
             </div>
             {/* change this poppins to lamore */}
-            <div className={`base:text-[1.8rem] lg:text-[2rem] ${poppins}`}>
+            <div
+              className={`base:text-[min(5vw,1.8rem)] lg:text-[2rem] ${poppins}`}
+            >
               THE STORY BEHIND
             </div>
 
@@ -42,7 +44,7 @@ const AboutusHero = () => {
               src="/aboutusheromobile.jpg"
             /> */}
             <Image
-              className="lg:hidden lg:pl-10 lg:pr-4 w-full rounded-bl-[2rem] object-cover h-[40rem] "
+              className="lg:hidden lg:pl-10 lg:pr-4 w-full rounded-bl-[2rem] object-cover h-[min(100vw,35rem)] "
               src={AboutMobile}
             />
             {/* <img

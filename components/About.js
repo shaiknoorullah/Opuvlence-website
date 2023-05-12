@@ -4,6 +4,7 @@ import react from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
 import Gettoknow from "../public/homepage/gettokow.webp";
+import Getmobile from "../public/homepage/GetMobile.webp";
 
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
@@ -70,10 +71,14 @@ const About = () => {
       </div>
       {/* base */}
       <div className="md:hidden absolute">
-        <img
+        {/* <img
           src="mobile266.png"
           className="w-[100vw] relative top-[38.123vw]"
-        ></img>
+        ></img> */}
+        <Image
+          src={Getmobile}
+          className="w-[100vw] relative top-[38.123vw] rounded-full"
+        />
         <img
           src="mobile267.png"
           className="relative w-[30.93vw] z-[100] left-[69.375vw] top-[5.625vw]"

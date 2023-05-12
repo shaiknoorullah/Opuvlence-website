@@ -19,15 +19,24 @@ const AboutUsContainer = ({ left }) => {
               : `${poppins.className} max-w-[90rem] font-normal leading-[40px] bg-[#270405] flex items-center lg:pr-[5rem] base:rounded-bl-[9rem] base:rounded-tr-[9rem] lg:pl-[10rem] lg:self-start base:self-center px-5 base:justify-self-center lg:justify-self-end lg:rounded-l-full lg:ml-[12rem] py-[150px] text-white lg:text-[20px]`
           }
         >
-          Each member of our team brings unique strengths and experiences to the
-          table, and we work collaboratively to achieve our objectives. We
-          prioritize communication, trust, and accountability in all our
-          interactions to ensure that we are working efficiently and effectively
-          towards our common goals. Our team is proud of delivering 90+ happy
-          Projects and we are always looking for ways to improve and innovate.
-          We value feedback and welcome new ideas, and we are committed to
-          supporting one another as we pursue our individual and collective
-          goals.
+          <div className="base:hidden lg:inline-block">
+            Each member of our team brings unique strengths and experiences to
+            the table, and we work collaboratively to achieve our objectives. We
+            prioritize communication, trust, and accountability in all our
+            interactions to ensure that we are working efficiently and
+            effectively towards our common goals. Our team is proud of
+            delivering 90+ happy Projects and we are always looking for ways to
+            improve and innovate. We value feedback and welcome new ideas, and
+            we are committed to supporting one another as we pursue our
+            individual and collective goals.
+          </div>{" "}
+          <div className=" lg:hidden">
+            Each member of our team brings unique strengths and experiences to
+            the table, and we work collaboratively to achieve our objectives. We
+            prioritize communication, trust, and accountability in all our
+            interactions to ensure that we are working efficiently and
+            effectively towards our common goals.
+          </div>
         </div>
       </div>
     </div>
