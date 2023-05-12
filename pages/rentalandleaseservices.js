@@ -5,7 +5,7 @@ import Feedback from "../components/Feedback.js";
 import ServicesRentalMobile from "../components/ServicesRentalMobile.js";
 import { useState, useEffect } from "react";
 
-const rentalandleaseservices = () => {
+const Rentalandleaseservices = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
 
   useEffect(() => {
@@ -27,4 +27,4 @@ const rentalandleaseservices = () => {
     </div>
   );
 };
-export default rentalandleaseservices;
+export default Rentalandleaseservices;
