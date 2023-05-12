@@ -437,7 +437,7 @@ const RentalServices = () => {
                 <p className="text-[min(16px,0.833vw)] w-[min(500px,26.5vw)]">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 </p>
               </div>
             </div>
@@ -447,7 +447,7 @@ const RentalServices = () => {
                   writingMode: "vertical-lr",
                 }}
                 id="s4text270"
-                className="  text-[min(30px,1.56vw)] z-1 relative h-[450px]  font-[600] text-black rotate-[180deg] "
+                className=" text-[min(30px,1.56vw)] z-1 relative h-[450px]  font-[600] text-black rotate-[180deg] "
               >
                 Marketing and Advertisement
               </h2>
