@@ -1,7 +1,7 @@
 import React from "react";
 import Rental from "../components/Rental.js";
 import RentalServices from "../components/RentalServices.js";
-import Feedback from "../components/Feedback.js";
+import Feedback from "../components/FeedbackForm.js";
 import ServicesRentalMobile from "../components/ServicesRentalMobile.js";
 import { useState, useEffect } from "react";
 
@@ -22,7 +22,7 @@ const Rentalandleaseservices = () => {
         <Rental />
         {!isMobileDevice ? <RentalServices /> : <ServicesRentalMobile />}
 
-        <Feedback />
+        {/* <Feedback /> */}
       </div>
     </div>
   );
