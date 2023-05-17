@@ -74,7 +74,7 @@ const OurProject = () => {
 							gridRowStart: 1,
 							gridRowEnd: 2,
 						}}
-						className="w-[100%] justify-center font-extrabold text-[1.3rem] text-[#A5787A] flex pt-[20px]"
+						className="w-[100%] justify-center font-extrabold base:text-[1.3rem] md:text-[2rem] text-[#A5787A] flex pt-[20px]"
 					>
 						/ OUR PROJECTS
 					</div>

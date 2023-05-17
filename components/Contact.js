@@ -170,15 +170,15 @@ const Contact = () => {
 			>
 				<div className="flex w-full justify-between ">
 					<h1
-						className={`lg:w-[50%] base:w-[70%] text-[#270405] uppercase base:text-[10vw] lg:text-[min(4.68vw,90px)] base:[12.5vw] lg:leading-[min(120px,6.25vw)]  ${golden.className} `}
+						className={`lg:w-[50%] base:w-[100%] text-[#270405] uppercase base:text-[10vw] md:text-[4rem] lg:text-[min(4.68vw,90px)] base:[12.5vw] lg:leading-[min(120px,6.25vw)]  ${golden.className} `}
 					>
 						get in touch with us
 					</h1>
 				</div>
 				<div
-					className={`w-full flex lg:flex-row base:flex-col mt-[34px] base:text-[4.375vw] lg:text-[18px] justify-between text-[#B25F62] font-[400] ${poppins.className} `}
+					className={`w-full flex md:flex-row base:flex-col mt-[34px] base:text-[4.375vw]  md:text-[18px] justify-between text-[#B25F62] font-[400] ${poppins.className} `}
 				>
-					<div className="base:w-full lg:w-[40%]">
+					<div className="base:w-full md:w-[40%]">
 						<div>
 							<label className="block">Name</label>
 							<input
@@ -204,7 +204,7 @@ const Contact = () => {
 							/>
 						</div>
 					</div>
-					<div className="base:w-full lg:w-[40%] base:mt-[14vw] lg:mt-0 lg:text-right ">
+					<div className="base:w-full md:w-[40%] base:mt-[14vw] md:mt-0 md:text-right ">
 						<div>
 							<label className="block ">
 								Contact number

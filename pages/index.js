@@ -78,7 +78,7 @@ export default function Home() {
       <OurProject />
       <MobileOurProject />
       <Testimonials />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 }

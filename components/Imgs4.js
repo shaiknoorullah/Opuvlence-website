@@ -69,7 +69,7 @@ const Imgs4 = () => {
       {/* for mobile */}
       <div className="w-full lg:hidden mt-16">
         {/* <img className="w-full" src="/imagesection.jpg" /> */}
-        <Image className="w-full " src={Secondimg} />
+        <Image className="w-full md:h-[40em]   object-cover " src={Secondimg} />
       </div>
     </div>
   );

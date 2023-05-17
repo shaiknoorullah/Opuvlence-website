@@ -14,7 +14,7 @@ const poppins = localFont({
 const MobileOurProject = () => {
 	return (
 		<div className="lg:hidden w-[100%] pt-[9.375vw]">
-			<p className="relative items-center flex justify-center text-[3.75vw] leading-[5.625vw] tracking-[0.05em] text-[#A5787A] font-extrabold uppercase mb-[6.25vw]">
+			<p className="relative items-center flex justify-center text-[3.75vw] md:text-[2rem] leading-[5.625vw] tracking-[0.05em] text-[#A5787A] font-extrabold uppercase mb-[6.25vw]">
 				/ our projects
 			</p>
 			<div className="flex flex-row justify-between pl-[5.93vw] pr-[7.18vw] pb-[8.43vw] ">
@@ -24,7 +24,7 @@ const MobileOurProject = () => {
 					<div>restaurant</div>
 				</div>
 				<div
-					className={`${poppins.className} w-[11.25vw] text-black text-[min(9px,2.20vw)] leading-[2.743vw] tracking-[10%] font-[700] text-right`}
+					className={`${poppins.className} base:w-[11.25vw] md:w-[25vw] text-black base:text-[min(9px,2.20vw)] md:text-[1.8rem] uppercase base:leading-[2.743vw] md:leading-9 tracking-[10%] font-[700] text-right`}
 				>
 					wE&apos;vE bUiLt homes thAt brinG DrEAms COME trUE
 				</div>
@@ -54,7 +54,7 @@ const MobileOurProject = () => {
 				></img>
 			</div>
 			<div
-				className={`${poppins.className} mt-[13vw] text-black text-[4vw] px-[6.125vw] font-normal text-justify leading-[6.05vw] tracking-[0.05em]`}
+				className={`${poppins.className} mt-[13vw] text-black base:text-[4vw] md:text-[1.5rem] px-[6.125vw] font-normal text-justify base:leading-[6.05vw] md:leading-10 md:font-semibold tracking-[0.05em]`}
 			>
 				Using edge cutting technology to provide extremely
 				reliable service Using edge cutting technology to

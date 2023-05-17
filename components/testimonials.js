@@ -49,14 +49,14 @@ const Testimonials = () => {
           <div className="lg:inline-block hidden w-[30%]"></div>
 
           <div
-            className={`font-[700] text-[1.2rem] text-[#A5787A] flex ${poppinsBold.className}`}
+            className={`font-[700] text-[1.2rem] text-[#A5787A] md:text-[2rem] flex ${poppinsBold.className}`}
           >
             / TESTIMONIALS
           </div>
         </div>
         {/* Lets see what our */}
         <div
-          className={`lg:w-[30%] ${poppins} text-black base:text-[1.5rem] lg:text-[1.8rem] leading-[2.4rem] lg:ml-10 font-[700] pt-8`}
+          className={`md:w-[50%] lg:w-[30%] ${poppins} text-black base:text-[1.5rem]  md:text-[2rem] lg:text-[1.8rem] leading-[2.4rem] lg:ml-10 font-[700] pt-8`}
         >
           LETS SEE WHAT OUR CUSTOMERS HAVE TO SAY
         </div>
@@ -115,7 +115,7 @@ const Testimonials = () => {
           {cards.map((data, index) => {
             return (
               <div
-                className=" flex lg:hidden min-w-[min(22rem,100vw)] flex-col justify-center mt-12 "
+                className=" flex lg:hidden base:min-w-[min(22rem,100vw)] flex-col justify-center mt-12 "
                 key={index}
               >
                

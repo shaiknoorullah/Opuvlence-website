@@ -98,11 +98,11 @@ const Hero = () => {
   return (
     <div
       data-scroll-section
-      className=" w-[100%] relative z-[1000] flex justify-center base:px-[20px] base:mt-5 lg:mt-0 lg:px-[40px]  "
+      className=" w-[100%] relative z-[1000] flex justify-center base:px-[20px] base:mt-5 lg:mt-0 md:pb-[6rem] lg:pb-0 lg:px-[40px]  "
     >
       <section className="flex lg:flex-row base:flex-col max-w-[1920px] lg:items-start lg:justify-between lg:mr-12 w-full text-left ">
-        <div className="flex flex-col base:items-center base:w-[100%]  md:w-[max(970px,50vw)] lg:items-start justify-start gap-[30px]">
-          <h1 className="m-0 text-[#270405] base:text-[24px]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[min(5vw,90px)] 2xl:leading-[100px] ">
+        <div className="flex flex-col base:items-center base:w-[100%]   lg:items-start justify-start gap-[30px]">
+          <h1 className="m-0 text-[#270405] base:text-[24px] md:text-[3rem]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[min(5vw,90px)] 2xl:leading-[100px] ">
             <div
               className={`w-full flex flex-col base:justify-center lg:justify-start base:items-center lg:items-start ${golden.className}`}
             >
@@ -112,9 +112,9 @@ const Hero = () => {
               >
                 <p
                   // ref={block}
-                  className="tracking base:text-cente lg:text-left overflow-clip"
+                  className="tracking base:text-center lg:text-left overflow-clip"
                 >
-                  {"Taking the".split("").map((char, idx) => {
+                  {"Taking the ".split("").map((char, idx) => {
                     return (
                       <span
                         key={idx}
@@ -165,7 +165,7 @@ const Hero = () => {
             </div>
           </h1>
           {/* image for mobile */}
-          <div className="lg:hidden base:inline-block base:w-[280px] md:w-[max(710px,40vw)] base:h-[350px] md:h-[min(500px,60vh)] relative overflow-clip rounded-tl-full rounded-tr-full">
+          <div className="lg:hidden base:inline-block base:w-[280px] md:w-[28rem]  base:h-[350px] md:h-[min(500px,60vh)] relative overflow-clip rounded-tl-full rounded-tr-full">
             <Image
               className="  lg:top-0 lg:right-[10] object-fill "
               // className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
@@ -175,7 +175,7 @@ const Hero = () => {
           </div>
           <p
             id="description"
-            className={`m-0 base:text-center lg:text-left text-[#A5787A]  lg:text-[min(1.3vw,20px)] 2xl:text-[22px] tracking-wide lg:leading-[30px] 2xl:leading-[34px] font-[400] flex flex-col items-start lg:w-[500px] ${poppins.className}`}
+            className={`m-0 base:text-center lg:text-left text-[#A5787A] md:text-[1.7rem]  lg:text-[min(1.3vw,20px)] 2xl:text-[22px] tracking-wide lg:leading-[30px] 2xl:leading-[34px] font-[400] flex flex-col items-start lg:w-[500px] ${poppins.className}`}
           >
             {`Opuvlence is a full-service interior design firm specializing in creating beautiful, functionalspaces for residential and commercial clients. With over 4 years of experience in the industry,our team of designers have a proven track record of delivering exceptional results.
 
