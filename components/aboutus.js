@@ -17,13 +17,13 @@ const AboutusHero = () => {
         <div className="lg:grid grid-cols-12 base:pt-7 lg:pt-[2rem] ">
           <div className="flex row-span-full flex-col text-black col-start-1 col-end-6  z-50">
             <div
-              className={`base:text-[min(9.5vw,5rem)] lg:text-[min(6.2vw,8rem)] tracking-[0.7rem] lg:leading-[min(7vw,130px)] ${golden}`}
+              className={`base:text-[min(9.5vw,5rem)] lg:text-[min(6.2vw,8rem)] tracking-[0.7rem] md:text-[6vw] md:w-[46vw] lg:leading-[min(7vw,130px)] ${golden}`}
             >
               GET TO KNOW US
             </div>
             {/* change this poppins to lamore */}
             <div
-              className={`base:text-[min(5vw,1.8rem)] lg:text-[2rem] ${poppins}`}
+              className={`base:text-[min(5vw,1.8rem)] lg:text-[2rem] md:text-[2.92vw] ${poppins}`}
             >
               THE STORY BEHIND
             </div>
@@ -58,7 +58,7 @@ const AboutusHero = () => {
           </div>
         </div>
         <div
-          className={`lg:hidden base:inline-block   lg:text-[1.3rem] w-[80%] font-extrabold italic ${poppins}`}
+          className={`lg:hidden base:inline-block   base:text-[1.1rem] md:text-[2.8vw] base:w-[70.315vw] md:w-[46vw] font-extrabold italic ${poppins}`}
         >
           “Experience the art of luxury interior design. Let us transform your
           space into a breathtaking work of art.”
@@ -71,7 +71,7 @@ const AboutusHero = () => {
               gridColumnStart: 2,
               gridColumnEnd: 3,
             }}
-            className={`${poppins} lg:ml-[17rem lg:mr-[10rem] base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal`}
+            className={`${poppins}  base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal md:text-[2.5vw]`}
           >
             At Opuvlence, we are committed to sustainability and
             eco-friendliness. We use environmentally- friendly materials

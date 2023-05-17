@@ -95,12 +95,12 @@ const AboutUsMeet = () => {
         <div className=" lg:grid grid-cols-12">
           <div className="col-start-1 col-end-11 flex flex-col z-50">
             <div
-              className={`lg:hidden base:text-[2.8rem] lg:text-[min(4.8vw)] tracking-[0.5rem] base:leading-[65px] lg:leading-[130px] ${golden.className} capitalize leading-[7rem] `}
+              className={`lg:hidden base:text-[2.2rem] md:text-[6vw] md:w-[60vw] lg:text-[min(4.8vw)] tracking-[0.5rem] base:leading-[65px] lg:leading-[130px] ${golden.className} capitalize leading-[7rem] `}
             >
               meet the team behind the magic
             </div>
             <div
-              className={`lg:inline-block base:hidden base:text-[2.8rem] lg:text-[min(4.8vw,6rem)] tracking-[0.5rem] base:leading-[65px] lg:leading-[min(6vw,130px)] ${golden.className} capitalize leading-[7rem] `}
+              className={`lg:inline-block base:hidden base:text-[2.8rem] lg:text-[min(4.8vw,6rem)]  tracking-[0.5rem] base:leading-[65px] lg:leading-[min(6vw,130px)] ${golden.className} capitalize leading-[7rem] `}
             >
               Meet the creative minds behind our designs - our team
             </div>
@@ -139,7 +139,7 @@ const AboutUsMeet = () => {
 
         {/* mobile testimonial */}
         <div className="flex w-full mt-16 justify-center">
-          <div className="base:grid gap-5 w-full lg:hidden grid-cols-2">
+          <div className="base:grid base:gap-5 md:gap-15 lg:gap-5 w-full lg:hidden grid-cols-2">
             {testimonial.map((data, index) => {
               return (
                 <div key={index}>
@@ -176,9 +176,7 @@ const AboutUsMeet = () => {
                 <div className="w-[16rem] text-[3.2rem] leading-[4rem]">
                   {name}
                 </div>
-                <div className="flex text-[1.5rem] pt-3">
-                 {designation}
-                </div>
+                <div className="flex text-[1.5rem] pt-3">{designation}</div>
                 <div className="border border-black w-full base:my-6 lg:my-6"></div>
                 <div className="text-[1.3rem] leading-[2rem]">
                   Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
