@@ -51,7 +51,7 @@ const HowDoesIt = () => {
           <div
             className={`${poppinsSemibold.className} row-start-2 italic row-end-3 col-start-3 col-end-7 pt-4`}
           >
-            “Using edge cutting technology to provide extremely reliable service
+            &quot;Using edge cutting technology to provide extremely reliable service
             Using edge cutting technology to.
           </div>
         </div>

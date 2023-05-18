@@ -51,13 +51,13 @@ const WhyChooseUs = () => {
           <div
             className={`${poppinsSemibold.className} row-start-2 italic row-end-3 col-start-3 col-end-7`}
           >
-            “Using edge cutting technology to provide extremely reliable service
+            &quot;Using edge cutting technology to provide extremely reliable service
             Using edge cutting technology to.
           </div>
           <div
             className={`${poppinsRegular.className} row-start-3 italic row-end-4 col-start-7 col-end-12`}
           >
-            “Lorem ipsum dolor sit amet consectetur{" "}
+            &quot;Lorem ipsum dolor sit amet consectetur{" "}
           </div>
         </div>
 
