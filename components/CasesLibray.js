@@ -56,7 +56,7 @@ const ProjectGrid = props => {
 	)
 }
 
-const CasesLibrary = () => {
+const CasesLibrary = ({setName,projects}) => {
 	return (
 		<div
 			// data-scroll-section
@@ -125,7 +125,9 @@ const CasesLibrary = () => {
 								// className="flex flex-row items-center base:gap-[5.56vw] base:px-[3.125vw] 3xl:gap-[40px] lg:gap-[2.08vw]"
 								className="flex flex-row items-center origin-top-left lg:-rotate-90 base:gap-[5.56vw] base:px-[3.125vw] md:px-[0px] 3xl:gap-[40px] lg:gap-[2.08vw]"
 							>
-								<div className="base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-medium italic uppercase text-black">
+								<div onClick={()=>{
+									setName("Residential")
+								}}  className="base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-medium italic uppercase text-black">
 									residential
 								</div>
 								<Image
@@ -133,7 +135,9 @@ const CasesLibrary = () => {
 									src={Arrow}
 									className="base:w-[2.3vw] invert 3xl:w-[12.17px]  3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-90  ml-1"
 								></Image>
-								<div className="base:text-[3.43vw] base:leading-[5.15vw]  base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-black">
+								<div onClick={()=>{
+									setName("Commercial")
+								}}  className="base:text-[3.43vw] base:leading-[5.15vw]  base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-black">
 									commercial
 								</div>
 								<Image
@@ -142,7 +146,9 @@ const CasesLibrary = () => {
 									className="base:w-[2.3vw] invert 3xl:w-[12.17px]  3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-90  ml-1"
 								></Image>
 
-								<div className="base:text-[3.43vw] base:leading-[5.15vw]  base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-black">
+								<div onClick={()=>{
+									setName("Restaurant")
+								}}  className="base:text-[3.43vw] base:leading-[5.15vw]  base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-black">
 									restaurant
 								</div>
 							</div>
@@ -153,7 +159,7 @@ const CasesLibrary = () => {
 						<ProjectGrid
 							href="/casestudies"
 							image={arch1}
-							heading="Batholic plutonic"
+							heading={"Batholic plutonic"}
 							text="wE'vE bUiLt homes thAt brinG DrEAms COME trUE"
 						/>
 						<ProjectGrid
