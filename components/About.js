@@ -15,6 +15,8 @@ const poppins = localFont({
   variable: "--font-poppins",
 });
 const About = () => {
+
+
   return (
     <div className="w-[100%]  base:flex jus relative lg:flex flex-col max-w-[1920px] base:mt-[4rem] lg:mt-[-10rem]">
       <div
@@ -30,7 +32,10 @@ const About = () => {
         >
           get to kno
           <span className="md:text-[white] base:text-[black]">w</span>{" "}
-          <span className="md:text-black base:text-white"><br/>us</span>
+          <span className="md:text-black base:text-white">
+            <br />
+            us
+          </span>
         </div>
         <div
           className={`text-right base:mt-[20vw] md:mt-0 base:w-[100] md:text-[6.6rem] base:text-[8.88vw] base:leading-[14.88vw] base:tracking-[2.46vw] 3xl:mt-[320px] lg:mt-[17.161616vw]   3xl:w-[656px] 3xl:text-[115px] 3xl:leading-[157.32px] 3xl:tracking-[17.5px] font-normal ${golden.className} text-right lg:text-[5.80vw] lg:leading-[7.94vw] lg:tracking-[0.88vw] lg:w-[33.1313vw]`}
