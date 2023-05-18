@@ -25,7 +25,7 @@ const OurServices = () => {
       <div className="w-[95%] lg:w-[97.5%] flex flex-col max-w-[1920px] ">
         <div className="flex w-full justify-center">
           <div className="lg:flex hidden w-[15%]"></div>
-          <div className="font-[700] text-[min(1.5rem,10rem)] w-[80%] text-[#A5787A] flex">
+          <div className="font-[700] base:text-[3.75vw] md:text-[2.815vw] lg:text-[min(1.5rem,10rem)] lg:w-[70%] base:w-[100%] text-[#A5787A] flex base:py-[6.5vw] md:py-[70px]   base:justify-center lg:justify-start">
             / OUR SERVICE / INTERIOR DESIGN
           </div>
         </div>
@@ -34,15 +34,18 @@ const OurServices = () => {
         <div className="flex flex-col lg:grid grid-cols-12 mt-[20px]">
           <div className="flex row-span-full flex-col col-start-1 col-end-8  z-50">
             <div
-              className={`base:text-[2.8rem] text-black lg:text-[min(5.9vw,7rem)] tracking-[0.7rem] lg:tracking-[min(1vw,1.9rem)] lg:leading-[min(10vw,170px)] ${golden.className}`}
+              className={`base:text-[2.7rem] md:text-[5.85vw] md:w-[41.01vw] lg:w-[60.4vw] base:w-[31.177vw] text-black lg:text-[min(5.9vw,7rem)] tracking-[0.7rem] lg:tracking-[min(1vw,1.9rem)] lg:leading-[min(10vw,170px)] ${golden.className}`}
             >
               Interior Design For Luxury
             </div>
           </div>
           <div className="row-span-full flex-col col-start-7 col-end-13 z-0 base:my-5 lg:my-0">
-            <img className="base:h-[22rem] lg:h-fit" src="/serviceshero.jpg" />
+            <img
+              className="base:h-[22rem] md:w-[100%] md:h-[100%] lg:h-fit"
+              src="/serviceshero.jpg"
+            />
           </div>
-          <div className="col-start-5 text-black lg:ml-[6rem] w-[90%] lg:leading-[min(3vw,2rem)] font-semibold lg:mt-[-6rem] ml-5 col-end-9 italic base:text-[1.1rem] lg:text-[min(1.5vw,2rem)] z-[100] ">
+          <div className="col-start-5 text-black lg:ml-[6rem] w-[90%] lg:leading-[min(3vw,2rem)] md:w-[50.65vw] lg:w-[100%] lg:mt-[-6rem] ml-5 col-end-9 italic base:text-[1.1rem] lg:text-[min(1.5vw,2rem)] z-[100]  ">
             “In rooms where lovely harmonies prevail, Where all is simple,
             gracious, and serene, Where natural beauty needs no art to veil,
             Where order, light, and comfort reign supreme ”

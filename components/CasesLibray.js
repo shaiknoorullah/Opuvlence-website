@@ -28,7 +28,7 @@ import Head from "next/head";
 const ProjectGrid = (props) => {
   return (
     <Link href={props.href} passHref>
-      <div className="block cursor-pointer base:h-[299px] md:h-[663px] lg:h-[820px]">
+      <div className="block cursor-pointer base:h-[30vh] md:h-[43.83vw]  lg:h-[820px]">
         <div className="w-[100%] h-[100%] relative flex flex-col justify-center items-center overflow-clip ">
           <div
             className={`${golden.className} z-[99] relative mix-blend-multiply w-[min(707px,36.8vw)] font-normal italic text-[min(100px,5.2vw)] leading-[(136.8px,7.125vw)] tracking-[0.175em] text-center text-black`}
@@ -45,7 +45,7 @@ const ProjectGrid = (props) => {
             // data-scroll-speed="1.2"
             src={props.image}
             alt="project image"
-            className="absolute top-[-50%] object-cover"
+            className="absolute top-[-50%] "
           ></Image>
         </div>
       </div>
@@ -128,7 +128,7 @@ const CasesLibrary = () => {
             </div>
           </div>
 
-          <div className=" base:w-[100%] lg:w-[95%] flex flex-col base:gap-[20px] md:gap-[10px] lg:gap-[30px] text-black lg:pt-[80px]">
+          <div className=" base:w-[100%] lg:w-[95%] flex flex-col base:gap-[6vw] md:gap-[10px] lg:gap-[30px] text-black lg:pt-[80px]">
             <ProjectGrid
               href="/casestudies"
               image={arch1}

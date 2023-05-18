@@ -31,7 +31,7 @@ const AboutUsBehind = () => {
               Behind every great company is a great founder - meet ours.
             </div>
             <div
-              className={`lg:hidden base:text-[min(7.9vw,5rem)] md:text-[min(6vw,45px)] md:w-[70vw] base:px-[25px] lg:text-[4.8vw]   tracking-[0.5rem]  ${golden} capitalize  `}
+              className={`lg:hidden base:text-[min(7.9vw,5rem)] md:text-[min(6vw,45px)] md:w-[70vw] base:px-[5px] lg:text-[4.8vw]   tracking-[0.5rem]  ${golden} capitalize  `}
             >
               meet our visionary founder
             </div>
