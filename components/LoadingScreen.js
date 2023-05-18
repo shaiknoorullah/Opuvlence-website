@@ -18,124 +18,124 @@ const LoadingScreen = () => {
   const loadingLogo = useRef(null);
   const paragraph = useRef(null);
 
-  //   useEffect(() => {
-  //     const loadingLogoVar = loadingLogo.current.children;
-  //     const paragraphVar = paragraph.current.children;
-  //     const tl = gsap.timeline();
-  //     const tl2 = gsap.timeline();
+  useEffect(() => {
+    const loadingLogoVar = loadingLogo.current.children;
+    const paragraphVar = paragraph.current.children;
+    const tl = gsap.timeline();
+    const tl2 = gsap.timeline();
 
-  //     gsap
-  //       .timeline()
-  //       .fromTo(
-  //         "#loadingScreen1",
-  //         { opacity: 1 },
-  //         {
-  //           opacity: 0,
+    gsap
+      .timeline()
+      .fromTo(
+        "#loadingScreen1",
+        { opacity: 1 },
+        {
+          opacity: 0,
 
-  //           transformOrigin: "bottom center",
-  //           duration: 0.2,
-  //           delay: 3.1,
-  //         }
-  //       )
-  //       .fromTo(
-  //         "#loadingScreen1",
-  //         {
-  //           display: "block",
-  //         },
-  //         {
-  //           display: "none",
-  //         }
-  //       );
+          transformOrigin: "bottom center",
+          duration: 0.2,
+          delay: 3.1,
+        }
+      )
+      .fromTo(
+        "#loadingScreen1",
+        {
+          display: "block",
+        },
+        {
+          display: "none",
+        }
+      );
 
-  //     tl.fromTo(
-  //       loadingLogoVar,
-  //       {
-  //         y: 40,
-  //         opacity: 0,
-  //       },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         ease: "power4.out",
-  //         duration: 1,
-  //         stagger: 0.1024,
-  //       }
-  //     ).fromTo(
-  //       paragraphVar,
-  //       {
-  //         y: 20,
-  //         opacity: 0,
-  //       },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
+    tl.fromTo(
+      loadingLogoVar,
+      {
+        y: 40,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        ease: "power4.out",
+        duration: 1,
+        stagger: 0.1024,
+      }
+    ).fromTo(
+      paragraphVar,
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
 
-  //         ease: "power4.out",
-  //         duration: 0.7,
-  //         stagger: 0.05,
-  //       }
-  //     );
-  //     gsap.fromTo(
-  //       "#progress",
-  //       { opacity: 1, width: 0 },
-  //       { duration: 3, width: "100%", ease: "power3.Out" }
-  //     );
+        ease: "power4.out",
+        duration: 0.7,
+        stagger: 0.05,
+      }
+    );
+    gsap.fromTo(
+      "#progress",
+      { opacity: 1, width: 0 },
+      { duration: 3, width: "100%", ease: "power3.Out" }
+    );
 
-  //     gsap.fromTo(
-  //       "#img1",
-  //       { y: -350 },
-  //       { y: 0, duration: 1, delay: 0.7, ease: "power3.out" }
-  //     );
-  //     gsap.fromTo(
-  //       "#img2",
-  //       { x: 1000 },
-  //       { x: 0, duration: 1, delay: 0.75, ease: "power3.out" }
-  //     );
-  //     gsap.fromTo(
-  //       "#img3",
-  //       { x: -800 },
-  //       { x: 0, duration: 1, delay: 0.8, ease: "power3.out" }
-  //     );
-  //     gsap.fromTo(
-  //       "#img4",
-  //       { y: 500 },
-  //       { y: 0, duration: 1, delay: 0.85, ease: "power3.out" }
-  //     );
+    gsap.fromTo(
+      "#img1",
+      { y: -350 },
+      { y: 0, duration: 1, delay: 0.7, ease: "power3.out" }
+    );
+    gsap.fromTo(
+      "#img2",
+      { x: 1000 },
+      { x: 0, duration: 1, delay: 0.75, ease: "power3.out" }
+    );
+    gsap.fromTo(
+      "#img3",
+      { x: -800 },
+      { x: 0, duration: 1, delay: 0.8, ease: "power3.out" }
+    );
+    gsap.fromTo(
+      "#img4",
+      { y: 500 },
+      { y: 0, duration: 1, delay: 0.85, ease: "power3.out" }
+    );
 
-  //     //   return () => {};
+    return () => {};
 
-  //     //   // tl.fromTo(
-  //     //   //   "#loadingScreen1",
-  //     //   //   { opacity: 1, display: "block" },
-  //     //   //   { opacity: 0, display: "none", delay: 2.2, overflow: "hidden" }
-  //     //   // );
-  //     //   // tl.
-  //     //   // tl.
-  //     //   // tl.
-  //     //   // tl.
-  //     //   // .fromTo(
-  //     //   //   "#loadingScreen2",
-  //     //   //   { height: 0, transformOrigin: "bottom center", display: "block" },
-  //     //   //   {
-  //     //   //     height: 100,
-  //     //   //     ease: "power2.Out",
-  //     //   //     duration: 0.5,
-  //     //   //     delay: 4.2,
-  //     //   //   }
-  //     //   // )
-  //     //   // .to("#loadingScreen2", {
-  //     //   //   height: 0,
-  //     //   //   ease: "power2.Out",
-  //     //   //   duration: 0.5,
-  //     //   //   delay: 1,
-  //     //   // })
-  //     //   // .fromTo(
-  //     //   //   "#text2",
-  //     //   //   { opacity: 0 },
-  //     //   //   { opacity: 1, delay: 2.5, duration: 1.2, ease: "power3.Out" }
-  //     //   // )
-  //     //   //
-  //   }, []);
+    // tl.fromTo(
+    //   "#loadingScreen1",
+    //   { opacity: 1, display: "block" },
+    //   { opacity: 0, display: "none", delay: 2.2, overflow: "hidden" }
+    // );
+    // tl.
+    // tl.
+    // tl.
+    // tl.
+    // .fromTo(
+    //   "#loadingScreen2",
+    //   { height: 0, transformOrigin: "bottom center", display: "block" },
+    //   {
+    //     height: 100,
+    //     ease: "power2.Out",
+    //     duration: 0.5,
+    //     delay: 4.2,
+    //   }
+    // )
+    // .to("#loadingScreen2", {
+    //   height: 0,
+    //   ease: "power2.Out",
+    //   duration: 0.5,
+    //   delay: 1,
+    // })
+    // .fromTo(
+    //   "#text2",
+    //   { opacity: 0 },
+    //   { opacity: 1, delay: 2.5, duration: 1.2, ease: "power3.Out" }
+    // )
+    //
+  }, []);
 
   return (
     <>
@@ -165,7 +165,7 @@ const LoadingScreen = () => {
           </h1>
           <div
             ref={paragraph}
-            className={`${poppins.className} md:w-[436px] base:w-[90vw] text-center overflow-hidden base:text-[16px] md:text-[2.34vw] lg:text-[28px] z-[100]`}
+            className={`${poppins.className} md:w-[436px] base:w-[90vw] text-center overflow-hidden base:text-[16px] md:text-[] lg:text-[28px] z-[100]`}
           >
             {"Elevating the status of luxury for the deserving"
               .split(" ")
@@ -186,7 +186,7 @@ const LoadingScreen = () => {
         />
 
         <img
-          className="base:hidden md:block absolute lg:top-[321px] md:top-[350px] left-0 lg:w-[650px] lg:h-[414px] md:w-[550px] md:h-[480px] object-contain"
+          className="base:hidden md:block absolute lg:top-[321px] md:top-[350px] left-0 lg:w-[650px] lg:h-[414px] md:w-[400px] md:h-[180px] object-contain"
           alt=""
           id="img3"
           src="/loading3.png"
