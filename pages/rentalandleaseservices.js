@@ -5,7 +5,7 @@ import Feedback from "../components/FeedbackForm.js";
 import ServicesRentalMobile from "../components/ServicesRentalMobile.js";
 import { useState, useEffect } from "react";
 import WhyChooseUs from "../components/WhyChooseUs.js";
-import HowDoesIt from "../components/HowDoesIt.JS";
+import HowDoesIt from "../components/HowDoesIt.js";
 
 
 const Rentalandleaseservices = () => {
