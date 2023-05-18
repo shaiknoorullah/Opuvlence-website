@@ -25,8 +25,7 @@ const Rentalandleaseservices = () => {
       <div className="w-[95%] ">
         <Rental />
         {!isMobileDevice ? <RentalServices /> : <ServicesRentalMobile />}
-        <WhyChooseUs />
-        <HowDoesIt />
+     hello
 
         {/* <Feedback /> */}
       </div>
