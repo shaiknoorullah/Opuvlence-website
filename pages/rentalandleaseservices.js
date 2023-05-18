@@ -4,6 +4,9 @@ import RentalServices from "../components/RentalServices.js";
 import Feedback from "../components/FeedbackForm.js";
 import ServicesRentalMobile from "../components/ServicesRentalMobile.js";
 import { useState, useEffect } from "react";
+import WhyChooseUs from "../components/WhyChooseUs.js";
+import HowDoesIt from "../components/HowDoesIt.JS";
+
 
 const Rentalandleaseservices = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
@@ -21,6 +24,8 @@ const Rentalandleaseservices = () => {
       <div className="w-[95%] ">
         <Rental />
         {!isMobileDevice ? <RentalServices /> : <ServicesRentalMobile />}
+        <WhyChooseUs />
+        <HowDoesIt />
 
         {/* <Feedback /> */}
       </div>
