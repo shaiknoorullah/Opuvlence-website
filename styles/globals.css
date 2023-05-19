@@ -235,3 +235,38 @@ html.has-scroll-dragging {
 	right: auto;
 	bottom: 0;
 }
+
+.privacy p {
+	font-size: 1rem;
+}
+
+.privacy p div span {
+	word-wrap: initial;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+div {
+	user-select: none;
+}
+
+.terms p li {
+	font-size: 1rem;
+}
+
+.terms span {
+	font-size: 1.3rem;
+	font-weight: 500;
+}
+
+.line {
+	width: 100%;
+	max-width: 800px;
+	height: 8px;
+	margin: 0 0 10px 0;
+	position: relative;
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 1);
+}

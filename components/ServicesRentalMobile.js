@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-const ServicesBottomMobile = () => {
+const ServicesRentalMobile = () => {
   const [service1, setService1] = useState(false);
   const [service2, setService2] = useState(false);
   const [service3, setService3] = useState(false);
@@ -118,7 +118,7 @@ const ServicesBottomMobile = () => {
           <div className=" h-[1px] bg-black" />
           <div className="flex items-center gap-[20px] mt-[16px] font- text-[5vw] text-black">
             <img src="/services12.png" className="w-[15.625vw] " />
-            <h1>Design Solutions</h1>
+            <h1>Tenant Managements</h1>
           </div>
           <div
             id="image1"
@@ -129,7 +129,7 @@ const ServicesBottomMobile = () => {
               id="div1"
               className="absolute z-10 top-[50%] w-[90%] text-white "
             >
-              <h1 className="text-[5vw]">Design Solutions</h1>
+              <h1 className="text-[5vw]">Tenant Managements</h1>
               <p className="text-[3.5075vw]">
                 Transform your home into a work of art with our residential
                 design services. From space planning to custom interiors, we
@@ -151,7 +151,7 @@ const ServicesBottomMobile = () => {
           <div className="w-full  h-[1px] bg-black  " />
           <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[5vw] text-black">
             <img src="/services12.png" className="w-[15.625vw] " />
-            <h1>Turnkey Solutions</h1>
+            <h1>Brokerage Servicess</h1>
           </div>
           <div
             id="image2"
@@ -162,7 +162,7 @@ const ServicesBottomMobile = () => {
               id="div2"
               className="absolute z-10 top-[50%] w-[90%] text-white  "
             >
-              <h1 className="text-[5vw]">Turnkey Solutions</h1>
+              <h1 className="text-[5vw]">Brokerage Servicess</h1>
               <p className="text-[3.5075vw]">
                 Elevate your business with our corporate design services. We
                 create functional and attractive workspaces that promote
@@ -185,7 +185,7 @@ const ServicesBottomMobile = () => {
           <div className="w-full  h-[1px] bg-black  " />
           <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[5vw] text-black">
             <img src="/services12.png" className="w-[15.625vw] " />
-            <h1>Execution Solutions</h1>
+            <h1>Property Management</h1>
           </div>
           <div
             id="image3"
@@ -196,7 +196,7 @@ const ServicesBottomMobile = () => {
               id="div3"
               className="absolute z-10 top-[50%] w-[90%] text-white "
             >
-              <h1 className="text-[5vw]">Execution Solutions</h1>
+              <h1 className="text-[5vw]">Property Management</h1>
               <p className="text-[3.5075vw]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -218,7 +218,7 @@ const ServicesBottomMobile = () => {
           <div className="w-full  lg:hidden  h-[1px] bg-black  " />
           <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[5vw] text-black">
             <img src="/services12.png" className="w-[15.625vw] " />
-            <h1>Other Solutions</h1>
+            <h1>Marketing and Advertisements</h1>
           </div>
           <div
             id="image4"
@@ -229,7 +229,7 @@ const ServicesBottomMobile = () => {
               id="div4"
               className="absolute z-10 top-[50%] w-[90%] text-white "
             >
-              <h1 className="text-[5vw]">Other Solutions</h1>
+              <h1 className="text-[5vw]">Marketing and Advertisements</h1>
               <p className="text-[3.5075vw]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -243,4 +243,4 @@ const ServicesBottomMobile = () => {
   );
 };
 
-export default ServicesBottomMobile;
+export default ServicesRentalMobile;

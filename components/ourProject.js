@@ -2,12 +2,14 @@
 
 import localFont from "next/font/local"
 import ScrollContainer from "react-indiana-drag-scroll"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { gsap } from "gsap"
 import Link from "next/link"
 import ProjectCard from "./projectCard"
 
-import projectImage from "../public/ourproject.png"
+import Bathroom from "../public/projectopuvlence/bathroom.webp"
+import Bedroom from "../public/projectopuvlence/bedroom.webp"
+import LivingRoom from "../public/projectopuvlence/livingroom.webp"
 
 const golden = localFont({
 	src: "../styles/font/golden/golden.woff2",
@@ -17,8 +19,93 @@ const poppins = localFont({
 	src: "../styles/font/poppins/Poppins-ExtraLight.woff2",
 	variable: "--font-poppins",
 })
+// const residential = [
+//   {
+//     name: "Serene Haven",
+//     description:
+//       "Serene Haven is an inviting residential bathroom design concept that creates a peaceful ambiance. With a calming color palette, natural elements, and minimalistic decor, it offers a tranquil retreat for relaxation. Thoughtful lighting and clean lines enhance the serene atmosphere, providing a haven of tranquility and rejuvenation.",
+//     image: Bathroom,
+//   },
+//   {
+//     name: "Tranquil Haven",
+//     description:
+//       "Tranquil Haven is a residential bedroom design concept that prioritizes serenity and relaxation. With soft colors, natural elements, and minimalistic decor, it creates a peaceful atmosphere. Cozy furnishings and soothing lighting enhance the tranquil ambiance, providing a haven for rest, rejuvenation, and a peaceful escape from the outside world.",
+//     image: Bedroom,
+//   },
+//   {
+//     name: "Timeless Elegance",
+//     description:
+//       "Timeless Elegance is a residential living room design concept that embraces classic aesthetics with a touch of sophistication. Neutral color palettes, luxurious materials, and harmonious furniture create a refined and enduring atmosphere. With attention to detail and balance, it achieves a timeless beauty and an understated sense of luxury.",
+//     image: LivingRoom,
+//   },
+// ];
+
+// const commercial = [
+//   {
+//     name: "Serene Haven",
+//     description:
+//       "Serene Haven is an inviting residential bathroom design concept that creates a peaceful ambiance. With a calming color palette, natural elements, and minimalistic decor, it offers a tranquil retreat for relaxation. Thoughtful lighting and clean lines enhance the serene atmosphere, providing a haven of tranquility and rejuvenation.",
+//     image: Bedroom,
+//   },
+//   {
+//     name: "Serene Haven",
+//     description:
+//       "Serene Haven is an inviting residential bathroom design concept that creates a peaceful ambiance. With a calming color palette, natural elements, and minimalistic decor, it offers a tranquil retreat for relaxation. Thoughtful lighting and clean lines enhance the serene atmosphere, providing a haven of tranquility and rejuvenation.",
+//     image: Bedroom,
+//   },
+//   {
+//     name: "Serene Haven",
+//     description:
+//       "Serene Haven is an inviting residential bathroom design concept that creates a peaceful ambiance. With a calming color palette, natural elements, and minimalistic decor, it offers a tranquil retreat for relaxation. Thoughtful lighting and clean lines enhance the serene atmosphere, providing a haven of tranquility and rejuvenation.",
+//     image: Bedroom,
+//   },
+// ];
+
+// const restaurant = [
+//   {
+//     name: "Serene Haven",
+//     description:
+//       "Serene Haven is an inviting residential bathroom design concept that creates a peaceful ambiance. With a calming color palette, natural elements, and minimalistic decor, it offers a tranquil retreat for relaxation. Thoughtful lighting and clean lines enhance the serene atmosphere, providing a haven of tranquility and rejuvenation.",
+//     image: Bedroom,
+//   },
+//   {
+//     name: "Serene Haven",
+//     description:
+//       "Serene Haven is an inviting residential bathroom design concept that creates a peaceful ambiance. With a calming color palette, natural elements, and minimalistic decor, it offers a tranquil retreat for relaxation. Thoughtful lighting and clean lines enhance the serene atmosphere, providing a haven of tranquility and rejuvenation.",
+//     image: Bedroom,
+//   },
+//   {
+//     name: "Serene Haven",
+//     description:
+//       "Serene Haven is an inviting residential bathroom design concept that creates a peaceful ambiance. With a calming color palette, natural elements, and minimalistic decor, it offers a tranquil retreat for relaxation. Thoughtful lighting and clean lines enhance the serene atmosphere, providing a haven of tranquility and rejuvenation.",
+//     image: Bedroom,
+//   },
+// ];
 
 const OurProject = () => {
+	const [active, setactive] = useState("Residential")
+
+	const [projects, setprojects] = useState(null)
+
+	console.log(projects)
+
+	useEffect(() => {
+		// Function to fetch data from the JSON file or API
+		const fetchData = async () => {
+			try {
+				const response = await fetch(
+					`/api/data?name=${active}`
+				)
+				const jsonData = await response.json()
+				setprojects(jsonData)
+			} catch (error) {
+				console.error("Error fetching data:", error)
+			}
+		}
+
+		fetchData()
+	}, [active])
+
 	useEffect(() => {
 		const viewMoreButtonRef = document.getElementById(
 			"viewMoreButton"
@@ -60,10 +147,10 @@ const OurProject = () => {
 			)
 		}
 	}, [])
+
 	return (
 		<div
-			// data-scroll
-			// data-scroll-speed="3"
+			data-scroll
 			className="w-full base:hidden md:hidden lg:flex items-center justify-center "
 		>
 			<div className="font-poppins w-[98%] z-50 ">
@@ -148,29 +235,23 @@ const OurProject = () => {
 						width: "full",
 					}}
 				>
-					<ProjectCard
-						src={projectImage}
-						title="Fluidic Designs"
-						description="Indulge in the world of luxury interior design with our exceptional showcase of projects. From opulent residential homes to lavish commercial spaces, we cater to the most discerning clients in Bangalore. Slide through our stunning designs and let us inspire you to transform your space into a beautiful, functional work of art that exudes luxury."
-						year="2022"
-						type="residential"
-					/>
-					<ProjectCard
-						src={projectImage}
-						title="Fluidic Designs"
-						description="Indulge in the world of luxury interior design with our exceptional showcase of projects. From opulent residential homes to lavish commercial spaces, we cater to the most discerning clients in Bangalore. Slide through our stunning designs and let us inspire you to transform your space into a beautiful, functional work of art that exudes luxury."
-						year="2022"
-						type="residential"
-					/>
-					<ProjectCard
-						src={projectImage}
-						title="Fluidic Designs"
-						description="Indulge in the world of luxury interior design with our exceptional showcase of projects. From opulent residential homes to lavish commercial spaces, we cater to the most discerning clients in Bangalore. Slide through our stunning designs and let us inspire you to transform your space into a beautiful, functional work of art that exudes luxury."
-						year="2022"
-						type="residential"
-					/>
+					{projects?.projects.map((data, index) => {
+						console.log(data)
+						return (
+							<div key={index}>
+								<ProjectCard
+									src={data.image}
+									title={data.title}
+									description={data.description}
+									year="2022"
+									type={active}
+								/>
+							</div>
+						)
+					})}
+
 					<Link
-						href="/CasesLibraryPage"
+						href="/caseslibrary"
 						passHref
 						id="viewMoreButton"
 						className="relative flex flex-col"

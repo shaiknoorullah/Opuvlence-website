@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
 import SplitType from "split-type"
 import { useAnimateOnScroll } from "../utils/hooks/useAnimateOnScroll"
+import Getmobile from "../public/homepage/GetMobile.webp"
 
 const golden = localFont({
 	src: "../styles/font/golden/golden.woff2",
@@ -116,10 +117,10 @@ const About = () => {
 
 			{/* base */}
 			<div className="md:hidden absolute">
-				<img
-					src="mobile266.png"
-					className="w-[100vw] relative top-[38.123vw]"
-				></img>
+				<Image
+					src={Getmobile}
+					className="w-[100vw] relative top-[38.123vw] rounded-[5rem] md:px-10"
+				/>
 				<img
 					src="mobile267.png"
 					className="relative w-[30.93vw] z-[100] left-[69.375vw] top-[5.625vw]"

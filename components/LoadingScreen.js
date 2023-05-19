@@ -143,7 +143,7 @@ const LoadingScreen = forwardRef((props, ref) => {
 				/>
 
 				<img
-					className="base:hidden md:block absolute top-[321px] left-0 w-[650px] h-[414px] object-contain"
+					className="base:hidden md:block absolute lg:top-[321px] md:top-[350px] left-0 lg:w-[650px] lg:h-[414px] md:w-[400px] md:h-[180px] object-contain"
 					alt=""
 					id="img3"
 					src="/loading3.png"

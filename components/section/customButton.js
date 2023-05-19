@@ -77,7 +77,7 @@ const CustomButton = ({
 				<Link href={href}>
 					<div
 						ref={buttonRef}
-						className="relative w-[max(280px,10vw)] flex items-center"
+						className="relative w-fit flex items-center"
 					>
 						<div
 							id="circle"
@@ -112,7 +112,7 @@ const CustomButton = ({
 			) : (
 				<div
 					ref={buttonRef}
-					className="relative w-[max(280px,10vw)] flex items-center"
+					className="relative w-fit flex items-center"
 				>
 					<div
 						id="circle"

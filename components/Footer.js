@@ -102,8 +102,8 @@ const Footer = () => {
 						<p className="m-0">our Newsletter</p>
 					</span>
 				</h2>
-				<div className="flex flex-col md:w-fit base:w-[90vw] items-end justify-start gap-[8px]">
-					<div className="flex flex-row items-center base:justify-between w-[100%] md:justify-start base:gap-[0] md:gap-[137px]">
+				<div className="flex flex-col lg:w-fit base:w-[90vw] items-end justify-start gap-[8px]">
+					<div className="flex flex-row items-center base:justify-between w-[100%] lg:justify-start base:gap-[0] lg:gap-[137px]">
 						<input
 							className={`[border:none] placeholder:opacity-[0.56] placeholder:text-[#765151] outline-none ${poppins} lg:text-[58.24px] base:text-[12px] text-[#765151]  bg-[transparent] relative tracking-[0.08em] uppercase font-bold text-left`}
 							type="email"
@@ -122,7 +122,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div
-				className={`flex w-[100%] md:flex-row base:flex-col items-start md:flex-wrap justify-start md:gap-[187px] base:gap-[100px] ${poppins} text-black text-[18.93px]`}
+				className={`flex w-[100%] lg:flex-row base:flex-col items-start lg:flex-wrap justify-start lg:gap-[187px] base:gap-[100px] ${poppins} text-black text-[18.93px]`}
 			>
 				{FooterLinks.map((blocks, idx) => {
 					return (
@@ -141,7 +141,7 @@ const Footer = () => {
 							phone
 						</h5>
 						<a
-							className={`${poppinsRegular.className} [text-decoration:none] base:text-[13px] md:text-[18px] tracking-[0.18em] leading-[136.8%] font-medium font-gilroy text-[inherit] text-right`}
+							className={`${poppinsRegular.className} [text-decoration:none] base:text-[13px] lg:text-[18px] tracking-[0.18em] leading-[136.8%] font-medium font-gilroy text-[inherit] text-right`}
 						>
 							(+091) 7892360181
 						</a>
@@ -153,7 +153,7 @@ const Footer = () => {
 							email
 						</h5>
 						<a
-							className={`${poppinsRegular.className} [text-decoration:none] base:text-[13px] md:text-[18px] tracking-[0.18em] leading-[136.8%] font-medium font-gilroy text-[inherit] text-right`}
+							className={`${poppinsRegular.className} [text-decoration:none] base:text-[13px] lg:text-[18px] tracking-[0.18em] leading-[136.8%] font-medium font-gilroy text-[inherit] text-right`}
 							href="mailto:care@opuvlence.com"
 						>
 							care@opuvlence.com
@@ -168,13 +168,13 @@ const Footer = () => {
 					</h5>
 					<Link
 						href="https://www.google.com/maps/place/Opuvlence/@13.0182965,77.6456517,17z/data=!3m1!4b1!4m6!3m5!1s0x844319234894b65d:0x8282e50574ef517f!8m2!3d13.0182913!4d77.648232!16s%2Fg%2F11twsvc47r"
-						className={`${poppinsRegular.className} m-0 base:text-[13px] md:text-[18px] cursor-pointer relative text-xl tracking-[0.18em] leading-[136.8%] font-medium flex items-end base:w-fit md:w-[427px]`}
+						className={`${poppinsRegular.className} m-0 base:text-[13px] lg:text-[18px] cursor-pointer relative text-xl tracking-[0.18em] leading-[136.8%] font-medium flex items-end base:w-fit lg:w-[427px]`}
 					>
 						Orangery plaza Bengaluru, Karnataka, 560043
 					</Link>
 				</div>
 			</div>
-			<div className="flex flex-row items-start base:justify-between md:justify-start md:gap-[485px] md:w-[initial] base:w-[90vw] text-right mb-[50px] text-xs text-black">
+			<div className="flex flex-row items-start base:justify-between lg:justify-start lg:gap-[485px] lg:w-[initial] base:w-[90vw] text-right mb-[50px] text-xs text-black">
 				<p className="m-0 relative italic font-medium">
 					© 2022, Opuvlence
 				</p>
@@ -197,7 +197,7 @@ const FooterLink = ({ href, text }) => {
 		<Link
 			href={href}
 			passHref
-			className="[text-decoration:none] base:text-[13px] md:text-[18px] cursor-pointer relative tracking-[0.08em] uppercase text-[inherit]"
+			className="[text-decoration:none] base:text-[13px] lg:text-[18px] cursor-pointer relative tracking-[0.08em] uppercase text-[inherit]"
 		>
 			{text}
 		</Link>
@@ -207,10 +207,10 @@ const FooterLink = ({ href, text }) => {
 const FooterLinkBlock = ({ heading, links }) => {
 	return (
 		<div
-			className={`flex flex-col items-start justify-start md:gap-[74px] base:gap-[20px] ${poppinsRegular.className} font-normal`}
+			className={`flex flex-col items-start justify-start lg:gap-[74px] base:gap-[20px] ${poppinsRegular.className} font-normal`}
 		>
 			<h5
-				className={`${poppinsSemibold.className} base:text-[15px] md:text-[19px] m-0 relative tracking-[0.08em] uppercase font-semibold`}
+				className={`${poppinsSemibold.className} base:text-[15px] lg:text-[19px] m-0 relative tracking-[0.08em] uppercase font-semibold`}
 			>
 				{heading}
 			</h5>

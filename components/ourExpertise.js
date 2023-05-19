@@ -29,12 +29,12 @@ const NumberText = ({ number, text, state }) => {
 	return (
 		<div className={`flex w-[9rem]  flex-${state} `}>
 			<div
-				className={`${poppinsSemibold.className} text-black font-semibold base:text-[2.8rem] lg:text-[min(3.5vw,3.5rem)]`}
+				className={`${poppinsSemibold.className} text-black font-semibold base:text-[2.8rem] md:text-[3.5rem] lg:text-[min(3.5vw,3.5rem)]`}
 			>
 				{number}+
 			</div>
 			<div
-				className={`${poppinsMedium.className} text-black w-[40%]  base:text-[0.9rem] lg:text-[min(1.8vw,1.5rem)] font-medium lg:leading-[min(2.2vw,2.5rem)] `}
+				className={`${poppinsMedium.className} text-black w-[40%]  base:text-[0.9rem] md:text-[1.8rem] lg:text-[min(1.8vw,1.5rem)] font-medium leading-8 lg:leading-[min(2.2vw,2.5rem)] `}
 			>
 				{text}
 			</div>
@@ -225,7 +225,7 @@ const OurExpertise = () => {
 
 						<div
 							id="section-stats-mobile"
-							className="base:flex lg:hidden justify-between"
+							className="base:flex lg:hidden justify-between md:mx-20"
 						>
 							<div className="flex flex-col gap-3">
 								<NumberText
