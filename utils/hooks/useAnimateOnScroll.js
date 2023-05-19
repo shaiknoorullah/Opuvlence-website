@@ -1,51 +1,57 @@
 /** @format */
 
-import { useRef, useEffect } from "react"
-import gsap from "gsap"
-import { useLocomotiveScroll } from "react-locomotive-scroll"
+import { useState, useEffect, useRef } from "react"
 
-const useAnimateOnScroll = () => {
-	const containerRef = useRef(null)
-	const { scroll } = useLocomotiveScroll()
-
-	console.log(scroll)
+export const useAnimateOnScroll = (
+	threshold,
+	once = true
+) => {
+	const [isIntersecting, setIsIntersecting] =
+		useState(false)
+	const wasIntersecting = useRef(false)
+	const targetRef = useRef(null)
 
 	useEffect(() => {
-		if (!containerRef.current) return
-
-		const elements = containerRef.current.querySelectorAll(
-			"[data-animate-on-scroll]"
-		)
-		elements.forEach(el => {
-			el.style.visibility = "hidden"
-		})
-
-		const handleScroll = () => {
-			elements.forEach(el => {
-				const { top, bottom } = el.getBoundingClientRect()
-				if (top < window.innerHeight && bottom > 0) {
-					gsap.to(el, {
-						duration: 0.6,
-						y: 0,
-						opacity: 1,
-						ease: "power4.out",
-						delay: 0.2,
-					})
-					el.style.visibility = "visible"
+		const observerCallback = entries => {
+			entries.forEach(entry => {
+				if (once) {
+					if (
+						entry.isIntersecting &&
+						!wasIntersecting.current
+					) {
+						setIsIntersecting(true)
+						wasIntersecting.current = true
+					} else {
+						setIsIntersecting(false)
+					}
+				} else {
+					if (entry.isIntersecting) {
+						setIsIntersecting(true)
+					} else {
+						setIsIntersecting(false)
+					}
 				}
 			})
 		}
 
-		handleScroll()
+		const options = {
+			root: null,
+			rootMargin: "0px",
+			threshold: threshold,
+		}
 
-		// scroll
+		const observer = new IntersectionObserver(
+			observerCallback,
+			options
+		)
+		if (targetRef.current) {
+			observer.observe(targetRef.current)
+		}
 
 		return () => {
-			// scroll.off("scroll")
+			observer.disconnect()
 		}
-	}, [scroll])
+	}, [])
 
-	return { containerRef }
+	return { isIntersecting, targetRef }
 }
-
-export default useAnimateOnScroll

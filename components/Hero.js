@@ -5,15 +5,10 @@ import localFont from "next/font/local"
 import CustomButton from "./section/customButton"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
-// import localFont from "next/font/local";
-// import CustomButton from "./section/customButton";
-// import { useEffect, useRef } from "react";
-// import { gsap } from "gsap";
-
-// static import images
 
 import Image from "next/image"
 import Heroimg from "../public/homepage/heroImg.webp"
+import { Parallax } from "./Parallax"
 
 const golden = localFont({
 	src: "../styles/font/golden/golden.woff2",
@@ -42,7 +37,7 @@ const Hero = () => {
 				y: 0,
 				duration: 1,
 				stagger: 0.2,
-				delay: 4.5,
+				delay: 0.5,
 				ease: "power2.out",
 			}
 		)
@@ -59,7 +54,7 @@ const Hero = () => {
 					y: 0,
 					duration: 0.8,
 					stagger: 0.07,
-					delay: 4.5,
+					delay: 0.5,
 					ease: "power2.out",
 				}
 			)
@@ -76,7 +71,7 @@ const Hero = () => {
 				opacity: 1,
 				duration: 0.5,
 				stagger: 0.05,
-				delay: 5,
+				delay: 1,
 				ease: "power2.out",
 			}
 		)
@@ -90,20 +85,23 @@ const Hero = () => {
 				y: 0,
 				opacity: 1,
 				duration: 0.5,
-				delay: 5.5,
+				delay: 1.5,
 				ease: "power2.out",
 			}
 		)
 	}, [])
 
 	return (
-		<div
-			data-scroll-section
-			className=" w-[100%] relative z-[1000] flex justify-center base:px-[20px] base:mt-5 lg:mt-0 lg:px-[40px]  "
-		>
-			<section className="flex lg:flex-row base:flex-col max-w-[1920px] lg:items-start lg:justify-between lg:mr-12 w-full text-left ">
+		<div className=" w-[100%] relative z-[1000] flex justify-center base:px-[20px] base:mt-5 lg:mt-0 lg:px-[40px]  ">
+			<section
+				data-scroll-section
+				className="flex lg:flex-row base:flex-col max-w-[1920px] lg:items-start lg:justify-between lg:mr-12 w-full text-left "
+			>
 				<div className="flex flex-col base:items-center base:w-[100%]  md:w-[max(970px,50vw)] lg:items-start justify-start gap-[30px]">
-					<h1 className="m-0 text-[#270405] base:text-[24px]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[min(5vw,90px)] 2xl:leading-[100px] ">
+					<h1
+						data-scroll
+						className="m-0 text-[#270405] base:text-[24px]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[min(5vw,90px)] 2xl:leading-[100px] "
+					>
 						<div
 							className={`w-full flex flex-col base:justify-center lg:justify-start base:items-center lg:items-start ${golden.className}`}
 						>
@@ -175,7 +173,6 @@ const Hero = () => {
 					<div className="lg:hidden base:inline-block base:w-[280px] md:w-[max(710px,40vw)] base:h-[350px] md:h-[min(500px,60vh)] relative overflow-clip rounded-tl-full rounded-tr-full">
 						<Image
 							className="  lg:top-0 lg:right-[10] object-fill "
-							// className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
 							alt="image of a luxury chair"
 							src={Heroimg}
 						/>
@@ -200,7 +197,6 @@ const Hero = () => {
 							})}
 					</p>
 					<div className="lg:mt-10 base:mt-3">
-						{" "}
 						<CustomButton
 							text="Say Hello"
 							color={"black"}
@@ -210,18 +206,18 @@ const Hero = () => {
 				</div>
 				<div
 					id="heroImage"
-					data-scroll
-					data-scroll-speed="1.7"
-					className="w-[min(712px,40vw)] h-[min(782px,75vh)] base:hidden lg:inline-block relative overflow-clip rounded-tl-full rounded-tr-full"
+					className="w-[min(712px,40vw)] bg-blue-500 h-[min(782px,75vh)] base:hidden lg:inline-block relative overflow-clip rounded-tl-full rounded-tr-full"
 				>
-					<Image
-						data-scroll
-						data-scroll-speed="1.5"
-						className="lg:inline-block base:hidden absolute top-[-20px] lg:right-[10] h-[800px] "
-						// className=" lg:h-[650px] 2xl:h-[820px] pr-[100px]  object-cover "
-						alt="image of a luxury chair"
-						src={Heroimg}
-					/>
+					<Parallax
+						speed="-1"
+						position="top"
+					>
+						<Image
+							className="lg:block base:hidden absolute top-[-25px] w-[min(750px,50vw)] object-cover lg:right-0 "
+							alt="image of a luxury chair"
+							src={Heroimg}
+						/>
+					</Parallax>
 				</div>
 			</section>
 		</div>

@@ -4,8 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+	cursor: none;
+}
+
 html,
 body {
+	cursor: none;
 	color: black;
 	padding: 0;
 	background-color: #f6ebdd;
@@ -38,6 +43,26 @@ a {
 	}
 }
 
+html.lenis {
+	height: auto;
+}
+
+.lenis.lenis-smooth {
+	scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+	overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+	overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+	pointer-events: none;
+}
+
 .golden {
 	font-family: GOLDEN Regular;
 	font-weight: 400;
@@ -66,6 +91,17 @@ a {
 .scrollbar-hide::-webkit-scrollbar {
 	display: none;
 }
+
+/* .about-us-image {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.about-us-image .is-inview {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+} */
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {

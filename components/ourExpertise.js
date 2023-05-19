@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from "react"
 import CustomButton from "./section/customButton"
-import { useLocomotiveScroll } from "react-locomotive-scroll"
 import localFont from "next/font/local"
 
 const poppinsExtrabold = localFont({
@@ -20,10 +19,11 @@ const poppinsSemibold = localFont({
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import { useAnimateOnScroll } from "../utils/hooks/useAnimateOnScroll"
 
 // number component
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 const NumberText = ({ number, text, state }) => {
 	return (
@@ -43,107 +43,98 @@ const NumberText = ({ number, text, state }) => {
 }
 
 const OurExpertise = () => {
-	const { scroll } = useLocomotiveScroll()
+	// const sectionRef = useRef(null)
+	const { targetRef: sectionRef, hasIntersected } =
+		useAnimateOnScroll(0.8)
 
-	const sectionRef = useRef(null)
+	useEffect(() => {
+		const sectionName =
+			document.getElementById("section-name")
 
-  // useEffect(() => {
-  // 	// const sectionName = document.getElementById('section-name')
+		const sectionStats =
+			document.getElementById("section-stats")
+		const sectionDescMob = document.getElementById(
+			"section-description-mobile"
+		).children
+		const sectionStatsMobile = document.getElementById(
+			"section-stats-mobile"
+		).children
+		const sectionGraph =
+			document.getElementById("section-graph")
 
-  // 	const sectionStats =
-  // 		document.getElementById("section-stats")
-  // 	const sectionDescMob = document.getElementById(
-  // 		"section-description-mobile"
-  // 	).children
-  // 	const sectionStatsMobile = document.getElementById(
-  // 		"section-stats-mobile"
-  // 	).children
-  // 	const sectionGraph =
-  // 		document.getElementById("section-graph")
+		const tl = gsap.timeline({
+			ease: "power2.out",
+			duration: 0.4,
+			delay: 1,
+		})
 
-  // 	const tl = gsap.timeline({
-  // 		ease: "power2.out",
-  // 		duration: 0.4,
-  // 		delay: 1,
-  // 	})
-
-  // 	tl.fromTo(
-  // 		"#section-name",
-  // 		{
-  // 			y: 20,
-  // 			opacity: 0,
-  // 		},
-  // 		{
-  // 			y: 0,
-  // 			opacity: 1,
-  // 			scrollTrigger: { trigger: sectionRef.current },
-  // 		}
-  // 	)
-  // 		.fromTo(
-  // 			"#section-title",
-  // 			{
-  // 				y: 20,
-  // 				opacity: 0,
-  // 			},
-  // 			{
-  // 				y: 0,
-  // 				opacity: 1,
-  // 				scrollTrigger: { trigger: sectionRef.current },
-  // 			}
-  // 		)
-  // 		.fromTo(
-  // 			"#section-description",
-  // 			{ y: 20, opacity: 0 },
-  // 			{
-  // 				y: 0,
-  // 				opacity: 1,
-
-  // 				scrollTrigger: { trigger: sectionRef.current },
-  // 			}
-  // 		)
-  // 		.fromTo(
-  // 			[sectionStats, sectionStatsMobile],
-  // 			{ y: 20, opacity: 0 },
-  // 			{
-  // 				y: 0,
-  // 				opacity: 1,
-  // 				stagger: 0.05,
-
-  // 				scrollTrigger: { trigger: sectionRef.current },
-  // 			}
-  // 		)
-  // 		.fromTo(
-  // 			"#section-button",
-  // 			{ y: 20, opacity: 0 },
-  // 			{
-  // 				y: 0,
-  // 				opacity: 1,
-
-  // 				scrollTrigger: { trigger: sectionRef.current },
-  // 			}
-  // 		)
-  // 		.fromTo(
-  // 			"#section-graph",
-  // 			{ h: 0, opacity: 0 },
-  // 			{
-  // 				h: "initial",
-  // 				opacity: 1,
-
-  // 				scrollTrigger: { trigger: sectionRef.current },
-  // 			}
-  // 		)
-  // }, [])
+		if (hasIntersected == true) {
+			tl.fromTo(
+				"#section-name",
+				{
+					y: 20,
+					opacity: 0,
+				},
+				{
+					y: 0,
+					opacity: 1,
+				}
+			)
+				.fromTo(
+					"#section-title",
+					{
+						y: 20,
+						opacity: 0,
+					},
+					{
+						y: 0,
+						opacity: 1,
+					}
+				)
+				.fromTo(
+					"#section-description",
+					{ y: 20, opacity: 0 },
+					{
+						y: 0,
+						opacity: 1,
+					}
+				)
+				.fromTo(
+					[sectionStats, sectionStatsMobile],
+					{ y: 20, opacity: 0 },
+					{
+						y: 0,
+						opacity: 1,
+						stagger: 0.05,
+					}
+				)
+				.fromTo(
+					"#section-button",
+					{ y: 20, opacity: 0 },
+					{
+						y: 0,
+						opacity: 1,
+					}
+				)
+				.fromTo(
+					"#section-graph",
+					{ h: 0, opacity: 0 },
+					{
+						h: "initial",
+						opacity: 1,
+					}
+				)
+		}
+	}, [hasIntersected])
 
 	return (
 		<div
-			data-scroll
-			data-scroll-speed="1.2"
+			// data-scroll
+			// data-scroll-speed="2"
 			ref={sectionRef}
 			className="w-full flex justify-center base:mt-[5rem] lg:mt-[70px] relative"
 		>
 			<div
-				data-scroll
-				data-scroll-speed="1.6"
 				className={`base:w-[90%] max-w-[1900px]  lg:w-[95%] z-50 flex flex-col py-12`}
 			>
 				{/* our Expertise title */}
@@ -153,35 +144,44 @@ const OurExpertise = () => {
 				>
 					<div className="lg:flex hidden w-[30%]"></div>
 
-          <div
-            className={`${poppinsExtrabold.className} uppercase font-extrabold text-[1.2rem] text-[#A5787A] flex`}
-          >
-            <span className="inline-block text-[1rem] mr-3">/</span>
-            <span className="inline-block mr-3 mt-[-3px]">our expertise</span>
-          </div>
-        </div>
+					<div
+						className={`${poppinsExtrabold.className} uppercase font-extrabold text-[1.2rem] text-[#A5787A] flex`}
+					>
+						<span className="inline-block text-[1rem] mr-3">
+							/
+						</span>
+						<span className="inline-block mr-3 mt-[-3px]">
+							our expertise
+						</span>
+					</div>
+				</div>
 
-        {/*25 years experience  */}
-        <div
-          id="section-title"
-          className={`${poppinsRegular.className} lg:w-[30%] base:text-[1.5rem] lg:text-[1.8rem] lg:text-left base:text-center text-black leading-[2.4rem] font-[700] pt-8`}
-        >
-          25 YEARS OF EXPERIENCE IN INTERIOR DESIGN
-        </div>
+				{/*25 years experience  */}
+				<div
+					id="section-title"
+					className={`${poppinsRegular.className} lg:w-[30%] base:text-[1.5rem] lg:text-[1.8rem] lg:text-left base:text-center text-black leading-[2.4rem] font-[700] pt-8`}
+				>
+					25 YEARS OF EXPERIENCE IN INTERIOR DESIGN
+				</div>
 
-        {/* description for lg */}
-        <div id="section-description" className="lg:flex base:hidden w-full">
-          <div className="w-[35%]"></div>
-          <div
-            className={`${poppinsRegular.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
-          >
-            Each member of our team brings unique strengths and experiences to
-            the table, and we work collaboratively to achieve our objectives. We
-            prioritize communication, trust, and accountability in all our
-            interactions to ensure that we are working efficiently and
-            effectively towards our common goals
-          </div>
-        </div>
+				{/* description for lg */}
+				<div
+					id="section-description"
+					className="lg:flex base:hidden w-full"
+				>
+					<div className="w-[35%]"></div>
+					<div
+						className={`${poppinsRegular.className} text-[0.9rem] w-[30rem] tracking-[7%] text-[#A5787A] leading-[1.5rem]`}
+					>
+						Each member of our team brings unique strengths
+						and experiences to the table, and we work
+						collaboratively to achieve our objectives. We
+						prioritize communication, trust, and
+						accountability in all our interactions to ensure
+						that we are working efficiently and effectively
+						towards our common goals
+					</div>
+				</div>
 
 				{/* grid */}
 				<div className="w-full grid base:grid-cols-2 lg:grid-cols-11 pt-9">
@@ -259,67 +259,67 @@ const OurExpertise = () => {
 							</div>
 						</div>
 
-            {/* button */}
-            <div
-              id="section-button"
-              class="row-span-1 hidden lg:flex  items-center"
-            >
-              <div className="ml-8 pb-4">
-                {" "}
-                <CustomButton
-                  text={"Discover"}
-                  color={"black"}
-                  href="#contact"
-                />
-              </div>
-            </div>
-          </div>
+						{/* button */}
+						<div
+							id="section-button"
+							class="row-span-1 hidden lg:flex  items-center"
+						>
+							<div className="ml-8 pb-4">
+								{" "}
+								<CustomButton
+									text={"Discover"}
+									color={"black"}
+									href="#contact"
+								/>
+							</div>
+						</div>
+					</div>
 
 					{/* graph */}
 					<div
 						id="section-graph"
-						class="col-span-5 base:mt-[5rem] lg:mt-[-2rem] items-end  lg:pl-9 gap-6 lg:gap-9 grid grid-cols-3"
+						class="col-span-5 base:mt-[5rem] lg:mt-[-2rem] lg:h-[520px] items-end lg:pl-9 gap-6 lg:gap-9 grid grid-cols-3"
 					>
 						{/* restaurant */}
-						<div className="flex flex-col items-center gap-6">
+						<div className="flex flex-col h-[100%] items-center justify-end gap-6">
 							<div
 								className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
 							>
-								75%
+								11%
 							</div>
-							<div className="bg-[#A5787A] rounded-tl-full  w-full base:h-[9rem] lg:h-[min(15vw,22rem)]"></div>
+							<div className="bg-[#A5787A] rounded-tl-full w-full base:h-[9rem] lg:h-[21%]"></div>
 							<div
 								className={`text-[#A5787A] base:text-[0.8rem] lg:text-[1.3rem] font-semibold italic ${poppinsRegular.className}`}
 							>
-								RESTAURANT
+								Design Solution
 							</div>
 						</div>
 						{/* residential */}
-						<div className="flex flex-col items-center gap-6">
+						<div className="flex flex-col h-full items-center justify-end gap-6">
 							<div
 								className={`${poppinsRegular.className} text-[#524646] text-[1.3rem] font-normal`}
 							>
-								86%
+								77%
 							</div>
-							<div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] lg:h-[min(25vw,34rem)]"></div>
+							<div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] lg:h-[87%]"></div>
 							<div
 								className={`${poppinsRegular.className} base:text-[0.8rem] lg:text-[1.3rem] text-[#A5787A]  font-semibold italic `}
 							>
-								RESIDENTIAL
+								Turnkey Solution
 							</div>
 						</div>
 						{/* coperate */}
-						<div className="flex flex-col items-center gap-6">
+						<div className="flex flex-col h-full items-center justify-end gap-6">
 							<div
 								className={`text-[#524646] text-[1.3rem] font-normal ${poppinsRegular.className}`}
 							>
-								78%
+								12%
 							</div>
-							<div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] lg:h-[min(20vw,28rem)]"></div>
+							<div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] lg:h-[32%]"></div>
 							<div
 								className={`text-[#A5787A] base:text-[0.8rem] lg:text-[1.3rem] font-semibold italic ${poppinsRegular.className} `}
 							>
-								CORPORATE
+								Execution Solution
 							</div>
 						</div>
 					</div>

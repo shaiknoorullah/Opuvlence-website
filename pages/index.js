@@ -21,6 +21,7 @@ import CasesLibrary from "../components/CasesLibray"
 
 import About from "../components/About"
 import { useEffect, useState } from "react"
+import Layout from "../components/Layouts/Layout"
 export default function Home() {
 	const [loader, setLoader] = useState(true)
 

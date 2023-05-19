@@ -62,7 +62,8 @@ const OurProject = () => {
 	}, [])
 	return (
 		<div
-			data-scroll
+			// data-scroll
+			// data-scroll-speed="3"
 			className="w-full base:hidden md:hidden lg:flex items-center justify-center "
 		>
 			<div className="font-poppins w-[98%] z-50 ">

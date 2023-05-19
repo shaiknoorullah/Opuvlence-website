@@ -1,6 +1,6 @@
 /** @format */
 
-import react, { useEffect, useRef } from "react"
+import react, { forwardRef, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import localFont from "next/font/local"
 
@@ -14,7 +14,8 @@ const poppins = localFont({
 	variable: "--font-poppins",
 })
 
-const LoadingScreen = () => {
+// eslint-disable-next-line react/display-name
+const LoadingScreen = forwardRef((props, ref) => {
 	const loadingLogo = useRef(null)
 	const paragraph = useRef(null)
 
@@ -23,29 +24,6 @@ const LoadingScreen = () => {
 		const paragraphVar = paragraph.current.children
 		const tl = gsap.timeline()
 		const tl2 = gsap.timeline()
-
-		gsap
-			.timeline()
-			.fromTo(
-				"#loadingScreen1",
-				{ opacity: 1 },
-				{
-					opacity: 0,
-
-					transformOrigin: "bottom center",
-					duration: 0.2,
-					delay: 3.1,
-				}
-			)
-			.fromTo(
-				"#loadingScreen1",
-				{
-					display: "block",
-				},
-				{
-					display: "none",
-				}
-			)
 
 		tl.fromTo(
 			loadingLogoVar,
@@ -101,47 +79,14 @@ const LoadingScreen = () => {
 			{ y: 500 },
 			{ y: 0, duration: 1, delay: 0.85, ease: "power3.out" }
 		)
-
-		//   return () => {};
-
-		//   // tl.fromTo(
-		//   //   "#loadingScreen1",
-		//   //   { opacity: 1, display: "block" },
-		//   //   { opacity: 0, display: "none", delay: 2.2, overflow: "hidden" }
-		//   // );
-		//   // tl.
-		//   // tl.
-		//   // tl.
-		//   // tl.
-		//   // .fromTo(
-		//   //   "#loadingScreen2",
-		//   //   { height: 0, transformOrigin: "bottom center", display: "block" },
-		//   //   {
-		//   //     height: 100,
-		//   //     ease: "power2.Out",
-		//   //     duration: 0.5,
-		//   //     delay: 4.2,
-		//   //   }
-		//   // )
-		//   // .to("#loadingScreen2", {
-		//   //   height: 0,
-		//   //   ease: "power2.Out",
-		//   //   duration: 0.5,
-		//   //   delay: 1,
-		//   // })
-		//   // .fromTo(
-		//   //   "#text2",
-		//   //   { opacity: 0 },
-		//   //   { opacity: 1, delay: 2.5, duration: 1.2, ease: "power3.Out" }
-		//   // )
-		//   //
 	}, [])
 
 	return (
 		<>
 			<div
+				ref={ref}
 				id="loadingScreen1"
-				className="absolute top-0 left-0 scrollbar-hide z-[9999] bg-[#f6ebdd] w-[100%]  overflow-hidden text-left text-[186px] text-black "
+				className="absolute select-none top-0 left-0 scrollbar-hide z-[9999] bg-[#f6ebdd] w-[100%]  overflow-hidden text-left text-[186px] text-black "
 			>
 				<img
 					className="base:hidden md:block absolute top-[0px] left-[0px] h-[230px]  object-contain"
@@ -156,7 +101,7 @@ const LoadingScreen = () => {
 				>
 					<h1
 						ref={loadingLogo}
-						className="text-[12vw]"
+						className="text-[12vw] select-none"
 					>
 						{"Opuvlence".split("").map((char, idx) => {
 							return (
@@ -171,7 +116,7 @@ const LoadingScreen = () => {
 					</h1>
 					<div
 						ref={paragraph}
-						className={`${poppins.className} md:w-[436px] base:w-[90vw] text-center overflow-hidden base:text-[16px] md:text-[28px] z-[100]`}
+						className={`${poppins.className} select-none md:w-[436px] base:w-[90vw] text-center overflow-hidden base:text-[16px] md:text-[28px] z-[100]`}
 					>
 						{"Elevating the status of luxury for the deserving"
 							.split(" ")
@@ -185,6 +130,9 @@ const LoadingScreen = () => {
 									</span>
 								)
 							})}
+						<p className="text-[22px] select-none mt-[30px] font-semibold text-black ">
+							click anywhere to begin
+						</p>
 					</div>
 				</div>
 				<img
@@ -214,6 +162,6 @@ const LoadingScreen = () => {
 			</div>
 		</>
 	)
-}
+})
 
 export default LoadingScreen
