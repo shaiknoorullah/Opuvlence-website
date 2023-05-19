@@ -97,7 +97,7 @@ const ProjectCard = ({
 					<Image
 						src={src}
 						alt="project image"
-						className=""
+						className="w-[min(32vw,35rem)] h-[min(32vw,35rem)] object-cover"
 					></Image>
 				</Link>
 			</div>

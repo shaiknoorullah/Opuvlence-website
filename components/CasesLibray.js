@@ -48,7 +48,7 @@ const ProjectGrid = props => {
 						// data-scroll-speed="1.2"
 						src={props.image}
 						alt="project image"
-						className="absolute top-[-50%] object-cover"
+						className="absolute top-[-50%] w-full object-cover"
 					></Image>
 				</div>
 			</div>
@@ -156,13 +156,22 @@ const CasesLibrary = ({setName,projects}) => {
 					</div>
 
 					<div className=" base:w-[100%] lg:w-[95%] flex flex-col gap-[30px] text-black lg:pt-[80px]">
-						<ProjectGrid
+						
+					{projects.map((data,index)=>{
+						return(
+							<div key={index}>
+								<ProjectGrid
 							href="/casestudies"
-							image={arch1}
-							heading={"Batholic plutonic"}
+							image={data.image}
+							heading={data.title}
 							text="wE'vE bUiLt homes thAt brinG DrEAms COME trUE"
 						/>
-						<ProjectGrid
+							</div>
+
+						)
+					})}	
+						
+						{/* <ProjectGrid
 							href="/casestudies"
 							image={arch2}
 							heading="Batholic plutonic"
@@ -179,7 +188,7 @@ const CasesLibrary = ({setName,projects}) => {
 							image={arch4}
 							heading="Batholic plutonic"
 							text="wE'vE bUiLt homes thAt brinG DrEAms COME trUE"
-						/>
+						/> */}
 					</div>
 				</div>
 			</div>

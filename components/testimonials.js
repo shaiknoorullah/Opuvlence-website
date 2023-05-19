@@ -4,8 +4,12 @@ import React, { useState } from "react";
 import CustomButton from "./section/customButton";
 import ScrollContainer from "react-indiana-drag-scroll";
 import { golden, poppins } from "../utils/fonts";
+import Testimonial1 from "../public/homepage/testimonial1.png"
+import Testimonial2 from "../public/homepage/testimonial2.webp"
+import Testimonial3 from "../public/homepage/testimonial3.webp"
 
 import localFont from "next/font/local";
+import Image from "next/image";
 
 const poppinsBold = localFont({
   src: "../styles/font/poppins/Poppins-ExtraBold.woff2",
@@ -23,19 +27,20 @@ const Testimonials = () => {
   const cards = [
     {
       title: "CAROLYN",
-      img: "/testimonial.png",
+      img: Testimonial1,
       description:
         "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
     },
     {
-      title: "CAROLYN",
-      img: "/testimonial.png",
+      title: "ALEX",
+      img: Testimonial2,
       description:
         "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
     },
     {
-      title: "CAROLYN",
-      img: "/testimonial.png",
+      title: "JESSIE",
+      img: Testimonial3,
+
       description:
         "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
     },
@@ -86,7 +91,8 @@ const Testimonials = () => {
                       {data.title}
                     </div>
                     <div className="flex gap-[4rem]">
-                      <img
+                      <div className="min-w-[33rem] overflow-hidden h-[10rem] cursor-pointer object-cover">
+                      <Image
                         onClick={() => {
                           setname(data.title);
                           setimage(data.img);
@@ -94,9 +100,9 @@ const Testimonials = () => {
 
                           setShowModal(true);
                         }}
-                        className="min-w-[33rem] h-[10rem] cursor-pointer"
+                        className="w-full h-full hover:scale-125 transition-transform duration-300 ease-in-out object-cover"
                         src={data.img}
-                      />
+                      /></div>
                       <div
                         className={`min-w-[18rem] text-[0.8rem] leading-[30px] self-end ${poppins}`}
                       >
@@ -132,7 +138,7 @@ const Testimonials = () => {
                     setShowModal(true);
                   }}
                     className="object-cover h-[10rem]"
-                    src="/testimonial.png"
+                    src={data.img}
                   />
                   <div className=" text-[1.3rem] text-black self-center justify-self-center leading-[30px] ">
                     Using edge cutting technology to provide extremely reliable
