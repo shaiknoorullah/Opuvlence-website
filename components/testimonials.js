@@ -29,20 +29,20 @@ const Testimonials = () => {
       title: "CAROLYN",
       img: Testimonial1,
       description:
-        "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
+        "The interior design team showcased their exceptional talent by curating a space that perfectly captures our style and personality. Every detail was thoughtfully considered, resulting in a harmonious and visually captivating environment. We couldn't be happier!",
     },
     {
       title: "ALEX",
       img: Testimonial2,
       description:
-        "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
+        "The interior design team worked tirelessly to understand our style and preferences, resulting in a space that truly reflects who we are. Their creativity, professionalism, and commitment to delivering outstanding results made the entire design process a seamless and enjoyable experience. We couldn't be happier!",
     },
     {
       title: "JESSIE",
       img: Testimonial3,
 
       description:
-        "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
+        "We are overjoyed with the exceptional interior design services provided by this company. Their attention to detail, unique design concepts, and ability to transform our space into a haven of beauty and comfort have surpassed our expectations. We highly recommend their services for any design project!",
     },
   ];
 
@@ -121,15 +121,15 @@ const Testimonials = () => {
           {cards.map((data, index) => {
             return (
               <div
-                className=" flex lg:hidden base:min-w-[min(22rem,100vw)] flex-col justify-center mt-12 "
+                className=" flex lg:hidden base:min-w-[min(22rem,100vw)] flex-col  mt-12 "
                 key={index}
               >
                
                 <div className="text-[2.5rem] text-black self-end justify-self-end tracking-[0.7rem] italic capitalize">
-                  CAROLYN
+                  {data.title}
                 </div>
                 <div className="flex flex-col mx-6 gap-[1rem]">
-                  <img
+                  <Image
                    onClick={() => {
                     setname(data.title);
                     setimage(data.img);
@@ -140,10 +140,8 @@ const Testimonials = () => {
                     className="object-cover h-[10rem]"
                     src={data.img}
                   />
-                  <div className=" text-[1.3rem] text-black self-center justify-self-center leading-[30px] ">
-                    Using edge cutting technology to provide extremely reliable
-                    service Using edge cutting technology to provide extremely
-                    reliable service Using edge cutting technology.
+                  <div className=" text-[1.1rem] text-justify text-black self-center justify-self-center leading-[30px] ">
+                    {data.description}
                   </div>
                 </div>
               </div>
