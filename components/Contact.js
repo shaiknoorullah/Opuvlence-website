@@ -140,110 +140,84 @@ const Contact = () => {
 	}
 
 	return (
-		<>
-			<Toaster
-				position="top-center"
-				reverseOrder={false}
-				gutter={8}
-				toastOptions={{
-					// Define default options
-					duration: 5000,
-					style: {
-						background: "#363636",
-						color: "#fff",
-					},
-
-					// Default options for specific types
-					success: {
-						duration: 3000,
-						theme: {
-							primary: "green",
-							secondary: "black",
-						},
-					},
-				}}
-			/>
+		<div
+			// data-scroll
+			id="contact"
+			className="w-full h-fit base:mt-[25px] lg:mt-[50px] base:px-[6.25vw] max-w-[1920px] lg:px-[40px] flex flex-col  justify-center mx-auto "
+		>
+			<div className="flex w-full justify-between ">
+				<h1
+					className={`lg:w-[50%] base:w-[70%] text-[#270405] uppercase base:text-[10vw] lg:text-[min(4.68vw,90px)] base:[12.5vw] lg:leading-[min(120px,6.25vw)]  ${golden.className} `}
+				>
+					get in touch with us
+				</h1>
+			</div>
 			<div
-				// data-scroll-section
-				id="contact"
-				className="w-full h-fit base:mt-[25px] lg:mt-[50px] base:px-[6.25vw] max-w-[1920px] lg:px-[40px] flex flex-col  justify-center mx-auto "
+				className={`w-full flex lg:flex-row base:flex-col mt-[34px] base:text-[4.375vw] lg:text-[18px] justify-between text-[#B25F62] font-[400] ${poppins.className} `}
 			>
-				<div className="flex w-full justify-between ">
-					<h1
-						className={`lg:w-[50%] base:w-[100%] text-[#270405] uppercase base:text-[10vw] md:text-[4rem] lg:text-[min(4.68vw,90px)] base:[12.5vw] lg:leading-[min(120px,6.25vw)]  ${golden.className} `}
-					>
-						get in touch with us
-					</h1>
-				</div>
-				<div
-					className={`w-full flex md:flex-row base:flex-col mt-[34px] base:text-[4.375vw]  md:text-[18px] justify-between text-[#B25F62] font-[400] ${poppins.className} `}
-				>
-					<div className="base:w-full md:w-[40%]">
-						<div>
-							<label className="block">Name</label>
-							<input
-								className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid"
-								type="text"
-								value={name}
-								onChange={e => {
-									setname(e.target.value)
-								}}
-							/>
-						</div>
-						<div>
-							<label className="block base:mt-[14vw] lg:mt-[78px] ">
-								Email
-							</label>
-							<input
-								className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid "
-								type="text"
-								value={email}
-								onChange={e => {
-									setemail(e.target.value)
-								}}
-							/>
-						</div>
+				<div className="base:w-full lg:w-[40%]">
+					<div>
+						<label className="block">Name</label>
+						<input
+							className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid"
+							type="text"
+							value={name}
+							onChange={e => {
+								setname(e.target.value)
+							}}
+						/>
 					</div>
-					<div className="base:w-full md:w-[40%] base:mt-[14vw] md:mt-0 md:text-right ">
-						<div>
-							<label className="block ">
-								Contact number
-							</label>
-							<input
-								className="w-full  outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid"
-								type="text"
-								value={contactNumber}
-								onChange={e => {
-									setcontactNumber(e.target.value)
-								}}
-							/>
-						</div>
-						<div>
-							<label className="block base:mt-[14vw]  lg:mt-[78px]">
-								Your Message
-							</label>
-							<input
-								className="w-full bg-inherit border-b-[1px] border-b-[#B25F62] border-solid outline-none "
-								type="text"
-								value={yourMessage}
-								onChange={e => {
-									setyourMessage(e.target.value)
-								}}
-							/>
-						</div>
+					<div>
+						<label className="block base:mt-[14vw] lg:mt-[78px] ">
+							Email
+						</label>
+						<input
+							className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid "
+							type="text"
+							value={email}
+							onChange={e => {
+								setemail(e.target.value)
+							}}
+						/>
 					</div>
 				</div>
-				<div
-					onClick={sendEmail}
-					className="mt-[70px] cursor-pointer  "
-				>
-					<CustomButton
-						text={"Submit"}
-						color={"black"}
-					/>
+				<div className="base:w-full lg:w-[40%] base:mt-[14vw] lg:mt-0 lg:text-right ">
+					<div>
+						<label className="block ">Contact number</label>
+						<input
+							className="w-full  outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid"
+							type="text"
+							value={contactNumber}
+							onChange={e => {
+								setcontactNumber(e.target.value)
+							}}
+						/>
+					</div>
+					<div>
+						<label className="block base:mt-[14vw]  lg:mt-[78px]">
+							Your Message
+						</label>
+						<input
+							className="w-full bg-inherit border-b-[1px] border-b-[#B25F62] border-solid outline-none "
+							type="text"
+							value={yourMessage}
+							onChange={e => {
+								setyourMessage(e.target.value)
+							}}
+						/>
+					</div>
 				</div>
 			</div>
-		</>
+			<div
+				onClick={sendEmail}
+				className="mt-[70px] cursor-pointer  "
+			>
+				<CustomButton
+					text={"Submit"}
+					color={"black"}
+				/>
+			</div>
+		</div>
 	)
 }
 

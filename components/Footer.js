@@ -92,10 +92,7 @@ const FooterLinks = [
 
 const Footer = () => {
 	return (
-		<footer
-			// data-scroll-section
-			className="w-screen flex justify-start flex-col gap-[124px] pl-[5vw] items-start mt-[180px] text-left"
-		>
+		<footer className="w-screen flex justify-start flex-col gap-[124px] pl-[5vw] items-start mt-[180px] text-left">
 			<div className="flex flex-col items-start justify-start gap-[51px] font-golden">
 				<h2
 					className={`${golden} m-0 relative text-[min(87.37px,max(22px,5vw))] text-[#1A0102] text-[inherit] tracking-[0.18em] leading-[135%] font-normal font-inherit flex items-end w-[1254px]`}
