@@ -31,7 +31,7 @@ const AboutUsBehind = () => {
               Behind every great company is a great founder - meet ours.
             </div>
             <div
-              className={`lg:hidden base:text-[min(7.9vw,5rem)] base:px-[25px] lg:text-[4.8vw]  self-center justify-self-center tracking-[0.5rem]  ${golden} capitalize  `}
+              className={`lg:hidden base:text-[min(7.9vw,5rem)] md:text-[min(6vw,45px)] md:w-[70vw] base:px-[5px] lg:text-[4.8vw]   tracking-[0.5rem]  ${golden} capitalize  `}
             >
               meet our visionary founder
             </div>
@@ -52,15 +52,15 @@ const AboutUsBehind = () => {
 
           {/*for mobile  */}
           <div
-            className={`lg:hidden base:inline-block  mt-4 lg:text-[1.3rem] w-[80%] font-extrabold italic ${poppins}`}
+            className={`lg:hidden base:inline-block tracking-[0.03em]  base:text-[1.1rem] md:text-[2.6vw] base:w-[70.315vw] md:w-[48vw] font-extrabold italic ${poppins}`}
           >
-            &dbquo;Lorem Ipsum dolor sit amet consectetur adipscing lore lorem
+            &apos; Lorem Ipsum dolor sit amet consectetur adipscing lore lorem
             is lorem ipsum dolor sit amet adipscing Lorem Ipsum dolor sit
-            amet&dbquo;
+            amet&apos;
           </div>
         </div>
         <div
-          className={`${poppinsRegular.className} base:text-right lg:text-left lg:ml-[25rem] lg:mr-[5rem] text-[1.1rem] py-11 text-black leading-8 `}
+          className={`${poppinsRegular.className}  base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal md:text-[2.4vw] lg:ml-[25rem] lg:mr-[5rem]`}
         >
           Quality materials: We believe that quality materials are essential for
           creating beautiful and long-lasting interior designs. That&apos;s why

@@ -1,29 +1,29 @@
 /** @format */
 
-import React, { useEffect } from "react"
-import localFont from "next/font/local"
-import Image from "next/image"
+import React, { useEffect } from "react";
+import localFont from "next/font/local";
+import Image from "next/image";
 
 // importing images statically
-import Arrow from "../public/Vectorwhite.png"
-import OurProject from "./ourProject"
+import Arrow from "../public/Vectorwhite.png";
+import OurProject from "./ourProject";
 
 const golden = localFont({
-	src: "../styles/font/golden/golden.woff2",
-	variable: "--font-golden",
-})
+  src: "../styles/font/golden/golden.woff2",
+  variable: "--font-golden",
+});
 const poppins = localFont({
-	src: "../styles/font/poppins/Poppins-ExtraLight.woff2",
-	variable: "--font-poppins",
-})
+  src: "../styles/font/poppins/Poppins-ExtraLight.woff2",
+  variable: "--font-poppins",
+});
 
 // import images statically
-import arch1 from "../public/architecture1.webp"
-import arch2 from "../public/architecture2.webp"
-import arch3 from "../public/architecture3.webp"
-import arch4 from "../public/architecture4.webp"
-import Link from "next/link"
-import Head from "next/head"
+import arch1 from "../public/architecture1.webp";
+import arch2 from "../public/architecture2.webp";
+import arch3 from "../public/architecture3.webp";
+import arch4 from "../public/architecture4.webp";
+import Link from "next/link";
+import Head from "next/head";
 
 const ProjectGrid = props => {
 	return (

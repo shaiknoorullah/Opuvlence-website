@@ -102,7 +102,7 @@ const Hero = () => {
     >
       <section className="flex lg:flex-row base:flex-col max-w-[1920px] lg:items-start lg:justify-between lg:mr-12 w-full text-left ">
         <div className="flex flex-col base:items-center base:w-[100%]   lg:items-start justify-start gap-[30px]">
-          <h1 className="m-0 text-[#270405] base:text-[24px] md:text-[3rem]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[min(5vw,90px)] 2xl:leading-[100px] ">
+          <h1 className="m-0 text-[#270405] base:text-[24px] md:text-[3rem]  2xl:tracking-[10px] lg:tracking-[7px]  xl:text-[62px] 2xl:text-[78px] uppercase font-[300] lg:leading-[min(5vw,90px)] 2xl:leading-[100px] md:tracking-[7px] ">
             <div
               className={`w-full flex flex-col base:justify-center lg:justify-start base:items-center lg:items-start ${golden.className}`}
             >

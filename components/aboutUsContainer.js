@@ -43,8 +43,8 @@ const AboutUsContainer = ({ left }) => {
         <div
           className={
             left
-              ? `${poppins.className} max-w-[90rem] font-normal leading-[40px] bg-[#270405] flex items-center lg:pl-[5rem] base:rounded-br-[9rem] base:rounded-tl-[9rem] lg:pr-[10rem] lg:self-start base:self-center px-5 base:justify-self-center lg:justify-self-start lg:rounded-r-full w-full lg:mr-[12rem] py-[150px] text-white lg:text-[20px]`
-              : `${poppins.className} max-w-[90rem] font-normal leading-[40px] bg-[#270405] flex items-center lg:pr-[5rem] base:rounded-bl-[9rem] base:rounded-tr-[9rem] lg:pl-[10rem] lg:self-start base:self-center px-5 base:justify-self-center lg:justify-self-end lg:rounded-l-full lg:ml-[12rem] py-[150px] text-white lg:text-[20px]`
+              ? `${poppins.className} max-w-[90rem] font-normal leading-[40px] bg-[#270405] flex items-center lg:pl-[5rem] base:rounded-br-[9rem] base:rounded-tl-[9rem] lg:pr-[10rem] lg:self-start base:self-center px-5 base:justify-self-center lg:justify-self-start lg:rounded-r-full w-full lg:mr-[12rem] py-[130px] text-white lg:text-[20px]`
+              : `${poppins.className} max-w-[90rem] font-normal leading-[40px] bg-[#270405] flex items-center lg:pr-[5rem] base:rounded-bl-[9rem] base:rounded-tr-[9rem] lg:pl-[10rem] lg:self-start base:self-center px-5 base:justify-self-center lg:justify-self-end lg:rounded-l-full lg:ml-[12rem] py-[130px] text-white lg:text-[20px]`
           }
         >
           <div  ref={containercontent} id="containercontent" className="base:hidden lg:inline-block">

@@ -218,7 +218,7 @@ const AboutusHero = () => {
           </div>
         </div>
         <div
-          className={`lg:hidden base:inline-block   lg:text-[1.3rem] w-[80%] font-extrabold italic ${poppins}`}
+          className={`lg:hidden base:inline-block   base:text-[1.1rem] md:text-[2.8vw] base:w-[70.315vw] md:w-[46vw] font-extrabold italic ${poppins}`}
         >
           “Experience the art of luxury interior design. Let us transform your
           space into a breathtaking work of art.”
@@ -231,7 +231,7 @@ const AboutusHero = () => {
               gridColumnStart: 2,
               gridColumnEnd: 3,
             }}
-            className={`${poppins} lg:ml-[17rem lg:mr-[10rem] base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal`}
+            className={`${poppins}  base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal md:text-[2.5vw]`}
           >
             At Opuvlence, we are committed to sustainability and
             eco-friendliness. We use environmentally- friendly materials

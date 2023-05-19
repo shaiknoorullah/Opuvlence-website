@@ -4,7 +4,7 @@ import NavLinks from "next/link";
 import localFont from "next/font/local";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-
+import Link from "next/link";
 // static image imports
 
 import logo from "../public/logo.png";
@@ -35,6 +35,8 @@ const Navbar = () => {
   const socialsRef = useRef(null);
 
   const router = useRouter();
+  // dropdown
+  const [drop, setdrop] = useState(false);
 
   useEffect(() => {
     if (buttonRef.current) {
@@ -294,6 +296,7 @@ const Navbar = () => {
     {
       title: "Services",
       href: "/services",
+      dropdown: true,
     },
     {
       title: "Cases",
@@ -316,7 +319,8 @@ const Navbar = () => {
     },
     {
       title: "Services",
-      href: "/services",
+      // href: "services",
+      dropdown: true,
     },
   ];
 
@@ -396,8 +400,41 @@ const Navbar = () => {
                 <NavLinks
                   href={data.href}
                   className="cursor-pointer hover:-translate-x-3 transition-transform ease-out "
+                  onMouseOver={() => {
+                    if (data.title === "Services") {
+                      setdrop(true);
+                    }
+                  }}
+                  onMouseOut={() => setdrop(false)}
                 >
                   {data.title}
+                  <div>
+                    {data.dropdown && (
+                      <div
+                        className={
+                          drop
+                            ? "  gap-[10px] p-[0px] text-[14px] w-[300px]"
+                            : "hidden"
+                        }
+                        onMouseOver={() => {
+                          if (data.title === "Services") {
+                            setdrop(!drop);
+                          }
+                        }}
+
+                        // onMouseOverCapture={() => setdrop(!drop)}
+                      >
+                        <div className=" hover:-translate-x-3">
+                          <Link href={"/"}>Interior design</Link>
+                        </div>
+                        <div className=" hover:-translate-x-3">
+                          <Link href={"/rentalandleaseservices"}>
+                            Rental & lease
+                          </Link>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </NavLinks>
               </div>
             );
@@ -462,7 +499,18 @@ const Navbar = () => {
                         }}
                         className="font-medium base:text-[1.3rem] lg:text-[1.7rem] hover:text-black text-[#071419]"
                       >
-                        {data.title}
+                        <div>{data.title}</div>
+                        <div>
+                          {data.dropdown && (
+                            <div>
+                              <Link href={"#"}>Interior design</Link>
+                              <br />
+                              <Link href={"/rentalandleaseservices"}>
+                                Rental & lease
+                              </Link>
+                            </div>
+                          )}
+                        </div>
                       </a>
                     );
                   })}
