@@ -261,7 +261,7 @@ div {
 	font-weight: 500;
 }
 
-.line {
+/* .line {
 	width: 100%;
 	max-width: 800px;
 	height: 8px;
@@ -269,4 +269,4 @@ div {
 	position: relative;
 	display: inline-block;
 	background-color: rgba(255, 255, 255, 1);
-}
+} */
