@@ -136,12 +136,13 @@ const AboutUsMeet = () => {
                   onClick={() => {
                     setname(data.name);
                     setdesignation(data.designation);
+                    setimage(data.picture)
 
                     setShowModal(true);
                   }}
                 >
                   <Image
-                    className="rounded-t-full h-[25rem]  object-fill scale-10"
+                    className="rounded-t-full h-[25rem]  object-cover scale-10"
                     alt="profession"
                     src={data.picture}
                   />
@@ -163,13 +164,19 @@ const AboutUsMeet = () => {
             {testimonial.map((data, index) => {
               return (
                 <div key={index}>
-                  <Link passHref href="/testimonialsingle">
+                  <div  onClick={() => {
+                    setname(data.name);
+                    setdesignation(data.designation);
+                    setimage(data.picture)
+
+                    setShowModal(true);
+                  }}>
                     <OurTeamSingle
                       name={data.name}
                       picture={data.picture}
                       designation={data.designation}
                     />
-                  </Link>
+                  </div>
                 </div>
               );
             })}
@@ -190,7 +197,7 @@ const AboutUsMeet = () => {
               {/* image section */}
 
               <div className="base:w-[65%] lg:w-[25%]">
-                <img className="cover w-full" src="testimonial.jpg" />
+                <Image className="object-cover h-full w-full" src={image} />
               </div>
               <div className="flex  text-black flex-col base:py-3 lg:my-[4rem] lg:pl-[3rem] lg:w-[75%]">
                 <div className="w-[16rem] text-[3.2rem] leading-[4rem]">
@@ -199,7 +206,7 @@ const AboutUsMeet = () => {
                 <div className="flex text-[1.5rem] pt-3">{designation}</div>
                 <div className="border border-black w-full base:my-6 lg:my-6"></div>
                 <div className="text-[1.3rem] leading-[2rem]">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
                   massa mi. Aliquam in hendrerit urna. Pellentesque sitLorem
                   ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
                   consectetur adipiscing elit Ut et massa mi. Aliquam in
