@@ -33,19 +33,10 @@ const MobileOurProject = () => {
       prevIndex === 0 ?  projects?.projects.length - 1 : prevIndex - 1
     );
   };
-
-  useEffect(() => {
-    gsap.from('.item-transition', {
-      opacity: 0,
-      duration: 0.5,
-    });
-  }, [currentIndex]);
-
-  const currentItem = projects?.projects[currentIndex];
-  console.log(currentItem)
-
   
-
+  
+  
+  
   useEffect(() => {
     // Function to fetch data from the JSON file or API
     const fetchData = async () => {
@@ -57,9 +48,21 @@ const MobileOurProject = () => {
         console.error("Error fetching data:", error);
       }
     };
-
+    
     fetchData();
   }, [active]);
+  const currentItem = projects?.projects[currentIndex];
+  // console.log(currentItem.image)
+  
+    useEffect(() => {
+      gsap.fromTo('.item-transition', {
+        opacity: 0,
+        duration: 0.2,
+      },{
+        opacity:1
+      });
+    }, [currentIndex]);
+    
   return (
     <div className="lg:hidden w-[100%] pt-[9.375vw]">
       <p className="relative items-center flex justify-center text-[3.75vw] md:text-[2rem] leading-[5.625vw] tracking-[0.05em] text-[#A5787A] font-extrabold uppercase mb-[6.25vw]">
@@ -86,7 +89,7 @@ const MobileOurProject = () => {
       <div className="item-transition relative">
         <Image
           src={currentItem?.image}
-          className="base:w-[100%] object-cover base:h-[38rem] md:h-[85vw]"
+          className="base:w-[100%] object-cover base:h-[25rem] md:h-[85vw]"
         ></Image>
         <div className="pl-[6.25vw]">
           {/* <img src="rectangle269.png" className="w-[100vw] z-[1]"></img> */}
