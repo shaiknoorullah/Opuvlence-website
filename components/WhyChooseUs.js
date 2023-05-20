@@ -20,40 +20,102 @@ const poppinsSemibold = localFont({
 });
 
 const WhyChooseUs = () => {
+  const content = [
+    { title: "Verified Tenants with Background Checks" },
+    { title: "Maintainance of Interiors" },
+    { title: "Dedicated Relationship Manager" },
+    { title: "On demand Repair Service" },
+    { title: "On Time Rental Collections" },
+  ];
+
   const sectionref = useRef(null);
   const triggerref = useRef(null);
 
   // useEffect(() => {
-  //   const pin = gsap.fromTo(
-  //     sectionref.current.children,
-  //     {
-  //       y: 0,
-     
-
-  //     },
-  //     {
-  //       y: "-200vh",
-    
-  //       ease: "none",
-  //       duration: 1,
-  //       scrollTrigger: {
-  //         trigger: triggerref.current,
-  //         start: "top top",
+  //   let timeln=gsap.timeline({
+  //     scrollTrigger:{
+  //       trigger:triggerref.current,
+  //       pin:true,
+  //       pinSpacing:true,
+  //       start: "top top",
   //         end: "2000 top",
   //         scrub: 0.6,
-  //         pin: true,
-  //       },
   //     }
-  //   );
 
-  //   return () => {
-  //     pin.kill();
-  //   };
-  // }, []);
+  //   })
+
+  //   // timeln.addLabel('card1');
+  //   timeln.to('.card-1',{
+  //     xPercent:0,
+  //     opacity:1
+  //   })
+
+  //   timeln.from('.card-2',{
+  //     xPercent:75,
+  //     opacity:0
+  //   })
+
+  //   // timeln.addLabel('card2');
+
+  //   timeln.to('.card-1',{
+  //     scale:0.95,
+  //     xPercent:-0.5,
+  //     opacity:0.5,
+  //   },"-=0.3")
+
+  //   timeln.from('.card-2',{
+
+  //     xPercent:0,
+  //     opacity:1,
+  //   });
+
+  //   timeln.from(".card-3",{
+  //     xPercent:75,
+  //     opacity:0
+  //   })
+
+  //   timeln.addLabel("card3")
+  //   timeln.to(".card-2",{
+  //     scale:0.98,
+  //     xPercent:-0.4,
+  //     opacity:0.6,
+  //   },"-=0.3")
+
+  //   timeln.to(".card-3",{
+  //     xPercent:0,
+  //     opacity:1
+  //   })
+  // }, [])
+
+  useEffect(() => {
+    const pin = gsap.fromTo(
+      sectionref.current,
+      {
+        x: 0,
+      },
+      {
+        x: "-300vw",
+
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+          trigger: triggerref.current,
+          start: "bottom bottom",
+          end: "2000 top",
+          scrub: 0.2,
+          pin: true,
+        },
+      }
+    );
+
+    return () => {
+      pin.kill();
+    };
+  }, []);
 
   return (
     <div ref={triggerref} className="w-full  flex justify-center">
-      <div     className="w-[90%] max-w-[1920px] ">
+      <div className="w-[90%] max-w-[1920px] ">
         {/* ourservice/why choose us */}
         <div
           id="section-name"
@@ -94,31 +156,37 @@ const WhyChooseUs = () => {
         </div>
 
         {/* cards */}
-        <div ref={sectionref}  className="relative">
-        <div  className="flex flex-col  ">
-          <div  className="mx-[min(3vw,3rem)] z-0     min-w-[70rem] max-h-[30rem]  my-8 bg-black py-[min(7vw,7.2rem)] px-[min(7vw,7.2rem)] rounded-[14rem] flex justify-between">
-            <div className="py-[5rem] w-[30%] text-[#F6EBDD] text-[min(2vw,2.5rem)]">
-              Verified Tenants with Background Checks 1
-            </div>
+        <div className="">
+          <div ref={sectionref} className="cards flex   relative  ">
+            {content.map((data, index) => {
+              return (
+                <div key={index}>
+                  <div className="card-1 mx-[min(3vw,3rem)] z-0   left-0 top-0    min-w-[70rem] max-h-[30rem]  my-8 bg-black py-[min(7vw,7.2rem)] px-[min(7vw,7.2rem)] rounded-[14rem] flex justify-between">
+                    <div className="py-[5rem] w-[30%] text-[#F6EBDD] text-[min(2vw,2.5rem)]">
+                      {data.title}
+                    </div>
 
-            <div className="w-[50%] flex justify-between gap-6 text-[min(1.2vw,1.7rem)]  text-[#E3CBC6]">
-              <ul className="justify-between flex flex-col">
-                <li>Lorem ipsum dolor sit ame consectetur </li>
-                <li>Lorem ipsum dolor sit ame consectetur </li>
-                <li>Lorem ipsum dolor sit ame consectetur </li>
-                <li>Lorem ipsum dolor sit ame consectetur </li>
-              </ul>
-              <ul className="justify-between flex flex-col">
-                <li>Lorem ipsum dolor sit ame consectetur </li>
-                <li>Lorem ipsum dolor sit ame consectetur </li>
-                <li>Lorem ipsum dolor sit ame consectetur </li>
-                <li>Lorem ipsum dolor sit ame consectetur </li>
-              </ul>
-            </div>
+                    <div className="w-[50%] flex justify-between gap-6 text-[min(1.2vw,1.7rem)]  text-[#E3CBC6]">
+                      <ul className="justify-between flex flex-col">
+                        <li>Lorem ipsum dolor sit ame consectetur </li>
+                        <li>Lorem ipsum dolor sit ame consectetur </li>
+                        <li>Lorem ipsum dolor sit ame consectetur </li>
+                        <li>Lorem ipsum dolor sit ame consectetur </li>
+                      </ul>
+                      <ul className="justify-between flex flex-col">
+                        <li>Lorem ipsum dolor sit ame consectetur </li>
+                        <li>Lorem ipsum dolor sit ame consectetur </li>
+                        <li>Lorem ipsum dolor sit ame consectetur </li>
+                        <li>Lorem ipsum dolor sit ame consectetur </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-         
         </div>
-      </div></div>
+      </div>
     </div>
   );
 };

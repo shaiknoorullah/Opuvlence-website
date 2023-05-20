@@ -444,7 +444,7 @@ const Navbar = () => {
 									  onMouseLeave={()=>{
 										setHover(false)
 									  }}
-									href={data.href}
+									href={data.title==="Cases"?{pathname: "/caseslibrary", query: { active: "Residential" } }:data.href}
 									className={"cursor-pointer hover:-translate-x-3 transition-transform ease-out w-fit hover:text-black text-gray-500 "}
 								>
 									{data.title}
