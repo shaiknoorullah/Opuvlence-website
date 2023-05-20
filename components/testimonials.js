@@ -29,20 +29,20 @@ const Testimonials = () => {
       title: "CAROLYN",
       img: Testimonial1,
       description:
-        "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
+        "Working with Opuvlence was an absolute delight. Their talented team of designers brought our vision to life with their impeccable taste and attention to detail. They transformed our space into a haven of luxury and elegance, exceeding all our expectations. We highly recommend Opuvlence for their exceptional interior design expertise.",
     },
     {
       title: "ALEX",
       img: Testimonial2,
       description:
-        "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
+        "Opuvlence is a true gem in the world of interior design. Their team's creativity and passion shine through in every project. With their guidance, our home underwent a remarkable transformation, becoming a reflection of our personal style and sophistication. Opuvlence's professionalism and commitment to excellence are unparalleled.",
     },
     {
       title: "JESSIE",
       img: Testimonial3,
 
       description:
-        "Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable service Using edge cutting technology to provide extremely reliable serviceUsing edge cutting technology to provide extremely reliable service",
+        "When it comes to interior design, Opuvlence is in a league of its own. Their innovative ideas and meticulous execution completely revitalized our space. The Opuvlence team's dedication to delivering outstanding results, combined with their keen eye for aesthetics, created a breathtaking environment that we are proud to call our own. We highly recommend Opuvlence for any design project.",
     },
   ];
 
@@ -127,15 +127,15 @@ const Testimonials = () => {
           {cards.map((data, index) => {
             return (
               <div
-                className=" flex lg:hidden base:min-w-[min(22rem,100vw)] flex-col justify-center mt-12 "
+                className=" flex lg:hidden base:min-w-[min(22rem,100vw)] flex-col  mt-12 "
                 key={index}
               >
                
                 <div className="text-[2.5rem] text-black self-end justify-self-end tracking-[0.7rem] italic capitalize">
-                  CAROLYN
+                 {data.title}
                 </div>
                 <div className="flex flex-col mx-6 gap-[1rem]">
-                  <img
+                  <Image
                    onClick={() => {
                     setname(data.title);
                     setimage(data.img);
@@ -147,9 +147,7 @@ const Testimonials = () => {
                     src={data.img}
                   />
                   <div className=" text-[1.3rem] text-black self-center justify-self-center leading-[30px] ">
-                    Using edge cutting technology to provide extremely reliable
-                    service Using edge cutting technology to provide extremely
-                    reliable service Using edge cutting technology.
+                   {data.description}
                   </div>
                 </div>
               </div>
@@ -166,7 +164,7 @@ const Testimonials = () => {
 							href={"#contact"}
 						/>
 					</div>
-					<div
+					{/* <div
 						className={`flex  gap-[3rem] text-black mr-16 ${poppins}`}
 					>
 						<div className="text-[2rem] italic underline ">
@@ -175,7 +173,7 @@ const Testimonials = () => {
 						<div className="text-[2rem] italic underline ">
 							NEXT
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 			{showModal && (
@@ -192,7 +190,7 @@ const Testimonials = () => {
 							{name}
 						</h1>
 						{/* Image */}
-						<img
+						<Image
 							src={image}
 							alt="Modal Image"
 							className="mx-auto mb-4"

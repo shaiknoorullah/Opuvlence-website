@@ -81,12 +81,12 @@ const About = () => {
 			>
 				<p
 					id="section-name-about"
-					className={`${poppins.className} opacity-0 font-extrabold col-start-2 text-[min(20px,1.3vw)]`}
+					className={`${poppins.className} opacity-0 font-extrabold col-start-2 lg:text-[min(20px,1.3vw)]`}
 				>
 					/ About
 				</p>
 			</div>
-			<div className="base:pl-[6.25vw] max-w-[80%] base:pr-[6.25vw] 3xl:pl-[191px] 3xl:pr-[191px] lg:pl-[9.64vw] lg:pr-[9.64vw] lg:flex lg:flex-row relative lg:gap-[11.41vw] 3xl:gap-[226px] z-[100]">
+			<div className="base:pl-[6.25vw] max-w-[80%] base:pr-[6.25vw] 3xl:pl-[191px] 3xl:pr-[191px] lg:pl-[9.64vw] lg:pr-[9.64vw] base:hidden lg:flex lg:flex-row relative lg:gap-[11.41vw] 3xl:gap-[226px] z-[100]">
 				<div
 					id="textLeft"
 					className={`base:w-[60.56vw] z-[99] overflow-hidden opacity-0 absolute top-0 left-0 base:text-[8.88vw] base:leading-[14.88vw] base:tracking-[2.46vw] 3xl:w-[656px] 3xl:text-[115px] 3xl:leading-[157.32px] 3xl:tracking-[17.5px] font-normal ${golden.className} lg:text-[5.80vw] lg:leading-[7.94vw] lg:tracking-[0.88vw] lg:w-[33.1313vw] text-black`}
@@ -121,10 +121,10 @@ const About = () => {
 					src={Getmobile}
 					className="w-[100vw] relative top-[38.123vw] rounded-[5rem] md:px-10"
 				/>
-				<img
+				{/* <img
 					src="mobile267.png"
 					className="relative w-[30.93vw] z-[100] left-[69.375vw] top-[5.625vw]"
-				></img>
+				></img> */}
 			</div>
 			{/* <div>kbd</div> */}
 		</div>

@@ -13,7 +13,7 @@ import { gsap } from "gsap"
 
 if (typeof window !== "undefined") {
 	gsap.registerPlugin(ScrollTrigger)
-	ScrollTrigger.defaults({ markers: true })
+	ScrollTrigger.defaults({ markers: false })
 
 	// merge rafs
 	gsap.ticker.lagSmoothing(0)
