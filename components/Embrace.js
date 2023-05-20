@@ -29,7 +29,6 @@ const poppinsSemibold = localFont({
 
 // for base
 const BaseEmbrace = () => {
-  let djdi;
   const opuvlence = [
     {
       id: "1",
@@ -367,7 +366,10 @@ const Embrace = () => {
         <div className="base:hidden  md:flex flex-col gap-[min(2.86vw,55px)]">
           {tableContent.map((item, idx) => {
             return (
-              <div className="flex flex-row items-center justify-between w-[90%]">
+              <div
+                className="flex flex-row items-center justify-between w-[90%]"
+                key={idx}
+              >
                 <div
                   className={`text-[min(1.30vw,25px)] leading-[min(2.08vw,40px)] text-black ${poppinsRegular.className}`}
                 >
@@ -375,18 +377,18 @@ const Embrace = () => {
                 </div>
                 <div className="flex gap-[min(13.75vw,264px)] ">
                   <div className="w-[min(1.14vw,30px)]  ">
-                    <Image src={item.img1} alt="right" />
+                    <Image src={item.img1} alt="tick mark" />
                   </div>
 
                   <Image
                     src={item.img2}
-                    alt="right"
+                    alt="tick mark"
                     className="w-[min(1.14vw,22px)]"
                   />
                   <div className="pr-[40px]">
                     <Image
                       src={item.img3}
-                      alt="left"
+                      alt="tick mark"
                       className="w-[min(1.14vw,22px)]"
                     />
                   </div>

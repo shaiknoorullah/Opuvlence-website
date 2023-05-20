@@ -14,7 +14,7 @@ const AboutusHero = () => {
   useEffect(() => {
     const heading = document.getElementById("heading");
     const description = document.getElementById("description");
-    const thestorybehind=document.getElementById("thestorybehind")
+    const thestorybehind = document.getElementById("thestorybehind");
 
     gsap.fromTo(
       heading.children,
@@ -65,10 +65,12 @@ const AboutusHero = () => {
       );
 
       gsap.fromTo(
-        thestorybehind.children,{
-          y:30,
-          opacity:0
-        },{
+        thestorybehind.children,
+        {
+          y: 30,
+          opacity: 0,
+        },
+        {
           y: 0,
           opacity: 1,
           duration: 0.5,
@@ -76,7 +78,7 @@ const AboutusHero = () => {
           delay: 1.8,
           ease: "power2.out",
         }
-      )
+      );
       gsap.fromTo(
         "#heroImage",
         {
@@ -89,7 +91,8 @@ const AboutusHero = () => {
           duration: 0.5,
           delay: `1.8`,
           ease: "power2.out",
-        })
+        }
+      );
     });
   }, []);
   return (
@@ -103,50 +106,50 @@ const AboutusHero = () => {
             >
               GET TO KNOW US
             </div> */}
-             <h1 className="m-0 base:text-[min(9.5vw,5rem)] tracking-[0.7rem] lg:leading-[min(7vw,130px)]  lg:text-[min(6.2vw,8rem)]  lg:tracking-[7px]  uppercase font-[300]  ">
-            <div
-              className={`w-full flex flex-col base:justify-start lg:justify-start base:items-start lg:items-start ${golden}`}
-            >
+            <h1 className="m-0 base:text-[min(9.5vw,5rem)] tracking-[0.7rem] lg:leading-[min(7vw,130px)]  lg:text-[min(6.2vw,8rem)]  lg:tracking-[7px]  uppercase font-[300]  ">
               <div
-                id="heading"
-                className="tracking relative base:text-left lg:text-left"
+                className={`w-full flex flex-col base:justify-start lg:justify-start base:items-start lg:items-start ${golden}`}
               >
-                <p
-                  // ref={block}
-                  className="tracking base:text-left lg:text-left overflow-clip"
+                <div
+                  id="heading"
+                  className="tracking relative base:text-left lg:text-left"
                 >
-                  {"GET TO".split("").map((char, idx) => {
-                    return (
-                      <span
-                        key={idx}
-                        className={`inline-block ${
-                          char == " "
-                            ? "base:ml-3 md:ml-7"
-                            : "base:ml-[0px] md:ml-[-7px]"
-                        }`}
-                      >
-                        {char}
-                      </span>
-                    );
-                  })}
-                </p>
-                <p className="tracking base:text-cente lg:text-left overflow-clip">
-                  {"KNOW US".split("").map((char, idx) => {
-                    return (
-                      <span
-                        key={idx}
-                        className={`inline-block ${
-                          char == " "
-                            ? "base:ml-3 md:ml-7"
-                            : "base:ml-[0px] md:ml-[-7px]"
-                        }`}
-                      >
-                        {char}
-                      </span>
-                    );
-                  })}
-                </p>
-                {/* <p className="tracking base:text-center lg:text-left overflow-clip">
+                  <p
+                    // ref={block}
+                    className="tracking base:text-left lg:text-left overflow-clip"
+                  >
+                    {"GET TO".split("").map((char, idx) => {
+                      return (
+                        <span
+                          key={idx}
+                          className={`inline-block ${
+                            char == " "
+                              ? "base:ml-3 md:ml-7"
+                              : "base:ml-[0px] md:ml-[-7px]"
+                          }`}
+                        >
+                          {char}
+                        </span>
+                      );
+                    })}
+                  </p>
+                  <p className="tracking base:text-cente lg:text-left overflow-clip">
+                    {"KNOW US".split("").map((char, idx) => {
+                      return (
+                        <span
+                          key={idx}
+                          className={`inline-block ${
+                            char == " "
+                              ? "base:ml-3 md:ml-7"
+                              : "base:ml-[0px] md:ml-[-7px]"
+                          }`}
+                        >
+                          {char}
+                        </span>
+                      );
+                    })}
+                  </p>
+                  {/* <p className="tracking base:text-center lg:text-left overflow-clip">
                   {"to new heights".split("").map((char, idx) => {
                     return (
                       <span
@@ -162,12 +165,12 @@ const AboutusHero = () => {
                     );
                   })}
                 </p> */}
+                </div>
               </div>
-            </div>
-          </h1>
+            </h1>
             {/* change this poppins to lamore */}
             <div
-            id="thestorybehind"
+              id="thestorybehind"
               className={`base:text-[min(5vw,1.8rem)] lg:text-[2rem] ${poppins} `}
             >
               {`THE STORY BEHIND`.split(/\r?\n/).map((char, idx) => {
@@ -176,22 +179,23 @@ const AboutusHero = () => {
                     {char}
                   </span>
                 );
-              }) }
+              })}
             </div>
 
             {/* quotation for desktop */}
             <div
-            id="description"
+              id="description"
               className={`lg:inline-block base:hidden mt-[5rem] text-[1.3rem] w-[70%] font-medium italic ${poppins}`}
             >
-              {`Experience the art of luxury interior design. Let us transform your space into a breathtaking work of art.`.split(/\r?\n/)
-              .map((char, idx) => {
-                return (
-                  <span key={idx} className="inline-block">
-                    {char}
-                  </span>
-                );
-              })}
+              {`Experience the art of luxury interior design. Let us transform your space into a breathtaking work of art.`
+                .split(/\r?\n/)
+                .map((char, idx) => {
+                  return (
+                    <span key={idx} className="inline-block">
+                      {char}
+                    </span>
+                  );
+                })}
             </div>
           </div>
 
@@ -202,7 +206,8 @@ const AboutusHero = () => {
               src="/aboutusheromobile.jpg"
             /> */}
             <Image
-            id="heroImage"
+              id="heroImage"
+              alt="about mobile"
               className="lg:hidden lg:pl-10 lg:pr-4 w-full rounded-bl-[2rem] object-cover h-[min(100vw,35rem)] "
               src={AboutMobile}
             />
@@ -210,11 +215,13 @@ const AboutusHero = () => {
               className="base:hidden lg:inline-block lg:pl-10 lg:pr-4 "
               src="/AboutUsHero.jpg"
             /> */}
-            <div id="heroImage" >
-            <Image
-              src={AboutImage}
-              className="base:hidden lg:inline-block object-cover h-[40rem] w-[1120px] lg:pl-10 lg:pr-4 "
-            /></div>
+            <div id="heroImage">
+              <Image
+                alt="about image"
+                src={AboutImage}
+                className="base:hidden lg:inline-block object-cover h-[40rem] w-[1120px] lg:pl-10 lg:pr-4 "
+              />
+            </div>
           </div>
         </div>
         <div
