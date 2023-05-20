@@ -259,24 +259,6 @@ div {
   font-weight: 500;
 }
 
-<<<<<<< HEAD
-.line {
-  width: 100%;
-  max-width: 800px;
-  height: 8px;
-  margin: 0 0 10px 0;
-  position: relative;
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 1);
-}
-/*  */
-.scrolloverflow {
-  overflow-y: scroll;
-}
-[data-scroll-direction="horizontal"] .scrolloverflow {
-  overflow-x: hidden;
-}
-=======
 /* .line {
 	width: 100%;
 	max-width: 800px;
@@ -286,4 +268,3 @@ div {
 	display: inline-block;
 	background-color: rgba(255, 255, 255, 1);
 } */
->>>>>>> 23f01316be8f14a4674fc7a77747e4d1d8efba07
