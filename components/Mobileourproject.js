@@ -105,7 +105,7 @@ const MobileOurProject = () => {
         </div>
       </div>
       <div className="relative left-[52vw] top-[-10vw]">
-        <img src="/group52.svg" className="absolute w-[45vw]"></img>
+        {/* <img src="/group52.svg" className="absolute w-[45vw]"></img> */}
       </div>
       <div
         className={`${poppins.className} mt-[13vw] text-black base:text-[4vw] md:text-[1.5rem] px-[6.125vw] font-normal text-justify base:leading-[6.05vw] md:leading-10 md:font-semibold tracking-[0.05em]`}
