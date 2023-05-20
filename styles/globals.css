@@ -5,91 +5,90 @@
 @tailwind utilities;
 
 * {
-	cursor: none;
+  cursor: none;
 }
 
 html,
 body {
-	cursor: none;
-	color: black;
-	padding: 0;
-	background-color: #f6ebdd;
-	overflow-x: hidden;
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
-		Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
-	color: black;
+  cursor: none;
+  color: black;
+  padding: 0;
+  background-color: #f6ebdd;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  color: black;
 }
 body::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
-	html {
-		color-scheme: dark;
-	}
-	body {
-		color: white;
-	}
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+  }
 }
 
 html.lenis {
-	height: auto;
+  height: auto;
 }
 
 .lenis.lenis-smooth {
-	scroll-behavior: auto;
+  scroll-behavior: auto;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-	overscroll-behavior: contain;
+  overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .lenis.lenis-scrolling iframe {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .golden {
-	font-family: GOLDEN Regular;
-	font-weight: 400;
-	letter-spacing: 1rem;
+  font-family: GOLDEN Regular;
+  font-weight: 400;
+  letter-spacing: 1rem;
 }
 
 .poppins {
-	font-family: Poppins;
+  font-family: Poppins;
 }
 
 .circle {
-	width: 5rem;
-	height: 5rem;
-	border: 1px solid black;
-	background-color: transparent;
-	border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid black;
+  background-color: transparent;
+  border-radius: 50%;
 }
 .circleblack {
-	width: 5rem;
-	height: 5rem;
-	border: 1px solid white;
-	background-color: transparent;
-	border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 50%;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 /* .about-us-image {
@@ -105,168 +104,174 @@ html.lenis {
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .our-projects-grid {
-	display: grid;
-	grid-template-columns: 1.3fr 0.4fr 1.2fr 1.2fr;
-	grid-template-rows: 0.4fr 0.6fr 0.7fr 0.5fr 0.4fr 9.1fr;
-	gap: 0px 0px;
-	grid-template-areas:
-		". ourporjects . ."
-		". . . ."
-		"Title . description ."
-		". . description ."
-		"types . . ."
-		". . . .";
+  display: grid;
+  grid-template-columns: 1.3fr 0.4fr 1.2fr 1.2fr;
+  grid-template-rows: 0.4fr 0.6fr 0.7fr 0.5fr 0.4fr 9.1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". ourporjects . ."
+    ". . . ."
+    "Title . description ."
+    ". . description ."
+    "types . . ."
+    ". . . .";
 }
 .our-projects-description {
-	grid-area: description;
+  grid-area: description;
 }
 .our-projects-Title {
-	grid-area: Title;
+  grid-area: Title;
 }
 .our-projects-types {
-	grid-area: types;
+  grid-area: types;
 }
 .our-projects-ourporjects {
-	grid-area: ourporjects;
+  grid-area: ourporjects;
 }
 #grid {
-	display: grid;
-	grid-template-columns: repeat(50, 1fr);
+  display: grid;
+  grid-template-columns: repeat(50, 1fr);
 }
 #gridItem1 {
-	grid-column: 3 / span 12;
+  grid-column: 3 / span 12;
 }
 #gridItem2 {
-	grid-column: 13 / span 18;
+  grid-column: 13 / span 18;
 }
 #gridItem3 {
-	grid-column: 27 / span 18;
+  grid-column: 27 / span 18;
 }
 #gridItem4 {
-	grid-column: 40 / span 10;
+  grid-column: 40 / span 10;
 }
 
 /* locomotive scroll css */
 
 html.has-scroll-smooth {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 html.has-scroll-dragging {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .has-scroll-smooth body {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .has-scroll-smooth [data-scroll-container] {
-	min-height: 100vh;
+  min-height: 100vh;
 }
 
-[data-scroll-direction="horizontal"]
-	[data-scroll-container] {
-	height: 100vh;
-	display: inline-block;
-	white-space: nowrap;
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 [data-scroll-direction="horizontal"] [data-scroll-section] {
-	display: inline-block;
-	vertical-align: top;
-	white-space: nowrap;
-	height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
 }
 
 .c-scrollbar {
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 11px;
-	height: 100%;
-	transform-origin: center right;
-	transition: transform 0.3s, opacity 0.3s;
-	opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
 }
 .c-scrollbar:hover {
-	transform: scaleX(1.45);
+  transform: scaleX(1.45);
 }
 .c-scrollbar:hover,
 .has-scroll-scrolling .c-scrollbar,
 .has-scroll-dragging .c-scrollbar {
-	opacity: 1;
+  opacity: 1;
 }
 [data-scroll-direction="horizontal"] .c-scrollbar {
-	width: 100%;
-	height: 10px;
-	top: auto;
-	bottom: 0;
-	transform: scaleY(1);
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
 }
 [data-scroll-direction="horizontal"] .c-scrollbar:hover {
-	transform: scaleY(1.3);
+  transform: scaleY(1.3);
 }
 
 .c-scrollbar_thumb {
-	position: absolute;
-	top: 0;
-	right: 0;
-	background-color: black;
-	opacity: 0.5;
-	width: 7px;
-	border-radius: 10px;
-	margin: 2px;
-	cursor: -webkit-grab;
-	cursor: grab;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 .has-scroll-dragging .c-scrollbar_thumb {
-	cursor: -webkit-grabbing;
-	cursor: grabbing;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
-	right: auto;
-	bottom: 0;
+  right: auto;
+  bottom: 0;
 }
 
 .privacy p {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
 .privacy p div span {
-	word-wrap: initial;
+  word-wrap: initial;
 }
 
 ul {
-	list-style-type: disc;
+  list-style-type: disc;
 }
 
 div {
-	user-select: none;
+  user-select: none;
 }
 
 .terms p li {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
 .terms span {
-	font-size: 1.3rem;
-	font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .line {
-	width: 100%;
-	max-width: 800px;
-	height: 8px;
-	margin: 0 0 10px 0;
-	position: relative;
-	display: inline-block;
-	background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  max-width: 800px;
+  height: 8px;
+  margin: 0 0 10px 0;
+  position: relative;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 1);
+}
+/*  */
+.scrolloverflow {
+  overflow-y: scroll;
+}
+[data-scroll-direction="horizontal"] .scrolloverflow {
+  overflow-x: hidden;
 }
