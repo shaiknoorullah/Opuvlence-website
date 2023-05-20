@@ -425,12 +425,7 @@ const Navbar = () => {
 
 						return (
 							<div
-              onMouseEnter={()=>{
-                setHover(true)
-              }}
-              onMouseLeave={()=>{
-                setHover(false)
-              }}
+          
 								key={index}
 								id="navLinksDesktop"
 								className={`flex flex-row items-center justify-end gap-[15px] `}
@@ -438,13 +433,19 @@ const Navbar = () => {
 								<div
 									className={
 										active
-											? "relative bg-black  h-[2px] shrink-0 w-[10px]"
+											? "relative bg-gray-500  h-[2px] shrink-0 w-[10px]"
 											: "hidden"
 									}
 								/>
 								<NavLinks
+								    onMouseEnter={()=>{
+										setHover(true)
+									  }}
+									  onMouseLeave={()=>{
+										setHover(false)
+									  }}
 									href={data.href}
-									className="cursor-pointer hover:-translate-x-3 transition-transform ease-out w-fit "
+									className={"cursor-pointer hover:-translate-x-3 transition-transform ease-out w-fit hover:text-black text-gray-500 "}
 								>
 									{data.title}
 								</NavLinks>

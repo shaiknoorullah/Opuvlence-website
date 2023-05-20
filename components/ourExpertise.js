@@ -289,7 +289,7 @@ const OurExpertise = () => {
 							</div>
 							<div className="bg-[#A5787A] rounded-tl-full w-full base:h-[9rem] lg:h-[21%]"></div>
 							<div
-								className={`text-[#A5787A] base:text-[0.8rem] lg:text-[1.3rem] font-semibold italic ${poppinsRegular.className}`}
+								className={`text-[#A5787A] base:text-[0.8rem] lg:text-[1.1rem] font-semibold italic ${poppinsRegular.className}`}
 							>
 								Design Solution
 							</div>
@@ -303,7 +303,7 @@ const OurExpertise = () => {
 							</div>
 							<div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] lg:h-[87%]"></div>
 							<div
-								className={`${poppinsRegular.className} base:text-[0.8rem] lg:text-[1.3rem] text-[#A5787A]  font-semibold italic `}
+								className={`${poppinsRegular.className} base:text-[0.8rem] lg:text-[1.1rem] text-[#A5787A]  font-semibold italic `}
 							>
 								Turnkey Solution
 							</div>
@@ -317,7 +317,7 @@ const OurExpertise = () => {
 							</div>
 							<div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] lg:h-[32%]"></div>
 							<div
-								className={`text-[#A5787A] base:text-[0.8rem] lg:text-[1.3rem] font-semibold italic ${poppinsRegular.className} `}
+								className={`text-[#A5787A] base:text-[0.8rem] lg:text-[1.1rem] font-semibold italic ${poppinsRegular.className} `}
 							>
 								Execution Solution
 							</div>

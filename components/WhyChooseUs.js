@@ -1,5 +1,6 @@
 import localFont from "@next/font/local";
-import React from "react";
+import { gsap } from "gsap";
+import React, { useEffect, useRef } from "react";
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
   variable: "--font-golden",
@@ -19,9 +20,40 @@ const poppinsSemibold = localFont({
 });
 
 const WhyChooseUs = () => {
+  const sectionref = useRef(null);
+  const triggerref = useRef(null);
+
+  useEffect(() => {
+    const pin = gsap.fromTo(
+      sectionref.current.children,
+      {
+        y: 0,
+     
+
+      },
+      {
+        y: "-200vh",
+    
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+          trigger: triggerref.current,
+          start: "top top",
+          end: "2000 top",
+          scrub: 0.6,
+          pin: true,
+        },
+      }
+    );
+
+    return () => {
+      pin.kill();
+    };
+  }, []);
+
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-[90%] max-w-[1920px] ">
+    <div ref={triggerref} className="w-full  flex justify-center">
+      <div     className="w-[90%] max-w-[1920px] ">
         {/* ourservice/why choose us */}
         <div
           id="section-name"
@@ -51,8 +83,8 @@ const WhyChooseUs = () => {
           <div
             className={`${poppinsSemibold.className} row-start-2 italic row-end-3 col-start-3 col-end-7`}
           >
-            &quot;Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to.
+            &quot;Using edge cutting technology to provide extremely reliable
+            service Using edge cutting technology to.
           </div>
           <div
             className={`${poppinsRegular.className} row-start-3 italic row-end-4 col-start-7 col-end-12`}
@@ -62,29 +94,70 @@ const WhyChooseUs = () => {
         </div>
 
         {/* cards */}
+        <div ref={sectionref}  className="relative">
+        <div  className="flex flex-col  ">
+          <div  className="mx-[min(3vw,3rem)] z-0     min-w-[70rem] max-h-[30rem]  my-8 bg-black py-[min(7vw,7.2rem)] px-[min(7vw,7.2rem)] rounded-[14rem] flex justify-between">
+            <div className="py-[5rem] w-[30%] text-[#F6EBDD] text-[min(2vw,2.5rem)]">
+              Verified Tenants with Background Checks 1
+            </div>
 
-        <div className="mx-[min(3vw,3rem)] my-8 bg-black py-[min(7vw,7.2rem)] px-[min(7vw,7.2rem)] rounded-[14rem] flex justify-between">
-          <div className="py-[5rem] w-[30%] text-[#F6EBDD] text-[min(2vw,2.5rem)]">
-            Verified Tenants with Background Checks
+            <div className="w-[50%] flex justify-between gap-6 text-[min(1.2vw,1.7rem)]  text-[#E3CBC6]">
+              <ul className="justify-between flex flex-col">
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+              </ul>
+              <ul className="justify-between flex flex-col">
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+              </ul>
+            </div>
           </div>
+          <div  className="mx-[min(3vw,3rem)] z-10    min-w-[70rem] max-h-[30rem] my-8 bg-black py-[min(7vw,7.2rem)] px-[min(7vw,7.2rem)] rounded-[14rem] flex justify-between">
+            <div className="py-[5rem] w-[30%] text-[#F6EBDD] text-[min(2vw,2.5rem)]">
+              Verified Tenants with Background Checks 2
+            </div>
 
-          <div className="w-[50%] flex justify-between gap-6 text-[min(1.2vw,1.7rem)]  text-[#E3CBC6]">
-            <ul className="justify-between flex flex-col">
-              <li>Lorem ipsum dolor sit ame consectetur </li>
-              <li>Lorem ipsum dolor sit ame consectetur </li>
-              <li>Lorem ipsum dolor sit ame consectetur </li>
-              <li>Lorem ipsum dolor sit ame consectetur </li>
-              
-            </ul>
-            <ul className="justify-between flex flex-col">
-              <li>Lorem ipsum dolor sit ame consectetur </li>
-              <li>Lorem ipsum dolor sit ame consectetur </li>
-              <li>Lorem ipsum dolor sit ame consectetur </li>
-              <li>Lorem ipsum dolor sit ame consectetur </li>
-            </ul>
+            <div  className="w-[50%] flex justify-between gap-6 text-[min(1.2vw,1.7rem)]  text-[#E3CBC6]">
+              <ul className="justify-between flex flex-col">
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+              </ul>
+              <ul className="justify-between flex flex-col">
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+              </ul>
+            </div>
+          </div>
+          <div className="mx-[min(3vw,3rem)] z-40     max-h-[30rem] min-w-[70rem] my-8 bg-black py-[min(7vw,7.2rem)] px-[min(7vw,7.2rem)] rounded-[14rem] flex justify-between">
+            <div className="py-[5rem] w-[30%] text-[#F6EBDD] text-[min(2vw,2.5rem)]">
+              Verified Tenants with Background Checks 3
+            </div>
+
+            <div  className="w-[50%] flex justify-between gap-6 text-[min(1.2vw,1.7rem)]  text-[#E3CBC6]">
+              <ul className="justify-between flex flex-col">
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+              </ul>
+              <ul className="justify-between flex flex-col">
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+                <li>Lorem ipsum dolor sit ame consectetur </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      </div></div>
     </div>
   );
 };

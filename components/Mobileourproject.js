@@ -54,11 +54,15 @@ const MobileOurProject = () => {
   const currentItem = projects?.projects[currentIndex];
   // console.log(currentItem.image)
   
+
+  // animation
     useEffect(() => {
       gsap.fromTo('.item-transition', {
         opacity: 0,
+        x:-200,
         duration: 0.2,
       },{
+        x:0,
         opacity:1
       });
     }, [currentIndex]);
