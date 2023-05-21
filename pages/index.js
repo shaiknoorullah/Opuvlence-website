@@ -26,11 +26,7 @@ export default function Home() {
 	const [loader, setLoader] = useState(true)
 
 	return (
-		<div
-			className="text-black"
-			// data-scroll-section
-			// className="w-[100vw]"
-		>
+		<div className="text-black">
 			<Head>
 				<title>
 					Opuvlence - Luxury Interior Design Services
