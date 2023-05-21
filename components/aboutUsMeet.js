@@ -3,7 +3,15 @@
 import React, { useState } from "react";
 import localFont from "next/font/local";
 import Link from "next/link";
-
+import Image from "next/image";
+// importing images
+import Ceo from "../public/team/ceo.webp";
+import CenterHead from "../public/team/centerHead.webp";
+import CustomerHead from "../public/team/customerHead.webp";
+import CustomerRelation from "../public/team/customerRelation.webp";
+import Design from "../public/team/designsupervisor.webp";
+import Manager from "../public/team/manager.webp";
+import Marketing from "../public/team/marketing.webp";
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
   variable: "--font-golden",
@@ -21,13 +29,17 @@ const poppinsSemibold = localFont({
   src: "../styles/font/poppins/Poppins-SemiBold.woff2",
 });
 
-const OurTeamSingle = ({ name, image, designation }) => {
+const OurTeamSingle = ({ name, picture, designation }) => {
   return (
     <div className="flexgap-1 rounded-tl-[10rem] justify-center items-center flex-col">
-      <img className="w-full rounded-tl-[10vw] " src={image} />
+      <Image
+        alt="pic"
+        className="w-full rounded-tl-[10vw] base:h-[60vw]  object-fill"
+        src={picture}
+      />
       <div className={`${poppinsSemibold.className} text-black `}>{name}</div>
       <div
-        className={`${poppinsRegular.className}text-black italic text-center w-[50%]`}
+        className={`${poppinsRegular.className}text-black italic text-center w-[70%]`}
       >
         {designation}
       </div>
@@ -44,49 +56,56 @@ const AboutUsMeet = () => {
 
   const testimonial = [
     {
-      name: "HIBA ISHTIAQ",
-      designation: "OPERATIONS MANAGER",
+      name: "Mr.Shaik Fauwaz",
+      picture: Ceo,
+      designation: "CEO(OPUVLENCE)",
     },
     {
-      name: "SONALI SINGH",
-      designation: "DESIGN MANAGER",
+      name: "Ms.Supriya Satyam",
+      picture: CustomerHead,
+      designation: "CUSTOMER EXCELLENCE HEAD",
     },
     {
-      name: " SUPRIYA SATYAM",
-      designation: "BUSINESS MANAGER",
+      name: "Mr.Faizan ",
+      picture: Manager,
+      designation: "R&L MANAGER",
     },
     {
-      name: " ARAVINDH G",
-      designation: " J.DESIGNER",
+      name: "Ms.Ayman Faruq",
+      picture: Marketing,
+      designation: "MARKETING HEAD",
     },
     {
-      name: " ASHRITH V",
-      designation: "S. DESIGNER",
+      name: "Mr.Shaik Suhail",
+      picture: Design,
+      designation: "DESIGN SUPERVISOR",
     },
     {
-      name: "SUHAIL SHAIK",
-      designation: "DESIGNER",
+      name: "Mr.Shaik Farouq",
+      picture: CustomerRelation,
+      designation: "CUSTOMER RELATION",
     },
     {
-      name: "SALEEM MAJEED",
-      designation: "S. DESIGNER",
+      name: "Mr.Pranav Raykar",
+      picture: CenterHead,
+      designation: "CENTER HEAD",
     },
-    {
-      name: "S JYOTI KONDADA ",
-      designation: "DESIGNER",
-    },
-    {
-      name: "AYMAN FARUQ",
-      designation: "S.DESIGNER",
-    },
-    {
-      name: "SHAIK FAROUK",
-      designation: "S.DESIGNER",
-    },
-    {
-      name: "SHABAB BASHEER",
-      designation: "S.DESIGNER",
-    },
+    // {
+    //   name: "S JYOTI KONDADA ",
+    //   designation: "DESIGNER",
+    // },
+    // {
+    //   name: "AYMAN FARUQ",
+    //   designation: "S.DESIGNER",
+    // },
+    // {
+    //   name: "SHAIK FAROUK",
+    //   designation: "S.DESIGNER",
+    // },
+    // {
+    //   name: "SHABAB BASHEER",
+    //   designation: "S.DESIGNER",
+    // },
   ];
 
   return (
@@ -117,13 +136,15 @@ const AboutUsMeet = () => {
                   onClick={() => {
                     setname(data.name);
                     setdesignation(data.designation);
+                    setimage(data.picture)
 
                     setShowModal(true);
                   }}
                 >
-                  <img
-                    className="rounded-t-full self-center "
-                    src="/testimonialdemo.jpg"
+                  <Image
+                    className="rounded-t-full h-[25rem]  object-cover scale-10"
+                    alt="profession"
+                    src={data.picture}
                   />
                   <div className="font-medium text-[1.5rem] mt-2">
                     {data.name}
@@ -143,13 +164,19 @@ const AboutUsMeet = () => {
             {testimonial.map((data, index) => {
               return (
                 <div key={index}>
-                  <Link passHref href="/testimonialsingle">
+                  <div  onClick={() => {
+                    setname(data.name);
+                    setdesignation(data.designation);
+                    setimage(data.picture)
+
+                    setShowModal(true);
+                  }}>
                     <OurTeamSingle
                       name={data.name}
-                      image={"/testimonialtesting.jpg"}
+                      picture={data.picture}
                       designation={data.designation}
                     />
-                  </Link>
+                  </div>
                 </div>
               );
             })}
@@ -170,7 +197,7 @@ const AboutUsMeet = () => {
               {/* image section */}
 
               <div className="base:w-[65%] lg:w-[25%]">
-                <img className="cover w-full" src="testimonial.jpg" />
+                <Image className="object-cover h-full w-full" src={image} />
               </div>
               <div className="flex  text-black flex-col base:py-3 lg:my-[4rem] lg:pl-[3rem] lg:w-[75%]">
                 <div className="w-[16rem] text-[3.2rem] leading-[4rem]">
@@ -179,7 +206,7 @@ const AboutUsMeet = () => {
                 <div className="flex text-[1.5rem] pt-3">{designation}</div>
                 <div className="border border-black w-full base:my-6 lg:my-6"></div>
                 <div className="text-[1.3rem] leading-[2rem]">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
                   massa mi. Aliquam in hendrerit urna. Pellentesque sitLorem
                   ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
                   consectetur adipiscing elit Ut et massa mi. Aliquam in

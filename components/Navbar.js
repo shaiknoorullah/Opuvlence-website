@@ -23,6 +23,7 @@ const poppins = localFont({
 
 const Navbar = () => {
 	const [isClicked, setIsClicked] = useState(false)
+  const [Hover, setHover] = useState(false)
 	const buttonRef = useRef(null)
 	const rect1Ref = useRef(null)
 	const rect2Ref = useRef(null)
@@ -37,6 +38,7 @@ const Navbar = () => {
 	const router = useRouter()
 
 	useEffect(() => {
+    
 		if (buttonRef.current) {
 			const rect1 = rect1Ref.current
 			const rect2 = rect2Ref.current
@@ -322,8 +324,12 @@ const Navbar = () => {
 			href: "/aboutus",
 		},
 		{
-			title: "Services",
+			title: "Interior Design",
 			href: "/services",
+		},
+    {
+			title: "Rental and Lease",
+			href: "/rentalandleaseservices",
 		},
 		{
 			title: "Cases",
@@ -379,6 +385,8 @@ const Navbar = () => {
 			href: "/",
 		},
 	]
+
+
 	return (
 		<nav
 			className={`flex flex-row relative justify-between w-screen pt-[25px] px-[40px]`}
@@ -417,20 +425,27 @@ const Navbar = () => {
 
 						return (
 							<div
+          
 								key={index}
 								id="navLinksDesktop"
-								className={`flex flex-row items-center justify-end gap-[15px] w-4  `}
+								className={`flex flex-row items-center justify-end gap-[15px] `}
 							>
 								<div
 									className={
 										active
-											? "relative bg-black w-[20px] h-[2px] shrink-0 "
+											? "relative bg-gray-500  h-[2px] shrink-0 w-[10px]"
 											: "hidden"
 									}
 								/>
 								<NavLinks
-									href={data.href}
-									className="cursor-pointer hover:-translate-x-3 transition-transform ease-out "
+								    onMouseEnter={()=>{
+										setHover(true)
+									  }}
+									  onMouseLeave={()=>{
+										setHover(false)
+									  }}
+									href={data.title==="Cases"?{pathname: "/caseslibrary", query: { active: "Residential" } }:data.href}
+									className={"cursor-pointer hover:-translate-x-3 transition-transform ease-out w-fit hover:text-black text-gray-500 "}
 								>
 									{data.title}
 								</NavLinks>

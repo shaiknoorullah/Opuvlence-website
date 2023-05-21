@@ -68,9 +68,9 @@ const Imgs4 = () => {
 			</section>
 
 			{/* for mobile */}
-			<div className="w-full lg:hidden mt-16">
+			<div className="w-full lg:hidden mt-16 md:mt-1">
 				<img
-					className="w-full"
+					className="w-full md:h-[832px]"
 					src="/imagesection.jpg"
 				/>
 			</div>

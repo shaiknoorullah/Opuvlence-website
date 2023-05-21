@@ -1,5 +1,5 @@
-import localFont from "@next/font/local";
 import React from "react";
+import localFont from "@next/font/local";
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
   variable: "--font-golden",
@@ -51,8 +51,8 @@ const HowDoesIt = () => {
           <div
             className={`${poppinsSemibold.className} row-start-2 italic row-end-3 col-start-3 col-end-7 pt-4`}
           >
-            &quot;Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to.
+            &quot;Using edge cutting technology to provide extremely reliable
+            service Using edge cutting technology to.
           </div>
         </div>
 
@@ -67,8 +67,10 @@ const HowDoesIt = () => {
             consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit
             urna. Pellentesque sitLorem ipsum dolor sit amet consectetur
           </div>
-          <div className={`${poppinsRegular.className} h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}>
-          Sign Management <br/> Agreement
+          <div
+            className={`${poppinsRegular.className} h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+          >
+            Sign Management <br /> Agreement
           </div>
         </div>
       </div>
