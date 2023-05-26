@@ -94,15 +94,15 @@ const WhyChooseUs = () => {
         x: 0,
       },
       {
-        x: "-300vw",
+        x: "-230vw",
 
         ease: "none",
         duration: 1,
         scrollTrigger: {
           trigger: triggerref.current,
-          start: "bottom bottom",
+          start: "top top",
           end: "2000 top",
-          scrub: 0.2,
+          scrub: 0.1,
           pin: true,
         },
       }
@@ -114,7 +114,7 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <div ref={triggerref} className="w-full  flex justify-center">
+    <div ref={triggerref} className="w-full  hidden lg:flex justify-center">
       <div className="w-[90%] max-w-[1920px] ">
         {/* ourservice/why choose us */}
         <div
@@ -162,11 +162,11 @@ const WhyChooseUs = () => {
               return (
                 <div key={index}>
                   <div className="card-1 mx-[min(3vw,3rem)] z-0   left-0 top-0    min-w-[70rem] max-h-[30rem]  my-8 bg-black py-[min(7vw,7.2rem)] px-[min(7vw,7.2rem)] rounded-[14rem] flex justify-between">
-                    <div className="py-[5rem] w-[30%] text-[#F6EBDD] text-[min(2vw,2.5rem)]">
+                    <div className=" w-[30%] flex justify-center items-center  text-[#F6EBDD] text-[min(1.8vw,2.4rem)]">
                       {data.title}
                     </div>
 
-                    <div className="w-[50%] flex justify-between gap-6 text-[min(1.2vw,1.7rem)]  text-[#E3CBC6]">
+                    <div className="w-[50%] flex justify-between gap-6 text-[min(1.2vw,1.2rem)]  text-[#E3CBC6]">
                       <ul className="justify-between flex flex-col">
                         <li>Lorem ipsum dolor sit ame consectetur </li>
                         <li>Lorem ipsum dolor sit ame consectetur </li>

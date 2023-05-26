@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import localFont from "@next/font/local";
+import { gsap } from "gsap";
+
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
   variable: "--font-golden",
@@ -19,13 +21,48 @@ const poppinsSemibold = localFont({
 });
 
 const HowDoesIt = () => {
+const content=["Sign Management agreement","Inventory Check and Video","Property Marketing", "Tenant Screening", "Tenant Agreement & Move In", "On Demand Maintenance", "Tenant Replacement", "Exit Check & Renewal"]
+
+  const sectionref1 = useRef(null);
+  const triggerref1 = useRef(null);
+
+  useEffect(() => {
+    const pin = gsap.fromTo(
+      sectionref1.current,
+      {
+        y: 0,
+      },
+      {
+        y: "-220vw",
+
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+          trigger: triggerref1.current,
+          start: "top top",
+          end: "2000 top",
+          scrub: 0.1,
+          pin: true,
+        },
+      }
+    );
+
+    return () => {
+      pin.kill();
+    };
+  }, []);
+
+   
   return (
-    <div className="w-full flex justify-center pt-36">
+    <div
+      ref={triggerref1}
+      className="pin-trigger w-full  flex justify-center py-36"
+    >
       <div className="w-[90%] max-w-[1920px] ">
         {/* ourservice/why choose us */}
         <div
           id="section-name"
-          className="flex lg:justify-start base:justify-center"
+          className="pin-element flex lg:justify-start base:justify-center"
         >
           <div className="md:flex hidden w-[20%]"></div>
 
@@ -68,9 +105,112 @@ const HowDoesIt = () => {
             urna. Pellentesque sitLorem ipsum dolor sit amet consectetur
           </div>
           <div
-            className={`${poppinsRegular.className} h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            ref={sectionref1}
+            id="cardsani"
+            className="card-container h-full w-[30%] relative"
           >
-            Sign Management <br /> Agreement
+            {content.map((data,index)=>{
+              return(
+                <div
+                // id="card"
+                key={index}
+                className={`${poppinsRegular.className} mt-[6rem]  left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+              >
+                {data}
+              </div>
+              )
+            })}
+           
+            {/* <div
+              id="card"
+              className={`${poppinsRegular.className} mt-12  left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement 2
+            </div>
+            <div
+              id="card"
+              className={`${poppinsRegular.className} mt-12 left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement 3
+            </div>
+            <div
+              id="card"
+              className={`${poppinsRegular.className} mt-12 left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement 4
+            </div>
+            <div
+              id="card"
+              className={`${poppinsRegular.className} mt-12 left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement 5
+            </div>
+            <div
+              id="card"
+              className={`${poppinsRegular.className} mt-12 left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement 6
+            </div>
+            <div
+              id="card"
+              className={`${poppinsRegular.className} mt-12 left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement 7
+            </div>
+            <div
+              id="card"
+              className={`${poppinsRegular.className} mt-12 left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement 8
+            </div> */}
+            {/* <div
+              id="card4"
+              className={`${poppinsRegular.className} absolute left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement 4
+            </div> */}
+            {/* <div
+              id="card2"
+              className={`${poppinsRegular.className} absolute left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement
+            </div> */}
+            {/* <div
+              id="card3"
+              className={`${poppinsRegular.className} absolute left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement
+            </div>
+            <div
+              id="card4"
+              className={`${poppinsRegular.className} absolute left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement
+            </div>
+            <div
+              id="card5"
+              className={`${poppinsRegular.className} absolute left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement
+            </div>
+            <div
+              id="card6"
+              className={`${poppinsRegular.className} absolute left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement
+            </div>
+            <div
+              id="card7"
+              className={`${poppinsRegular.className} absolute left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement
+            </div>
+            <div
+              id="card8"
+              className={`${poppinsRegular.className} absolute left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+            >
+              Sign Management <br /> Agreement
+            </div> */}
           </div>
         </div>
       </div>
