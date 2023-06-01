@@ -39,7 +39,7 @@ const OurTeamSingle = ({ name, picture, designation }) => {
       />
       <div className={`${poppinsSemibold.className} text-black `}>{name}</div>
       <div
-        className={`${poppinsRegular.className}text-black italic text-center w-[70%]`}
+        className={`${poppinsRegular.className}text-black italic  w-[80%]`}
       >
         {designation}
       </div>

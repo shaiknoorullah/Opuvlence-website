@@ -54,9 +54,10 @@ const AboutUsBehind = () => {
           <div
             className={`lg:hidden base:inline-block tracking-[0.03em]  base:text-[1.1rem] md:text-[2.6vw] base:w-[70.315vw] md:w-[48vw] font-extrabold italic ${poppins}`}
           >
-            &apos; Lorem Ipsum dolor sit amet consectetur adipscing lore lorem
-            is lorem ipsum dolor sit amet adipscing Lorem Ipsum dolor sit
-            amet&apos;
+           &quot; We understand that the details matter in interior design.
+              We pay close attention to every aspect of the project to ensure
+              that the end result is exactly what our clients are looking
+              for&quot;
           </div>
         </div>
         <div
