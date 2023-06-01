@@ -40,10 +40,10 @@ const AboutUsBehind = () => {
             <div
               className={`lg:inline-block base:hidden w-[32rem] text-black text-[min(1.5vw,1.4rem)]  italic  pt-[11rem] ${poppinsSemibold.className}`}
             >
-              &dbquo; We understand that the details matter in interior design.
+              &quot; We understand that the details matter in interior design.
               We pay close attention to every aspect of the project to ensure
               that the end result is exactly what our clients are looking
-              for&dbquo;
+              for&quot;
             </div>
           </div>
           <div className="row-span-full lg:pl-[5rem] col-start-7 col-end-13 z-0">
