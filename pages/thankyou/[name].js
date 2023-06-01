@@ -28,7 +28,7 @@ const Name = () => {
 
   return (
     <div
-      className="flex flex-col w-full items-center justify-center  py-[12rem]
+      className="flex flex-col w-full items-center justify-center text-black  py-[12rem]
   "
     >
       <div
