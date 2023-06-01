@@ -7,6 +7,7 @@ import Services4 from "../components/Services4";
 import ServicesBottom from "../components/ServicesBottom";
 import ServicesBottomMobile from "../components/ServicesBottomMobile";
 import Footer from "../components/Footer";
+import Imgs4 from "../components/Imgs4";
 
 const Services = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
@@ -27,6 +28,7 @@ const Services = () => {
       <OurServices />
 
       {!isMobileDevice ? <ServicesBottom /> : <ServicesBottomMobile />}
+      <Imgs4 />
       {/* <Footer /> */}
     </div>
   );

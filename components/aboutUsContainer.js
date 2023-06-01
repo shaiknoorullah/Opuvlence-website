@@ -12,28 +12,28 @@ const poppins = localFont({
 const AboutUsContainer = ({ left }) => {
 
   const containercontent = useRef(null)
-  useEffect(() => {
-    gsap.fromTo(
-      "#containercontent",
-      {
-        y: 20,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-        stagger: 0.05,
-        delay: 2.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: containercontent.current,
-        },
-      }
-    );
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     "#containercontent",
+  //     {
+  //       y: 20,
+  //       opacity: 0,
+  //     },
+  //     {
+  //       y: 0,
+  //       opacity: 1,
+  //       duration: 0.5,
+  //       stagger: 0.05,
+  //       delay: 2.2,
+  //       ease: "power2.out",
+  //       scrollTrigger: {
+  //         trigger: containercontent.current,
+  //       },
+  //     }
+  //   );
    
  
-  }, [])
+  // }, [])
   
 
 

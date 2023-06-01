@@ -74,16 +74,13 @@ const FooterLinks = [
 				href: "/feedback",
 				text: "Feedback",
 			},
+		
 			{
-				href: "/support",
-				text: "Support",
+				href: "/privacypolicy",
+				text: "Privacy Policy",
 			},
 			{
-				href: "/privacy",
-				text: "Privacy",
-			},
-			{
-				href: "/terms",
+				href: "/termsofservices",
 				text: "Terms",
 			},
 		],
@@ -143,7 +140,7 @@ const Footer = () => {
 						<a
 							className={`${poppinsRegular.className} [text-decoration:none] base:text-[13px] lg:text-[18px] tracking-[0.18em] leading-[136.8%] font-medium font-gilroy text-[inherit] text-right`}
 						>
-							(+091) 7892360181
+							(+91) 789 236 0181
 						</a>
 					</div>
 					<div className="flex flex-col justify-start gap-[15px]">
@@ -170,13 +167,13 @@ const Footer = () => {
 						href="https://www.google.com/maps/place/Opuvlence/@13.0182965,77.6456517,17z/data=!3m1!4b1!4m6!3m5!1s0x844319234894b65d:0x8282e50574ef517f!8m2!3d13.0182913!4d77.648232!16s%2Fg%2F11twsvc47r"
 						className={`${poppinsRegular.className} m-0 base:text-[13px] lg:text-[18px] cursor-pointer relative text-xl tracking-[0.18em] leading-[136.8%] font-medium flex items-end base:w-fit lg:w-[427px]`}
 					>
-						Orangery plaza Bengaluru, Karnataka, 560043
+						Orangery Plaza, Bengaluru, Karnataka - 560043
 					</Link>
 				</div>
 			</div>
 			<div className="flex flex-row items-start base:justify-between lg:justify-start lg:gap-[485px] lg:w-[initial] base:w-[90vw] text-right mb-[50px] text-xs text-black">
 				<p className="m-0 relative italic font-medium">
-					© 2022, Opuvlence
+				Copyright © 2023 Opuvlence . All Rights Reserved
 				</p>
 				<Link
 					className="[text-decoration:none] relative"

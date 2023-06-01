@@ -192,7 +192,7 @@ const Hero = () => {
         </div>
         <div
           id="heroImage"
-          className="w-[min(712px,40vw)] bg-blue-500 h-[min(782px,75vh)] base:hidden lg:inline-block relative overflow-clip rounded-tl-full rounded-tr-full"
+          className="w-[min(712px,40vw)]  h-[min(782px,75vh)] base:hidden lg:inline-block relative overflow-clip rounded-tl-full rounded-tr-full"
         >
           <Parallax speed="-1" position="top">
             <Image

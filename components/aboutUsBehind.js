@@ -60,13 +60,13 @@ const AboutUsBehind = () => {
           </div>
         </div>
         <div
-          className={`${poppinsRegular.className}  base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal md:text-[2.4vw] lg:ml-[25rem] lg:mr-[5rem]`}
+          className={`${poppinsRegular.className}  base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal md:text-[2.4vw] lg:ml-[25rem] lg:mr-[19rem]`}
         >
-          Quality materials: We believe that quality materials are essential for
+          <span className="font-semibold">Quality materials:</span> We believe that quality materials are essential for
           creating beautiful and long-lasting interior designs. That&apos;s why
           we only use the best materials in all of our projects.
           <br />
-          Customer satisfaction: Our top priority is our customer&apos;s
+          <span className="font-semibold">Customer satisfaction:</span> Our top priority is our customer&apos;s
           satisfaction. We work hard to ensure that every project is completed
           to our client&apos;s satisfaction and that they are happy with the end
           result.

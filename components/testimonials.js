@@ -26,23 +26,23 @@ const Testimonials = () => {
 
   const cards = [
     {
-      title: "CAROLYN",
+      title: "Lovin K.G",
       img: Testimonial1,
       description:
-        "Working with Opuvlence was an absolute delight. Their talented team of designers brought our vision to life with their impeccable taste and attention to detail. They transformed our space into a haven of luxury and elegance, exceeding all our expectations. We highly recommend Opuvlence for their exceptional interior design expertise.",
+        "Our design work got assigned to a senior designer Mr. Ashrith and we got a proper follow up from him and had fulfilled our needs based on the customised plan within our  budget. This is highly appreciated.",
     },
     {
-      title: "ALEX",
+      title: "Vinay ",
       img: Testimonial2,
       description:
-        "Opuvlence is a true gem in the world of interior design. Their team's creativity and passion shine through in every project. With their guidance, our home underwent a remarkable transformation, becoming a reflection of our personal style and sophistication. Opuvlence's professionalism and commitment to excellence are unparalleled.",
+        "Designer was quite informative and provided valuable insights on how the choice of components should be  done along with acceptance of feedback and what to be done to accommodate the same",
     },
     {
-      title: "JESSIE",
+      title: "Maseerah",
       img: Testimonial3,
 
       description:
-        "When it comes to interior design, Opuvlence is in a league of its own. Their innovative ideas and meticulous execution completely revitalized our space. The Opuvlence team's dedication to delivering outstanding results, combined with their keen eye for aesthetics, created a breathtaking environment that we are proud to call our own. We highly recommend Opuvlence for any design project.",
+        "Have had a seamless experience with the team right from the beginning! Chose opuvlence after so many visits to so many other designers in the city. Though faced a few obstacles during the process but it was handled so well The entire team is co operative, understood my requirements and gave the best outcome! Extremely happy , will definitely recommend opuvlence! Will definitely come back to post all the images!",
     },
   ];
 
@@ -96,13 +96,13 @@ const Testimonials = () => {
                     <div className="flex gap-[4rem]">
                       <div className="min-w-[33rem] overflow-hidden h-[10rem] cursor-pointer object-cover">
                         <Image
-                          onClick={() => {
-                            setname(data.title);
-                            setimage(data.img);
-                            setdescriptionn(data.description);
+                          // onClick={() => {
+                          //   setname(data.title);
+                          //   setimage(data.img);
+                          //   setdescriptionn(data.description);
 
-                            setShowModal(true);
-                          }}
+                          //   setShowModal(true);
+                          // }}
                           className="w-full h-full hover:scale-125 transition-transform duration-300 ease-in-out object-cover"
                           src={data.img}
                         />
@@ -133,13 +133,13 @@ const Testimonials = () => {
                 </div>
                 <div className="flex flex-col mx-6 gap-[1rem]">
                   <Image
-                    onClick={() => {
-                      setname(data.title);
-                      setimage(data.img);
-                      setdescriptionn(data.description);
+                    // onClick={() => {
+                    //   setname(data.title);
+                    //   setimage(data.img);
+                    //   setdescriptionn(data.description);
 
-                      setShowModal(true);
-                    }}
+                    //   setShowModal(true);
+                    // }}
                     className="object-cover h-[10rem]"
                     src={data.img}
                   />

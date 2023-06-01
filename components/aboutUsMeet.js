@@ -34,7 +34,7 @@ const OurTeamSingle = ({ name, picture, designation }) => {
     <div className="flexgap-1 rounded-tl-[10rem] justify-center items-center flex-col">
       <Image
         alt="pic"
-        className="w-full rounded-tl-[10vw] base:h-[60vw]  object-fill"
+        className="w-full rounded-tl-[10vw] base:h-[60vw]  object-cover"
         src={picture}
       />
       <div className={`${poppinsSemibold.className} text-black `}>{name}</div>
@@ -133,13 +133,7 @@ const AboutUsMeet = () => {
             return (
               <div key={index} className="flex flex-col  cursor-pointer  ">
                 <div
-                  onClick={() => {
-                    setname(data.name);
-                    setdesignation(data.designation);
-                    setimage(data.picture)
-
-                    setShowModal(true);
-                  }}
+                
                 >
                   <Image
                     className="rounded-t-full h-[25rem]  object-cover scale-10"
@@ -164,13 +158,7 @@ const AboutUsMeet = () => {
             {testimonial.map((data, index) => {
               return (
                 <div key={index}>
-                  <div  onClick={() => {
-                    setname(data.name);
-                    setdesignation(data.designation);
-                    setimage(data.picture)
-
-                    setShowModal(true);
-                  }}>
+                  <div  >
                     <OurTeamSingle
                       name={data.name}
                       picture={data.picture}

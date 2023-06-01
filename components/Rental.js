@@ -20,7 +20,7 @@ const Rental = () => {
       gracious, and serene, Where natural beauty needs no art to veil,
       Where order, light, and comfort reign supreme”`}
         className={`${golden.className}`}
-        className2={`${poppins.className}`}
+        // className2={`${poppins.className}`}
       />
     </>
   );

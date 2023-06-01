@@ -6,26 +6,26 @@ import { useAnimateOnScroll } from "../utils/hooks/useAnimateOnScroll"
 import { useLenis } from "@studio-freight/react-lenis"
 
 const Imgs4 = () => {
-	const { isIntersecting, targetRef } = useAnimateOnScroll(
-		0.25,
-		false
-	)
+	// const { isIntersecting, targetRef } = useAnimateOnScroll(
+	// 	0.25,
+	// 	false
+	// )
 
-	const lenis = useLenis()
+	// const lenis = useLenis()
 
-	useEffect(() => {
-		if (!isIntersecting) return
-		lenis.scrollTo("#images-section", {
-			offset: -50,
-			immediate: false,
-			duration: 1,
-			lerp: 0.03,
-			lock: true,
-		})
-	}, [isIntersecting])
+	// useEffect(() => {
+	// 	if (!isIntersecting) return
+	// 	lenis.scrollTo("#images-section", {
+	// 		offset: 0,
+	// 		immediate: false,
+	// 		duration: 0,
+	// 		lerp: 0.00,
+	// 		lock: true,
+	// 	})
+	// }, [isIntersecting])
 	return (
 		<div
-			ref={targetRef}
+			// ref={targetRef}
 			id="images-section"
 			className="w-full flex base:mt-0 md:mt-[100px] scroll-smooth lg:justify-center"
 		>

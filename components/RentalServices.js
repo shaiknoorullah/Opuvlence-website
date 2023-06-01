@@ -255,9 +255,10 @@ const RentalServices = () => {
                   Brokerage Services
                 </h1>
                 <p className="text-[min(16px,0.833vw)]  w-[min(500px,26.5vw)] ">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+                  Our brokerage services specialize in rental properties,
+                  offering comprehensive solutions to connect tenants with their
+                  ideal homes. Contact us to access our extensive portfolio and
+                  expert guidance in finding your perfect rental property.
                 </p>
               </div>
             </div>
@@ -435,9 +436,10 @@ const RentalServices = () => {
                   Marketing and Advertisements
                 </h1>
                 <p className="text-[min(16px,0.833vw)] w-[min(500px,26.5vw)]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  Our marketing and management services are designed to optimize
+                  the visibility and profitability of your rental properties.
+                  Trust us to handle the promotion, tenant screening, and
+                  day-to-day operations for a hassle-free experience.
                 </p>
               </div>
             </div>

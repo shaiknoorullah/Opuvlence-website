@@ -198,9 +198,10 @@ const ServicesRentalMobile = () => {
             >
               <h1 className="text-[5vw]">Property Management</h1>
               <p className="text-[3.5075vw]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+              Impress your diners with our Property Management services.
+                  From the layout to the decor, we create a welcoming atmosphere
+                  that complements your menu and brand. Let us transform your
+                  space into a dining destination.
               </p>
             </div>
           </div>
@@ -231,9 +232,10 @@ const ServicesRentalMobile = () => {
             >
               <h1 className="text-[5vw]">Marketing and Advertisements</h1>
               <p className="text-[3.5075vw]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+              Our marketing and management services are designed to optimize
+                  the visibility and profitability of your rental properties.
+                  Trust us to handle the promotion, tenant screening, and
+                  day-to-day operations for a hassle-free experience.
               </p>
             </div>
           </div>
