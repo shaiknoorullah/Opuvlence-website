@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import localFont from "next/font/local";
 import CustomButton from "./section/customButton";
 const golden = localFont({
@@ -9,11 +9,63 @@ const poppins = localFont({
   src: "../styles/font/poppins/Poppins-ExtraBold.woff2",
   variable: "--font-poppins",
 });
+import emailjs from "@emailjs/browser";
 
 const FeedbackForm = () => {
+  // for emailjs
+  const [formData, setFormData] = useState({
+    user_name: "",
+    email: "",
+    subject: "",
+    message: "",
+    appeal: "",
+    aboutus: "",
+    change: "",
+    experience: "",
+  });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_rsrdagg",
+        "template_twnoeua",
+        form.current,
+        "js5upz3NXwQooaDZM"
+      )
+      .then(
+        (result) => {
+          console.log("hello");
+          // e.target.reset();
+          console.log("Message Success");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setFormData({
+      user_name: "",
+      email: "",
+      subject: "",
+      message: "",
+      appeal: "",
+      aboutus: "",
+      change: "",
+      experience: "",
+    });
+  };
+  // rating usestates
   const [rating, setRating] = useState(0);
   const [selectedRating, setSelectedRating] = useState(0);
 
+  // for rating
   const handleHover = (value) => {
     setRating(value);
   };
@@ -28,7 +80,7 @@ const FeedbackForm = () => {
         id="contact"
         className=" w-full base:mt-[25px] lg:mt-[50px] base:px-[6.25vw] max-w-[1920px] lg:px-[40px] flex flex-col  justify-center mx-auto "
       >
-        <div className="flex w-full justify-between ">
+        <div className="flex w-full justify-between">
           <h1
             className={`lg:w-[70%] base:w-[100%] text-[#270405] uppercase base:text-[5vw] lg:text-[min(2.60vw,50px)] base:leading-[8.5vw] lg:leading-[min(120px,6.25vw)]  ${golden.className} base:tracking-[0.02em] lg:tracking-[0.04em] `}
           >
@@ -36,6 +88,8 @@ const FeedbackForm = () => {
           </h1>
         </div>
         <div
+          ref={form}
+          onSubmit={sendEmail}
           className={`w-full flex lg:flex-row base:flex-col mt-[34px] base:text-[4.375vw] lg:text-[18px] justify-between text-[#B25F62] font-[300] ${poppins.className} `}
         >
           <div className="base:w-full lg:w-[40%]">
@@ -43,7 +97,10 @@ const FeedbackForm = () => {
               <label className="block">Name</label>
               <input
                 className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid"
-                type="text"
+                type="name"
+                name="user_name"
+                value={formData.user_name}
+                onChange={handleChange}
               />
             </div>
             {/* <div>
@@ -63,15 +120,24 @@ const FeedbackForm = () => {
                 className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid "
                 type="text"
               /> */}
-              <select
-                // value="subject"
-                className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid pb-[30px]  "
-              >
-                <option className="bg-inherit ">subject</option>
-                <option typeof="bg-inherit">Website experience </option>
-                <option typeof="bg-inherit">Support experience</option>
-                <option typeof="bg-inherit">Service feedback</option>
-              </select>
+              <div>
+                <select
+                  // value="subject"
+                  className="w-full"
+                >
+                  <option className="bg-inherit ">subject</option>
+                  <option typeof="bg-inherit">Website experience </option>
+                  <option typeof="bg-inherit">Support experience</option>
+                  <option typeof="bg-inherit">Service feedback</option>
+                </select>
+                <input
+                  className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid"
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
             <div>
               <label className="block base:mt-[14vw] lg:mt-[78px] ">
@@ -80,6 +146,9 @@ const FeedbackForm = () => {
               <input
                 className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid "
                 type="text"
+                name="appeal"
+                value={formData.appeal}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -90,15 +159,21 @@ const FeedbackForm = () => {
               <input
                 className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid "
                 type="text"
+                name="change"
+                value={formData.change}
+                onChange={handleChange}
               />
             </div>
           </div>
           <div className="base:w-full lg:w-[40%] base:mt-[14vw] lg:mt-0 lg:text-right ">
             <div>
-              <label className="block ">Email</label>
+              <label className=" ">Email</label>
               <input
                 className="w-full  outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid"
-                type="text"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -108,6 +183,9 @@ const FeedbackForm = () => {
               <input
                 className="w-full bg-inherit border-b-[1px] border-b-[#B25F62] border-solid outline-none "
                 type="text"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -117,6 +195,9 @@ const FeedbackForm = () => {
               <input
                 className="w-full bg-inherit border-b-[1px] border-b-[#B25F62] border-solid outline-none "
                 type="text"
+                name="aboutus"
+                value={formData.aboutus}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -126,9 +207,18 @@ const FeedbackForm = () => {
               <input
                 className="w-full bg-inherit border-b-[1px] border-b-[#B25F62] border-solid outline-none "
                 type="text"
+                name="experience"
+                value={formData.experience}
+                onChange={handleChange}
               />
             </div>
           </div>
+
+          <button type="submit">submit</button>
+
+          {/* <div className="mt-[70px] cursor-pointer" type="">
+            <CustomButton text={"Submit"} color={"black"} />
+          </div> */}
         </div>
         {/* Rating from 1 to 10 */}
         <div className="flex flex-col gap-[1.5rem] base:w-[100%] lg:w-[min(41vw,788px)] mt-[50px]">
@@ -164,10 +254,10 @@ const FeedbackForm = () => {
             <div>Extremely Unikely</div>
           </div>
         </div>
-
-        <div className="mt-[70px] cursor-pointer  ">
+        {/* for email js*/}
+        {/* <div className="mt-[70px] cursor-pointer  ">
           <CustomButton text={"Submit"} color={"black"} />
-        </div>
+        </div> */}
       </div>
     </>
   );
