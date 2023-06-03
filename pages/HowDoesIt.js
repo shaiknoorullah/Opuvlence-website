@@ -21,7 +21,16 @@ const poppinsSemibold = localFont({
 });
 
 const HowDoesIt = () => {
-const content=["Sign Management agreement","Inventory Check and Video","Property Marketing", "Tenant Screening", "Tenant Agreement & Move In", "On Demand Maintenance", "Tenant Replacement", "Exit Check & Renewal"]
+  const content = [
+    "Sign Management agreement",
+    "Inventory Check and Video",
+    "Property Marketing",
+    "Tenant Screening",
+    "Tenant Agreement & Move In",
+    "On Demand Maintenance",
+    "Tenant Replacement",
+    "Exit Check & Renewal",
+  ];
 
   const sectionref1 = useRef(null);
   const triggerref1 = useRef(null);
@@ -52,7 +61,6 @@ const content=["Sign Management agreement","Inventory Check and Video","Property
     };
   }, []);
 
-   
   return (
     <div
       ref={triggerref1}
@@ -88,39 +96,42 @@ const content=["Sign Management agreement","Inventory Check and Video","Property
           <div
             className={`${poppinsSemibold.className} row-start-2 italic row-end-3 col-start-3 col-end-7 pt-4`}
           >
-            &quot;Using edge cutting technology to provide extremely reliable
-            service Using edge cutting technology to.
+            Streamline rentals and leases with our comprehensive services,
+            ensuring a seamless experience for landlords and tenants.
           </div>
         </div>
 
         {/* cards */}
         <div className="flex justify-between h-[32rem] items-center ">
           <div className="py-[5rem] w-[55vw] text-[min(20px,1.4vw)] leading-[min(3vw,2rem)]">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sitLorem ipsum dolor sit
-            amet consectetur Lorem ipsum dolor sit amet consectetur adipiscing
-            elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
-            sitLorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
-            consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit
-            urna. Pellentesque sitLorem ipsum dolor sit amet consectetur
+           We specialize in providing hassle-free
+            solutions for individuals and businesses seeking temporary or
+            long-term accommodations. Our experienced team offers a wide range
+            of properties, from apartments to commercial spaces, tailored to
+            meet diverse needs and budgets. We handle all aspects of the rental
+            process, from property sourcing and tenant screening to lease
+            agreement management and maintenance coordination. With our
+            commitment to exceptional service and attention to detail, we strive
+            to ensure a seamless and enjoyable experience for both landlords and
+            tenants.
           </div>
           <div
             ref={sectionref1}
             id="cardsani"
             className="card-container h-full w-[30%] relative"
           >
-            {content.map((data,index)=>{
-              return(
+            {content.map((data, index) => {
+              return (
                 <div
-                // id="card"
-                key={index}
-                className={`${poppinsRegular.className} mt-[6rem]  left-0 h-full w-[min(27vw,30rem)] pt-9 bg-[#270405] rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
-              >
-                {data}
-              </div>
-              )
+                  // id="card"
+                  key={index}
+                  className={`${poppinsRegular.className} mt-[6rem]  left-0 h-full w-[min(27vw,30rem)] pt-9 bg-[#270405] rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+                >
+                  {data}
+                </div>
+              );
             })}
-           
+
             {/* <div
               id="card"
               className={`${poppinsRegular.className} mt-12  left-0 h-full w-[min(27vw,30rem)] pt-9 bg-black rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}

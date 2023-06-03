@@ -43,85 +43,189 @@ const NumberText = ({ number, text, state }) => {
 };
 
 const OurExpertise = () => {
+  const sectionstats = useRef(null)
   // const sectionRef = useRef(null)
-  const { targetRef: sectionRef, hasIntersected } = useAnimateOnScroll(0.8);
+  const { targetRef: sectionRef, isIntersecting } = useAnimateOnScroll(0.5);
+
+  // useEffect(() => {
+  //   const sectionName = document.getElementById("section-name");
+
+  //   const sectionStats = document.getElementById("section-stats");
+  //   const sectionDescMob = document.getElementById(
+  //     "section-description-mobile"
+  //   ).children;
+  //   const sectionStatsMobile = document.getElementById(
+  //     "section-stats-mobile"
+  //   ).children;
+  //   const sectionGraph = document.getElementById("section-graph");
+
+  //   const tl = gsap.timeline({
+  //     ease: "power2.out",
+  //     duration: 0.4,
+  //     delay: 1,
+  //   });
+
+  //   if (hasIntersected == true) {
+  //     tl.fromTo(
+  //       "#section-name",
+  //       {
+  //         y: 20,
+  //         opacity: 0,
+  //       },
+  //       {
+  //         y: 0,
+  //         opacity: 1,
+  //       }
+  //     )
+  //       .fromTo(
+  //         "#section-title",
+  //         {
+  //           y: 20,
+  //           opacity: 0,
+  //         },
+  //         {
+  //           y: 0,
+  //           opacity: 1,
+  //         }
+  //       )
+  //       .fromTo(
+  //         "#section-description",
+  //         { y: 20, opacity: 0 },
+  //         {
+  //           y: 0,
+  //           opacity: 1,
+  //         }
+  //       )
+  //       .fromTo(
+  //         [sectionStats, sectionStatsMobile],
+  //         { y: 20, opacity: 0 },
+  //         {
+  //           y: 0,
+  //           opacity: 1,
+  //           stagger: 0.05,
+  //         }
+  //       )
+  //       .fromTo(
+  //         "#section-button",
+  //         { y: 20, opacity: 0 },
+  //         {
+  //           y: 0,
+  //           opacity: 1,
+  //         }
+  //       )
+  //       .fromTo(
+  //         "#section-graph",
+  //         { h: 0, opacity: 0 },
+  //         {
+  //           h: "initial",
+  //           opacity: 1,
+  //         }
+  //       );
+  //   }
+  // }, [hasIntersected]);
 
   useEffect(() => {
-    const sectionName = document.getElementById("section-name");
-
-    const sectionStats = document.getElementById("section-stats");
-    const sectionDescMob = document.getElementById(
-      "section-description-mobile"
-    ).children;
-    const sectionStatsMobile = document.getElementById(
-      "section-stats-mobile"
-    ).children;
-    const sectionGraph = document.getElementById("section-graph");
-
-    const tl = gsap.timeline({
-      ease: "power2.out",
-      duration: 0.4,
-      delay: 1,
-    });
-
-    if (hasIntersected == true) {
-      tl.fromTo(
-        "#section-name",
+    if (isIntersecting) {
+     
+      gsap.fromTo(
+        "#achiev1",
         {
-          y: 20,
-          opacity: 0,
+          x: "-50rem",
+        },
+        {
+          x: 0,
+          duration: "1",
+          // scrollTrigger: {
+          //   trigger: sectionRef.current,
+            
+          // },
+        }
+      );
+  
+      gsap.fromTo(
+        "#achiev2",
+        {
+          x: "50rem",
+        },
+        {
+          x: 0,
+          duration: "1",
+        }
+      );
+      gsap.fromTo(
+        "#firstgraph",
+        {
+          y: "12rem",
         },
         {
           y: 0,
-          opacity: 1,
+          duration: "1",
         }
-      )
-        .fromTo(
-          "#section-title",
+      );
+      gsap.fromTo(
+        "#secondgraph",
+        {
+          y: "35rem",
+        },
+        {
+          y: 0,
+          duration: "1",
+          delay:"0.3"
+        }
+      );
+      gsap.fromTo(
+        "#thirdgraph",
+        {
+          y: "14rem",
+        },
+        {
+          y: 0,
+          duration: "1",
+          // delay:"0.5"
+        }
+      );
+      gsap.fromTo(
+        "#section-title",
+        {
+          opacity:0
+        },
+        {
+          opacity: 1,
+          duration: "1",
+
+          delay:"0.5"
+        }
+        
+      ),
+
+      gsap.fromTo(
+        "#section-description",
+        {
+          opacity:0
+        },
+        {
+          opacity: 1,
+          duration: "1",
+          delay:1
+
+          // delay:"0.5"
+        })
+        gsap.fromTo(
+          sectionstats.current.children,
           {
-            y: 20,
-            opacity: 0,
+            opacity:0
           },
           {
-            y: 0,
             opacity: 1,
-          }
-        )
-        .fromTo(
-          "#section-description",
-          { y: 20, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-          }
-        )
-        .fromTo(
-          [sectionStats, sectionStatsMobile],
-          { y: 20, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            stagger: 0.05,
-          }
-        )
-        .fromTo(
-          "#section-button",
-          { y: 20, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-          }
-        )
-        .fromTo(
-          "#section-graph",
-          { h: 0, opacity: 0 },
-          {
-            h: "initial",
-            opacity: 1,
-          }
-        );
+            duration: "1",
+            stagger:0.2,
+            delay:0.1
+  
+            // delay:"0.5"
+          })
     }
-  }, [hasIntersected]);
+  
+  }, [isIntersecting]);
 
   return (
     <div
@@ -135,7 +239,7 @@ const OurExpertise = () => {
       >
         {/* our Expertise title */}
         <div
-          id="section-name"
+          id=""
           className="flex lg:justify-start base:justify-center"
         >
           <div className="lg:flex hidden w-[30%]"></div>
@@ -175,6 +279,7 @@ const OurExpertise = () => {
           <div class="col-span-6  w-full grid lg:grid-rows-3">
             {/* for desktop */}
             <div
+            ref={sectionstats}
               id="section-stats"
               class="lg:row-span-2 lg:grid text-black lg:grid-cols-2 gap-3  hidden"
             >
@@ -274,9 +379,14 @@ const OurExpertise = () => {
               >
                 11%
               </div>
-              <div className="bg-[#A5787A] rounded-tl-full w-full base:h-[9rem] md:h-[18vw] lg:h-[21%]"></div>
+              <div className=" rounded-tl-full w-full base:h-[9rem] md:h-[18vw] overflow-hidden lg:h-[21%]">
+                <div
+                  id="firstgraph"
+                  className="bg-[#A5787A] h-[15rem] w-full"
+                ></div>
+              </div>
               <div
-                className={`text-[#A5787A] base:text-[0.6rem] lg:text-[1.3rem] font-semibold italic ${poppinsRegular.className}`}
+                className={`text-[#A5787A] base:text-[0.6rem] lg:text-[min(1.1rem,1vw)] font-semibold italic ${poppinsRegular.className}`}
               >
                 Design Solution
               </div>
@@ -288,9 +398,15 @@ const OurExpertise = () => {
               >
                 77%
               </div>
-              <div className="bg-[#443C3D] rounded-t-full w-full base:h-[14.5rem] md:h-[46vw] lg:h-[87%]"></div>
+              <div className=" rounded-t-full w-full base:h-[14.5rem] overflow-hidden md:h-[46vw] lg:h-[87%]">
+
               <div
-                className={`${poppinsRegular.className} base:text-[0.6rem] lg:text-[1.3rem] text-[#A5787A]  font-semibold italic `}
+                  id="secondgraph"
+                  className="bg-[#443C3D] h-[30rem] w-full"
+                ></div>
+              </div>
+              <div
+                className={`${poppinsRegular.className} base:text-[0.6rem] lg:text-[min(1.1rem,1vw)] text-[#A5787A]  font-semibold italic `}
               >
                 Turnkey Solution
               </div>
@@ -302,9 +418,14 @@ const OurExpertise = () => {
               >
                 12%
               </div>
-              <div className="bg-[#AB9D9E] rounded-tr-full w-full base:h-[11rem] md:h-[21vw] lg:h-[32%]"></div>
+              <div className=" rounded-tr-full w-full base:h-[11rem] overflow-hidden  md:h-[21vw] lg:h-[32%]">
               <div
-                className={`text-[#A5787A] base:text-[0.6rem] lg:text-[1.3rem] font-semibold italic ${poppinsRegular.className} `}
+                  id="thirdgraph"
+                  className="bg-[#AB9D9E] h-[15rem] w-full"
+                ></div>
+              </div>
+              <div
+                className={`text-[#A5787A] base:text-[0.6rem] lg:text-[min(1.1rem,1vw)] font-semibold italic ${poppinsRegular.className} `}
               >
                 Execution Solution
               </div>
@@ -327,10 +448,16 @@ const OurExpertise = () => {
       </div>
 
       {/* background text */}
-      <div className="absolute hidden scale-[2] top-[18%]  lg:inline-block golden  opacity-70 text-[#DFCECF4D]">
-        <img src="/achievements.svg" className="max-h-[15rem] ml-[25rem]" />
+      <div
+        id="achiev1"
+        className="absolute hidden scale-[1.5] top-[13%]  lg:inline-block golden  opacity-70 text-[#DFCECF4D]"
+      >
+        <img src="/achievements.svg" className="max-h-[15rem] ml-[15rem]" />
       </div>
-      <div className="absolute hidden scale-[2] bottom-[18%] lg:inline-block golden  opacity-70 text-[#DFCECF4D]">
+      <div
+        id="achiev2"
+        className="absolute hidden scale-[1.5] bottom-[18%] lg:inline-block golden  opacity-70 text-[#DFCECF4D]"
+      >
         <img src="/achievements.svg" className="max-h-[15rem]" />
       </div>
     </div>
