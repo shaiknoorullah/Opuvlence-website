@@ -171,29 +171,30 @@ const BaseEmbrace = () => {
     },
   ];
   return (
-    <div className="md:hidden base:flex  justify-center gap-[3.5vw] items-center flex-col pt-[50px] ">
+    <div className="md:hidden base:flex  gap-[3.5vw]  flex-col pt-[50px] ">
       <div
-        className={`uppercase text-[#A5787A] text-[min(3.75vw,20px)]  leading-[5.62vw] ${poppinsExtrabold.className}`}
+        className={`uppercase text-[#A5787A] text-[min(3.75vw,20px)] px-3  leading-[5.62vw] ${poppinsExtrabold.className}`}
       >
         / our service / unmatched perfection
       </div>
       <div
-        className={`uppercase text-[min(10.88vw,45px)] leading-[min(14vw,60px)] tracking-[0.05em] w-[80vw] text-[black] ${golden.className} `}
+        className={`uppercase text-[min(10.88vw,45px)] leading-[min(14vw,60px)] px-3 tracking-[0.05em] w-[80vw] text-[black] ${golden.className} `}
       >
         unmatched property management
       </div>
       <div
-        className={` pl text-black ${poppinsMedium.className} italic text-[min(3.28vw,18px)] w-[vw] pl-[19.5vw]  `}
+        className={` pl text-black ${poppinsMedium.className}  italic text-[min(3.28vw,18px)] w-[vw] pl-[19.5vw]  `}
       >
-        &apos;Using edge cutting technology to provide extremely reliable
-        service Using edge cutting technology to.
+        Efficiently connect landlords and tenants with our comprehensive rental
+        and lease services, delivering seamless experiences and satisfying
+        accommodations.
       </div>
       <div
-        className="flex flex-row gap-[40px]  overflow-x-scroll scrolloverflow"
-        style={{ overflowX: "scroll" }}
+        className="flex flex-row gap-[40px] w-[100vw]  px-3  overflow-x-scroll "
+        // style={{ overflowX: "scroll" }}
       >
         {/* opuvlence */}
-        <div className="flex flex-col items-center gap-[20px] w-[59.6vw] bg-[#270405] rounded-[15px] py-[40px] px-[20px]">
+        <div className="flex flex-col items-center gap-[20px] min-w-[59.6vw] bg-[#270405] rounded-[15px] py-[40px] px-[20px]">
           <div
             className={`text-[5.62vw] leading-[8.43vw] text-[#A35D5F] ${poppinsExtrabold.className}`}
           >
@@ -215,7 +216,7 @@ const BaseEmbrace = () => {
           })}
         </div>
         {/* local brockers */}
-        <div className="flex flex-col items-center gap-[20px] w-[59.6vw] bg-[#FFF3E4] rounded-[15px] py-[40px] px-[20px]">
+        <div className="flex flex-col items-center gap-[20px] min-w-[59.6vw] bg-[#FFF3E4] rounded-[15px] py-[40px] px-[20px]">
           <div
             className={`text-[5.62vw] leading-[7.43vw] text-[black] ${poppinsSemibold.className}`}
           >
@@ -236,7 +237,7 @@ const BaseEmbrace = () => {
           })}
         </div>
         {/* others */}
-        <div className="flex flex-col items-center gap-[20px] w-[59.6vw] bg-[#FFF3E4] rounded-[15px] py-[40px] px-[20px]">
+        <div className="flex flex-col items-center gap-[20px] min-w-[59.6vw] bg-[#FFF3E4] rounded-[15px] py-[40px] px-[20px]">
           <div
             className={`text-[5.62vw] leading-[8.43vw] text-[black] ${poppinsSemibold.className}`}
           >
@@ -344,8 +345,9 @@ const Embrace = () => {
           <div
             className={`row-span-full row-start-4 col-start-5 col-end-9 text-[min(1.19vw,23px)] leading-[mi(2.2vw,42.5px)] tracking-[0.1em] text-[black] ${poppinsMedium.className}`}
           >
-            &apos;Using edge cutting technology to provide extremely reliable
-            service Using edge cutting technology to.
+            Efficiently connect landlords and tenants with our comprehensive
+            rental and lease services, delivering seamless experiences and
+            satisfying accommodations.
           </div>
         </div>
         {/* table headings md-lg */}

@@ -27,12 +27,12 @@ const WhyChooseUs = () => {
         "Peace of mind with thorough background checks.",
         "Trustworthy individuals for your property's long-term stability.",
         "A secure selection process that safeguards your investments.",
-        "Our rigorous checks guarantee responsible occupants for you."
+        "Our rigorous checks guarantee responsible occupants for you.",
       ],
       content2: [
         "We ensure only the best tenants for your properties.",
         "Our vetting process brings you reliable, responsible tenants.",
-        "Our verified tenants uphold your property's integrity and value."
+        "Our verified tenants uphold your property's integrity and value.",
       ],
     },
     {
@@ -41,51 +41,56 @@ const WhyChooseUs = () => {
         "Skilled maintenance for a flawlessly maintained property interior.",
         "Ensuring your property's interior remains pristine and inviting.",
         "Dedicated maintenance for a comfortable and well-maintained living space.",
-        " Experts in preserving the interior beauty of your property."
+        " Experts in preserving the interior beauty of your property.",
       ],
       content2: [
         " Meticulous attention to detail in interior maintenance services.",
         "Our maintenance ensures a comfortable and aesthetically pleasing environment.",
-        "Trust us to maintain the interior's charm and functionality."
+        "Trust us to maintain the interior's charm and functionality.",
       ],
     },
-    { title: "Dedicated Relationship Manager", 
+    {
+      title: "Dedicated Relationship Manager",
       content1: [
-      " Your dedicated relationship manager ensures exceptional client service.",
-      " A dedicated relationship manager for a customized real estate experience.",
-      "Your dedicated manager for a seamless and personalized journey.",
-      " A dedicated relationship manager to navigate your real estate goals."
-    ],
+        " Your dedicated relationship manager ensures exceptional client service.",
+        " A dedicated relationship manager for a customized real estate experience.",
+        "Your dedicated manager for a seamless and personalized journey.",
+        " A dedicated relationship manager to navigate your real estate goals.",
+      ],
       content2: [
-      "Your dedicated manager anticipates and meets your unique needs.",
-      "Our relationship manager is committed to your success.",
-      "A dedicated manager for clear and prompt assistance."
-    ],
-  },
-    { title: "On demand Repair Service",
+        "Your dedicated manager anticipates and meets your unique needs.",
+        "Our relationship manager is committed to your success.",
+        "A dedicated manager for clear and prompt assistance.",
+      ],
+    },
+    {
+      title: "On demand Repair Service",
       content1: [
-      " On-demand services for swift and efficient property repairs.",
-      " Quick and convenient on-demand repair solutions for your property.",
-      " On-demand repair services that prioritize your property's upkeep.",
-      "Count on our on-demand repair services for timely property maintenance."
-    ],
+        " On-demand services for swift and efficient property repairs.",
+        " Quick and convenient on-demand repair solutions for your property.",
+        " On-demand repair services that prioritize your property's upkeep.",
+        "Count on our on-demand repair services for timely property maintenance.",
+      ],
       content2: [
-      "Our on-demand services ensure your property remains in top condition.",
-      " On-demand repairs delivered with precision and professionalism.",
-      " Trust our on-demand repair services for timely property restoration."
-    ], },
-    { title: "On Time Rental Collections",
+        "Our on-demand services ensure your property remains in top condition.",
+        " On-demand repairs delivered with precision and professionalism.",
+        " Trust our on-demand repair services for timely property restoration.",
+      ],
+    },
+    {
+      title: "On Time Rental Collections",
       content1: [
-      "Our on-time rental collection ensures a hassle-free experience.",
-      " Timely rental collection for consistent cash flow management.",
-      "On-time payments that optimize your property's financial performance.",
-      "Trust us for on-time rental collection and hassle-free transactions."
-    ],
+        "Our on-time rental collection ensures a hassle-free experience.",
+        " Timely rental collection for consistent cash flow management.",
+        "On-time payments that optimize your property's financial performance.",
+        "Trust us for on-time rental collection and hassle-free transactions.",
+      ],
       content2: [
-      "Our on-time rental collection ensures consistent income for property owners.",
-      "Count on us for timely and hassle-free rental collection.",
-      "Our on-time rental collection ensures your financial peace of mind."
-    ],  },
+        "Our on-time rental collection ensures consistent income for property owners.",
+        "Count on us for timely and hassle-free rental collection.",
+        "Our on-time rental collection ensures your financial peace of mind.",
+      ],
+    },
   ];
 
   const sectionref = useRef(null);
@@ -160,7 +165,7 @@ const WhyChooseUs = () => {
         duration: 1,
         scrollTrigger: {
           trigger: triggerref.current,
-          start: "top top",
+          start: "bottom bottom",
           end: "2000 top",
           scrub: 0.1,
           pin: true,
@@ -223,25 +228,21 @@ const WhyChooseUs = () => {
             {content.map((data, index) => {
               return (
                 <div key={index}>
-                  <div className="card-1 mx-[min(3vw,3rem)] z-0   left-0 top-0    min-w-[70rem] min-h-[30rem]  my-8 bg-[#270405] py-[min(7vw,7.2rem)] px-[min(7vw,7.2rem)] rounded-[14rem] flex justify-between">
+                  <div className="card-1 mx-[min(3vw,3rem)] z-0   left-0 top-0    min-w-[min(70vw,70rem)] min-h-[min(28vw,30rem)]  my-8 bg-[#270405] py-[min(7vw,7.2rem)] px-[min(7vw,7.2rem)] rounded-[14rem] flex justify-between">
                     <div className=" w-[30%] flex justify-center items-center  text-[#F6EBDD] text-[min(1.8vw,2.4rem)]">
                       {data.title}
                     </div>
 
                     <div className="w-[50%] flex justify-between gap-6 text-[min(1.2vw,1.2rem)]  text-[#E3CBC6]">
-                      <ul className="justify-between text-[min(0.8vw,0.9rem)] flex flex-col">
-                    {data.content1.map((data,index)=>{
-                      return (
-                        <li key={index}>{data}</li>
-                      )
-                    })}
+                      <ul className="justify-between text-[max(0.8rem,min(0.8vw,0.9rem))] flex flex-col">
+                        {data.content1.map((data, index) => {
+                          return <li key={index}>{data}</li>;
+                        })}
                       </ul>
-                      <ul className="justify-between text-[min(0.8vw,0.9rem)] flex flex-col">
-                      {data.content2.map((data,index)=>{
-                      return (
-                        <li key={index}>{data}</li>
-                      )
-                    })}
+                      <ul className="justify-between text-[max(0.8rem,min(0.8vw,0.9rem))] flex flex-col">
+                        {data.content2.map((data, index) => {
+                          return <li key={index}>{data}</li>;
+                        })}
                       </ul>
                     </div>
                   </div>
