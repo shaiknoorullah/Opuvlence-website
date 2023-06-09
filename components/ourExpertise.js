@@ -43,7 +43,7 @@ const NumberText = ({ number, text, state }) => {
 };
 
 const OurExpertise = () => {
-  const sectionstats = useRef(null)
+  const sectionstats = useRef(null);
   // const sectionRef = useRef(null)
   const { targetRef: sectionRef, isIntersecting } = useAnimateOnScroll(0.1);
 
@@ -126,7 +126,6 @@ const OurExpertise = () => {
 
   useEffect(() => {
     if (isIntersecting) {
-     
       gsap.fromTo(
         "#achiev1",
         {
@@ -137,11 +136,11 @@ const OurExpertise = () => {
           duration: "1",
           // scrollTrigger: {
           //   trigger: sectionRef.current,
-            
+
           // },
         }
       );
-  
+
       gsap.fromTo(
         "#achiev2",
         {
@@ -170,7 +169,7 @@ const OurExpertise = () => {
         {
           y: 0,
           duration: "1",
-          delay:"0.3"
+          delay: "0.3",
         }
       );
       gsap.fromTo(
@@ -187,44 +186,43 @@ const OurExpertise = () => {
       gsap.fromTo(
         "#section-title",
         {
-          opacity:0
+          opacity: 0,
         },
         {
           opacity: 1,
           duration: "1",
 
-          delay:"0.5"
+          delay: "0.5",
         }
-        
       ),
-
-      gsap.fromTo(
-        "#section-description",
-        {
-          opacity:0
-        },
-        {
-          opacity: 1,
-          duration: "1",
-          delay:1
-
-          // delay:"0.5"
-        })
         gsap.fromTo(
-          sectionstats.current.children,
+          "#section-description",
           {
-            opacity:0
+            opacity: 0,
           },
           {
             opacity: 1,
             duration: "1",
-            stagger:0.2,
-            delay:0.1
-  
+            delay: 1,
+
             // delay:"0.5"
-          })
+          }
+        );
+      gsap.fromTo(
+        sectionstats.current.children,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: "1",
+          stagger: 0.2,
+          delay: 0.1,
+
+          // delay:"0.5"
+        }
+      );
     }
-  
   }, [isIntersecting]);
 
   return (
@@ -238,10 +236,7 @@ const OurExpertise = () => {
         className={`base:w-[90%] max-w-[1900px]  lg:w-[95%] z-50 flex flex-col py-12`}
       >
         {/* our Expertise title */}
-        <div
-          id=""
-          className="flex lg:justify-start base:justify-center"
-        >
+        <div id="" className="flex lg:justify-start base:justify-center">
           <div className="lg:flex hidden w-[30%]"></div>
 
           <div
@@ -279,7 +274,7 @@ const OurExpertise = () => {
           <div class="col-span-6  w-full grid lg:grid-rows-3">
             {/* for desktop */}
             <div
-            ref={sectionstats}
+              ref={sectionstats}
               id="section-stats"
               class="lg:row-span-2 lg:grid text-black lg:grid-cols-2 gap-3  hidden"
             >
@@ -298,15 +293,11 @@ const OurExpertise = () => {
                 />
               </div>
               <div className="hidden lg:flex">
-                <NumberText
-                  number={"32"}
-                  text={"Awards Gained"}
-                  state={"row"}
-                />
+                <NumberText number={"5"} text={"Awards Gained"} state={"row"} />
               </div>
               <div className="hidden lg:flex">
                 <NumberText
-                  number={"2,000"}
+                  number={"437"}
                   text={"Projects Completed"}
                   state={"row"}
                 />
@@ -399,8 +390,7 @@ const OurExpertise = () => {
                 77%
               </div>
               <div className=" rounded-t-full w-full base:h-[14.5rem] overflow-hidden md:h-[46vw] lg:h-[87%]">
-
-              <div
+                <div
                   id="secondgraph"
                   className="bg-[#443C3D] h-[30rem] w-full"
                 ></div>
@@ -419,7 +409,7 @@ const OurExpertise = () => {
                 12%
               </div>
               <div className=" rounded-tr-full w-full base:h-[11rem] overflow-hidden  md:h-[21vw] lg:h-[32%]">
-              <div
+                <div
                   id="thirdgraph"
                   className="bg-[#AB9D9E] h-[15rem] w-full"
                 ></div>
@@ -438,7 +428,7 @@ const OurExpertise = () => {
           className="lg:hidden  w-full mt-10"
         >
           <div className="lg:text-[0.9rem] text-[1.2rem]  text-center text-[#A5787A] leading-[1.5rem]">
-          Each member of our team brings unique strengths and experiences to
+            Each member of our team brings unique strengths and experiences to
             the table, and we work collaboratively to achieve our objectives. We
             prioritize communication, trust, and accountability in all our
             interactions to ensure that we are working efficiently and

@@ -293,17 +293,18 @@ const Navbar = () => {
       href: "/aboutus",
     },
     {
+      title: "Cases",
+      href: "/caseslibrary",
+    },
+    {
       title: "Interior Design",
       href: "/services",
     },
     {
-      title: "Rental and Lease",
+      title: "Property Management",
       href: "/rentalandleaseservices",
     },
-    {
-      title: "Cases",
-      href: "/caseslibrary",
-    },
+
     {
       title: "Contact",
       href: "/#contact",
@@ -319,14 +320,14 @@ const Navbar = () => {
       title: "About",
       href: "/aboutus",
     },
-	{
-		title: "Interior Design",
-		href: "/services",
-	  },
-	  {
-		title: "Rental and Lease",
-		href: "/rentalandleaseservices",
-	  },
+    {
+      title: "Interior Design",
+      href: "/services",
+    },
+    {
+      title: "Rental and Lease",
+      href: "/rentalandleaseservices",
+    },
   ];
 
   const options2 = [

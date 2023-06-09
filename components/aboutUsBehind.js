@@ -54,23 +54,23 @@ const AboutUsBehind = () => {
           <div
             className={`lg:hidden base:inline-block tracking-[0.03em]  base:text-[1.1rem] md:text-[2.6vw] base:w-[70.315vw] md:w-[48vw] font-extrabold italic ${poppins}`}
           >
-           &quot; We understand that the details matter in interior design.
-              We pay close attention to every aspect of the project to ensure
-              that the end result is exactly what our clients are looking
-              for&quot;
+            &quot; We understand that the details matter in interior design. We
+            pay close attention to every aspect of the project to ensure that
+            the end result is exactly what our clients are looking for&quot;
           </div>
         </div>
         <div
           className={`${poppinsRegular.className}  base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal md:text-[2.4vw] lg:ml-[25rem] lg:mr-[19rem]`}
         >
-          <span className="font-semibold">Quality materials:</span> We believe that quality materials are essential for
-          creating beautiful and long-lasting interior designs. That&apos;s why
-          we only use the best materials in all of our projects.
+          <span className="font-semibold">Quality materials:</span> We believe
+          that quality materials are essential for creating beautiful and
+          long-lasting interior designs. That&apos;s why we only use the best
+          materials in all of our projects.
           <br />
-          <span className="font-semibold">Customer satisfaction:</span> Our top priority is our customer&apos;s
-          satisfaction. We work hard to ensure that every project is completed
-          to our client&apos;s satisfaction and that they are happy with the end
-          result.
+          <span className="font-semibold">Customer satisfaction:</span> Our top
+          priority is our customer&apos;s satisfaction. We work hard to ensure
+          that every project is completed to our client&apos;s satisfaction and
+          that they are happy with the end result.
           <br /> Overall, if you&apos;re looking for an interior company that
           can provide you with personalized and high-quality service, then
           we&apos;re the right choice for you.

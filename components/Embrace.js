@@ -352,7 +352,7 @@ const Embrace = () => {
         </div>
         {/* table headings md-lg */}
         <div
-          className={`base:hidden md:flex justify-end w-[90%] gap-[min(4.64vw,75px)] md:pr-[30px] lg:pr-[0px]  text-black ${poppinsMedium.className} pt-[min(7.81vw,150px)] pb-[min(4.166vw,80px)]`}
+          className={`base:hidden md:flex justify-end w-[85%] gap-[min(4.64vw,75px)] md:pr-[30px] lg:pr-[0px]  text-black ${poppinsMedium.className} pt-[min(7.81vw,150px)] pb-[min(4.166vw,80px)]`}
         >
           <div className="row-span-full  text-[min(1.45vw,28px)] leading-[min(2.18vw,42px)] text-[#A5787A]  font-[800] uppercase">
             opuvlence
@@ -369,11 +369,11 @@ const Embrace = () => {
           {tableContent.map((item, idx) => {
             return (
               <div
-                className="flex flex-row items-center justify-between w-[90%]"
+                className="flex flex-row items-center justify-between w-[85%]"
                 key={idx}
               >
                 <div
-                  className={`text-[min(1.30vw,25px)] leading-[min(2.08vw,40px)] text-black ${poppinsRegular.className}`}
+                  className={`text-[min(1.30vw,25px)] leading-[min(2.08vw,40px)] ml-[10rem] text-black ${poppinsRegular.className}`}
                 >
                   {item.tittle}
                 </div>
