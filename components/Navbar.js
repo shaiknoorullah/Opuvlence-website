@@ -293,8 +293,8 @@ const Navbar = () => {
       href: "/aboutus",
     },
     {
-      title: "Cases",
-      href: "/caseslibrary",
+      title: "Education",
+      href: "/comingsoon",
     },
     {
       title: "Interior Design",
@@ -332,8 +332,8 @@ const Navbar = () => {
 
   const options2 = [
     {
-      title: "Cases",
-      href: "/casestudies",
+      title: "Education",
+      href: "/comingsoon",
     },
     {
       title: "Contact",
