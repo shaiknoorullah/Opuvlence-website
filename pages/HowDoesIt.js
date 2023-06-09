@@ -42,7 +42,7 @@ const HowDoesIt = () => {
         y: 0,
       },
       {
-        y: "-220vw",
+        y: "-280vw",
 
         ease: "none",
         duration: 1,
@@ -125,7 +125,7 @@ const HowDoesIt = () => {
                 <div
                   // id="card"
                   key={index}
-                  className={`${poppinsRegular.className} mt-[6rem]  left-0 h-full w-[min(27vw,30rem)] pt-9 bg-[#270405] rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
+                  className={`${poppinsRegular.className} mt-[6rem]  left-0 h-[min(27vw,30rem)] w-[min(27vw,30rem)] pt-9 bg-[#270405] rounded-t-full flex items-center justify-center text-center text-[min(1.8vw,2rem)] text-white`}
                 >
                   {data}
                 </div>

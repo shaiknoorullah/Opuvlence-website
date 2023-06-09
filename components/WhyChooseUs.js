@@ -159,7 +159,7 @@ const WhyChooseUs = () => {
         x: 0,
       },
       {
-        x: "-230vw",
+        x: "-290vw",
 
         ease: "none",
         duration: 1,

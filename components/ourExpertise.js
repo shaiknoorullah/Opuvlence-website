@@ -45,7 +45,7 @@ const NumberText = ({ number, text, state }) => {
 const OurExpertise = () => {
   const sectionstats = useRef(null)
   // const sectionRef = useRef(null)
-  const { targetRef: sectionRef, isIntersecting } = useAnimateOnScroll(0.5);
+  const { targetRef: sectionRef, isIntersecting } = useAnimateOnScroll(0.1);
 
   // useEffect(() => {
   //   const sectionName = document.getElementById("section-name");
@@ -438,11 +438,11 @@ const OurExpertise = () => {
           className="lg:hidden  w-full mt-10"
         >
           <div className="lg:text-[0.9rem] text-[1.2rem]  text-center text-[#A5787A] leading-[1.5rem]">
-            Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to provide extremely reliable service
-            Using edge cutting technology to provide extremely reliable
-            serviceUsing edge cutting technology to provide extremely reliable
-            service
+          Each member of our team brings unique strengths and experiences to
+            the table, and we work collaboratively to achieve our objectives. We
+            prioritize communication, trust, and accountability in all our
+            interactions to ensure that we are working efficiently and
+            effectively towards our common goals
           </div>
         </div>
       </div>
