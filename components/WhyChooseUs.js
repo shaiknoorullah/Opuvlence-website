@@ -162,7 +162,7 @@ const WhyChooseUs = () => {
         x: "-290vw",
 
         ease: "none",
-        duration: 1,
+        duration: 0.5,
         scrollTrigger: {
           trigger: triggerref.current,
           start: "bottom bottom",
@@ -179,7 +179,7 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <div ref={triggerref} className="w-full  hidden lg:flex justify-center">
+    <div ref={triggerref} className="w-full mt-[-5rem]  hidden lg:flex justify-center">
       <div className="w-[90%] max-w-[1920px] ">
         {/* ourservice/why choose us */}
         <div
