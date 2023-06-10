@@ -695,7 +695,7 @@ const ServicesRentalMobile = () => {
               setService4(true);
             }}
           >
-            <div className="w-full  lg:hidden  h-[1px] bg-black  " />
+            <div className="w-full h-[1px] bg-black  " />
             <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[min(2vw,2rem)] text-black">
               <img src="/services12.png" className="w-[min(7vw,7rem)] " />
               <h1>Marketing and Advertisement</h1>
