@@ -29,34 +29,34 @@ const Testimonials = () => {
       title: "Lovin K.G",
       img: Testimonial1,
       description:
-        "Our design work got assigned to a senior designer Mr. Ashrith and we got a proper follow up from him and had fulfilled our needs based on the customised plan within our  budget. This is highly appreciated.",
+        ' " Our design work got assigned to a senior designer Mr. Ashrith and we got a proper follow up from him and had fulfilled our needs based on the customised plan within our  budget. This is highly appreciated. " ',
     },
     {
       title: "Vinay ",
       img: Testimonial2,
       description:
-        "Designer was quite informative and provided valuable insights on how the choice of components should be  done along with acceptance of feedback and what to be done to accommodate the same",
+        ' " Designer was quite informative and provided valuable insights on how the choice of components should be  done along with acceptance of feedback and what to be done to accommodate the same " ',
     },
     {
       title: "Maseerah",
       img: Testimonial3,
 
       description:
-        "Have had a seamless experience with the team right from the beginning! Chose opuvlence after so many visits to so many other designers in the city. Though faced a few obstacles during the process but it was handled so well The entire team is co operative, understood my requirements and gave the best outcome! Extremely happy , will definitely recommend opuvlence! Will definitely come back to post all the images!",
+        ' " Have had a seamless experience with the team right from the beginning! Chose opuvlence after so many visits to so many other designers in the city. Though faced a few obstacles during the process but it was handled so well The entire team is co operative, understood my requirements and gave the best outcome! Extremely happy , will definitely recommend opuvlence! Will definitely come back to post all the images! "',
     },
     {
       title: "Shahjabeen",
       img: Testimonial3,
 
       description:
-        "It was a wonderful experience working with Mr. Shaik Shareef and his team. Thanks to Opuvlence for giving us such amazing designs and smooth execution... Literally our dreams and imagination was brought to reality...",
+        ' " It was a wonderful experience working with Mr. Shaik Shareef and his team. Thanks to Opuvlence for giving us such amazing designs and smooth execution... Literally our dreams and imagination was brought to reality..." ',
     },
     {
-      title: "Zay",
+      title: "Zayyan",
       img: Testimonial3,
 
       description:
-        "5 stars for Shaik and his amazing team for their services and on time handover",
+        ' " 5 stars for Shaik and his amazing team for their services and on time handover " ',
     },
   ];
 
@@ -122,7 +122,7 @@ const Testimonials = () => {
                         /> */}
                       </div>
                       <div
-                        className={`min-w-[18rem] pl-[25rem] text-[0.8rem] leading-[30px] self-end ${poppins}`}
+                        className={`min-w-[18rem] pl-[25rem] text-[1rem] leading-[30px] self-end ${poppins}`}
                       >
                         {data.description}
                       </div>

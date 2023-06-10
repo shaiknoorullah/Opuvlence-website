@@ -581,148 +581,150 @@ const ServicesRentalMobile = () => {
 
   return (
     <div className="w-full justify-center py-60 flex">
-    <div className="    justify-center  w-[50%]">
-      <div className="w-[95%] flex flex-col gap-[16px] mt-[50px] ">
-        {/* first service */}
-        <div
-          className="w-full"
-          id="first"
-          onClick={() => {
-            setService1(true);
-            setService2(false);
-            setService3(false);
-            setService4(false);
-          }}
-        >
-          <div className=" h-[1px] bg-black" />
-          <div className="flex items-center gap-[20px] mt-[16px] font- text-[min(2vw,2rem)] text-black">
-            <img src="/services12.png" className="w-[min(7vw,7rem)] " />
-            <h1>Tenant Managements</h1>
-          </div>
+      <div className="    justify-center  w-[50%]">
+        <div className="w-[95%] flex flex-col gap-[16px] mt-[50px] ">
+          {/* first service */}
           <div
-            id="image1"
-            className="relative mt-[12px] hidden  justify-center "
+            className="w-full"
+            id="first"
+            onClick={() => {
+              setService1(true);
+              setService2(false);
+              setService3(false);
+              setService4(false);
+            }}
           >
-            <img src="/services3.png" className="relative" />
+            <div className=" h-[1px] bg-black" />
+            <div className="flex items-center gap-[20px] mt-[16px] font- text-[min(2vw,2rem)] text-black">
+              <img src="/services12.png" className="w-[min(7vw,7rem)] " />
+              <h1>Tenant Management</h1>
+            </div>
             <div
-              id="div1"
-              className="absolute z-10 top-[50%] w-[90%] text-white "
+              id="image1"
+              className="relative mt-[12px] hidden  justify-center "
             >
-              <h1 className="text-[min(2vw,2rem)]">Tenant Managements</h1>
-              <p className="text-[min(1.5075vw,1.5rem)]">
-                Transform your home into a work of art with our residential
-                design services. From space planning to custom interiors, we
-                create stunning living spaces that reflect your unique style.
-              </p>
+              <img src="/services3.png" className="relative" />
+              <div
+                id="div1"
+                className="absolute z-10 top-[50%] w-[90%] text-white "
+              >
+                <h1 className="text-[min(2vw,2rem)]">Tenant Managements</h1>
+                <p className="text-[min(1.5075vw,1.5rem)]">
+                  Transform your home into a work of art with our residential
+                  design services. From space planning to custom interiors, we
+                  create stunning living spaces that reflect your unique style.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        {/* second service */}
-        <div
-          id="second"
-          onClick={() => {
-            setService1(false);
-            setService2(true);
-            setService3(false);
-            setService4(false);
-          }}
-        >
-          <div className="w-full  h-[1px] bg-black  " />
-          <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[min(2vw,2rem)] text-black">
-            <img src="/services12.png" className="w-[min(7vw,7rem)] " />
-            <h1>Brokerage Servicess</h1>
-          </div>
+          {/* second service */}
           <div
-            id="image2"
-            className="relative mt-[12px] hidden  justify-center "
+            id="second"
+            onClick={() => {
+              setService1(false);
+              setService2(true);
+              setService3(false);
+              setService4(false);
+            }}
           >
-            <img src="/services3.png" className="relative" />
+            <div className="w-full  h-[1px] bg-black  " />
+            <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[min(2vw,2rem)] text-black">
+              <img src="/services12.png" className="w-[min(7vw,7rem)] " />
+              <h1>Brokerage Services</h1>
+            </div>
             <div
-              id="div2"
-              className="absolute z-10 top-[50%] w-[90%] text-white  "
+              id="image2"
+              className="relative mt-[12px] hidden  justify-center "
             >
-              <h1 className="text-[min(2vw,2rem)]">Brokerage Servicess</h1>
-              <p className="text-[min(1.5075vw,1.5rem)]">
-                Elevate your business with our corporate design services. We
-                create functional and attractive workspaces that promote
-                productivity and reflect your brand identity. Let us help you
-                create a space that inspires and motivates.
-              </p>
+              <img src="/services3.png" className="relative" />
+              <div
+                id="div2"
+                className="absolute z-10 top-[50%] w-[90%] text-white  "
+              >
+                <h1 className="text-[min(2vw,2rem)]">Brokerage Servicess</h1>
+                <p className="text-[min(1.5075vw,1.5rem)]">
+                  Elevate your business with our corporate design services. We
+                  create functional and attractive workspaces that promote
+                  productivity and reflect your brand identity. Let us help you
+                  create a space that inspires and motivates.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        {/* third service */}
-        <div
-          id="third"
-          onClick={() => {
-            setService1(false);
-            setService2(false);
-            setService3(true);
-            setService4(false);
-          }}
-        >
-          <div className="w-full  h-[1px] bg-black  " />
-          <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[min(2vw,2rem)] text-black">
-            <img src="/services12.png" className="w-[min(7vw,7rem)] " />
-            <h1>Property Management</h1>
-          </div>
+          {/* third service */}
           <div
-            id="image3"
-            className="relative mt-[12px] hidden  justify-center "
+            id="third"
+            onClick={() => {
+              setService1(false);
+              setService2(false);
+              setService3(true);
+              setService4(false);
+            }}
           >
-            <img src="/services3.png" className="relative" />
+            <div className="w-full  h-[1px] bg-black  " />
+            <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[min(2vw,2rem)] text-black">
+              <img src="/services12.png" className="w-[min(7vw,7rem)] " />
+              <h1>Property Management</h1>
+            </div>
             <div
-              id="div3"
-              className="absolute z-10 top-[50%] w-[90%] text-white "
+              id="image3"
+              className="relative mt-[12px] hidden  justify-center "
             >
-              <h1 className="text-[min(2vw,2rem)]">Property Management</h1>
-              <p className="text-[min(1.5075vw,1.5rem)]">
-              Impress your diners with our Property Management services.
+              <img src="/services3.png" className="relative" />
+              <div
+                id="div3"
+                className="absolute z-10 top-[50%] w-[90%] text-white "
+              >
+                <h1 className="text-[min(2vw,2rem)]">Property Management</h1>
+                <p className="text-[min(1.5075vw,1.5rem)]">
+                  Impress your diners with our Property Management services.
                   From the layout to the decor, we create a welcoming atmosphere
                   that complements your menu and brand. Let us transform your
                   space into a dining destination.
-              </p>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        {/* fourth service */}
-        <div
-          id="fourth"
-          onClick={() => {
-            setService1(false);
-            setService2(false);
-            setService3(false);
-            setService4(true);
-          }}
-        >
-          <div className="w-full  lg:hidden  h-[1px] bg-black  " />
-          <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[min(2vw,2rem)] text-black">
-            <img src="/services12.png" className="w-[min(7vw,7rem)] " />
-            <h1>Marketing and Advertisements</h1>
-          </div>
+          {/* fourth service */}
           <div
-            id="image4"
-            className="relative mt-[12px] hidden  justify-center "
+            id="fourth"
+            onClick={() => {
+              setService1(false);
+              setService2(false);
+              setService3(false);
+              setService4(true);
+            }}
           >
-            <img src="/services3.png" className="relative" />
+            <div className="w-full  lg:hidden  h-[1px] bg-black  " />
+            <div className="flex items-center  gap-[20px] mt-[16px]  font- text-[min(2vw,2rem)] text-black">
+              <img src="/services12.png" className="w-[min(7vw,7rem)] " />
+              <h1>Marketing and Advertisement</h1>
+            </div>
             <div
-              id="div4"
-              className="absolute z-10 top-[50%] w-[90%] text-white "
+              id="image4"
+              className="relative mt-[12px] hidden  justify-center "
             >
-              <h1 className="text-[min(2vw,2rem)]">Marketing and Advertisements</h1>
-              <p className="text-[min(1.5075vw,1.5rem)]">
-              Our marketing and management services are designed to optimize
+              <img src="/services3.png" className="relative" />
+              <div
+                id="div4"
+                className="absolute z-10 top-[50%] w-[90%] text-white "
+              >
+                <h1 className="text-[min(2vw,2rem)]">
+                  Marketing and Advertisements
+                </h1>
+                <p className="text-[min(1.5075vw,1.5rem)]">
+                  Our marketing and management services are designed to optimize
                   the visibility and profitability of your rental properties.
                   Trust us to handle the promotion, tenant screening, and
                   day-to-day operations for a hassle-free experience.
-              </p>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div></div>
+    </div>
   );
 };
 
 export default ServicesRentalMobile;
-

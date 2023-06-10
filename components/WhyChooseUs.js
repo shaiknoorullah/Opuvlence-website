@@ -22,7 +22,7 @@ const poppinsSemibold = localFont({
 const WhyChooseUs = () => {
   const content = [
     {
-      title: "Verified Tenants with Background Checks",
+      title: "Verified Tenants with Background Check",
       content1: [
         "Peace of mind with thorough background checks.",
         "Trustworthy individuals for your property's long-term stability.",
@@ -52,15 +52,15 @@ const WhyChooseUs = () => {
     {
       title: "Dedicated Relationship Manager",
       content1: [
-        " Your dedicated relationship manager ensures exceptional client service.",
         " A dedicated relationship manager for a customized real estate experience.",
-        "Your dedicated manager for a seamless and personalized journey.",
+        " Your dedicated relationship manager ensures exceptional client service.",
+        "Your dedicated manager ensures a seamless and personalized journey.",
         " A dedicated relationship manager to navigate your real estate goals.",
       ],
       content2: [
         "Your dedicated manager anticipates and meets your unique needs.",
-        "Our relationship manager is committed to your success.",
-        "A dedicated manager for clear and prompt assistance.",
+        "Your relationship manager is committed to your success.",
+        "Your dedicated manager provides clear and prompt assistance.",
       ],
     },
     {
@@ -179,7 +179,10 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <div ref={triggerref} className="w-full mt-[-5rem]  hidden lg:flex justify-center">
+    <div
+      ref={triggerref}
+      className="w-full mt-[-5rem]  hidden lg:flex justify-center"
+    >
       <div className="w-[90%] max-w-[1920px] ">
         {/* ourservice/why choose us */}
         <div
@@ -195,7 +198,7 @@ const WhyChooseUs = () => {
               /
             </span>
             <span className="inline-block mr-3 mt-[-3px] lg:text-[1.2rem]">
-              Our service / why choose us?
+              Our service / Why choose us?
             </span>
           </div>
         </div>
@@ -205,7 +208,7 @@ const WhyChooseUs = () => {
           <h1
             className={`${golden.className} text-[min(2.9vw,3.4rem)] col-start-1 col-end-6 row-start-1 row-end-2`}
           >
-            WHy choose us?
+            Why choose us?
           </h1>
           <div
             className={`${poppinsSemibold.className} row-start-2 italic row-end-3 col-start-3 col-end-7`}
