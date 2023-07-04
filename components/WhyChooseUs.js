@@ -201,7 +201,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* grid */}
-        <div className="grid grid-cols-12 grid-rows-3 pt-12">
+        <div className="grid grid-cols-12 grid-rows-3 pt-14">
           <h1
             className={`${golden.className} text-[min(2.9vw,3.4rem)] col-start-1 col-end-6 row-start-1 row-end-2`}
           >
