@@ -16,11 +16,51 @@ const poppinsSemibold = localFont({
 });
 const WhyChooseMobile = () => {
   const content = [
-    { title: "Verified Tenants with Background Checks" },
-    { title: "Maintainance of Interiors" },
-    { title: "Dedicated Relationship Manager" },
-    { title: "On demand Repair Service" },
-    { title: "On Time Rental Collections" },
+    {
+      title: "Verified Tenants with Background Checks",
+      content1: [
+        "Peace of mind with thorough background checks.",
+        "Trustworthy individuals for your property's long-term stability.",
+        "A secure selection process that safeguards your investments.",
+        "Our rigorous checks guarantee responsible occupants for you.",
+      ],
+    },
+    {
+      title: "Maintainance of Interiors",
+      content1: [
+        "Skilled maintenance for a flawlessly maintained property interior.",
+        "Ensuring your property's interior remains pristine and inviting.",
+        "Dedicated maintenance for a comfortable and well-maintained living space.",
+        " Experts in preserving the interior beauty of your property.",
+      ],
+    },
+    {
+      title: "Dedicated Relationship Manager",
+      content1: [
+        " Your dedicated relationship manager ensures exceptional client service.",
+        " A dedicated relationship manager for a customized real estate experience.",
+        "Your dedicated manager for a seamless and personalized journey.",
+        " A dedicated relationship manager to navigate your real estate goals.",
+      ],
+    },
+    {
+      title: "On demand Repair Service",
+      content1: [
+        " On-demand services for swift and efficient property repairs.",
+        " Quick and convenient on-demand repair solutions for your property.",
+        " On-demand repair services that prioritize your property's upkeep.",
+        "Count on our on-demand repair services for timely property maintenance.",
+      ],
+    },
+    {
+      title: "On Time Rental Collections",
+      content1: [
+        "Our on-time rental collection ensures a hassle-free experience.",
+        " Timely rental collection for consistent cash flow management.",
+        "On-time payments that optimize your property's financial performance.",
+        "Trust us for on-time rental collection and hassle-free transactions.",
+      ],
+    },
   ];
 
   const [activeCard, setActiveCard] = useState(0);
@@ -76,11 +116,21 @@ const WhyChooseMobile = () => {
             {content[activeCard].title}
           </div>
           <ul className="text-[#E3CBC6] flex flex-col text-justify items-center justify-center gap-3 px-[3.5rem] w-full">
+            {/* <li>Lorem ipsum dolor sit ame consectetur </li>
             <li>Lorem ipsum dolor sit ame consectetur </li>
             <li>Lorem ipsum dolor sit ame consectetur </li>
             <li>Lorem ipsum dolor sit ame consectetur </li>
-            <li>Lorem ipsum dolor sit ame consectetur </li>
-            <li>Lorem ipsum dolor sit ame consectetur </li>
+            <li>Lorem ipsum dolor sit ame consectetur </li> */}
+            {/* <li>{content[activeCard].content1}</li> */}
+            <li>
+              {content[activeCard].content1.map((data, index) => {
+                return (
+                  <li key={index} className="text-left">
+                    {data}
+                  </li>
+                );
+              })}
+            </li>
           </ul>
         </div>
 
