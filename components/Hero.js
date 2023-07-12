@@ -174,7 +174,7 @@ const Hero = () => {
             id="description"
             className={`m-0 base:text-center lg:text-left text-[#A5787A]  lg:text-[min(1.3vw,20px)] 2xl:text-[22px] tracking-wide lg:leading-[30px] 2xl:leading-[34px] font-[400] flex flex-col items-start lg:w-[500px] ${poppins.className}`}
           >
-            {`Opuvlence is a full-service interior design firm specializing in creating beautiful, functionalspaces for residential and commercial clients. With over 4 years of experience in the industry,our team of designers have a proven track record of delivering exceptional results.
+            {`Opuvlence is a full-service interior design firm specializing in creating beautiful, functional spaces for residential and commercial clients. With over 4 years of experience in the industry,our team of designers have a proven track record of delivering exceptional results.
 
 `
               .split(/\r?\n/)
@@ -192,7 +192,7 @@ const Hero = () => {
         </div>
         <div
           id="heroImage"
-          className="w-[min(712px,40vw)] bg-blue-500 h-[min(782px,75vh)] base:hidden lg:inline-block relative overflow-clip rounded-tl-full rounded-tr-full"
+          className="w-[min(712px,40vw)]  h-[min(782px,75vh)] base:hidden lg:inline-block relative overflow-clip rounded-tl-full rounded-tr-full"
         >
           <Parallax speed="-1" position="top">
             <Image

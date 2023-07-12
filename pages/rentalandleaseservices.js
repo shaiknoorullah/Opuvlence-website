@@ -7,6 +7,8 @@ import { useState, useEffect } from "react";
 import WhyChooseUs from "../components/WhyChooseUs.js";
 import HowDoesIt from "./HowDoesIt.js";
 import Embrace from "../components/Embrace.js";
+import WhyChooseMobile from "../components/WhyChooseMobile.js";
+import HowDoesItMob from "../components/HowDoesItMob.js";
 
 const Rentalandleaseservices = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
@@ -20,12 +22,18 @@ const Rentalandleaseservices = () => {
     }
   }, []);
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center text-black">
       <div className="w-[95%] ">
         <Rental />
         {!isMobileDevice ? <RentalServices /> : <ServicesRentalMobile />}
-        <WhyChooseUs />
-        <HowDoesIt />
+        <div className="lg:block base:hidden">
+          <WhyChooseUs />
+        </div>
+        <WhyChooseMobile />
+        <div className="lg:block base:hidden">
+          <HowDoesIt />
+        </div>
+        <HowDoesItMob />
         <Embrace />
 
         {/* <Feedback /> */}

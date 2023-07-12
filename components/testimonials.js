@@ -26,23 +26,37 @@ const Testimonials = () => {
 
   const cards = [
     {
-      title: "CAROLYN",
+      title: "Lovin K.G",
       img: Testimonial1,
       description:
-        "Working with Opuvlence was an absolute delight. Their talented team of designers brought our vision to life with their impeccable taste and attention to detail. They transformed our space into a haven of luxury and elegance, exceeding all our expectations. We highly recommend Opuvlence for their exceptional interior design expertise.",
+        "Our design work got assigned to a senior designer Mr. Ashrith and we got a proper follow up from him and had fulfilled our needs based on the customised plan within our  budget. This is highly appreciated.",
     },
     {
-      title: "ALEX",
+      title: "Vinay ",
       img: Testimonial2,
       description:
-        "Opuvlence is a true gem in the world of interior design. Their team's creativity and passion shine through in every project. With their guidance, our home underwent a remarkable transformation, becoming a reflection of our personal style and sophistication. Opuvlence's professionalism and commitment to excellence are unparalleled.",
+        "Designer was quite informative and provided valuable insights on how the choice of components should be  done along with acceptance of feedback and what to be done to accommodate the same",
     },
     {
-      title: "JESSIE",
+      title: "Maseerah",
       img: Testimonial3,
 
       description:
-        "When it comes to interior design, Opuvlence is in a league of its own. Their innovative ideas and meticulous execution completely revitalized our space. The Opuvlence team's dedication to delivering outstanding results, combined with their keen eye for aesthetics, created a breathtaking environment that we are proud to call our own. We highly recommend Opuvlence for any design project.",
+        "Have had a seamless experience with the team right from the beginning! Chose opuvlence after so many visits to so many other designers in the city. Though faced a few obstacles during the process but it was handled so well The entire team is co operative, understood my requirements and gave the best outcome! Extremely happy , will definitely recommend opuvlence! Will definitely come back to post all the images!",
+    },
+    {
+      title: "Shahjabeen",
+      img: Testimonial3,
+
+      description:
+        "It was a wonderful experience working with Mr. Shaik Shareef and his team. Thanks to Opuvlence for giving us such amazing designs and smooth execution... Literally our dreams and imagination was brought to reality...",
+    },
+    {
+      title: "Zay",
+      img: Testimonial3,
+
+      description:
+        "5 stars for Shaik and his amazing team for their services and on time handover",
     },
   ];
 
@@ -64,7 +78,7 @@ const Testimonials = () => {
         </div>
         {/* Lets see what our */}
         <div
-          className={`md:w-[60%] lg:w-[30%] ${poppins} text-black base:text-[1.5rem]  md:text-[2rem] lg:text-[1.8rem] leading-[2.4rem] lg:ml-10 font-[700] pt-8`}
+          className={`md:w-[60%] lg:w-[30%] ${poppins} text-black base:text-[1.5rem]  md:text-[2rem] lg:text-[1.8rem] leading-[2.4rem] lg:ml-10 font-[700] pt-8 pb-8`}
         >
           LETS SEE WHAT OUR CUSTOMERS HAVE TO SAY
         </div>
@@ -74,7 +88,7 @@ const Testimonials = () => {
             style={{
               overflow: "scroll",
               display: "flex",
-              gap: "4rem",
+              gap: "1rem",
             }}
           >
             {cards.map((data, index) => {
@@ -85,7 +99,7 @@ const Testimonials = () => {
                   data-scroll-speed="1.5"
                   data-scroll-draggable="true"
                   key={index}
-                  className="flex-col min-w-[68rem] pl-[7rem] mr-[2rem]"
+                  className="flex-col min-w-[68rem] pl-[4rem] mr-[4rem] "
                 >
                   <div>
                     <div
@@ -94,21 +108,21 @@ const Testimonials = () => {
                       {data.title}
                     </div>
                     <div className="flex gap-[4rem]">
-                      <div className="min-w-[33rem] overflow-hidden h-[10rem] cursor-pointer object-cover">
-                        <Image
+                      <div className="min-w-[33rem] hidden overflow-hidden h-[10rem] cursor-pointer object-cover">
+                        {/* <Image
                           onClick={() => {
-                            setname(data.title);
-                            setimage(data.img);
+                           setname(data.title);
+                             setimage(data.img);
                             setdescriptionn(data.description);
 
                             setShowModal(true);
-                          }}
+                          
                           className="w-full h-full hover:scale-125 transition-transform duration-300 ease-in-out object-cover"
                           src={data.img}
-                        />
+                        /> */}
                       </div>
                       <div
-                        className={`min-w-[18rem] text-[0.8rem] leading-[30px] self-end ${poppins}`}
+                        className={`min-w-[18rem] pl-[25rem] text-[0.8rem] leading-[30px] self-end ${poppins}`}
                       >
                         {data.description}
                       </div>
@@ -133,13 +147,13 @@ const Testimonials = () => {
                 </div>
                 <div className="flex flex-col mx-6 gap-[1rem]">
                   <Image
-                    onClick={() => {
-                      setname(data.title);
-                      setimage(data.img);
-                      setdescriptionn(data.description);
+                    // onClick={() => {
+                    //   setname(data.title);
+                    //   setimage(data.img);
+                    //   setdescriptionn(data.description);
 
-                      setShowModal(true);
-                    }}
+                    //   setShowModal(true);
+                    // }}
                     className="object-cover h-[10rem]"
                     src={data.img}
                   />

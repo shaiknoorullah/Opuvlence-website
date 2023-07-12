@@ -376,10 +376,10 @@ const ServicesBottom = () => {
                   Execution Solutions
                 </h1>
                 <p className="text-[min(16px,0.833vw)]  w-[min(500px,26.5vw)] ">
-                  Impress your diners with our Execution Solutions services. From
-                  the layout to the decor, we create a welcoming atmosphere that
-                  complements your menu and brand. Let us transform your space
-                  into a dining destination.
+                  Impress your diners with our Execution Solutions services.
+                  From the layout to the decor, we create a welcoming atmosphere
+                  that complements your menu and brand. Let us transform your
+                  space into a dining destination.
                 </p>
               </div>
             </div>
@@ -436,9 +436,8 @@ const ServicesBottom = () => {
                   Other Solutions
                 </h1>
                 <p className="text-[min(16px,0.833vw)] w-[min(500px,26.5vw)]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+                  Contact us for more information and to explore additional
+                  interior design services tailored to your needs.{" "}
                 </p>
               </div>
             </div>

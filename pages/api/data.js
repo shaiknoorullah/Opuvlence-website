@@ -1,8 +1,8 @@
 // pages/api/data.js
 // residential
-import Bathroom from "../../public/projectopuvlence/bathroom.webp";
-import Bedroom from "../../public/projectopuvlence/bedroom.webp";
-import LivingRoom from "../../public/projectopuvlence/livingroom.webp";
+import Bathroom from "../../public/projectopuvlence/bathroom.png";
+import Bedroom from "../../public/projectopuvlence/bedroom.png";
+import LivingRoom from "../../public/projectopuvlence/livingroom.png";
 // commercial
 import Dinner from "../../public/projectopuvlence/dinner.webp";
 import Foyer from "../../public/projectopuvlence/foyer.webp";
@@ -19,24 +19,26 @@ const data = [
     name: "Residential",
     projects: [
       {
-        title: "Serene Haven",
-        shortDescription: "we've built homes that bring dreams come true",
+        title: " Ecstasy Villa",
+        shortDescription:
+          "If Pure luxury had a synonym it would be this Project",
         description:
-          "Serene Haven is an inviting residential bathroom design concept that creates a peaceful ambiance. With a calming color palette, natural elements, and minimalistic decor, it offers a tranquil retreat for relaxation. Thoughtful lighting and clean lines enhance the serene atmosphere, providing a haven of tranquility and rejuvenation.",
+          "This Pure Luxury Interior Project aims to create a truly opulent and lavish living space that transcends conventional design boundaries. This project encompasses a holistic approach to interior design, combining timeless elegance, sophisticated craftsmanship, and the finest materials to create a haven of indulgence and refinement.          ",
         image: Bathroom,
       },
       {
-        title: "Tranquil Haven",
+        title: "natural FRESHNESS",
         shortDescription: "we've built homes that bring dreams come true",
         description:
-          "Tranquil Haven is a residential bedroom design concept that prioritizes serenity and relaxation. With soft colors, natural elements, and minimalistic decor, it creates a peaceful atmosphere. Cozy furnishings and soothing lighting enhance the tranquil ambiance, providing a haven for rest, rejuvenation, and a peaceful escape from the outside world.",
+          "In the realm of interior design, there is a growing appreciation for spaces that embrace nature and promote a sense of freshness. Natural and fresh blend interiors have emerged as a popular design trend, focusing on creating harmonious environments that seamlessly integrate the outdoors with indoor living spaces. This design approach draws inspiration from nature's beauty, incorporating organic materials, earthy color palettes, and abundant natural light. In this write-up, we will explore the key elements and principles behind natural and fresh blend interiors, along with tips on how to achieve this aesthetic in your own home.          ",
         image: Bedroom,
       },
       {
-        title: "Cozy Retreat",
-        shortDescription: "we've built homes that bring dreams come true",
+        title: "Satish’s Luxury",
+        shortDescription:
+          "The driving force behind this Project is to find a balance between minimalism and luxury, emphasizing the essential elements of design while incorporating opulent touches.",
         description:
-          "Cozy Retreat is a residential living room design concept that embraces classic aesthetics with a touch of sophistication. Neutral color palettes, luxurious materials, and harmonious furniture create a refined and enduring atmosphere. With attention to detail and balance, it achieves a timeless beauty and an understated sense of luxury.",
+          "This Luxury Minimalist Interior Design Project aims to create a serene and sophisticated living space that exudes elegance through simplicity. This project embraces the concept of minimalism while incorporating luxurious elements to elevate the overall aesthetic. By carefully curating a selection of high-quality materials, sleek lines, and functional design, the project creates an atmosphere of tranquility and refined taste.          ",
         image: LivingRoom,
       },
     ],

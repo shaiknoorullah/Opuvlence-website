@@ -6,14 +6,14 @@ import { useAnimateOnScroll } from "../utils/hooks/useAnimateOnScroll"
 import { useLenis } from "@studio-freight/react-lenis"
 
 const Imgs4 = () => {
-	const { isIntersecting, targetRef } = useAnimateOnScroll(
-		0.25,
-		false
-	)
+	// const { isIntersecting, targetRef } = useAnimateOnScroll(
+	// 	0.25,
+	// 	false
+	// )
 
 	return (
 		<div
-			ref={targetRef}
+			// ref={targetRef}
 			id="images-section"
 			className="w-full flex base:mt-0 md:mt-[300px] scroll-smooth lg:justify-center"
 		>

@@ -9,7 +9,7 @@ import ProjectCard from "./projectCard";
 
 import Bathroom from "../public/projectopuvlence/bathroom.webp";
 import Bedroom from "../public/projectopuvlence/bedroom.webp";
-import LivingRoom from "../public/projectopuvlence/livingroom.webp";
+// import LivingRoom from "../public/projectopuvlence/livingroom.webp";
 
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",

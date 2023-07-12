@@ -198,9 +198,9 @@ const ServicesBottomMobile = () => {
             >
               <h1 className="text-[5vw]">Execution Solutions</h1>
               <p className="text-[3.5075vw]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+                Impress your diners with our Execution Solutions services. From
+                the layout to the decor, we create a welcoming atmosphere that
+                complements your menu and brand.
               </p>
             </div>
           </div>
@@ -231,9 +231,8 @@ const ServicesBottomMobile = () => {
             >
               <h1 className="text-[5vw]">Other Solutions</h1>
               <p className="text-[3.5075vw]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco{" "}
+                Contact us for more information and to explore additional
+                interior design services tailored to your needs.
               </p>
             </div>
           </div>
