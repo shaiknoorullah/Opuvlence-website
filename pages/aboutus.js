@@ -6,6 +6,7 @@ import AboutUsContainer from "../components/aboutUsContainer"
 import AboutUsBehind from "../components/aboutUsBehind"
 import AboutUsMeet from "../components/aboutUsMeet"
 import Head from "next/head"
+import ExampleComponent from "../components/ExampleComponent"
 
 const Aboutus = () => {
 	return (
@@ -57,6 +58,7 @@ const Aboutus = () => {
 					content="/image-card.png"
 				/>
 			</Head>
+			<ExampleComponent />
 			<AboutusHero />
 			<AboutUsContainer left={true} />
 			<AboutUsBehind />
