@@ -10,6 +10,8 @@ import MainLayout from "../components/Layouts/MainLayout"
 import RealViewport from "../components/real-viewport"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import { gsap } from "gsap"
+import Script from "next/script"
+import Head from "next/head"
 
 if (typeof window !== "undefined") {
 	gsap.registerPlugin(ScrollTrigger)
@@ -31,10 +33,35 @@ function MyApp({ Component, pageProps }) {
 	const lenis = useLenis(ScrollTrigger.update)
 	useEffect(ScrollTrigger.refresh, [lenis])
 	return (
-		<MainLayout>
-			<RealViewport />
-			<Component {...pageProps} />
-		</MainLayout>
+		<>
+			<Head>
+				<script type="text/javascript">
+					{`
+	(function(m, o, n, t, e, r, _){
+			  m['__GetResponseAnalyticsObject'] = e;m[e] = m[e] || function() {(m[e].q = m[e].q || []).push(arguments)};
+			  r = o.createElement(n);_ = o.getElementsByTagName(n)[0];r.async = 1;r.src = t;r.setAttribute('crossorigin', 'use-credentials');_.parentNode .insertBefore(r, _);
+		  })(window, document, 'script', 'https://ga.getresponse.com/script/28da83f2-21ac-42dd-a43f-068a2708c221/ga.js', 'GrTracking');
+	`}
+				</script>
+			</Head>
+			<Script
+				id="datalayerscript"
+				strategy="lazyOnload"
+			>
+				{`
+					window.dataLayer = window.dataLayer || [];
+  					function gtag(){dataLayer.push(arguments);}
+  						gtag('js', new Date());
+
+  					gtag('config', 'G-YDB95HKDNQ');
+				`}
+			</Script>
+
+			<MainLayout>
+				<RealViewport />
+				<Component {...pageProps} />
+			</MainLayout>
+		</>
 	)
 }
 
