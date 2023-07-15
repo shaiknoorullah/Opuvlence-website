@@ -53,7 +53,7 @@ const WeProvide = () => {
         <div className="text-[min(2rem,45px)] font-[600] text-[#270405] lg:w-[40%]  pb-[70px]">
           We provide the best process experience
         </div>
-        <div className="w-full flex gap-[min(12vw,236px)]">
+        <div className="w-full flex base:flex-col-reverse md:flex-row gap-[min(12vw,236px)]">
           {/* left items */}
 
           <Experience />

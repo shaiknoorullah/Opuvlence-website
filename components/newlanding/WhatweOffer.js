@@ -50,12 +50,12 @@ const WhatweOffer = () => {
           What We Offer
         </div>
 
-        <div className=" grid grid-cols-3 gap-[min(7.8vw,150px)]  ">
+        <div className=" grid  md:grid-cols-3 gap-[min(7.8vw,150px)]  ">
           {What.map((item, index) => {
             return (
               <div
                 key={index}
-                className="flex flex-col  items-center py-[min(4.3vw,84px)] px-[min(2.8vw,54px)] gap-[1.5rem] w-[min(22.03vw,423px)] border rounded-sm "
+                className="flex flex-col  items-center py-[min(4.3vw,84px)] px-[min(2.8vw,54px)] gap-[1.5rem] md:w-[min(22.03vw,423px)] border rounded-sm "
               >
                 <Image
                   src={item.image}
@@ -64,7 +64,7 @@ const WhatweOffer = () => {
                 <div className="text-[#F6EBDD] font-[Gilroy] text-[min(1.4vw,27px)] font-[600]">
                   {item.title}
                 </div>
-                <div className="text-[#F6EBDD] font-[Gilroy] text-[min(1.04,20px)] text-center leading-[min(1.49vw,28px)]">
+                <div className="text-[#F6EBDD] font-[Gilroy] text-[min(1.04,20px)] text-center ">
                   {item.text}
                 </div>
               </div>

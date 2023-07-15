@@ -6,7 +6,7 @@ const Download = () => {
   return (
     <div className="w-full flex justify-center">
       <div className="w-[90%]">
-        <div className="flex flex-row py-[min(5.2vw,100px)] px-[min(2.60vw,50px)] bg-[#270405] gap-[min(16.14vw,310px)]">
+        <div className="flex base:flex-col md:flex-row py-[min(5.2vw,100px)] px-[min(2.60vw,50px)] bg-[#270405] gap-[min(16.14vw,310px)]">
           <div className="flex flex-col gap-[min(1.5vw,30px)]">
             <div className="text-[#F6EBDD] font-[Gilroy] text-[min(2.3vw,45px)]">
               Download your Free Opuvlence Design Guide Now!
@@ -31,7 +31,7 @@ const Download = () => {
           <Image
             src={DownloadImage}
             alt="image"
-            className="w-[min(21.9vw,421px)]"
+            className="md:w-[min(21.9vw,421px)]"
           />
         </div>
       </div>
