@@ -28,10 +28,10 @@ const Experience = () => {
       {Numbers.map((item, index) => {
         return (
           <div key={index} className="flex flex-row gap-[2rem] ">
-            <div className="bg-[#270405] h-[40px] w-[140px] rounded-full flex items-center place-content-center">
+            <div className="bg-[#270405] h-[min(2.08vw,40px)] w-[min(7.2vw,140px)] rounded-full flex items-center  place-content-center text-[min(1.1vw,20px)]">
               {item.number}
             </div>
-            <div className="text-[#270405] flex flex-col gap-[20px]">
+            <div className="text-[#270405] flex flex-col gap-[min(1.041vw,20px)]">
               <h1 className="text-[min(2vw,27px)] font-[600] leading-[0.8rem]">
                 {item.title}
               </h1>

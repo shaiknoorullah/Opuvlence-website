@@ -142,7 +142,7 @@ const Righttick = () => {
         {tableContent.map((item, index) => {
           return (
             <div className="ite">
-              <Image key={index} src={item.img1} />
+              <Image key={index} src={item.img1} alt="Righttick" />
             </div>
           );
         })}
@@ -217,7 +217,7 @@ const WrongTick = () => {
         {tableContent.map((item, index) => {
           return (
             <div className="ite">
-              <Image key={index} src={item.img1} />
+              <Image key={index} src={item.img1} alt="Lefttick" />
             </div>
           );
         })}
