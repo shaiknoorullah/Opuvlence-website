@@ -180,19 +180,10 @@ const OurServices = () => {
               src="/serviceshero.jpg"
             />
           </div>
-          <div
-            id="description"
-            className="inline-block col-start-5 text-black lg:ml-[6rem] w-[90%] lg:leading-[min(3vw,2rem)] md:w-[50.65vw] lg:w-[100%] lg:mt-[-6rem] ml-5 col-end-9 italic base:text-[1.1rem] lg:text-[min(1.5vw,2rem)] z-[100]  "
-          >
-            {`“We offer stunning residential interiors and optimized rental spaces. Custom designs and renovations available. Let us transform your space. ”`
-              .split(/\?\n/)
-              .map((char, index) => {
-                return (
-                  <span key={index} className="inline-block">
-                    {char}
-                  </span>
-                );
-              })}
+          <div className="col-start-5 text-black lg:ml-[6rem] w-[90%] lg:leading-[min(3vw,2rem)] md:w-[50.65vw] lg:w-[100%] lg:mt-[-6rem] ml-5 col-end-9 italic base:text-[1.1rem] lg:text-[min(1.5vw,2rem)] z-[100]  ">
+            “In rooms where lovely harmonies prevail, Where all is simple,
+            gracious, and serene, Where natural beauty needs no art to veil,
+            Where order, light, & comfort reign supreme ”
           </div>
           <div className="mt-10 col-start-1 col-end-4 row-start-2">
             {" "}

@@ -4,9 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  cursor: none;
-}
+/* * { */
+  /* cursor: none; */
+/* } */
 
 html,
 body {

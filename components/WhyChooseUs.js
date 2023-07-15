@@ -159,13 +159,13 @@ const WhyChooseUs = () => {
         x: 0,
       },
       {
-        x: "-230vw",
+        x: "-290vw",
 
         ease: "none",
-        duration: 1,
+        duration: 0.5,
         scrollTrigger: {
           trigger: triggerref.current,
-          start: "bottom bottom",
+          start: "top top",
           end: "2000 top",
           scrub: 0.1,
           pin: true,
@@ -201,7 +201,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* grid */}
-        <div className="grid grid-cols-12 grid-rows-3 pt-12">
+        <div className="grid grid-cols-12 grid-rows-3 pt-14">
           <h1
             className={`${golden.className} text-[min(2.9vw,3.4rem)] col-start-1 col-end-6 row-start-1 row-end-2`}
           >

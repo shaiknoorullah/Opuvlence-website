@@ -16,6 +16,16 @@ const poppinsSemibold = localFont({
 });
 
 const HowDoesItMob = () => {
+  const content = [
+    "Sign Management agreement",
+    "Inventory Check and Video",
+    "Property Marketing",
+    "Tenant Screening",
+    "Tenant Agreement & Move In",
+    "On Demand Maintenance",
+    "Tenant Replacement",
+    "Exit Check & Renewal",
+  ];
   const [activeCard, setActiveCard] = useState(0);
 
   const handleRight = () => {
@@ -50,7 +60,7 @@ const HowDoesItMob = () => {
 
         {/* heading */}
         <div className={`${golden.className} text-[3rem] my-7`}>
-        how does <br/> it work?
+          how does <br /> it work?
         </div>
         <div
           className={`${poppinsSemibold.className} text-[1rem] italic ml-12`}
@@ -61,7 +71,16 @@ const HowDoesItMob = () => {
 
         {/* card */}
         <div className="w-full items-center justify-center bg-[#270405] rounded-t-full mt-[6rem] flex h-[22rem] text-center ">
-          <span className={`w-[15rem] text-[1.1rem] text-white ${poppinsSemibold.className}`}> Sign Management Agreement</span>
+          <span
+            className={`w-[15rem] text-[1.1rem] text-white ${poppinsSemibold.className}`}
+          >
+            {" "}
+            {/* Sign Management Agreement */}
+            {/* {content[activeCard].map((data, index) => {
+              return <div key={index}>{data}</div>;
+            })} */}
+            {content[activeCard]}
+          </span>
         </div>
 
         {/* arrow */}

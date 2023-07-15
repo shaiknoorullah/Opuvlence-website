@@ -11,6 +11,7 @@ import { Cursor } from "../Cursor"
 const MainLayout = ({ children }) => {
 	const [loaded, setLoaded] = useState(false)
 
+
 	const [startAnimation, setStartAnimation] =
 		useState(false)
 

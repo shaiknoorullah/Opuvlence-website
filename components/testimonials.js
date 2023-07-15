@@ -44,6 +44,20 @@ const Testimonials = () => {
       description:
         "Have had a seamless experience with the team right from the beginning! Chose opuvlence after so many visits to so many other designers in the city. Though faced a few obstacles during the process but it was handled so well The entire team is co operative, understood my requirements and gave the best outcome! Extremely happy , will definitely recommend opuvlence! Will definitely come back to post all the images!",
     },
+    {
+      title: "Shahjabeen",
+      img: Testimonial3,
+
+      description:
+        "It was a wonderful experience working with Mr. Shaik Shareef and his team. Thanks to Opuvlence for giving us such amazing designs and smooth execution... Literally our dreams and imagination was brought to reality...",
+    },
+    {
+      title: "Zay",
+      img: Testimonial3,
+
+      description:
+        "5 stars for Shaik and his amazing team for their services and on time handover",
+    },
   ];
 
   return (
@@ -64,7 +78,7 @@ const Testimonials = () => {
         </div>
         {/* Lets see what our */}
         <div
-          className={`md:w-[60%] lg:w-[30%] ${poppins} text-black base:text-[1.5rem]  md:text-[2rem] lg:text-[1.8rem] leading-[2.4rem] lg:ml-10 font-[700] pt-8`}
+          className={`md:w-[60%] lg:w-[30%] ${poppins} text-black base:text-[1.5rem]  md:text-[2rem] lg:text-[1.8rem] leading-[2.4rem] lg:ml-10 font-[700] pt-8 pb-8`}
         >
           LETS SEE WHAT OUR CUSTOMERS HAVE TO SAY
         </div>
@@ -74,7 +88,7 @@ const Testimonials = () => {
             style={{
               overflow: "scroll",
               display: "flex",
-              gap: "4rem",
+              gap: "1rem",
             }}
           >
             {cards.map((data, index) => {
@@ -85,7 +99,7 @@ const Testimonials = () => {
                   data-scroll-speed="1.5"
                   data-scroll-draggable="true"
                   key={index}
-                  className="flex-col min-w-[68rem] pl-[7rem] mr-[2rem]"
+                  className="flex-col min-w-[68rem] pl-[4rem] mr-[4rem] "
                 >
                   <div>
                     <div
@@ -94,21 +108,21 @@ const Testimonials = () => {
                       {data.title}
                     </div>
                     <div className="flex gap-[4rem]">
-                      <div className="min-w-[33rem] overflow-hidden h-[10rem] cursor-pointer object-cover">
-                        <Image
-                          // onClick={() => {
-                          //   setname(data.title);
-                          //   setimage(data.img);
-                          //   setdescriptionn(data.description);
+                      <div className="min-w-[33rem] hidden overflow-hidden h-[10rem] cursor-pointer object-cover">
+                        {/* <Image
+                          onClick={() => {
+                           setname(data.title);
+                             setimage(data.img);
+                            setdescriptionn(data.description);
 
-                          //   setShowModal(true);
-                          // }}
+                            setShowModal(true);
+                          
                           className="w-full h-full hover:scale-125 transition-transform duration-300 ease-in-out object-cover"
                           src={data.img}
-                        />
+                        /> */}
                       </div>
                       <div
-                        className={`min-w-[18rem] text-[0.8rem] leading-[30px] self-end ${poppins}`}
+                        className={`min-w-[18rem] pl-[25rem] text-[0.8rem] leading-[30px] self-end ${poppins}`}
                       >
                         {data.description}
                       </div>

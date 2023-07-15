@@ -102,7 +102,7 @@ const ServicesRentalMobile = () => {
   }, [service1, service2, service3, service4]);
 
   return (
-    <div className="  base:flex lg:hidden  justify-center  w-[100%]">
+    <div className="    justify-center  w-[100%]">
       <div className="w-[95%] flex flex-col gap-[16px] mt-[50px] ">
         {/* first service */}
         <div

@@ -120,24 +120,15 @@ const FeedbackForm = () => {
                 className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid "
                 type="text"
               /> */}
-              <div>
-                <select
-                  // value="subject"
-                  className="w-full"
-                >
-                  <option className="bg-inherit ">subject</option>
-                  <option typeof="bg-inherit">Website experience </option>
-                  <option typeof="bg-inherit">Support experience</option>
-                  <option typeof="bg-inherit">Service feedback</option>
-                </select>
-                <input
-                  className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid"
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                />
-              </div>
+              <select
+                // value="subject"
+                className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid pb-[30px]  "
+              >
+                <option className="bg-inherit ">Subject</option>
+                <option typeof="bg-inherit">Website experience </option>
+                <option typeof="bg-inherit">Support experience</option>
+                <option typeof="bg-inherit">Service feedback</option>
+              </select>
             </div>
             <div>
               <label className="block base:mt-[14vw] lg:mt-[78px] ">
@@ -153,8 +144,7 @@ const FeedbackForm = () => {
             </div>
             <div>
               <label className="block base:mt-[14vw] lg:mt-[78px] ">
-                If you could have one thing that you could change, what would it
-                be?
+                If you could change one thing, what would it be?
               </label>
               <input
                 className="w-full outline-none bg-inherit border-b-[1px] border-b-[#B25F62] border-solid "
@@ -190,7 +180,7 @@ const FeedbackForm = () => {
             </div>
             <div>
               <label className="block base:mt-[14vw]  lg:mt-[78px]">
-                what did you like the most about us?
+                What did you like the most about us?
               </label>
               <input
                 className="w-full bg-inherit border-b-[1px] border-b-[#B25F62] border-solid outline-none "
@@ -202,7 +192,7 @@ const FeedbackForm = () => {
             </div>
             <div>
               <label className="block base:mt-[14vw]  lg:mt-[78px]">
-                please explain your experience to us briefly.
+                Please explain your experience with us briefly.
               </label>
               <input
                 className="w-full bg-inherit border-b-[1px] border-b-[#B25F62] border-solid outline-none "
@@ -251,7 +241,7 @@ const FeedbackForm = () => {
             className={` flex justify-between  base:text-[4.375vw] lg:text-[min(1.041vw,20px)]  text-[#B25F62] font-[300] ${poppins.className} `}
           >
             <div>Extremely Likely</div>
-            <div>Extremely Unikely</div>
+            <div>Extremely Unlikely</div>
           </div>
         </div>
         {/* for email js*/}
