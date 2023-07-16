@@ -12,6 +12,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 import { gsap } from "gsap"
 import Script from "next/script"
 import Head from "next/head"
+import "../styles/font/gilroy/stylesheet.css"
 
 if (typeof window !== "undefined") {
 	gsap.registerPlugin(ScrollTrigger)
