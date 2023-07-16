@@ -14,7 +14,7 @@ const Download = () => {
             <div className="text-[#F6EBDD] font-[Gilroy] text-[min(1.09vw,21px)]">
               Discover the secrets to extraordinary design with our free Design
               Guide. Packed with expert tips, this guide will empower you to
-              transform your space into a stunning masterpiece. Don't miss out
+              transform your space into a stunning masterpiece. Don&quot;t miss out
               on this invaluable resource – download your free guide today and
               embark on a journey of design excellence.
             </div>

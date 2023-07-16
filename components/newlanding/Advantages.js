@@ -293,7 +293,7 @@ const Righttick = () => {
       <div className="flex flex-col gap-[min(4.1vw,80px)] ">
         {tableContent.map((item, index) => {
           return (
-            <div className="ite">
+            <div key={index} className="ite">
               <Image
                 className="w-[min(1.9vw,38px)]"
                 key={index}
@@ -373,7 +373,7 @@ const WrongTick = () => {
       <div className="flex flex-col  gap-[min(4.2vw,80px)] ">
         {tableContent.map((item, index) => {
           return (
-            <div className="ite">
+            <div key={index} className="ite">
               <Image
                 className="w-[min(1.9vw,38px)]"
                 key={index}
