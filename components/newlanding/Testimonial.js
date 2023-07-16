@@ -44,12 +44,13 @@ const Testimonial = () => {
     // },
   ];
   return (
-    <div className="w-full flex justify-center bg-[#270405]">
-      <div className="w-[90%] flex-col gap-14 text-[#F6EBDD] flex justify-center py-24">
+    <div className="w-full flex justify-center mt-20 bg-[#270405]">
+      <div className="w-[90%] max-w-[1920px] flex-col gap-14 text-[#F6EBDD] flex justify-center py-24">
         <p className="w-full flex justify-center">
           {" "}
           Testimonials: Hear From Our Cutomers
         </p>
+        {/* testimonial section */}
         <div className="w-full flex lg:flex-row base:flex-col base:items-center  justify-between base:gap-6 lg:gap-[12rem]">
           <Image
             src={Arrow}
@@ -83,7 +84,7 @@ const Testimonial = () => {
             src={Arrow}
             className="w-[min(2.5vw,2.5rem)] rotate-180 lg:flex base:hidden"
           />
-          <div className="flex-row gap-2 flex">
+          <div className="flex-row gap-2 lg:hidden base:flex">
           <Image
             src={Arrow}
             className="base:w-14 lg:w-[min(2.5vw,2.5rem)] rotate-180 base:flex lg:hidden"

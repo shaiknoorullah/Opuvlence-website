@@ -51,7 +51,7 @@ const Benefits = () => {
           <div className="flex justify-between gap-[4vw] base:overflow-x-scroll lg:overflow-hidden">
             {benefitContent.map((data, index) => {
               return (
-                <div key={index} className="flex min-w-[20rem] flex-col gap-7">
+                <div key={index} className="flex min-w-[18rem] flex-col gap-7">
                   <Image className="w-full" src={data.img} />
                   <div className="font-semibold base:text-[1.5rem] lg:text-[min(1.5vw,1.5rem)]">
                     {data.title}
@@ -73,7 +73,7 @@ const Benefits = () => {
         </div>
         {/* second section */}
         <div className="flex lg:flex-row base:flex-col w-full lg:gap-0 base:gap-12  justify-between">
-          <Image className="rounded-md lg:w-fit base:w-full" src={BenefitImage} />
+          <Image className="rounded-md base:w-full lg:w-[33%] w-full" src={BenefitImage} />
           <div className="h-full flex flex-col gap-8 lg:gap-0 lg:w-[40%] justify-between">
             <div className="text-right lg:text-[min(1.5vw,1.5rem)] font-medium">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

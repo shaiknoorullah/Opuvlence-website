@@ -90,8 +90,8 @@ const Hero = () => {
         className="w-full h-full object-cover absolute brightness-50"
         src={BgImage}
       />
-      <div className="lg:w-[80%] base:w-[90%] max-[1920px]: py-[7vw] flex flex-col text-[#F6EBDD]  justify-between">
-        <div className="w-full flex justify-between h-full z-50">
+      <div className="bgmobile p-6 lg:mt-0 base:mt-24 lg:w-[80%] base:w-[90%] max-[1920px]: py-[7vw] flex flex-col text-[#F6EBDD]  justify-between">
+        <div className="w-full flex lg:flex-row base:flex-col justify-between h-full z-50">
           <div className="gap-[7vw] lg:w-[40%] h-full  flex flex-col">
             <div className="flex flex-col base:gap-3 lg:gap-[min(1vw,1rem)]">
               <div className="lg:text-[min(2.6vw,2.6rem)] base:text-[2rem] lg:leading-[min(3vw,3rem)] font-bold">
@@ -107,7 +107,7 @@ const Hero = () => {
               <div className="flex flex-col gap-9 lg:gap-[min(1vw,1rem)]">
                 {" "}
                 <CountdownTimer />
-                <div className="text-[min(1vw,1rem)]">
+                <div className="lg:text-[min(1vw,1rem)]">
                   {" "}
                   Don't miss the Limited Period Offer-Hurry Up!
                 </div>
@@ -118,18 +118,19 @@ const Hero = () => {
                 <button className="text-[#F6EBDD] bg-[#28CA6D]  base:text-[0.9rem] lg:text-[min(1vw,1rem)] w-fit base:px-12 lg:px-24 py-3 rounded-[4px]">
                   GET 35% DISCOUNT NOW!
                 </button>
-                <div className="text-[0.8vw]">
+                <div className="base:text-[0.7rem] lg:text-[0.8vw]">
                   Trusted by more than 5,000 homes already.
                 </div>
               </div>
             </div>
           </div>
-          <div className=" h-full lg:flex base:hidden w-[28%] py-[2vw]">
-            <div className="formbg w-full p-[2vw] h-full flex flex-col gap-2 justify-between">
-              <div className="text-[min(1.7vw,1.7rem)] leading-[min(2vw,2rem)] font-bold">
+          <div className=" h-full  lg:w-[min(33%,33rem)] py-[2vw]">
+            {/* form */}
+            <div className="formbg lg:min-h-[35rem] w-full lg:p-[2vw] h-full flex flex-col gap-2 justify-between">
+              <div className="lg:text-[min(1.7vw,1.7rem)] lg:leading-[min(2vw,2rem)] font-bold">
                 Limited Time Offer: Get 20% Off + Free Kitchen Design!
               </div>
-              <form className="h-full flex flex-col justify-between">
+              <form className="h-full flex flex-col gap-3 justify-between">
                 <div className="flex flex-col">
                   {" "}
                   <div className="herolabel">Name</div>
@@ -150,14 +151,14 @@ const Hero = () => {
                   <div className="herolabel">Name</div>
                   <input className="heroinput" />
                 </div>
-                <button className="text-[#F6EBDD] bg-[#28CA6D] w-full px-10 h-[max(2rem,min(2vw,3rem))] rounded-[4px] uppercase">
+                <button className="text-[#F6EBDD] bg-[#28CA6D] w-full px-10 h-[max(2.5rem,min(2.5vw,3rem))] rounded-[4px] uppercase">
                   let&quot;s do this!
                 </button>
               </form>
             </div>
           </div>
         </div>
-        <div className="w-full flex base:flex-col lg:flex-row gap-9 lg:justify-between">
+        <div className="w-full hidden lg:flex base:flex-col lg:flex-row gap-9 lg:justify-between">
           {review.map((data, index) => {
             return (
               <div className="heroreview text-[#270405] p-[1.2vw] flex flex-col justify-between">
