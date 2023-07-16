@@ -109,7 +109,7 @@ const Hero = () => {
                 <CountdownTimer />
                 <div className="lg:text-[min(1vw,1rem)]">
                   {" "}
-                  Don't miss the Limited Period Offer-Hurry Up!
+                  Don&quot;t miss the Limited Period Offer-Hurry Up!
                 </div>
               </div>
 
@@ -161,7 +161,7 @@ const Hero = () => {
         <div className="w-full hidden lg:flex base:flex-col lg:flex-row gap-9 lg:justify-between">
           {review.map((data, index) => {
             return (
-              <div className="heroreview text-[#270405] p-[1.2vw] flex flex-col justify-between">
+              <div key={index} className="heroreview text-[#270405] p-[1.2vw] flex flex-col justify-between">
                 <div className="base:text-[2rem] lg:text-[min(1.7vw,1.7rem)] font-medium">
                   {data.title}
                 </div>
