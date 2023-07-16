@@ -1,7 +1,12 @@
 import React from "react";
 import Image from "next/image";
 // import Whatimg from "../../public/landingimages/landingsecurity.png";
-import Whatimg from "../../public/landingimages/landingsecurity.png";
+import Whatimg from "../../public/landingimages/whatweoffer/landingsecurity.png";
+import Chimney from "../../public/landingimages/whatweoffer/chimney.png";
+import Water from "../../public/landingimages/whatweoffer/water.png";
+import Months from "../../public/landingimages/whatweoffer/months.png";
+import Customization from "../../public/landingimages/whatweoffer/customization.png";
+import German from "../../public/landingimages/whatweoffer/german.png";
 
 const WhatweOffer = () => {
   const What = [
@@ -13,31 +18,31 @@ const WhatweOffer = () => {
     },
     {
       id: "2",
-      image: Whatimg,
+      image: Chimney,
       title: "Complimentary  Chimney",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud  ",
     },
     {
       id: "3",
-      image: Whatimg,
+      image: Water,
       title: "Water proof",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud  ",
     },
     {
       id: "4",
-      image: Whatimg,
+      image: Months,
       title: "3 months maintanance ",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud  ",
     },
     {
       id: "5",
-      image: Whatimg,
+      image: Customization,
       title: "customization",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud  ",
     },
     {
       id: "6",
-      image: Whatimg,
+      image: German,
       title: "german hardware(hettich)",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud  ",
     },
@@ -59,7 +64,7 @@ const WhatweOffer = () => {
               >
                 <Image
                   src={item.image}
-                  className="w-[min(5.4vw,104px)] -mt-[min(7.2vw,120px)]"
+                  className="base:w-[min(15vw,70px)] md:w-[min(5.4vw,104px)] -mt-[min(7.2vw,120px)]"
                 />
                 <div className="text-[#F6EBDD] font-[Gilroy] text-[min(1.4vw,27px)] font-[600]">
                   {item.title}

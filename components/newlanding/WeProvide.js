@@ -24,18 +24,21 @@ const Experience = () => {
   ];
 
   return (
-    <div className="flex flex-col justify-between ">
+    <div className="flex flex-col base:gap-[2rem] md:justify-between ">
       {Numbers.map((item, index) => {
         return (
-          <div key={index} className="flex flex-row gap-[2rem] ">
-            <div className="bg-[#270405] h-[min(2.08vw,40px)] w-[min(7.2vw,140px)] rounded-full flex items-center  place-content-center text-[min(1.1vw,20px)]">
+          <div
+            key={index}
+            className="flex flex-row base:gap-[1rem] md:gap-[2rem] "
+          >
+            <div className="bg-[#270405] text-[white] base:h-fit md:h-[min(2.08vw,40px)] md:w-[min(7.2vw,140px)] rounded-full flex items-center  place-content-center md:text-[min(1.1vw,20px)]">
               {item.number}
             </div>
-            <div className="text-[#270405] flex flex-col gap-[min(1.041vw,20px)]">
-              <h1 className="text-[min(2vw,27px)] font-[600] leading-[0.8rem]">
+            <div className="text-[#270405] flex flex-col base:gap-[0.8rem] md:gap-[min(1.041vw,20px)]">
+              <h1 className="md:text-[min(2vw,27px)] font-[600] leading-[0.8rem]">
                 {item.title}
               </h1>
-              <p className="text-[min(1.1vw,20px)] font-medium capitalize text-justify">
+              <p className="md:text-[min(1.1vw,20px)] font-medium capitalize text-justify">
                 {item.description}
               </p>
             </div>
@@ -53,12 +56,12 @@ const WeProvide = () => {
         <div className="text-[min(2rem,45px)] font-[600] text-[#270405] lg:w-[40%]  pb-[70px]">
           We provide the best process experience
         </div>
-        <div className="w-full flex base:flex-col-reverse md:flex-row gap-[min(12vw,236px)]">
+        <div className="w-full flex base:flex-col-reverse base:gap-[40px] md:flex-row md:gap-[min(12vw,236px)]">
           {/* left items */}
 
           <Experience />
           {/* image */}
-          <img src="../weprovide.png" className="w-[min(38vw,733px)]" />
+          <img src="../weprovide.png" className="md:w-[min(38vw,733px)]" />
         </div>
       </div>
     </div>
