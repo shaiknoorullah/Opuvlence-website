@@ -4,6 +4,8 @@ import React from "react";
 // import Navbar from "./Navbar"
 import localFont from "next/font/local";
 import CustomButton from "./section/customButton";
+import { useEffect } from "react";
+import { gsap } from "gsap";
 
 const golden = localFont({
   src: "../styles/font/golden/golden.woff2",
@@ -20,6 +22,90 @@ const poppins = localFont({
 });
 
 const OurServices = () => {
+  useEffect(() => {
+    const heading = document.getElementById("heading");
+    const description = document.getElementById("description");
+    const thestorybehind = document.getElementById("thestorybehind");
+
+    gsap.fromTo(
+      heading.children,
+      {
+        y: 70,
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.2,
+        delay: 1.3,
+        ease: "power2.out",
+      }
+    );
+    heading.childNodes.forEach((element, idx) => {
+      // console.log(element, idx)
+      gsap.fromTo(
+        element.children,
+        {
+          y: 70,
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.07,
+          delay: 1.3,
+          ease: "power2.out",
+        }
+      );
+      gsap.fromTo(
+        description.children,
+        {
+          y: 20,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.2,
+          stagger: 0.02,
+          delay: 1.9,
+          ease: "power2.out",
+        }
+      );
+
+      // gsap.fromTo(
+      //   thestorybehind.children,
+      //   {
+      //     y: 30,
+      //     opacity: 0,
+      //   },
+      //   {
+      //     y: 0,
+      //     opacity: 1,
+      //     duration: 0.5,
+      //     stagger: 0.05,
+      //     delay: 1.8,
+      //     ease: "power2.out",
+      //   }
+      // );
+      gsap.fromTo(
+        "#ourserviceimage",
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          delay: `1.8`,
+          ease: "power2.out",
+        }
+      );
+    });
+  }, []);
   return (
     <div className="w-full base:justify-center lg:justify-center flex">
       <div className="w-[95%] lg:w-[97.5%] flex flex-col max-w-[1920px] ">
@@ -35,12 +121,61 @@ const OurServices = () => {
           <div className="flex row-span-full flex-col col-start-1 col-end-8  z-50">
             <div
               className={`base:text-[2.7rem] md:text-[5.85vw] md:w-[41.01vw] lg:w-[60.4vw] base:w-[31.177vw] text-black lg:text-[min(5.9vw,7rem)] tracking-[0.7rem] lg:tracking-[min(1vw,1.9rem)] lg:leading-[min(10vw,170px)] ${golden.className}`}
+              id="heading"
             >
-              Interior Design For Luxury
+              <p>
+                {`Interior`.split(" ").map((item, index) => {
+                  return (
+                    <span
+                      key={index}
+                      className={`inline-block ${
+                        item == " "
+                          ? "base:ml-3 md:ml-7"
+                          : "base:ml-[0px] md:ml-[7px]"
+                      }`}
+                    >
+                      {item}
+                    </span>
+                  );
+                })}
+              </p>
+              <p>
+                {`Design For`.split(" ").map((item, index) => {
+                  return (
+                    <span
+                      key={index}
+                      className={`inline-block  ${
+                        item == " "
+                          ? "base:ml-3 md:ml-7"
+                          : "base:ml-[0px] md:ml-[7px]"
+                      }`}
+                    >
+                      {item}
+                    </span>
+                  );
+                })}
+              </p>
+              <p>
+                {`Luxury`.split(" ").map((item, index) => {
+                  return (
+                    <span
+                      key={index}
+                      className={`inline-block ${
+                        item == " "
+                          ? "base:ml-3 md:ml-7"
+                          : "base:ml-[0px] md:ml-[7px]"
+                      }`}
+                    >
+                      {item}
+                    </span>
+                  );
+                })}
+              </p>
             </div>
           </div>
           <div className="row-span-full flex-col col-start-7 col-end-13 z-0 base:my-5 lg:my-0">
             <img
+              id="ourserviceimage"
               className="base:h-[22rem] md:w-[100%] md:h-[100%] lg:h-fit"
               src="/serviceshero.jpg"
             />
