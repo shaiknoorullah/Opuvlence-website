@@ -11,7 +11,23 @@ import Footer from "../../components/newlanding/Footer";
 import Testimonial from "../../components/newlanding/Testimonial";
 
 const Landing = () => {
-  return (
+  return (  
+    <>
+     <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-7XND0NLWKF`}
+        id="analytics"
+      />
+      <Script id="analytics1" strategy="lazyOnload">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7XND0NLWKF', {
+        page_path: window.location.pathname,
+        });
+    `}
+      </Script>
     <div className="font-[Gilroy] text-[#270405]">
       <div className="w-full flex items-center flex-wrap text-center base:text-[0.7rem] lg:text-[min(1vw,1rem)] justify-center py-6">
         <span className="font-semibold">Up to 15% OFF* </span>&nbsp; on your
@@ -28,7 +44,7 @@ const Landing = () => {
       <Testimonial />
       <Faqs />
       <Footer />
-    </div>
+    </div></>
   );
 };
 
