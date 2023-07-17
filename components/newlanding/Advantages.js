@@ -8,6 +8,7 @@ import Wrong from "../../public/embrace/landingwrong.png";
 // mobile ticks images
 import BaseRight from "../../public/landingimages/baseright.png";
 import BaseWrong from "../../public/landingimages/basewrong.png";
+import Reusabletext from "./reusabletext";
 
 const BaseAdvantage = () => {
   const opuvlence = [
@@ -106,7 +107,7 @@ const BaseAdvantage = () => {
     },
   ];
   return (
-    <div className="md:hidden base:flex  gap-[3.5vw]  flex-col pt-[50px] ">
+    <div className="md:hidden base:flex  gap-[3.5vw]  flex-col lg:pt-[50px] ">
       {/* <div className="flex flex-row gap-[40px] w-[100vw]  px-3  overflow-x-scroll "> */}
       <div
         className="grid grid-cols-2 gap-[min(19vw,82px)]
@@ -119,7 +120,7 @@ const BaseAdvantage = () => {
           {opuvlence.map((item, idx) => {
             return (
               <div
-                className="flex flex-col-reverse gap-[3.44vw] items-center"
+                className="flex flex-col-reverse gap-[3.44vw] text-center  items-center"
                 key={idx}
               >
                 <div className="text-[3.7vw] leading-[5.74vw]  tracking-[0.01em] font-medium">
@@ -142,7 +143,7 @@ const BaseAdvantage = () => {
                 className="flex flex-col-reverse justify-center gap-[3.44vw] items-center text-black"
                 key={idx}
               >
-                <div className="text-[3.7vw] leading-[5.74vw] text-justify tracking-[0.01em] ">
+                <div className="text-[3.7vw] leading-[5.74vw] text-center tracking-[0.01em] ">
                   {item.tittle}
                 </div>
                 <Image src={item.img} alt="pic" />
@@ -287,7 +288,7 @@ const Righttick = () => {
   return (
     <div className="w-[min(20.8vw,400px)] flex flex-col justify-center  items-center rounded-lg bg-[#270405] ">
       {/* <Image src={Right} /> */}
-      <div className="text-[min(1.8vw,35px)] pb-[min(4.1vw,80px)]">
+      <div className="text-[min(1.8vw,35px)] text-white pb-[min(4.1vw,80px)]">
         Opuvlence
       </div>
       <div className="flex flex-col gap-[min(4.1vw,80px)] ">
@@ -457,9 +458,7 @@ const Advantages = () => {
       <div className="w-[90%] max-w-[1920px]">
         {/* table content md to lg*/}
 
-        <div className="text-[#270405] font-bold text-[min(2.3vw,45px)]">
-          Advantages
-        </div>
+       <Reusabletext text={"Advantages"} />
         <div className="base:hidden md:grid grid-cols-3 place-content-center">
           {/* <div className="mt-[30px]"> */}
           <Benefits />

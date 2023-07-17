@@ -13,7 +13,7 @@ import Testimonial from "../../components/newlanding/Testimonial";
 const Landing = () => {
   return (
     <div className="font-[Gilroy] text-[#270405]">
-      <div className="w-full flex items-center flex-wrap text-center base:text-[0.8rem] lg:text-[min(1vw,1rem)] justify-center py-6">
+      <div className="w-full flex items-center flex-wrap text-center base:text-[0.7rem] lg:text-[min(1vw,1rem)] justify-center py-6">
         <span className="font-semibold">Up to 15% OFF* </span>&nbsp; on your
         Home Interiors. Limited Period Offer-Hurry Up!&nbsp;{" "}
         <span className="font-semibold underline uppercase"> BOOK NOW!!</span>

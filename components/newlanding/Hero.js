@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import BgImage from "../../public/newlanding/herobg.jpg";
+import BgImage from "../../public/newlanding/herobg.webp";
+// import Logo from "../../public/newlanding/logo.png"
 
 const CountdownTimer = () => {
   const [countdown, setCountdown] = useState({
@@ -90,6 +91,7 @@ const Hero = () => {
         className="w-full h-full object-cover absolute brightness-50"
         src={BgImage}
       />
+      {/* <Image className="absolute left-5 top-2" src={Logo} /> */}
       <div className="bgmobile p-6 lg:mt-0 base:mt-24 lg:w-[80%] base:w-[90%] max-[1920px]: py-[7vw] flex flex-col text-[#F6EBDD]  justify-between">
         <div className="w-full flex lg:flex-row base:flex-col justify-between h-full z-50">
           <div className="gap-[7vw] lg:w-[40%] h-full  flex flex-col">
@@ -124,9 +126,9 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className=" h-full  lg:w-[min(33%,33rem)] py-[2vw]">
+          <div className=" h-full  lg:w-[min(36%,36rem)] py-[2vw]">
             {/* form */}
-            <div className="formbg lg:min-h-[35rem] w-full lg:p-[2vw] h-full flex flex-col gap-2 justify-between">
+            <div className="formbg lg:min-h-[35rem] w-full lg:p-[3vw] h-full flex flex-col gap-2 justify-between">
               <div className="lg:text-[min(1.7vw,1.7rem)] lg:leading-[min(2vw,2rem)] font-bold">
                 Limited Time Offer: Get 20% Off + Free Kitchen Design!
               </div>
@@ -138,17 +140,17 @@ const Hero = () => {
                 </div>
                 <div className="flex flex-col">
                   {" "}
-                  <div className="herolabel">Name</div>
+                  <div className="herolabel">Contact</div>
                   <input className="heroinput" />
                 </div>
                 <div className="flex flex-col">
                   {" "}
-                  <div className="herolabel">Name</div>
+                  <div className="herolabel">Locality</div>
                   <input className="heroinput" />
                 </div>
                 <div className="flex flex-col">
                   {" "}
-                  <div className="herolabel">Name</div>
+                  <div className="herolabel">Area (in Sqft)</div>
                   <input className="heroinput" />
                 </div>
                 <button className="text-[#F6EBDD] bg-[#28CA6D] w-full px-10 h-[max(2.5rem,min(2.5vw,3rem))] rounded-[4px] uppercase">

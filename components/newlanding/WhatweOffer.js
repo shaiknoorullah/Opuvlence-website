@@ -7,6 +7,7 @@ import Water from "../../public/landingimages/whatweoffer/water.png";
 import Months from "../../public/landingimages/whatweoffer/months.png";
 import Customization from "../../public/landingimages/whatweoffer/customization.png";
 import German from "../../public/landingimages/whatweoffer/german.png";
+import Reusabletext from "./reusabletext";
 
 const WhatweOffer = () => {
   const What = [
@@ -49,11 +50,12 @@ const WhatweOffer = () => {
   ];
 
   return (
-    <div className="w-full flex justify-center bg-[#270405] my-[100px]">
+    <div className="w-full flex justify-center bg-[#270405] pb-20 my-[100px]">
       <div className="w-[90%] bg-[#270405] mt-[min(2.60vw,50px)]  flex flex-col justify-center items-center py-[30px]">
-        <div className="text-[#F6EBDD] font-[Gilroy] text-[min(2.3vw,45px)] font-[600] flex justify-center pb-[min(10.4vw,200px)]">
-          What We Offer
-        </div>
+     <div className="text-center pb-5">
+      <Reusabletext text={"What We Offer"} white />
+
+     </div>
 
         <div className=" grid  md:grid-cols-3 gap-[min(7.8vw,150px)]  ">
           {What.map((item, index) => {
@@ -66,10 +68,10 @@ const WhatweOffer = () => {
                   src={item.image}
                   className="base:w-[min(15vw,70px)] md:w-[min(5.4vw,104px)] -mt-[min(7.2vw,120px)]"
                 />
-                <div className="text-[#F6EBDD] font-[Gilroy] text-[min(1.4vw,27px)] font-[600]">
+                <div className="text-[#F6EBDD] font-[Gilroy] base:text-[1.5rem] lg:text-[min(1.4vw,27px)] font-[600]">
                   {item.title}
                 </div>
-                <div className="text-[#F6EBDD] font-[Gilroy] text-[min(1.04,20px)] text-center ">
+                <div className="text-[#F6EBDD] font-[Gilroy] lg:text-[min(1.04,20px)] text-center ">
                   {item.text}
                 </div>
               </div>

@@ -1,8 +1,12 @@
 import React from "react";
 import Benefit1 from "../../public/newlanding/benefit1.jpg";
+import Benefit2 from "../../public/newlanding/benefits2.webp";
+import Benefit3 from "../../public/newlanding/benefit3.webp";
+import Benefit4 from "../../public/newlanding/benefit4.webp";
 import BenefitImage from "../../public/newlanding/benefitimg.jpg";
 import Tick from "../../public/newlanding/tick.svg";
 import Image from "next/image";
+import Reusabletext from "./reusabletext";
 
 const Benefits = () => {
   const benefitContent = [
@@ -16,7 +20,7 @@ const Benefits = () => {
       ],
     },
     {
-      img: Benefit1,
+      img: Benefit2,
       title: "Tailored Modular Kitchens for Indian Homes",
       subtitle: [
         "Personalization for Perfection",
@@ -25,7 +29,7 @@ const Benefits = () => {
       ],
     },
     {
-      img: Benefit1,
+      img: Benefit3,
       title: "Tailored Modular Kitchens for Indian Homes",
       subtitle: [
         "Personalization for Perfection",
@@ -34,7 +38,7 @@ const Benefits = () => {
       ],
     },
     {
-      img: Benefit1,
+      img: Benefit4,
       title: "Tailored Modular Kitchens for Indian Homes",
       subtitle: [
         "Personalization for Perfection",
@@ -46,8 +50,8 @@ const Benefits = () => {
   return (
     <div className="w-full flex justify-center text-[#270405] ">
       <div className="w-[90%] flex flex-col gap-[8rem] py-20">
-        <div className="flex flex-col gap-8">
-          <h1>Benefits</h1>
+        <div className="flex flex-col gap-3">
+         <Reusabletext  text={"Benefits"}/>
           <div className="flex justify-between gap-[4vw] base:overflow-x-scroll lg:overflow-hidden">
             {benefitContent.map((data, index) => {
               return (

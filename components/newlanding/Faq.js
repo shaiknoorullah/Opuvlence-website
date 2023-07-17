@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Reusabletext from "./reusabletext";
 
 const Faqs = () => {
   const questionAnswersArray = [
@@ -34,9 +35,7 @@ const Faqs = () => {
   return (
     <div className="w-[100%] bg-[#F6EBDD] flex flex-col  items-center text-[#270405]">
       <div className="w-[90%] py-[5vw]">
-        <div className="font-[500] lg:text-[2.5rem] mb-[5rem]">
-          Frequently Asked Questions
-        </div>
+       <Reusabletext text={"Frequently Asked Questions"} />
         {questionAnswersArray.map((data, index) => {
           return (
             <div key={index}>
@@ -61,19 +60,19 @@ const SingleFaq = ({ id, question, answer }) => {
   return (
     <div className="border-t border-[#270405]">
       <div
-        className="flex justify-between gap-10 py-[3rem] cursor-pointer"
+        className="flex justify-between gap-4 lg:gap-10 py-[3rem] cursor-pointer"
         onClick={() => {
           setAns(!ans);
         }}
       >
         <div>{id}</div>
         <div className="flex flex-col gap-5 lg:mr-[30rem] w-full">
-          <div> {question}</div>
+          <div className="font-medium"> {question}</div>
           {ans && <div className="">{answer}</div>}
         </div>
 
         {ans ? (
-          <div className=" lg:mr-[10rem]">
+          <div className=" lg:flex base:hidden lg:mr-[10rem]">
             <svg
               width="30"
               height="30"
@@ -91,7 +90,7 @@ const SingleFaq = ({ id, question, answer }) => {
             </svg>
           </div>
         ) : (
-          <div className="rotate-180 lg:mr-[10rem]">
+          <div className="lg:flex base:hidden rotate-180 lg:mr-[10rem]">
             <svg
               width="30"
               height="30"

@@ -1,4 +1,5 @@
 import React from "react";
+import Reusabletext from "./reusabletext";
 // import Provide from "../../public/landingImages/weprovide.png";
 
 const Experience = () => {
@@ -31,7 +32,7 @@ const Experience = () => {
             key={index}
             className="flex flex-row base:gap-[1rem] md:gap-[2rem] "
           >
-            <div className="bg-[#270405] text-[white] base:h-fit md:h-[min(2.08vw,40px)] md:w-[min(7.2vw,140px)] rounded-full flex items-center  place-content-center md:text-[min(1.1vw,20px)]">
+            <div className="bg-[#270405] text-[white] base:h-fit md:h-[min(2.08vw,40px)] md:w-[min(7.2vw,140px)] rounded-full flex items-center base:p-1 lg:p-0  place-content-center md:text-[min(1.1vw,20px)]">
               {item.number}
             </div>
             <div className="text-[#270405] flex flex-col base:gap-[0.8rem] md:gap-[min(1.041vw,20px)]">
@@ -53,8 +54,8 @@ const WeProvide = () => {
   return (
     <div className="w-full flex justify-center ">
       <div className="max-w-[1920px] w-[90%] py-[100px]">
-        <div className="text-[min(2rem,45px)] font-[600] text-[#270405] lg:w-[40%]  pb-[70px]">
-          We provide the best process experience
+        <div className="lg:w-[40%]  lg:pb-[70px]">
+ <Reusabletext text={"We provide the best process experience"} />
         </div>
         <div className="w-full flex base:flex-col-reverse base:gap-[40px] md:flex-row md:gap-[min(12vw,236px)]">
           {/* left items */}
