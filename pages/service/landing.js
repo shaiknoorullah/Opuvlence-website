@@ -9,6 +9,7 @@ import Faqs from "../../components/newlanding/Faq";
 import Benefits from "../../components/newlanding/Benefits";
 import Footer from "../../components/newlanding/Footer";
 import Testimonial from "../../components/newlanding/Testimonial";
+import Script from "next/script";
 
 const Landing = () => {
   return (  
