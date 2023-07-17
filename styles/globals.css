@@ -306,16 +306,16 @@ backdrop-filter: blur(6.75px);
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 960px) {
   .formbg{
     border-radius: 8px;
   background: linear-gradient(159deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 100%);
   backdrop-filter: blur(12.5px);
   }
+  .timerbg{
+    border-radius: 8px;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(7.5px);
+  }
 }
 
-.timerbg{
-  border-radius: 8px;
-background: rgba(0, 0, 0, 0.30);
-backdrop-filter: blur(7.5px);
-}

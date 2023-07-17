@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import BgImage from "../../public/newlanding/herobg.webp";
+import Logo from "../../public/logoLight.png";
+
 // import Logo from "../../public/newlanding/logo.png"
 
 const CountdownTimer = () => {
@@ -86,13 +88,15 @@ const Hero = () => {
     },
   ];
   return (
-    <div className=" min-h-screen w-full relative flex justify-center">
+    <div className="  min-h-screen w-full relative flex justify-center">
       <Image
         className="w-full h-full object-cover absolute brightness-50"
         src={BgImage}
       />
+      <Image className="absolute top-9 left-9" src={Logo} alt="company_logo" />
+
       {/* <Image className="absolute left-5 top-2" src={Logo} /> */}
-      <div className="bgmobile p-6 lg:mt-0 base:mt-24 lg:w-[80%] base:w-[90%] max-[1920px]: py-[7vw] flex flex-col text-[#F6EBDD]  justify-between">
+      <div className="bgmobile my-11 p-6 lg:mt-0 base:mt-24 lg:w-[80%] base:w-[90%] max-w-[1920px] py-[7vw] flex flex-col text-[#F6EBDD]  justify-between">
         <div className="w-full flex lg:flex-row base:flex-col justify-between h-full z-50">
           <div className="gap-[7vw] lg:w-[50%] h-full  flex flex-col">
             <div className="flex flex-col base:gap-3 lg:gap-[min(1vw,1rem)]">
@@ -112,30 +116,30 @@ const Hero = () => {
               </div>
             </div>
             <div className="gap-[3vw] flex flex-col">
-              <div className="timerbg py-8 w-fit px-8 flex flex-col gap-9 lg:gap-[min(1vw,1rem)]">
+              <div className="timerbg py-8 base:w-[100%] lg:w-[min(65%,25rem)] lg:justify-center lg:items-center flex flex-col gap-9 lg:gap-[min(1.8vw,1.8rem)]">
                 {" "}
                 <CountdownTimer />
-                <div className="lg:text-[min(1vw,1rem)]">
+                <div className="lg:text-[min(1vw,1rem)] lg:px-5">
                   {" "}
-                  Don&quot;t miss the Limited Period Offer-Hurry Up!
+                  Don't let your dream kitchen slip away. Get started today and claim your free appliances
                 </div>
               </div>
 
-              <div className="flex flex-col gap-2">
+              {/* <div className="flex flex-col gap-2">
                 {" "}
-                <button className="text-[#F6EBDD] bg-[#28CA6D]  base:text-[0.9rem] lg:text-[min(1vw,1rem)] w-fit base:px-12 lg:px-24 py-3 rounded-[4px]">
+                <button className="text-[#F6EBDD] bg-[#28CA6D]  base:text-[0.9rem] lg:text-[min(1vw,1rem)] w-fit base:px-12 lg:px-24 py-3 lg:flex base:hidden rounded-[4px]">
                   GET 35% DISCOUNT NOW!
                 </button>
                 <div className="base:text-[0.7rem] lg:text-[0.8vw]">
                   Trusted by more than 5,000 homes already.
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
-          <div className=" h-full  lg:w-[min(36%,36rem)] py-[2vw]">
+          <div className=" h-full  lg:w-[min(38%,38rem)] py-[2vw]">
             {/* form */}
-            <div className="formbg lg:min-h-[35rem] lg:max-h-[39rem] w-full lg:p-[3vw] h-full flex flex-col gap-2 justify-between">
-              <div className="lg:text-[min(1.7vw,1.7rem)] lg:leading-[min(2vw,2rem)] font-bold">
+            <div className="formbg lg:min-h-[29rem] lg:max-h-[38rem] w-full lg:p-[2vw] h-full flex flex-col gap-2 justify-between lg:pt-14 base:pt-14">
+              <div className="lg:text-[min(1.7vw,1.7rem)] lg:leading-[min(2vw,2rem)] lg:flex base:hidden font-bold">
                 Limited Time Offer: Get 20% Off + Free Kitchen Design!
               </div>
               <form className="h-full flex flex-col gap-3 justify-between">
@@ -159,8 +163,8 @@ const Hero = () => {
                   <div className="herolabel">Area (in Sqft)</div>
                   <input className="heroinput" />
                 </div>
-                <button className="text-[#F6EBDD] bg-[#28CA6D] w-full px-10 h-[max(2.5rem,min(2.5vw,3rem))] rounded-[4px] uppercase">
-                  let&quot;s do this!
+                <button className="text-[#F6EBDD] font-black bg-[#CA2828] w-full base:px-3 lg:px-6 h-[max(2.5rem,min(2.5vw,3rem))] rounded-[4px] mt-[min(1.5rem,1.5vw)] base:text-[0.7rem] lg:text-[min(1vw,1rem)] uppercase">
+                claim ₹40,000 worth of free appliances
                 </button>
               </form>
             </div>

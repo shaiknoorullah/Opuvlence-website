@@ -214,9 +214,12 @@ const Benefits = () => {
   return (
     <div className="flex flex-col justify-center items-start">
       <div className="text-[min(1.8vw,35px)] pb-[min(8.1vw,170px)]">
-        lkfnwdf/lADN
+        <div className="lg:mb-[-8rem]">
+          {" "}
+          <Reusabletext text={"Advantages"} />
+        </div>
       </div>
-      <div className="flex flex-col  gap-[min(4.2vw,80px)]">
+      <div className="flex flex-col  gap-[min(4.2vw,80px)] pb-10">
         {Advantage.map((item, index) => {
           return (
             <div key={index} className="flex flex-col   text-[#270405] ">
@@ -286,12 +289,12 @@ const Righttick = () => {
     },
   ];
   return (
-    <div className="w-[min(20.8vw,400px)] flex flex-col justify-center  items-center rounded-lg bg-[#270405] ">
+    <div className="w-[min(20.8vw,400px)] flex flex-col pt-14  items-center rounded-lg bg-[#270405] pb-5">
       {/* <Image src={Right} /> */}
       <div className="text-[min(1.8vw,35px)] text-white pb-[min(4.1vw,80px)]">
         Opuvlence
       </div>
-      <div className="flex flex-col gap-[min(4.1vw,80px)] ">
+      <div className="flex flex-col gap-[min(5.7vw,6.5rem)] pb-10">
         {tableContent.map((item, index) => {
           return (
             <div key={index} className="ite">
@@ -366,12 +369,12 @@ const WrongTick = () => {
     },
   ];
   return (
-    <div className="w-[min(20.8vw,400px)] flex flex-col justify-center items-center rounded-lg ">
+    <div className="w-[min(20.8vw,400px)] flex flex-col pt-14  items-center pb-5 rounded-lg ">
       {/* <Image src={Right} /> */}
       <div className="text-[min(1.8vw,35px)] text-[#270405] pb-[min(4.1vw,80px)]">
         Other Companies
       </div>
-      <div className="flex flex-col  gap-[min(4.2vw,80px)] ">
+      <div className="flex flex-col   gap-[min(5.7vw,6.5rem)] pb-10">
         {tableContent.map((item, index) => {
           return (
             <div key={index} className="ite">
@@ -454,11 +457,14 @@ const Advantages = () => {
     },
   ];
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center lg:pt-[8rem]">
       <div className="w-[90%] max-w-[1920px]">
         {/* table content md to lg*/}
+        <div className="lg:hidden flex">
+          {" "}
+          <Reusabletext text={"Advantages"} />
+        </div>
 
-       <Reusabletext text={"Advantages"} />
         <div className="base:hidden md:grid grid-cols-3 place-content-center">
           {/* <div className="mt-[30px]"> */}
           <Benefits />
