@@ -42,27 +42,27 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className=" flex base:text-[1.9rem] base:mt-2 md:mt-0 lg:text-[min(1.8vw,35px)]">
-      <div>
-        <span className="border-[0.65px] text-[#ffffff] mr-1 font-[250]  rounded-md border-[#F6EBDD] p-3  lg:p-[min(0.4vw,13px)]">
+    <div className=" flex base:text-[1.9rem] base:mt-2 md:mt-0 lg:text-[min(3vw,42px)]">
+      <div className="lg:text-[#FF3333] base:text-[#ffffff]">
+        <span className="border-[0.65px] lg:text-[#FF3333] base:text-[#ffffff] mr-1 font-[250]  rounded-md lg:border-[#FF3333] base:border-[#ffffff] p-3  lg:p-[min(1vw,1rem)]">
           {countdown.days}
         </span>
         :
       </div>
-      <div>
-        <span className="border-[0.65px] text-[#F6EBDD] mx-1 font-[250] rounded-md border-[#F6EBDD] p-3  lg:p-[min(0.4vw,13px)]">
+      <div className="lg:text-[#FF3333] base:text-[#ffffff]">
+        <span className="border-[0.65px] lg:text-[#FF3333] base:text-[#ffffff] mx-1 font-[250] rounded-md lg:border-[#FF3333] base:border-[#ffffff] p-3  lg:p-[min(1vw,1rem)]">
           {countdown.hours}
         </span>
         :
       </div>
-      <div>
-        <span className="border-[0.65px] text-[#F6EBDD] mx-1 font-[250] rounded-md border-[#F6EBDD]  p-3  lg:p-[min(0.4vw,13px)]">
+      <div className="lg:text-[#FF3333] base:text-[#ffffff]">
+        <span className="border-[0.65px] lg:text-[#FF3333] base:text-[#ffffff] mx-1 font-[250] rounded-md lg:border-[#FF3333] base:border-[#ffffff]  p-3  lg:p-[min(1vw,1rem)]">
           {countdown.minutes}
         </span>
         :
       </div>
       <div>
-        <span className="border text-[#F6EBDD] font-[250] mx-1 rounded-md border-[#F6EBDD] p-3  lg:p-[min(0.4vw,13px)]">
+        <span className="border lg:text-[#FF3333] base:text-[#ffffff] font-[250] mx-1 rounded-md lg:border-[#FF3333] base:border-[#ffffff] p-3  lg:p-[min(1vw,1rem)]">
           {countdown.seconds}
         </span>
       </div>
@@ -94,19 +94,25 @@ const Hero = () => {
       {/* <Image className="absolute left-5 top-2" src={Logo} /> */}
       <div className="bgmobile p-6 lg:mt-0 base:mt-24 lg:w-[80%] base:w-[90%] max-[1920px]: py-[7vw] flex flex-col text-[#F6EBDD]  justify-between">
         <div className="w-full flex lg:flex-row base:flex-col justify-between h-full z-50">
-          <div className="gap-[7vw] lg:w-[40%] h-full  flex flex-col">
+          <div className="gap-[7vw] lg:w-[50%] h-full  flex flex-col">
             <div className="flex flex-col base:gap-3 lg:gap-[min(1vw,1rem)]">
               <div className="lg:text-[min(2.6vw,2.6rem)] base:text-[2rem] lg:leading-[min(3vw,3rem)] font-bold">
-                Transform Your Space into a Work of Art:
+                Get Your Dream Kitchen for a Fraction of the Cost + ₹40,000
+                Worth of Free Appliances!
               </div>
-              <div className="lg:text-[min(1vw,1rem)]">
-                Turn Your Design Dreams into Reality. Experience Personalized
-                Spaces Reflecting Your Style. Meticulous Attention to Detail.
-                Discover the Transformative Power of opuvlence Hyderabad.
+              <div className="lg:text-[min(1.2vw,1.2rem)] lg:w-[80%]">
+                Act Now and create your happily ever after in the kitchen of
+                your dreams
+              </div>
+              <div className="lg:text-[min(1.2vw,1.2rem)] lg:w-[80%] pt-11">
+                Don't Miss Out on the Ultimate Offer! Get Your Dream Kitchen
+                without the High Price Tag. Enjoy a Free Modular Makeover +
+                40,000 INR Worth of Appliances. Transform Your Kitchen into a
+                Five-Star Oasis. Act Now, Offer Ends Soon!{" "}
               </div>
             </div>
             <div className="gap-[3vw] flex flex-col">
-              <div className="flex flex-col gap-9 lg:gap-[min(1vw,1rem)]">
+              <div className="timerbg py-8 w-fit px-8 flex flex-col gap-9 lg:gap-[min(1vw,1rem)]">
                 {" "}
                 <CountdownTimer />
                 <div className="lg:text-[min(1vw,1rem)]">
@@ -128,7 +134,7 @@ const Hero = () => {
           </div>
           <div className=" h-full  lg:w-[min(36%,36rem)] py-[2vw]">
             {/* form */}
-            <div className="formbg lg:min-h-[35rem] w-full lg:p-[3vw] h-full flex flex-col gap-2 justify-between">
+            <div className="formbg lg:min-h-[35rem] lg:max-h-[39rem] w-full lg:p-[3vw] h-full flex flex-col gap-2 justify-between">
               <div className="lg:text-[min(1.7vw,1.7rem)] lg:leading-[min(2vw,2rem)] font-bold">
                 Limited Time Offer: Get 20% Off + Free Kitchen Design!
               </div>
@@ -160,10 +166,13 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="w-full hidden lg:flex base:flex-col lg:flex-row gap-9 lg:justify-between">
+        <div className="w-full hidden lg:flex base:flex-col lg:flex-row gap-9 lg:justify-between pt-14">
           {review.map((data, index) => {
             return (
-              <div key={index} className="heroreview text-[#270405] p-[1.2vw] flex flex-col justify-between">
+              <div
+                key={index}
+                className="heroreview text-[#270405] p-[1.2vw] flex flex-col justify-between"
+              >
                 <div className="base:text-[2rem] lg:text-[min(1.7vw,1.7rem)] font-medium">
                   {data.title}
                 </div>

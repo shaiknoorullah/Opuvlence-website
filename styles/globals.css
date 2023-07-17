@@ -313,3 +313,9 @@ backdrop-filter: blur(6.75px);
   backdrop-filter: blur(12.5px);
   }
 }
+
+.timerbg{
+  border-radius: 8px;
+background: rgba(0, 0, 0, 0.30);
+backdrop-filter: blur(7.5px);
+}
