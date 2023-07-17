@@ -11,13 +11,13 @@ const Footer = () => {
     {
       title: "Quick links",
       elements: [
-        { title: "Home", href: "/" },
-        { title: "Benefits", href: "/benefits" },
-        { title: "Testimonials", href: "/" },
-        { title: "FAQs", href: "/" },
-        { title: "About Us", href: "/aboutus" },
-        { title: "How It Works", href: "/" },
-        { title: "What We Offer", href: "/" },
+        { title: "Home", href: "/landing/offers/kitchen/01/#landinghome" },
+        { title: "Benefits", href: "/landing/offers/kitchen/01/#landingbenefits" },
+        { title: "Testimonials", href: "/landing/offers/kitchen/01/#landingtestimonial" },
+        { title: "FAQs", href: "/landing/offers/kitchen/01/#landingfaq" },
+        { title: "About Us", href: "/landing/offers/kitchen/01/#landingaboutus" },
+        // { title: "How It Works", href: "#howitworks" },
+        { title: "What We Offer", href: "/landing/offers/kitchen/01/#whatweoffer" },
       ],
     },
     {

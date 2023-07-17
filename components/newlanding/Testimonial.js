@@ -59,7 +59,7 @@ const Testimonial = () => {
     setCurrentPage(pageNumber);
   };
   return (
-    <div className="w-full flex justify-center bg-[#270405] my-48">
+    <div id="landingtestimonial" className="w-full flex justify-center bg-[#270405] my-48">
       <div className="w-[90%] max-w-[1920px] flex-col gap-14 text-[#F6EBDD] flex justify-center py-24">
         <div className="text-center">
           <Reusabletext text={"Testimonials: Hear From Our Cutomers"} white />

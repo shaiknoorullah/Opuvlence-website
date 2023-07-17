@@ -457,7 +457,7 @@ const Advantages = () => {
     },
   ];
   return (
-    <div className="w-full flex justify-center lg:pt-[8rem]">
+    <div id="advantages" className="w-full flex justify-center lg:pt-[8rem]">
       <div className="w-[90%] max-w-[1920px]">
         {/* table content md to lg*/}
         <div className="lg:hidden flex">

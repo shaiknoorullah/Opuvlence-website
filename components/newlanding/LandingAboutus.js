@@ -3,7 +3,7 @@ import Reusabletext from "./reusabletext";
 
 const LandingAboutus = () => {
   return (
-    <div className="w-full flex justify-center base:py-14 lg:py-40 ">
+    <div id="landingaboutus" className="w-full flex justify-center base:py-14 lg:py-40 ">
       <div className="max-w-[1920px] w-[90%] base:py-[50px] md:py-[100px] text-[#270405]">
         {/* heading */}
         <div className="flex base:flex-col-reverse md:flex-row gap-[min(14vw,273px)] ">

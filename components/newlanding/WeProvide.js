@@ -52,7 +52,7 @@ const Experience = () => {
 
 const WeProvide = () => {
   return (
-    <div className="w-full flex justify-center ">
+    <div id="weprovide" className="w-full flex justify-center ">
       <div className="max-w-[1920px] w-[90%] base:py-[7rem] lg:py-[100px]">
         <div className="lg:w-[40%]  lg:pb-[70px]">
  <Reusabletext text={"We provide the best process experience"} />

@@ -50,7 +50,7 @@ const WhatweOffer = () => {
   ];
 
   return (
-    <div className="w-full flex justify-center bg-[#270405] pb-20 lg:my-[100px]">
+    <div id="whatweoffer" className="w-full flex justify-center bg-[#270405] pb-20 lg:my-[100px]">
       <div className="w-[90%] bg-[#270405] mt-[min(2.60vw,50px)]  flex flex-col justify-center items-center py-[30px]">
      <div className="text-center pb-5">
       <Reusabletext text={"What We Offer"} white />

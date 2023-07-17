@@ -19,7 +19,7 @@ const CountdownTimer = () => {
       const nextRefresh = new Date(
         now.getFullYear(),
         now.getMonth(),
-        now.getDate() + 3
+        now.getDate() + 4
       );
       const timeLeft = nextRefresh.getTime() - now.getTime();
 
@@ -44,7 +44,7 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className=" flex base:text-[1.9rem] base:mt-2 md:mt-0 lg:text-[min(3vw,42px)]">
+    <div  className=" flex base:text-[1.9rem] base:mt-2 md:mt-0 lg:text-[min(3vw,42px)]">
       <div className="lg:text-[#FF3333] base:text-[#ffffff]">
         <span className="border-[0.65px] lg:text-[#FF3333] base:text-[#ffffff] mr-1 font-[250]  rounded-md lg:border-[#FF3333] base:border-[#ffffff] p-3  lg:p-[min(1vw,1rem)]">
           {countdown.days}
@@ -88,7 +88,7 @@ const Hero = () => {
     },
   ];
   return (
-    <div className="  min-h-screen w-full relative flex justify-center">
+    <div id="landinghome" className="  min-h-screen w-full relative flex justify-center">
       <Image
         className="w-full h-full object-cover absolute brightness-50"
         src={BgImage}

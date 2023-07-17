@@ -63,7 +63,7 @@ const Benefits = () => {
     },
   ];
   return (
-    <div className="w-full flex justify-center text-[#270405] ">
+    <div id="landingbenefits" className="w-full flex justify-center text-[#270405] ">
       <div className="w-[90%] max-w-[1920px] flex flex-col gap-[8rem] py-20">
         <div className="base:flex lg:hidden flex-col gap-8">
           {review.map((data,index)=>{

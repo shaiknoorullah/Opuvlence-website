@@ -32,7 +32,7 @@ const Faqs = () => {
     },
   ];
   return (
-    <div className="w-[100%] bg-[#F6EBDD] flex flex-col  items-center text-[#270405]">
+    <div id="landingfaq" className="w-[100%] bg-[#F6EBDD] flex flex-col  items-center text-[#270405]">
       <div className="w-[90%] max-w-[1920px] py-[5vw]">
         <Reusabletext text={"Frequently Asked Questions"} />
         {questionAnswersArray.map((data, index) => {

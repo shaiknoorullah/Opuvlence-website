@@ -5,7 +5,7 @@ import Reusabletext from "./reusabletext";
 
 const Download = () => {
   return (
-    <div className="w-full flex justify-center">
+    <div id="download" className="w-full flex justify-center">
       <div className="w-[90%] max-w-[1920px] base:text-[#270405] lg:text-[#F6EBDD]">
         <div className="flex base:flex-col md:flex-row py-[min(5.2vw,100px)] px-[min(2.60vw,50px)] lg:bg-[#270405] gap-[min(16.14vw,310px)]">
           <div className="flex flex-col base:gap-[20px] justify-between lg:gap-[min(1.5vw,30px)]">
