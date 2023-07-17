@@ -109,7 +109,7 @@ const Hero = () => {
                 your dreams
               </div>
               <div className="lg:text-[min(1.2vw,1.2rem)] lg:w-[80%] pt-11">
-                Don't Miss Out on the Ultimate Offer! Get Your Dream Kitchen
+                Don&quot;t Miss Out on the Ultimate Offer! Get Your Dream Kitchen
                 without the High Price Tag. Enjoy a Free Modular Makeover +
                 40,000 INR Worth of Appliances. Transform Your Kitchen into a
                 Five-Star Oasis. Act Now, Offer Ends Soon!{" "}
@@ -121,7 +121,7 @@ const Hero = () => {
                 <CountdownTimer />
                 <div className="lg:text-[min(1vw,1rem)] lg:px-5">
                   {" "}
-                  Don't let your dream kitchen slip away. Get started today and claim your free appliances
+                  Don&quot;t let your dream kitchen slip away. Get started today and claim your free appliances
                 </div>
               </div>
 
