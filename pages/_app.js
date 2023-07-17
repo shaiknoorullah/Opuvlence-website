@@ -55,7 +55,7 @@ function MyApp({ Component, pageProps }) {
 				`}
       </Script>
 
-     <MainLayout>
+      <MainLayout>
         <RealViewport />
         <Component {...pageProps} />
       </MainLayout>

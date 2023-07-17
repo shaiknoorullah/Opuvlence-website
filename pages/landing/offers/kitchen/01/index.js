@@ -1,15 +1,16 @@
 import React from "react";
-import Hero from "../../components/newlanding/Hero";
-import WeProvide from "../../components/newlanding/WeProvide";
-import LandingAboutus from "../../components/newlanding/LandingAboutus";
-import Advantages from "../../components/newlanding/Advantages.js";
-import WhatweOffer from "../../components/newlanding/WhatweOffer.js";
-import Download from "../../components/newlanding/Download";
-import Faqs from "../../components/newlanding/Faq";
-import Benefits from "../../components/newlanding/Benefits";
-import Footer from "../../components/newlanding/Footer";
-import Testimonial from "../../components/newlanding/Testimonial";
+
 import Script from "next/script";
+import Hero from "../../../../../components/newlanding/Hero";
+import Benefits from "../../../../../components/newlanding/Benefits";
+import WhatweOffer from "../../../../../components/newlanding/WhatweOffer";
+import WeProvide from "../../../../../components/newlanding/WeProvide";
+import Advantages from "../../../../../components/newlanding/Advantages";
+import LandingAboutus from "../../../../../components/newlanding/LandingAboutus";
+import Download from "../../../../../components/newlanding/Download";
+import Testimonial from "../../../../../components/newlanding/Testimonial";
+import Faqs from "../../../../../components/newlanding/Faq";
+import Footer from "../../../../../components/newlanding/Footer";
 
 const Landing = () => {
   return (  

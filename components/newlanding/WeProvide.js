@@ -62,7 +62,7 @@ const WeProvide = () => {
 
           <Experience />
           {/* image */}
-          <img src="../weprovide.png" className="md:w-[min(38vw,733px)]" />
+          <img src="../../../weprovide.png" className="md:w-[min(38vw,733px)]" />
         </div>
       </div>
     </div>
