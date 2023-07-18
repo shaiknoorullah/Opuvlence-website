@@ -13,6 +13,7 @@ import { gsap } from "gsap";
 import Script from "next/script";
 import Head from "next/head";
 import "../styles/font/gilroy/stylesheet.css";
+import { Router, useRouter } from "next/router";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -32,6 +33,7 @@ if (typeof window !== "undefined") {
 
 function MyApp({ Component, pageProps }) {
   const lenis = useLenis(ScrollTrigger.update);
+  const router = useRouter();
   useEffect(ScrollTrigger.refresh, [lenis]);
   return (
     <>
@@ -54,11 +56,14 @@ function MyApp({ Component, pageProps }) {
   					gtag('config', 'G-YDB95HKDNQ');
 				`}
       </Script>
-
-     <MainLayout>
-        <RealViewport />
+      {router.pathname !== "/landing/offers/kitchen/01" ? (
+        <MainLayout>
+          <RealViewport />
+          <Component {...pageProps} />
+        </MainLayout>
+      ) : (
         <Component {...pageProps} />
-      </MainLayout>
+      )}
     </>
   );
 }

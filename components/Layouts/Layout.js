@@ -29,6 +29,7 @@ const Layout = (props) => {
   };
 
   return (
+   <>
     <Lenis
       root
       options={{
@@ -38,16 +39,16 @@ const Layout = (props) => {
     >
       <div>
         <main>
-          {router.pathname !== "/service/landing" && <Navbar />}
-          {router.pathname !== "/service/landing" && <Cursor />}
-          {router.pathname !== "/service/landing" && <ExampleComponent />}
+          {router.pathname !== "/landing/offers/kitchen/01" && <Navbar />}
+          {router.pathname !== "/landing/offers/kitchen/01" && <Cursor />}
+          {router.pathname !== "/landing/offers/kitchen/01" && <ExampleComponent />}
 
           <div className="cursor-default">{props.children}</div>
-          {router.pathname !== "/service/landing" && <Footer />}
+          {router.pathname !== "/landing/offers/kitchen/01" && <Footer />}
 
         </main>
       </div>
-    </Lenis>
+    </Lenis></>
   );
 };
 

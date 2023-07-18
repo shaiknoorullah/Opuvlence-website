@@ -7,6 +7,7 @@ import Water from "../../public/landingimages/whatweoffer/water.png";
 import Months from "../../public/landingimages/whatweoffer/months.png";
 import Customization from "../../public/landingimages/whatweoffer/customization.png";
 import German from "../../public/landingimages/whatweoffer/german.png";
+import Reusabletext from "./reusabletext";
 
 const WhatweOffer = () => {
   const What = [
@@ -14,46 +15,47 @@ const WhatweOffer = () => {
       id: "1",
       image: Whatimg,
       title: "10 Years of Security",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud ",
+      text: "Enjoy a 10-Year Warranty on Our Modular Kitchens. With quality craftsmanship and top-notch materials, we stand behind our products, ensuring lasting satisfaction for a decade and beyond.",
     },
     {
       id: "2",
       image: Chimney,
       title: "Complimentary  Chimney",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud  ",
+      text: "Enjoy the Perk of a Complimentary Chimney! Upgrade your kitchen experience with our exclusive offer. Get a FREE chimney installation when you design your dream modular kitchen with us. Don't miss out",
     },
     {
       id: "3",
       image: Water,
       title: "Water proof",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud  ",
+      text: " Our Modular Kitchens are crafted with top-notch waterproof materials, ensuring durability and protection against moisture. Experience peace of mind knowing your kitchen is resilient and built to withstand ",
     },
     {
       id: "4",
       image: Months,
       title: "3 months maintanance ",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud  ",
+      text: "We offer 3 months of complimentary maintenance to ensure your modular kitchen remains in pristine condition. Experience hassle-free living and let our team take care of your kitchen's upkeep.",
     },
     {
       id: "5",
       image: Customization,
       title: "customization",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud  ",
+      text: " Design a modular kitchen that reflects your unique taste. From materials and finishes to layouts, we empower you to personalize every element, ensuring a kitchen that truly embodies your vision.",
     },
     {
       id: "6",
       image: German,
       title: "german hardware(hettich)",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis aliqua. Ut enim ad minim veniam, quis nostrud  enim ad nostrud  ",
+      text: "German Hardware Excellence. Our modular kitchens boast precision engineering and superior functionality with Hettich's renowned products. Elevate your kitchen experience with the best in the industry",
     },
   ];
 
   return (
-    <div className="w-full flex justify-center bg-[#270405] my-[100px]">
+    <div id="whatweoffer" className="w-full flex justify-center bg-[#270405] pb-20 lg:my-[100px]">
       <div className="w-[90%] bg-[#270405] mt-[min(2.60vw,50px)]  flex flex-col justify-center items-center py-[30px]">
-        <div className="text-[#F6EBDD] font-[Gilroy] text-[min(2.3vw,45px)] font-[600] flex justify-center pb-[min(10.4vw,200px)]">
-          What We Offer
-        </div>
+     <div className="text-center pb-5">
+      <Reusabletext text={"What We Offer"} white />
+
+     </div>
 
         <div className=" grid  md:grid-cols-3 gap-[min(7.8vw,150px)]  ">
           {What.map((item, index) => {
@@ -66,10 +68,10 @@ const WhatweOffer = () => {
                   src={item.image}
                   className="base:w-[min(15vw,70px)] md:w-[min(5.4vw,104px)] -mt-[min(7.2vw,120px)]"
                 />
-                <div className="text-[#F6EBDD] font-[Gilroy] text-[min(1.4vw,27px)] font-[600]">
+                <div className="text-[#F6EBDD] font-[Gilroy] base:text-[1.5rem] lg:text-[min(1.2vw,25px)] font-[600]">
                   {item.title}
                 </div>
-                <div className="text-[#F6EBDD] font-[Gilroy] text-[min(1.04,20px)] text-center ">
+                <div className="text-[#F6EBDD] font-[Gilroy] lg:text-[min(1.04,20px)] text-center ">
                   {item.text}
                 </div>
               </div>

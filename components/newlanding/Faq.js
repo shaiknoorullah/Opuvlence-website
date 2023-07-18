@@ -1,42 +1,40 @@
 import React, { useState } from "react";
+import Reusabletext from "./reusabletext";
 
 const Faqs = () => {
   const questionAnswersArray = [
     {
       id: "01",
-      question:
-        "Lorem ipsum dolor sit amet consectetur Sagittis id consectetur sagittis id?",
+      question: "How involved will I be in the decision-making process?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac.Ornare amet ligula ornare lacus aliquam aenean. Eu lacusimperdiet urna amet ",
+        "When it comes to interiors, clients actively participate in the decision-making process. Client needs to communicate their needs, preferences, and budget while gathering inspiration and collaborating with  design professionals on design development. Clients make choices regarding cabinetry, countertops, flooring, lighting, and appliances. Clients review quotes, select specific products, and provide feedback throughout construction and installation. By being involved, clients can ensure that the final design aligns with their style, fulfills functional requirements, and remains within their budget.",
     },
     {
       id: "02",
       question:
-        "Lorem ipsum dolor sit amet consectetur Sagittis id consectetur sagittis id?",
+        "How do you handle purchasing and procurement of materials and furnishings?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac.Ornare amet ligula ornare lacus aliquam aenean. Eu lacusimperdiet urna amet ",
+        "At Opulence design Kitchens, our purchasing and procurement process is meticulous. We carefully select reputable vendors, assessing materials for durability and aesthetics. Negotiating competitive prices, we ensure value for our customers. Timely delivery and quality control are prioritized, while efficient inventory management keeps projects on track. We communicate transparently with clients, involving them in decision-making for a truly satisfying modular kitchen experience.",
     },
     {
       id: "03",
       question:
-        "Lorem ipsum dolor sit amet consectetur Sagittis id consectetur sagittis id?",
+        "Do you have partnerships or discounts with suppliers or vendors?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac.Ornare amet ligula ornare lacus aliquam aenean. Eu lacusimperdiet urna amet ",
+        "At Opulence design Kitchens, we prioritize delivering the best value to our customers by offering competitive pricing without compromising on quality. While we do not have any specific partnerships or discounts with suppliers or vendors, we maintain strong relationships with reliable and trusted suppliers to ensure the highest quality materials for our projects. Our focus is on providing personalized and high-quality modular kitchen solutions, and we strive to keep our pricing fair and transparent for all our valued customers.",
     },
     {
       id: "04",
       question:
-        "Lorem ipsum dolor sit amet consectetur Sagittis id consectetur sagittis id?",
+        "What is the best method and frequency of communication?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur. In augue ipsum tellus ultrices. Ac pharetra ultrices consectetur consequat tellus massa. Nec aliquam cras sagittis duis sed euismod arcu hac.Ornare amet ligula ornare lacus aliquam aenean. Eu lacusimperdiet urna amet ",
+        "The best method and frequency of communication depend on the context and preferences of the individuals or teams involved. It is important to choose a suitable method, such as face-to-face meetings, phone calls, emails, or video conferences, to ensure clear and efficient communication. Regular updates and check-ins strike a balance between staying informed and avoiding disruptions. Adaptability is key, as different situations may require different communication frequencies. Effective communication involves active listening, clarity in conveying information, and being open to feedback.",
     },
   ];
   return (
-    <div className="w-[100%] bg-[#F6EBDD] flex flex-col  items-center text-[#270405]">
-      <div className="w-[90%] py-[5vw]">
-        <div className="font-[500] lg:text-[2.5rem] mb-[5rem]">
-          Frequently Asked Questions
-        </div>
+    <div id="landingfaq" className="w-[100%] bg-[#F6EBDD] flex flex-col  items-center text-[#270405]">
+      <div className="w-[90%] max-w-[1920px] py-[5vw]">
+        <Reusabletext text={"Frequently Asked Questions"} />
         {questionAnswersArray.map((data, index) => {
           return (
             <div key={index}>
@@ -61,19 +59,19 @@ const SingleFaq = ({ id, question, answer }) => {
   return (
     <div className="border-t border-[#270405]">
       <div
-        className="flex justify-between gap-10 py-[3rem] cursor-pointer"
+        className="flex justify-between gap-4 lg:gap-10 py-[3rem] cursor-pointer"
         onClick={() => {
           setAns(!ans);
         }}
       >
-        <div>{id}</div>
+        <div className="lg:text-[min(1.4vw,1.4rem)]">{id}</div>
         <div className="flex flex-col gap-5 lg:mr-[30rem] w-full">
-          <div> {question}</div>
+          <div className="font-medium lg:text-[min(1.4vw,1.4rem)]"> {question}</div>
           {ans && <div className="">{answer}</div>}
         </div>
 
         {ans ? (
-          <div className=" lg:mr-[10rem]">
+          <div className=" lg:flex base:hidden lg:mr-[10rem]">
             <svg
               width="30"
               height="30"
@@ -91,7 +89,7 @@ const SingleFaq = ({ id, question, answer }) => {
             </svg>
           </div>
         ) : (
-          <div className="rotate-180 lg:mr-[10rem]">
+          <div className="lg:flex base:hidden rotate-180 lg:mr-[10rem]">
             <svg
               width="30"
               height="30"

@@ -13,7 +13,7 @@ const SineWave = () => {
   const [amplitude, setAmplitude] = useState(20);
 
   useEffect(() => {
-    if (router.pathname !== "/service/landing") {
+    if (router.pathname !== "/landing/offers/kitchen/01") {
       if (playing) {
         const audio = document.querySelector("audio");
         setAmplitude(20);
@@ -37,7 +37,7 @@ const SineWave = () => {
   }, [playing]);
 
   useEffect(() => {
-    if (router.pathname !== "/service/landing") {
+    if (router.pathname !== "/landing/offers/kitchen/01") {
       let canvas, ctx, wave, theta;
       canvas = canvasRef.current;
       console.log(canvas.height);
@@ -86,7 +86,7 @@ const SineWave = () => {
 
   return (
     <>
-      {router.pathname !== "/service/landing" && (
+      {router.pathname !== "/landing/offers/kitchen/01" && (
         <>
           <audio ref={audioPlayer} loop>
             <source src="opuvlence.mp3" type="audio/mp3" />
