@@ -56,14 +56,16 @@ function MyApp({ Component, pageProps }) {
   					gtag('config', 'G-YDB95HKDNQ');
 				`}
       </Script>
-      {router.pathname !== "/landing/offers/kitchen/01" ? (
+      {router.pathname !== "/landing/offers/kitchen/01" ?
+       router.pathname !== "/landing/offers/kitchen/01/thankyou"?
+       (
         <MainLayout>
           <RealViewport />
           <Component {...pageProps} />
         </MainLayout>
-      ) : (
+      ):(
         <Component {...pageProps} />
-      )}
+      ): <Component {...pageProps} />}
     </>
   );
 }

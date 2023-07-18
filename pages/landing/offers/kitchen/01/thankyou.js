@@ -26,7 +26,7 @@ const Thankyou = () => {
 
   return (
     <div
-      className="flex flex-col w-full items-center justify-center text-black  py-[12rem]
+      className="flex flex-col w-full items-center justify-center text-black h-screen cursor-default
   "
     >
       <div
