@@ -16,6 +16,7 @@ import {
 	leadFormSchema,
 } from "../../utils/formValidationSchema"
 import { toast } from "react-hot-toast"
+import { useRouter } from "next/router"
 
 const LandingForm = () => {
 	const {
@@ -28,6 +29,8 @@ const LandingForm = () => {
 		resolver: zodResolver(leadFormSchema),
 	})
 	const { field } = useController({ name: "city", control })
+
+	const router = useRouter()
 
 	const handleSelectChange = option => {
 		field.onChange(option.value)
@@ -70,6 +73,9 @@ const LandingForm = () => {
 					})
 					.then(result => {
 						toast.success("Thank you for reaching out! we`ll see you soon!")
+						router.push(
+							"http://www.opuvlence.com/landing/offers/kitchen/01/thankyou"
+						)
 					})
 					.catch(err => {
 						console.error(err)

@@ -90,7 +90,7 @@ const Hero = () => {
 					.then(result => {
 						toast.success("Thank you for reaching out! we`ll see you soon!")
 						router.push(
-							"http://localhost:3000/landing/offers/kitchen/01/thankyou"
+							"http://www.opuvlence.com/landing/offers/kitchen/01/thankyou"
 						)
 					})
 					.catch(err => {
