@@ -64,7 +64,7 @@ const Hero = () => {
 			headers: {
 				accept: "application/json",
 				"content-type": "application/json",
-				"api-key": `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`,
+				"api-key": `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`,
 			},
 			data: {
 				email: formValues.email,
