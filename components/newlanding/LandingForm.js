@@ -48,7 +48,7 @@ const LandingForm = () => {
 			headers: {
 				accept: "application/json",
 				"content-type": "application/json",
-				"api-key": process.env.BREVO_API_KEY,
+				"api-key": `${process.env.BREVO_API_KEY}`,
 			},
 			data: {
 				email: formValues.email,
