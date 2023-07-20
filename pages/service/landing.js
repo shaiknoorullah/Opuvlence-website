@@ -46,6 +46,7 @@ const Landing = () => {
 			<Download />
 			<Testimonial />
 			<Faqs />
+
 			<Footer />
 		</div>
 	)

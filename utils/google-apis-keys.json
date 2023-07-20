@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "global-booster-393400",
+  "private_key_id": "1bbd19e7d5579d0351df39b03b5482a767b924b9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC8XebwhpxxSdu9\ncPkYPlxgbNtWa2TKOe2ZLfcIGDQ1AJxNIdHmf9kW5h9EW/OQMdVIOpR+wH6HCPTh\nD+Yyz+YjzLl0xof8DtKf3CllId4wN2HwpdXpnh2U3arYQPdNG1n73ZHtQAvaVi4c\nRj3/LZl8rJQpw2kCbq4fuyW3EeLuX2awP82naKLRuiljBQ5mf6dsmwd6YvGsO++j\nC0n6qxAJJayxUQZ/6TbZ7g8ifZiudNQtikJrADZTax/g7OV8Sv3dfVInal4Ef/Cv\nVQ8XKidSTPYUBE0iSIMXoM0GYKgUCZ85uGIYeHSu65/n76Fy62cm5yaL1Xy4Ua8f\n9kfEbqONAgMBAAECgf9Oh3C7KDoy3i5QnhZFfQPmY/gq58fsSaKxQFnAU9CkzG9M\nxTYu1ro6T0xfmQCcV0fnAttUviX/x9y4uRFf1MJzktagisMtH0m6fSSr4Vu3atVP\nID9T55CElIZM8U7kOyIP950cA+I29hahFcGCtd/a7SByL+HNHfWaS6e0gIfjcYAe\nX3CcUANZQ5j1zSJuv7jX0wL16mHGEDC6YkTgk6dCeuvqen1nt5dxLeY4eF9/D0Ly\n9X5nPhMWof9puXMki/QWrSDm4vGA2gq5RyEkL1sYDEvVYfO8DUSj7CqTgRL/AYPT\n0uaj7m4SDoVEb7V/oESoCqb+AVht/sTT/6Eo+EECgYEA+TnmdPcl4ubBvw0XnimM\nbYwHOSwUzpCe+wClJSnw7jJefSkkf7Ggy7FbPF/lO0aZtvpINYM4m5SaCHu0I9SU\nfbv2SDsbZcZWWWJUDDxkjFJlEbNjmKpi/qozUpdgMUI/8YkWk98lINC7YsGd0OC7\nSj2ax/pKfLfp5NzzUvPI4TsCgYEAwXyL2gyGP6cCM7KpffqkdpRn2M2EztTU5xNQ\nAYC8z/C+gP+a7u/Mdcyr9VThTuV6xQNijSjRDx4JT8HYdzz6Ed5GKuq6LNnI5zI2\nD89M0lgVH6FztSqb9gvY7d0tid5jcI9qSCtheFG8zLa6c3VPai0w2TIs+Z888AyC\nHDAEwdcCgYEAgLfexto+vwnfVwU0BYP/+zQvJuAVfvpCofCbWq5muR9andn599mN\n6qYXMP92LT8xdMefM8QqIHCHfYomZ7sLVkUV1ghxBgeB4XhfYFJwu+hyOsojzl1x\n84WELEvyan6E+AKNnqHJU0F7Bm5pS9BF6voWTuJ+RhvWuVVEdrtiLLECgYEAoXQr\nQx2WXMEgzkD0vCINYMG/0iLVAr6IlfYAmfByHdZXMU+ZWm6Rn27Vwxc8F1jYVFPZ\nxc7cfI/k1z/7QKyKQ6TFyoQqLMjio0G76P9jrFZB8i4IXpGaqPsD3qDkohoHwmJ6\nHpTMddlHAVAtT7EBPqlNDMCY1QeykuDtJVZQcesCgYAEh8qBWJEUpchuoe1wFj3y\ngOsY9cxbxKYGK/cRN7H4ZyfUbvwZE1Zlw3HiKhEv+QmOr8qRg1FgKeZz3wb9els9\nuqroicOZ3WCYa4KECYzVib+qc8+9fL2RyxO8fX9REO/C8QUMn9lnQmRWCR98OSGf\nSapsDgQbGDYh3AJBi1TYtA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "lead-generation-kitchen-offer@global-booster-393400.iam.gserviceaccount.com",
+  "client_id": "107092618266691341876",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lead-generation-kitchen-offer%40global-booster-393400.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
