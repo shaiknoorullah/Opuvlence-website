@@ -39,7 +39,7 @@ const LandingForm = () => {
 	}
 
 	const createContact = formValues => {
-		console.log(process.env.NEXT_PUBLIC_BREVO_API_KEY)
+		console.log(process.env.BREVO_API_KEY)
 		const fullname = formValues.fullName
 		const spaceIdx = fullname.indexOf(" ")
 		const firstName = fullname.slice(0, spaceIdx)
