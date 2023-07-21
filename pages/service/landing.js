@@ -16,22 +16,6 @@ import Head from "next/head"
 const Landing = () => {
 	return (
 		<div className="font-[Gilroy] text-[#270405]">
-			<Head>
-				<script>
-					{`
-    				  (function(d, w, c) {
-    				    w.BrevoConversationsID = '64b43f8facf6a514df4311cb';
-    				    w[c] = w[c] || function() {
-    				        (w[c].q = w[c].q || []).push(arguments);
-    				    };
-    				    var s = d.createElement('script');
-    				    s.async = true;
-    				    s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
-    				    if (d.head) d.head.appendChild(s);
-    					})(document, window, 'BrevoConversations');
-    				`}
-				</script>
-			</Head>
 			<div className="w-full flex items-center flex-wrap text-center base:text-[0.8rem] lg:text-[min(1vw,1rem)] justify-center py-6">
 				<span className="font-semibold">Up to 15% OFF* </span>&nbsp; on your
 				Home Interiors. Limited Period Offer-Hurry Up!&nbsp;{" "}
