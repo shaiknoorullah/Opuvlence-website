@@ -66,41 +66,42 @@ const Download = () => {
                   }
                   style={{ overflowY: "hidden" }}
                 >
-                  <div className="bg-[#F6EBDD] flex flex-row gap-[2rem] justify-center p-10 w-[55rem]">
+                  <div className="bg-[#F6EBDD] flex flex-row-reverse gap-[2rem] justify-center p-10 base:w-[90%] lg:w-[55rem]">
                     {/* close button */}
-                    <div className="flex flex-col justify-between items-end">
+                    <div className="flex flex-col ">
                       <button
-                        className="font-bold py-2 px-4 w-fit hover:scale-[1.2] "
+                        className="  w-fit hover:scale-[1.2] "
                         onClick={() => setopen(false)}
                       >
                         <Image src={Closebutton} />
                       </button>
-                      {/* importing input fields  */}
-                      <div className="w-full flex flex-col gap-[3rem]">
-                        <div>
-                          <label className="text-[#270405] font-bold">
-                            Full Name
-                          </label>
-                          <br />
-                          <input
-                            label="Full Name*"
-                            className="text-[16px] font-normal leading-[32px] w-full rounded-sm  border pl-4 border-[#270405] placeholder:text-[#270405] text-[#270405] bg-[#F6EBDD]"
-                            placeholder="Arun Kumar"
-                          />
-                        </div>
-                        <div>
-                          <label className="text-[#270405] font-bold">
-                            Email
-                          </label>
-                          <br />
-                          <input
-                            label="Full Name"
-                            className="text-[16px] font-normal leading-[32px] w-full rounded-sm  border pl-4 border-[#270405] placeholder:text-[#270405] text-[#270405] bg-[#F6EBDD]"
-                            placeholder="arunkumar@gmail.com"
-                          />
-                        </div>
+                    </div>
+                    {/*  input fields  */}
+                    <div className="w-full flex flex-col gap-[3rem]">
+                      <div>
+                        <label className="text-[#270405] font-bold base:text-[min(3.8vw,20px)] md:text-[min(1vw,20px)]">
+                          Full Name
+                        </label>
+                        <br />
+                        <input
+                          label="Full Name*"
+                          className="text-[16px] font-normal leading-[32px] w-full rounded-sm  border pl-4 border-[#270405] placeholder:text-[#270405] text-[#270405] bg-[#F6EBDD]"
+                          placeholder="Arun Kumar"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[#270405] font-bold base:text-[min(3.8vw,20px)] md:text-[min(1vw,20px)]">
+                          Email
+                        </label>
+                        <br />
+                        <input
+                          label="Full Name"
+                          className="text-[16px] font-normal leading-[32px] w-full rounded-sm  border pl-4 border-[#270405] placeholder:text-[#270405] text-[#270405] bg-[#F6EBDD]"
+                          placeholder="arunkumar@gmail.com"
+                        />
                       </div>
                     </div>
+                    {/* </div> */}
                   </div>
                 </div>
               )}
