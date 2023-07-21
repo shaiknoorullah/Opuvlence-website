@@ -36,7 +36,7 @@ const Experience = () => {
               {item.number}
             </div>
             <div className="text-[#270405] flex flex-col base:gap-[0.8rem] md:gap-[min(1.041vw,20px)]">
-              <h1 className="md:text-[min(2vw,27px)] font-[600] leading-[0.8rem]">
+              <h1 className="md:text-[min(2vw,27px)] font-[600] leading-[1.1rem]">
                 {item.title}
               </h1>
               <p className="md:text-[min(1.1vw,20px)] font-medium capitalize text-justify">
@@ -55,14 +55,17 @@ const WeProvide = () => {
     <div id="weprovide" className="w-full flex justify-center ">
       <div className="max-w-[1920px] w-[90%] base:py-[7rem] lg:py-[100px]">
         <div className="lg:w-[40%]  lg:pb-[70px]">
- <Reusabletext text={"We provide the best process experience"} />
+          <Reusabletext text={"We provide the best process experience"} />
         </div>
         <div className="w-full flex base:flex-col-reverse base:gap-[40px] md:flex-row md:gap-[min(12vw,236px)]">
           {/* left items */}
 
           <Experience />
           {/* image */}
-          <img src="../../../weprovide.png" className="md:w-[min(38vw,733px)]" />
+          <img
+            src="../../../weprovide.png"
+            className="md:w-[min(38vw,733px)]"
+          />
         </div>
       </div>
     </div>
