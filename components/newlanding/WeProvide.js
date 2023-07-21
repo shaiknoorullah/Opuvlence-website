@@ -32,7 +32,7 @@ const Experience = () => {
             key={index}
             className="flex flex-row base:gap-[1rem] md:gap-[2rem] "
           >
-            <div className="bg-[#270405] text-[white] base:h-fit md:h-[min(3vw,40px)] md:w-[min(7.2vw,140px)] rounded-full flex items-center base:p-1 lg:p-0  place-content-center md:text-[min(1.1vw,20px)]">
+            <div className="bg-[#270405] text-[white] base:h-fit md:h-[min(2vw,40px)] md:w-[min(9.5vw,200px)] rounded-full flex items-center base:p-1 lg:p-0  align-middle  place-content-center md:text-[min(1.1vw,20px)]">
               {item.number}
             </div>
             <div className="text-[#270405] flex flex-col base:gap-[0.8rem] md:gap-[min(1.041vw,20px)]">
