@@ -30,7 +30,7 @@ const LandingForm = () => {
 	})
 	const { field } = useController({ name: "city", control })
 
-	const apiKey = process.env.BREVO_API_KEY
+	// const apiKey = process.env.BREVO_API_KEY
 
 	const router = useRouter()
 
@@ -39,7 +39,6 @@ const LandingForm = () => {
 	}
 
 	const createContact = formValues => {
-		console.log(process.env.BREVO_API_KEY)
 		const fullname = formValues.fullName
 		const spaceIdx = fullname.indexOf(" ")
 		const firstName = fullname.slice(0, spaceIdx)
@@ -50,7 +49,7 @@ const LandingForm = () => {
 			headers: {
 				accept: "application/json",
 				"content-type": "application/json",
-				"api-key": apiKey,
+				"api-key": process.env.BREVO_API_KEY,
 			},
 			data: {
 				email: formValues.email,
@@ -65,29 +64,30 @@ const LandingForm = () => {
 			},
 		}
 
-		// axios
-		// 	.request(options)
-		// 	.then(response => {
-		// 		axios
-		// 			.post(`${baseRef}/addLead`, {
-		// 				...formValues,
-		// 			})
-		// 			.then(result => {
-		// 				toast.success("Thank you for reaching out! we`ll see you soon!")
-		// 				router.push(
-		// 					"http://www.opuvlence.com/landing/offers/kitchen/01/thankyou"
-		// 				)
-		// 			})
-		// 			.catch(err => {
-		// 				console.error(err)
-		// 				toast.error(
-		// 					"Oops! there seems to be a problem submitting your details. Please try after some time."
-		// 				)
-		// 			})
-		// 	})
-		// 	.catch(error => {
-		// 		console.error(error)
-		// 	})
+		axios
+			.request(options)
+			.then(response => {
+				axios
+					.post(`${baseRef}/addLead`, {
+						...formValues,
+					})
+					.then(result => {
+						toast.success("Thank you for reaching out! we`ll see you soon!")
+
+						router.push(
+							"http://www.opuvlence.com/landing/offers/kitchen/01/thankyou"
+						)
+					})
+					.catch(err => {
+						console.error(err)
+						toast.error(
+							"Oops! there seems to be a problem submitting your details. Please try after some time."
+						)
+					})
+			})
+			.catch(error => {
+				console.error(error)
+			})
 	}
 
 	return (
