@@ -30,7 +30,9 @@ const LandingForm = () => {
 	})
 	const { field } = useController({ name: "city", control })
 
-	const apiKey = process.env.BREVO_API_KEY
+	const [loading, setLoading] = useState(false)
+
+	// const apiKey = process.env.BREVO_API_KEY
 
 	const router = useRouter()
 
@@ -39,7 +41,7 @@ const LandingForm = () => {
 	}
 
 	const createContact = formValues => {
-		console.log(process.env.NEXT_PUBLIC_BREVO_API_KEY)
+		setLoading(true)
 		const fullname = formValues.fullName
 		const spaceIdx = fullname.indexOf(" ")
 		const firstName = fullname.slice(0, spaceIdx)
@@ -50,7 +52,7 @@ const LandingForm = () => {
 			headers: {
 				accept: "application/json",
 				"content-type": "application/json",
-				"api-key": apiKey,
+				"api-key": process.env.BREVO_API_KEY,
 			},
 			data: {
 				email: formValues.email,
@@ -65,29 +67,32 @@ const LandingForm = () => {
 			},
 		}
 
-		// axios
-		// 	.request(options)
-		// 	.then(response => {
-		// 		axios
-		// 			.post(`${baseRef}/addLead`, {
-		// 				...formValues,
-		// 			})
-		// 			.then(result => {
-		// 				toast.success("Thank you for reaching out! we`ll see you soon!")
-		// 				router.push(
-		// 					"http://www.opuvlence.com/landing/offers/kitchen/01/thankyou"
-		// 				)
-		// 			})
-		// 			.catch(err => {
-		// 				console.error(err)
-		// 				toast.error(
-		// 					"Oops! there seems to be a problem submitting your details. Please try after some time."
-		// 				)
-		// 			})
-		// 	})
-		// 	.catch(error => {
-		// 		console.error(error)
-		// 	})
+		axios
+			.request(options)
+			.then(response => {
+				axios
+					.post(`${baseRef}/addLead`, {
+						...formValues,
+					})
+					.then(result => {
+						toast.success("Thank you for reaching out! we`ll see you soon!")
+						setLoading(false)
+						router.push(
+							"http://www.opuvlence.com/landing/offers/kitchen/01/thankyou"
+						)
+					})
+					.catch(err => {
+						setLoading(false)
+						console.error(err)
+						toast.error(
+							"Oops! there seems to be a problem submitting your details. Please try after some time."
+						)
+					})
+			})
+			.catch(error => {
+				setLoading(false)
+				console.error(error)
+			})
 	}
 
 	return (
@@ -218,9 +223,32 @@ const LandingForm = () => {
 					</div>
 					<button
 						type="submit"
-						className="base:py-[10px] mt-10 hover:scale-[1.05] hover:transition-all hover:ease-in-out base:px-[10px] md:py-[30px] md:px-[94px] text-[min(26px,max(1.220vw,22px))] uppercase font-black text-white leading-[130%] tracking-[2.5px] bg-[#CA2828] rounded-[6px]"
+						className="base:py-[10px] flex justify-center items-center mt-10 hover:scale-[1.05] hover:transition-all hover:ease-in-out base:px-[10px] md:py-[30px] md:px-[94px] text-[min(26px,max(1.220vw,22px))] uppercase font-black text-white leading-[130%] tracking-[2.5px] bg-[#CA2828] rounded-[6px]"
 					>
-						claim ₹40,000 worth of free appliances
+						{loading ? (
+							<svg
+								className="w-5 h-5 mr-3 -ml-1 text-white animate-spin"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+							>
+								<circle
+									className="opacity-25"
+									cx="12"
+									cy="12"
+									r="10"
+									stroke="currentColor"
+									stroke-width="4"
+								></circle>
+								<path
+									className="opacity-75"
+									fill="currentColor"
+									d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+								></path>
+							</svg>
+						) : (
+							"claim ₹40,000 worth of free appliances"
+						)}
 					</button>
 				</form>
 			</div>

@@ -52,6 +52,8 @@ const Hero = () => {
 
   const { field } = useController({ name: "city", control });
 
+  const [loading, setLoading] = useState(false);
+
   const router = useRouter();
 
   const handleSelectChange = (option) => {
@@ -59,6 +61,8 @@ const Hero = () => {
   };
 
   const createContact = (formValues) => {
+    setLoading(true);
+
     const fullname = formValues.fullName;
     const spaceIdx = fullname.indexOf(" ");
     const firstName = fullname.slice(0, spaceIdx);
@@ -93,11 +97,13 @@ const Hero = () => {
           })
           .then((result) => {
             toast.success("Thank you for reaching out! we`ll see you soon!");
+            setLoading(false);
             router.push(
               "http://www.opuvlence.com/landing/offers/kitchen/01/thankyou"
             );
           })
           .catch((err) => {
+            setLoading(false);
             console.error(err);
             toast.error(
               "Oops! there seems to be a problem submitting your details. Please try after some time."
@@ -105,6 +111,7 @@ const Hero = () => {
           });
       })
       .catch((error) => {
+        setLoading(false);
         console.error(error);
       });
   };
@@ -121,9 +128,12 @@ const Hero = () => {
       />
       <Image className="absolute top-9 left-9" src={Logo} alt="company_logo" />
       {/* hero right button top */}
-      <button className="absolute  z-[9999] base:right-10 top-10 md:right-18 md:top-8 bg-[#F6EBDD] text-[#270405] font-bold base:px-[10px]  items-center  md:px-[20px] py-[5px] rounded-sm base:text-[min(2.5vw,20px)] md:text-[min(1vw,19px)]">
-        <Link href={"#form"}>+9234343</Link>
-      </button>
+      <Link
+        href="tel:+918867159086"
+        className="absolute  z-[9999] base:right-10 top-10 md:right-18 md:top-8 bg-[#F6EBDD] text-[#270405] font-bold base:px-[10px]  items-center  md:px-[20px] py-[5px] rounded-sm base:text-[min(2.5vw,20px)] md:text-[min(1vw,19px)]"
+      >
+        +918867159086
+      </Link>
 
       {/* <Image className="absolute left-5 top-2" src={Logo} /> */}
       <div className="bgmobile my-11 p-6 lg:mt-0 base:mt-24 lg:w-[80%] base:w-[90%] max-w-[1920px] py-[7vw] flex flex-col text-[#F6EBDD]  justify-between">
@@ -232,9 +242,32 @@ const Hero = () => {
               </div>
               <button
                 type="submit"
-                className="text-[#F6EBDD] font-black bg-[#CA2828] w-full mt-8 base:px-3 lg:px-6 h-[max(2.5rem,min(2.5vw,3rem))] rounded-[4px] base:text-[0.7rem] lg:text-[min(1vw,1rem)] uppercase"
+                className="text-[#F6EBDD] flex justify-center items-center font-black bg-[#CA2828] w-full mt-8 base:px-3 lg:px-6 h-[max(2.5rem,min(2.5vw,3rem))] rounded-[4px] base:text-[0.7rem] lg:text-[min(1vw,1rem)] uppercase"
               >
-                claim ₹40,000 worth of free appliances
+                {loading ? (
+                  <svg
+                    className="w-5 h-5 mr-3 -ml-1 text-white animate-spin"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                ) : (
+                  "claim ₹40,000 worth of free appliances"
+                )}
               </button>
             </form>
           </div>
