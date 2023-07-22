@@ -21,6 +21,7 @@ import { useRouter } from "next/router";
 // bottom rating images
 import GoogleRating from "../../public/newlandinghero/google.png";
 import TrustPilot from "../../public/newlandinghero/trust.png";
+import Link from "next/link";
 
 // import Logo from "../../public/newlanding/logo.png"
 
@@ -121,7 +122,7 @@ const Hero = () => {
       <Image className="absolute top-9 left-9" src={Logo} alt="company_logo" />
       {/* hero right button top */}
       <button className="absolute  z-[9999] base:right-10 top-10 md:right-18 md:top-8 bg-[#F6EBDD] text-[#270405] font-bold base:px-[10px]  items-center  md:px-[20px] py-[5px] rounded-sm base:text-[min(2.5vw,20px)] md:text-[min(1vw,19px)]">
-        +9234343
+        <Link href={"#form"}>+9234343</Link>
       </button>
 
       {/* <Image className="absolute left-5 top-2" src={Logo} /> */}

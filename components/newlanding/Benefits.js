@@ -11,6 +11,7 @@ import Reusabletext from "./reusabletext";
 // bottom rating images
 import GoogleRating from "../../public/newlandinghero/google.png";
 import TrustPilot from "../../public/newlandinghero/trust.png";
+import Link from "next/link";
 
 const Benefits = () => {
   const benefitContent = [
@@ -165,11 +166,11 @@ const Benefits = () => {
               </div>
             </div>
 
-            <div className="w-full justify-end flex pt-9">
+            <Link href={"#form"} className="w-full justify-end flex pt-9">
               <button className="bg-[#270405] text-[#F6EBDD] px-12 py-3 w-fit base:text-[1.3rem] lg:text-[min(1.1vw,1.1rem)] rounded-[4px]">
                 Book Now
               </button>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
