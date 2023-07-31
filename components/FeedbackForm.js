@@ -45,33 +45,42 @@ const FeedbackForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_rsrdagg",
-        "template_twnoeua",
-        form.current,
-        "js5upz3NXwQooaDZM"
-      )
-      .then(
-        (result) => {
-          console.log("hello");
-          // e.target.reset();
-          console.log("Message Success");
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    setFormData({
-      user_name: "",
-      email: "",
-      subject: "",
-      message: "",
-      appeal: "",
-      aboutus: "",
-      change: "",
-      experience: "",
-    });
+    if (
+      formData.user_name == "" ||
+      formData.email == "" ||
+      formData.number == "" ||
+      formData.message == ""
+    ) {
+      alert("Fill all the fields");
+    } else {
+      emailjs
+        .sendForm(
+          "service_rsrdagg",
+          "template_twnoeua",
+          form.current,
+          "js5upz3NXwQooaDZM"
+        )
+        .then(
+          (result) => {
+            console.log("hello");
+            e.target.reset();
+            console.log("Message Success");
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      setFormData({
+        user_name: "",
+        email: "",
+        subject: "",
+        message: "",
+        appeal: "",
+        aboutus: "",
+        change: "",
+        experience: "",
+      });
+    }
   };
   // rating usestates
   const [rating, setRating] = useState(0);
@@ -99,10 +108,10 @@ const FeedbackForm = () => {
             Help us enhance our services by sharing your valuable feedback.
           </h1>
         </div>
-        <form className={`${poppinsMedium.className}`}>
+        <form ref={form} onSubmit={sendEmail}>
           <div
-            ref={form}
-            onSubmit={sendEmail}
+            // ref={form}
+            // onSubmit={sendEmail}
             className={`w-full flex lg:flex-row base:flex-col mt-[34px] base:text-[4.375vw] lg:text-[18px] justify-between text-[#B25F62] font-[300] ${poppins.className} `}
           >
             <div
@@ -266,9 +275,9 @@ const FeedbackForm = () => {
               <div>Extremely Unlikely</div>
             </div>
           </div>
-          <div className="mt-[70px] cursor-pointer" type="">
+          <button className="mt-[70px] cursor-pointer" type="submit">
             <CustomButton text={"Submit"} color={"black"} />
-          </div>
+          </button>
         </form>
         {/* for email js*/}
       </div>
