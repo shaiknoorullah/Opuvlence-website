@@ -61,7 +61,7 @@ const AboutUsContainer = ({ left }) => {
                 );
               })}
           </div>{" "}
-          <div className=" lg:hidden">
+          <div className="leading-5 lg:hidden">
             {/* Each member of our team brings unique strengths and experiences to
             the table, and we work collaboratively to achieve our objectives. We
             prioritize communication, trust, and accountability in all our
