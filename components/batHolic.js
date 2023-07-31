@@ -95,35 +95,7 @@ const Batholic = () => {
     <div className="w-full flex justify-center ">
       <div className="w-[95%] max-w-[1920px] 3xl:pt-[105px] lg:pt-[5.46vw]">
         <div className=" flex base:flex-col lg:flex-row 3xl:gap-[33.97px] lg:gap-[1.7692vw]">
-          <div className="base:w-[100%] lg:w-[5%] 3xl:mt-[291.4px] lg:mt-[6.2vw]">
-            <div className=" 3xl:w-[90px] lg:w-[4.68vw]  relative  3xl:top-[520px] lg:top-[27.08vw] ">
-              <div
-                // className="flex flex-row items-center base:gap-[5.56vw] base:px-[3.125vw] 3xl:gap-[40px] lg:gap-[2.08vw]"
-                className="flex flex-row items-center origin-top-left lg:-rotate-90 base:gap-[5.56vw] base:px-[3.125vw] md:px-[4.5vw] md:pb-[2vw] 3xl:gap-[40px] lg:gap-[2.08vw]"
-              >
-                <div className="base:text-[min(3.13vw,28px)] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-medium italic uppercase text-black">
-                  residential
-                </div>
-                <Image
-                  alt="arrow"
-                  src={Arrow}
-                  className="base:w-[min(2.3vw,57px)] invert 3xl:w-[12.17px]  3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-90  ml-1"
-                ></Image>
-                <div className="base:text-[min(3.13vw,28px)] base:leading-[5.15vw]  base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-black">
-                  commercial
-                </div>
-                <Image
-                  alt="arrow"
-                  src={Arrow}
-                  className="base:w-[min(2.3vw,57px)] invert 3xl:w-[12.17px]  3xl:h-[64.78px] lg:w-[0.633vw] lg:h-[3.37vw] rotate-90  ml-1"
-                ></Image>
-
-                <div className="base:text-[min(3.13vw,28px)] base:leading-[5.15vw]  base:tracking-[0.05em] 3xl:text-[22.15px]  3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw] tracking-[0.5%]  italic uppercase text-black">
-                  restaurant
-                </div>
-              </div>
-            </div>
-          </div>
+        
 
           <div className="flex  flex-col base:gap-[20px] 3xl:gap-[50px] lg:gap-[2.60vw] base:-[] base:pl-[3.125vw] base:pr-[3.125vw] lg:p-[0px]">
             <div className="large-image">
@@ -157,7 +129,7 @@ const Batholic = () => {
             >
               Fluidic Designs
             </div>
-            <div className="base:text-[3.43vw] base:leading-[5.625vw] md:text-[2.34vw] md:leading-[3.79vw] 3xl:w-[499px] lg:w-[25.989vw] 3xl:text-[22px] lg:text-[1.14vw] 3xl:leading-[40px] lg:leading-[2.083vw] tracking-[10%] font-normal lg:italic align-middle  text-[#A5787A] 3xl:pl-[141px] lg:pl-[7.343vw]">
+            <div className="base:text-[3.43vw] base:leading-[5.625vw] md:text-[2.34vw] md:leading-[3.79vw] 3xl:w-[499px] lg:w-[25.989vw] 3xl:text-[22px] lg:text-[1.14vw] 3xl:leading-[40px] lg:leading-[2.083vw] tracking-[10%] font-normal lg:italic align-middle  text-[#A5787A] 3xl:pl-[100px] lg:pl-[3vw]">
               Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa
               mi. Aliquam in hendrerit urna. Pellentesque sitLorem ipsum dolor
               sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in

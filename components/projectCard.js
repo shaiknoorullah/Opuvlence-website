@@ -70,7 +70,7 @@ const ProjectCard = ({ title, description, year, type, src }) => {
           gridRowStart: 3,
           gridRowEnd: 4,
         }}
-        className="3xl:text-[16px] text-black pointer-events-none w-[min(600px,32vw)] lg:text-[0.85vw] 3xl:leading-[24.85px] lg:leading-[1.29vw] tracking-[0.007em] font-normal z-[10]"
+        className="3xl:text-[16px] text-black pointer-events-none w-[min(600px,32vw)] lg:text-[1vw] 3xl:leading-[24.85px] lg:leading-[1.29vw] tracking-[0.007em] font-normal z-[10]"
       >
         {description}
       </div>
