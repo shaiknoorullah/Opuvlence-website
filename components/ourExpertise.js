@@ -34,7 +34,7 @@ const NumberText = ({ number, text, state }) => {
         {number}+
       </div>
       <div
-        className={`${poppinsMedium.className} text-black w-[40%]  base:text-[0.9rem] md:text-[3.35vw] lg:text-[min(1.8vw,1.5rem)] font-medium leading-8 lg:leading-[min(2.2vw,2.5rem)] `}
+        className={`${poppinsMedium.className} text-black w-[40%]  base:text-[0.9rem] md:text-[3.35vw] lg:text-[min(1.8vw,1.5rem)] font-medium leading-5 lg:leading-[min(2.2vw,2.5rem)] `}
       >
         {text}
       </div>
@@ -415,7 +415,7 @@ const OurExpertise = () => {
                 ></div>
               </div>
               <div
-                className={`text-[#A5787A] base:text-[0.6rem] lg:text-[min(1.1rem,1vw)] font-semibold italic ${poppinsRegular.className} `}
+                className={`text-[#A5787A] whitespace-nowrap base:text-[0.6rem] lg:text-[min(1.1rem,1vw)] font-semibold italic ${poppinsRegular.className} `}
               >
                 Execution Solution
               </div>

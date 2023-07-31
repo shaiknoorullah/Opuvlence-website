@@ -122,10 +122,10 @@ const MobileOurProject = () => {
       <div
         className={`flex  gap-[3rem] w-full items-center justify-end mt-5 pr-7 text-black ${poppins}`}
       >
-        <div onClick={handleNext} className="text-[2rem] italic underline ">
+        <div onClick={handleNext} className="text-[1.5rem] italic underline ">
           PREV
         </div>
-        <div onClick={handlePrevious} className="text-[2rem] italic underline ">
+        <div onClick={handlePrevious} className="text-[1.5rem] italic underline ">
           NEXT
         </div>
       </div>
