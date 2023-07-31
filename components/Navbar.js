@@ -300,10 +300,10 @@ const Navbar = () => {
       title: "Interior Design",
       href: "/services",
     },
-    {
-      title: "Property Management",
-      href: "/rentalandleaseservices",
-    },
+    // {
+    //   title: "Property Management",
+    //   href: "/rentalandleaseservices",
+    // },
 
     {
       title: "Contact",

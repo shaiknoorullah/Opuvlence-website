@@ -37,10 +37,8 @@ const OurTeamSingle = ({ name, picture, designation }) => {
         className="w-full rounded-tl-[10vw] base:h-[60vw]  object-cover"
         src={picture}
       />
-      <div className={`${poppinsSemibold.className} text-black `}>{name}</div>
-      <div
-        className={`${poppinsRegular.className}text-black italic  w-[80%]`}
-      >
+      <div className={`${poppinsMedium.className} text-black `}>{name}</div>
+      <div className={`${poppinsRegular.className}text-black italic  w-[80%]`}>
         {designation}
       </div>
     </div>
@@ -132,9 +130,7 @@ const AboutUsMeet = () => {
           {testimonial.map((data, index) => {
             return (
               <div key={index} className="flex flex-col  cursor-pointer  ">
-                <div
-                
-                >
+                <div>
                   <Image
                     className="rounded-t-full h-[25rem]  object-cover scale-10"
                     alt="profession"
@@ -158,7 +154,7 @@ const AboutUsMeet = () => {
             {testimonial.map((data, index) => {
               return (
                 <div key={index}>
-                  <div  >
+                  <div>
                     <OurTeamSingle
                       name={data.name}
                       picture={data.picture}
@@ -194,7 +190,7 @@ const AboutUsMeet = () => {
                 <div className="flex text-[1.5rem] pt-3">{designation}</div>
                 <div className="border border-black w-full base:my-6 lg:my-6"></div>
                 <div className="text-[1.3rem] leading-[2rem]">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et
                   massa mi. Aliquam in hendrerit urna. Pellentesque sitLorem
                   ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet
                   consectetur adipiscing elit Ut et massa mi. Aliquam in
