@@ -80,7 +80,7 @@ const About = () => {
       >
         <p
           id="section-name-about"
-          className={`${poppins.className} opacity-0 font-extrabold col-start-2 lg:text-[min(20px,1.3vw)]`}
+          className={`${poppins.className} base:text-[1rem] font-extrabold col-start-2 lg:text-[min(20px,1.3vw)]`}
         >
           / About
         </p>
@@ -128,7 +128,7 @@ const About = () => {
           <div className="text-white">US</div>
         </div>
 
-		<div
+        <div
           className={`absolute bottom-0 right-0 text-right z-[1000] mr-5  ${golden.className}  flex flex-col gap-6`}
         >
           <div className="text-white">A</div>

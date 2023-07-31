@@ -324,10 +324,10 @@ const Navbar = () => {
       title: "Interior Design",
       href: "/services",
     },
-    {
-      title: "Rental and Lease",
-      href: "/rentalandleaseservices",
-    },
+    // {
+    //   title: "Rental and Lease",
+    //   href: "/rentalandleaseservices",
+    // },
   ];
 
   const options2 = [
