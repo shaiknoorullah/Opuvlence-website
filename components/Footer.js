@@ -173,7 +173,7 @@ const Footer = () => {
       </div>
       <div className="flex flex-row items-start base:justify-between lg:justify-start lg:gap-[485px] lg:w-[initial] base:w-[90vw] text-right mb-[50px] text-xs text-black">
         <p className="m-0 relative italic font-medium">
-          Copyright © 2023 Opuvlence . All Rights Reserved
+       © 2023 Opuvlence 
         </p>
         <Link
           className="[text-decoration:none] relative"
