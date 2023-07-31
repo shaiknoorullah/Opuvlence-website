@@ -42,69 +42,55 @@ const OurServices = () => {
         ease: "power2.out",
       }
     );
-    heading.childNodes.forEach((element, idx) => {
-      // console.log(element, idx)
-      gsap.fromTo(
-        element.children,
-        {
-          y: 70,
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.07,
-          delay: 1.3,
-          ease: "power2.out",
-        }
-      );
-      gsap.fromTo(
-        description.children,
-        {
-          y: 20,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.2,
-          stagger: 0.02,
-          delay: 1.9,
-          ease: "power2.out",
-        }
-      );
+    // heading.childNodes.forEach((element, idx) => {
+    //   // console.log(element, idx)
 
-      // gsap.fromTo(
-      //   thestorybehind.children,
-      //   {
-      //     y: 30,
-      //     opacity: 0,
-      //   },
-      //   {
-      //     y: 0,
-      //     opacity: 1,
-      //     duration: 0.5,
-      //     stagger: 0.05,
-      //     delay: 1.8,
-      //     ease: "power2.out",
-      //   }
-      // );
-      gsap.fromTo(
-        "#ourserviceimage",
-        {
-          y: 50,
-          opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.5,
-          delay: `1.8`,
-          ease: "power2.out",
-        }
-      );
-    });
+    //   gsap.fromTo(
+    //     description.children,
+    //     {
+    //       y: 20,
+    //       opacity: 0,
+    //     },
+    //     {
+    //       y: 0,
+    //       opacity: 1,
+    //       duration: 0.2,
+    //       stagger: 0.02,
+    //       delay: 1.9,
+    //       ease: "power2.out",
+    //     }
+    //   );
+
+    //   // gsap.fromTo(
+    //   //   thestorybehind.children,
+    //   //   {
+    //   //     y: 30,
+    //   //     opacity: 0,
+    //   //   },
+    //   //   {
+    //   //     y: 0,
+    //   //     opacity: 1,
+    //   //     duration: 0.5,
+    //   //     stagger: 0.05,
+    //   //     delay: 1.8,
+    //   //     ease: "power2.out",
+    //   //   }
+    //   // );
+    //   gsap.fromTo(
+    //     "#ourserviceimage",
+    //     {
+    //       y: 50,
+    //       opacity: 0,
+    //     },
+    //     {
+    //       y: 0,
+    //       opacity: 1,
+    //       duration: 0.5,
+    //       delay: `1.8`,
+    //       ease: "power2.out",
+    //     }
+    //   );
+    // });
   }, []);
   return (
     <div className="w-full base:justify-center lg:justify-center flex">
