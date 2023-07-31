@@ -57,6 +57,19 @@ function MyApp({ Component, pageProps }) {
           `}
 				</script>
 			</Head>
+			<Script src="https://www.googletagmanager.com/gtag/js?id=AW-11258206199" />
+			<Script
+				id="google-analytics"
+				strategy="lazyOnload"
+			>
+				{`
+					window.dataLayer = window.dataLayer || [];
+ 					function gtag(){dataLayer.push(arguments);}
+ 					gtag('js', new Date());
+
+ 					gtag('config', 'AW-11258206199');
+       			`}
+			</Script>
 			<Script
 				id="datalayerscript"
 				strategy="lazyOnload"
