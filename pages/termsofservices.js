@@ -19,7 +19,7 @@ const Termsofservices = () => {
     "No refund/ No cancellation (Customer is obligated to pay the balance of Sales Order value)",
   ];
   return (
-    <div className="terms flex w-full justify-center text-black">
+    <div className="terms flex w-full cursor-none justify-center text-black">
       <div className="w-[90%]">
         <div className="   text-[35px] font-semibold mb-7 tracking-[0.1em] leading-[40px] font-lamore">
           TERMS OF SERVICE

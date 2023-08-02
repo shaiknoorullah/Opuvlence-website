@@ -10,7 +10,7 @@ import ExampleComponent from "../components/ExampleComponent"
 
 const Aboutus = () => {
 	return (
-		<div className="text-black">
+		<div className="text-black cursor-none">
 			<Head>
 				<title>About Us - Opuvlence</title>
 				<meta

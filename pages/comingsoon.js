@@ -14,7 +14,7 @@ const golden = localFont({
 const NotFoundPage = () => {
   return (
     <div
-      className={`flex ${golden.className} flex-col w-full items-center justify-center base:py-[8rem] text-black lg:py-[15rem]`}
+      className={`flex ${golden.className} cursor-none flex-col w-full items-center justify-center base:py-[8rem] text-black lg:py-[15rem]`}
     >
       <div className="base:text-[min(7vw,35px)] lg:text-[min(5vw,5rem)] h-[fit]">
         COMING Soon
