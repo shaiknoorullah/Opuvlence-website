@@ -255,9 +255,10 @@ const FeedbackForm = () => {
                   <div
                     key={value}
                     className={`cursor-pointer base:w-[10.71vw]  base:text-[4.46vw] base:h-[10.71vw] lg:w-[min(2.8vw,54px)] lg:h-[min(2.8vw,54px)] lg:text-[min(1.14vw,22px)]  rounded-full flex items-center justify-center border-[#DECFBB] ${
-                      value <= (selectedRating || rating)
-                        ? "bg-[#5E2427] text-[#DECFBB] "
-                        : "bg-[#DECFBB]"
+                      // value == selectedRating || rating
+                      value == selectedRating
+                        ? "bg-[#5E2427] text-[#DECFBB] hover:bg-[#5E2427]"
+                        : "bg-[#DECFBB] hover:bg-[#5E2427] hover:text-[#DECFBB]"
                     }`}
                     onMouseEnter={() => handleHover(value)}
                     onMouseLeave={() => handleHover(0)}

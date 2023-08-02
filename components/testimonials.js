@@ -63,9 +63,9 @@ const Testimonials = () => {
   return (
     <div
       // data-scroll
-      className="w-full flex  text-black my-[8rem]  justify-center relative"
+      className="w-full flex  text-black mt-[8rem]  justify-center relative"
     >
-      <div className="font-poppins base:w-[95%] lg:w-[100%] z-50 flex flex-col py-12">
+      <div className="font-poppins base:w-[95%] lg:w-[100%] z-50 flex flex-col py-">
         {/* testimonials title */}
         <div className="flex w-full base:justify-center lg:justify-start">
           <div className="lg:inline-block hidden w-[30%]"></div>
@@ -157,7 +157,7 @@ const Testimonials = () => {
                     className="object-cover h-[10rem]"
                     src={data.img}
                   />
-                  <div className=" text-[1.3rem] text-black self-center justify-self-center leading-[30px] ">
+                  <div className="text-[1.3rem] text-black self-center justify-self-center leading-[30px] ">
                     {data.description}
                   </div>
                 </div>
