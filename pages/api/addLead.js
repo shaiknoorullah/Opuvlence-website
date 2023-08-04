@@ -43,6 +43,8 @@ const handler = async (req, res) => {
 							body.city,
 							body.area,
 							body.details,
+							"Google",
+							"Opuvlence_Kitchen_Offer_01_July",
 						],
 					],
 				},
