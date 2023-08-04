@@ -45,20 +45,23 @@ const MobileOurProject = () => {
   }, [active]);
   const currentItem = projects?.projects[currentIndex];
   // console.log(currentItem.image)
-  
 
   // animation
-    useEffect(() => {
-      gsap.fromTo('.item-transition', {
+  useEffect(() => {
+    gsap.fromTo(
+      ".item-transition",
+      {
         opacity: 0,
-        x:-200,
+        x: -200,
         duration: 0.2,
-      },{
-        x:0,
-        opacity:1
-      });
-    }, [currentIndex]);
-    
+      },
+      {
+        x: 0,
+        opacity: 1,
+      }
+    );
+  }, [currentIndex]);
+
   return (
     <div className="lg:hidden w-[100%] pt-[9.375vw]">
       <p className="relative items-center flex justify-center text-[3.75vw] md:text-[2rem] leading-[5.625vw] tracking-[0.05em] text-[#A5787A] font-extrabold uppercase mb-[6.25vw]">
@@ -122,10 +125,13 @@ const MobileOurProject = () => {
       <div
         className={`flex  gap-[3rem] w-full items-center justify-end mt-5 pr-7 text-black ${poppins}`}
       >
-        <div onClick={handleNext} className="text-[2rem] italic underline ">
+        <div onClick={handleNext} className="text-[1.5rem] italic underline ">
           PREV
         </div>
-        <div onClick={handlePrevious} className="text-[2rem] italic underline ">
+        <div
+          onClick={handlePrevious}
+          className="text-[1.5rem] italic underline "
+        >
           NEXT
         </div>
       </div>

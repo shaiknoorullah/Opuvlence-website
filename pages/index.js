@@ -26,7 +26,7 @@ export default function Home() {
 	const [loader, setLoader] = useState(true)
 
 	return (
-		<div className="text-black">
+		<div className="text-black cursor-none">
 			<Head>
 				<title>
 					Opuvlence - Luxury Interior Design Services

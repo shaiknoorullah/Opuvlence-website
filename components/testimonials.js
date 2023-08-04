@@ -63,15 +63,15 @@ const Testimonials = () => {
   return (
     <div
       // data-scroll
-      className="w-full flex  text-black my-[8rem]  justify-center relative"
+      className="w-full flex  text-black mt-[8rem]  justify-center relative"
     >
-      <div className="font-poppins base:w-[95%] lg:w-[100%] z-50 flex flex-col py-12">
+      <div className="font-poppins base:w-[95%] lg:w-[100%] z-50 flex flex-col py-">
         {/* testimonials title */}
         <div className="flex w-full base:justify-center lg:justify-start">
           <div className="lg:inline-block hidden w-[30%]"></div>
 
           <div
-            className={`font-[700] text-[1.2rem] text-[#A5787A] md:text-[2rem] flex ${poppinsBold.className}`}
+            className={`font-[700] lg:text-[1.3rem] text-[#A5787A] md:text-[1rem] flex ${poppinsBold.className}`}
           >
             / TESTIMONIALS
           </div>
@@ -99,11 +99,11 @@ const Testimonials = () => {
                   data-scroll-speed="1.5"
                   data-scroll-draggable="true"
                   key={index}
-                  className="flex-col min-w-[68rem] pl-[4rem] mr-[4rem] "
+                  className="flex-col min-w-[50rem] "
                 >
                   <div>
                     <div
-                      className={`text-[6rem] w-full pl-[25rem] tracking-[1rem] italic text-black ${poppins}`}
+                      className={`text-[6rem] w-full pl-[12rem] tracking-[1rem] italic text-black ${poppins}`}
                     >
                       {data.title}
                     </div>
@@ -122,7 +122,7 @@ const Testimonials = () => {
                         /> */}
                       </div>
                       <div
-                        className={`min-w-[18rem] pl-[25rem] text-[0.8rem] leading-[30px] self-end ${poppins}`}
+                        className={`min-w-[18rem] pl-[12rem] text-[0.8rem] leading-[30px] self-end ${poppins}`}
                       >
                         {data.description}
                       </div>
@@ -157,7 +157,7 @@ const Testimonials = () => {
                     className="object-cover h-[10rem]"
                     src={data.img}
                   />
-                  <div className=" text-[1.3rem] text-black self-center justify-self-center leading-[30px] ">
+                  <div className="text-[1.3rem] text-black self-center justify-self-center leading-[30px] ">
                     {data.description}
                   </div>
                 </div>

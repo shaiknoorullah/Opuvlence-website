@@ -64,7 +64,7 @@ const HowDoesIt = () => {
   return (
     <div
       ref={triggerref1}
-      className="pin-trigger w-full  flex justify-center py-36"
+      className="pin-trigger w-full cursor-none flex justify-center py-36"
     >
       <div className="w-[90%] max-w-[1920px] ">
         {/* ourservice/why choose us */}

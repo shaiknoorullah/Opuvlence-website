@@ -5,7 +5,7 @@ import Batholic from "../components/batHolic"
 
 const Casestudies = () => {
 	return (
-		<div className="text-white">
+		<div className="text-white cursor-none">
 			<Batholic />
 		</div>
 	)

@@ -40,7 +40,7 @@ function CasesLibraryPage() {
   }
 
   return (
-    <div className=" text-black">
+    <div className=" text-black cursor-none">
       <CasesLibrary projects={data.projects} name={name} setName={setName} />
     </div>
   );

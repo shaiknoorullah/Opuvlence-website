@@ -27,12 +27,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const ProjectGrid = (props) => {
-
-// getting query
-
-
-
-
+  // getting query
 
   return (
     <Link href={props.href} passHref>
@@ -53,7 +48,7 @@ const ProjectGrid = (props) => {
             // data-scroll-speed="1.2"
             src={props.image}
             alt="project image"
-            className="absolute top-[-50%] w-full object-cover"
+            className="absolute top-[] w-full object-cover"
           ></Image>
         </div>
       </div>
@@ -117,7 +112,7 @@ const CasesLibrary = ({ setName, projects, name }) => {
                     setName("Residential");
                   }}
                   className={
-                    name==="Residential"
+                    name === "Residential"
                       ? `base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-medium italic uppercase text-black `
                       : `base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-normal italic uppercase text-black`
                   }
@@ -133,11 +128,12 @@ const CasesLibrary = ({ setName, projects, name }) => {
                   onClick={() => {
                     setName("Commercial");
                   }}
-				  className={
-                    name==="Commercial"
+                  className={
+                    name === "Commercial"
                       ? `base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-medium italic uppercase text-black `
                       : `base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-normal italic uppercase text-black`
-                  }                >
+                  }
+                >
                   commercial
                 </div>
                 <Image
@@ -150,11 +146,12 @@ const CasesLibrary = ({ setName, projects, name }) => {
                   onClick={() => {
                     setName("Restaurant");
                   }}
-				  className={
-                    name==="Restaurant"
+                  className={
+                    name === "Restaurant"
                       ? `base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-medium italic uppercase text-black `
                       : `base:text-[3.43vw] base:leading-[5.15vw] base:tracking-[0.05em] 3xl:text-[22.15px] 3xl:leading-[33.22px] lg:text-[1.153vw] lg:leading-[1.73vw]  tracking-[0.5%] font-normal italic uppercase text-black`
-                  }                >
+                  }
+                >
                   restaurant
                 </div>
               </div>

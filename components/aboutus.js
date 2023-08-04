@@ -116,7 +116,7 @@ const AboutusHero = () => {
                 >
                   <p
                     // ref={block}
-                    className="tracking base:text-left lg:text-left overflow-clip"
+                    className="tracking-[0.15em] base:text-left lg:text-left overflow-clip"
                   >
                     {"GET TO".split("").map((char, idx) => {
                       return (
@@ -133,7 +133,8 @@ const AboutusHero = () => {
                       );
                     })}
                   </p>
-                  <p className="tracking base:text-cente lg:text-left overflow-clip">
+
+                  <p className="tracking-[0.15em] base:text-cente lg:text-left overflow-clip">
                     {"KNOW US".split("").map((char, idx) => {
                       return (
                         <span
@@ -171,7 +172,7 @@ const AboutusHero = () => {
             {/* change this poppins to lamore */}
             <div
               id="thestorybehind"
-              className={`base:text-[min(5vw,1.8rem)] lg:text-[2rem] ${poppins} `}
+              className={`base:text-[min(5vw,1.8rem)] lg:text-[2rem] ${poppins} tracking-[3px]`}
             >
               {`THE STORY BEHIND`.split(/\r?\n/).map((char, idx) => {
                 return (
@@ -187,7 +188,7 @@ const AboutusHero = () => {
               id="description"
               className={`lg:inline-block base:hidden mt-[5rem] text-[1.3rem] w-[70%] font-medium italic ${poppins}`}
             >
-              {`Experience the art of luxury interior design. Let us transform your space into a breathtaking work of art.`
+              {`"Experience the art of luxury interior design. Let us transform your space into a breathtaking work of art."`
                 .split(/\r?\n/)
                 .map((char, idx) => {
                   return (
@@ -219,13 +220,13 @@ const AboutusHero = () => {
               <Image
                 alt="about image"
                 src={AboutImage}
-                className="base:hidden lg:inline-block object-cover h-[40rem] w-[1120px] lg:pl-10 lg:pr-4 "
+                className="base:hidden lg:inline-block object-cover h-[30rem] w-[60rem] lg:pl-10 lg:pr-4 "
               />
             </div>
           </div>
         </div>
         <div
-          className={`lg:hidden base:inline-block   base:text-[1.1rem] md:text-[2.8vw] base:w-[70.315vw] md:w-[46vw] font-extrabold italic ${poppins}`}
+          className={`lg:hidden base:inline-block   base:text-[1.1rem] md:text-[2.8vw] base:w-[70.315vw] md:w-[46vw] font-extrabold italic ${poppins.className} `}
         >
           “Experience the art of luxury interior design. Let us transform your
           space into a breathtaking work of art.”
@@ -236,17 +237,20 @@ const AboutusHero = () => {
           <div
             style={{
               gridColumnStart: 2,
-              gridColumnEnd: 3,
+              gridColumnEnd: 4,
             }}
-            className={`${poppins}  base:text-[1rem] lg:text-[1rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal md:text-[2.5vw]`}
+            className={`${poppins.className}  base:text-[1rem] lg:text-[1.25rem] base:text-right lg:text-left py-11 text-black lg:leading-8 font-normal md:text-[2.5vw]`}
           >
             At Opuvlence, we are committed to sustainability and
             eco-friendliness. We use environmentally- friendly materials
             whenever possible and strive to reduce waste and minimize our carbon
-            footprint. Our portfolio includes a diverse range of projects, from
-            single-room makeovers to large-scale commercial renovations. We have
-            worked with clients in a variety of industries, including
-            hospitality, healthcare, and retail.
+            footprint.
+            <span className="base:hidden lg:inline-block">
+              Our portfolio includes a diverse range of projects, from
+              single-room makeovers to large-scale commercial renovations. We
+              have worked with clients in a variety of industries, including
+              hospitality, healthcare, and retail.
+            </span>
           </div>
         </div>
       </div>

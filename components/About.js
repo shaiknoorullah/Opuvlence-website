@@ -73,14 +73,14 @@ const About = () => {
       id="about-section"
       data-scroll
       data-scroll-speed="1.4"
-      className="w-[100%] snap-center md:min-h-[min(100vh,900px)] base:min-h-[min(100vh,500px)]  base:flex justify-center items-center relative lg:flex flex-col max-w-[1920px]  lg:mt-[-30rem]"
+      className="w-[100%] snap-center md:min-h-[min(100vh,900px)] base:min-h-[min(100vh,500px)]  base:flex justify-center items-center relative lg:flex flex-col max-w-[1920px] base:my-32  lg:mt-[0rem]"
     >
       <div
         className={`lg:w-full grid grid-cols-[1.2fr_2.8fr] base:text-[3.75vw] base:leading-[5.62vw] base:tracking-[0.15vw] base:pt-[5vw] base:pb-[6.40vw] 3xl:text-[25px] 3xl:leading-[37.5px] 3xl:tracking-[0.5px] font-extrabold text-[#A5787A] 3xl:pt-[20px] 3xl:pb-[41px] lg:text-[1.2626vw] lg:leading-[1.89vw] lg:pt-[1.01vw] lg:pb-[2.07vw] uppercase ${poppins.className}`}
       >
         <p
           id="section-name-about"
-          className={`${poppins.className} opacity-0 font-extrabold col-start-2 lg:text-[min(20px,1.3vw)]`}
+          className={`${poppins.className} base:text-[1rem] font-extrabold col-start-2 lg:text-[min(20px,1.3vw)]`}
         >
           / About
         </p>
@@ -128,7 +128,7 @@ const About = () => {
           <div className="text-white">US</div>
         </div>
 
-		<div
+        <div
           className={`absolute bottom-0 right-0 text-right z-[1000] mr-5  ${golden.className}  flex flex-col gap-6`}
         >
           <div className="text-white">A</div>

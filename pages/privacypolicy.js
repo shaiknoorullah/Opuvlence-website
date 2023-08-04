@@ -8,7 +8,7 @@ const poppins = localFont({
 
 const PrivacyPolicy = () => {
   return (
-    <div className="privacy w-full flex justify-center  text-xl text-black font-poppins">
+    <div className="privacy w-full flex cursor-none justify-center  text-xl text-black font-poppins">
       <div className="w-[90%]">
         <div className="   text-[35px] font-semibold mb-7 tracking-[0.1em] leading-[40px] font-lamore">
           Privacy Policy

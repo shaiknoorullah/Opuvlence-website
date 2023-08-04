@@ -23,7 +23,7 @@ const Services = () => {
 
   console.log(isMobileDevice);
   return (
-    <div className=" w-full lg:px-[40px] text-black ">
+    <div className=" w-full lg:px-[40px] cursor-none text-black ">
       <TransitionScreen />
       <OurServices />
 

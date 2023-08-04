@@ -38,7 +38,7 @@ const Layout = (props) => {
       }}
     >
       <div>
-        <main>
+        <main  className="cursor-none">
           {router.pathname !== "/landing/offers/kitchen/01" && <Navbar />}
           {router.pathname !== "/landing/offers/kitchen/01" && <Cursor />}
           {router.pathname !== "/landing/offers/kitchen/01" && <ExampleComponent />}

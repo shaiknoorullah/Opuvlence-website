@@ -300,10 +300,10 @@ const Navbar = () => {
       title: "Interior Design",
       href: "/services",
     },
-    {
-      title: "Property Management",
-      href: "/rentalandleaseservices",
-    },
+    // {
+    //   title: "Property Management",
+    //   href: "/rentalandleaseservices",
+    // },
 
     {
       title: "Contact",
@@ -324,10 +324,10 @@ const Navbar = () => {
       title: "Interior Design",
       href: "/services",
     },
-    {
-      title: "Rental and Lease",
-      href: "/rentalandleaseservices",
-    },
+    // {
+    //   title: "Rental and Lease",
+    //   href: "/rentalandleaseservices",
+    // },
   ];
 
   const options2 = [
@@ -376,7 +376,7 @@ const Navbar = () => {
       <NavLinks href={"/"}>
         <Image
           id="navLinksDesktop"
-          className="relative w-[40px] h-[40px] shrink-0 object-cover cursor-pointer"
+          className="relative w-[30px] h-[30px] shrink-0 object-cover cursor-pointer"
           alt=""
           src={logo}
         />
@@ -449,8 +449,8 @@ const Navbar = () => {
           >
             <rect
               ref={rect1Ref}
-              width="52"
-              height="5"
+              width="42"
+              height="4"
               fill={isClicked ? "black" : "black"}
               // click={props.isClicked}
               // toggle={props.setIsClicked}
@@ -458,8 +458,8 @@ const Navbar = () => {
             <rect
               ref={rect2Ref}
               y="10"
-              width="52"
-              height="5"
+              width="42"
+              height="4"
               fill={isClicked ? "black" : "black"}
             />
           </svg>
