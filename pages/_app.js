@@ -15,6 +15,7 @@ import Head from "next/head"
 import "../styles/font/gilroy/stylesheet.css"
 import { Router, useRouter } from "next/router"
 import { Toaster } from "react-hot-toast"
+import Image from "next/image"
 
 if (typeof window !== "undefined") {
 	gsap.registerPlugin(ScrollTrigger)
@@ -47,6 +48,32 @@ function MyApp({ Component, pageProps }) {
 	          	  })(window, document, 'script', 'https://ga.getresponse.com/script/28da83f2-21ac-42dd-a43f-068a2708c221/ga.js', 'GrTracking');
 	        `}
 				</script>
+				{/* <!-- Meta Pixel Code --> */}
+				<script>
+					{`
+						!function(f,b,e,v,n,t,s)
+						{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+						n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+						if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+						n.queue=[];t=b.createElement(e);t.async=!0;
+						t.src=v;s=b.getElementsByTagName(e)[0];
+						s.parentNode.insertBefore(t,s)}(window, document,'script',
+						'https://connect.facebook.net/en_US/fbevents.js');
+						fbq('init', '1390369494855385');
+						fbq('track', 'PageView');
+						
+    				`}
+				</script>
+				<noscript>
+					<Image
+						height="1"
+						width="1"
+						style="display:none"
+						alt=""
+						src="https://www.facebook.com/tr?id=1390369494855385&ev=PageView&noscript=1"
+					/>
+				</noscript>
+				{/* <!-- End Meta Pixel Code --> */}
 				<script type="text/javascript">
 					{`
              (function(m, o, n, t, e, r, _){
